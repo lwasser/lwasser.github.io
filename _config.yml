@@ -26,7 +26,7 @@ repository               : "lwasser/lwasser.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
@@ -76,7 +76,7 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification :
+google_site_verification : google-site-verification=q-Yy3Eq0_b-9Ix13E6cNJU6S87Ignn7zva59_xhd5AI
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
@@ -100,24 +100,24 @@ social:
 analytics:
   provider               : false # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : UA-20661241-1
     anonymize_ip         : # true, false (default)
 
 
 # Site Author
 author:
   name             : "Leah Wasser"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  avatar           : "/images/leah-wasser-open-education-earth-data-science.jpg"
+  bio              : "Open education * open science * data science * builder of things."
+  location         : "Earth"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       # url: mailto:your.name@email.com
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://leahwasser..com"
+    #- label: "Website"
+      #icon: "fas fa-fw fa-link"
+      #url: "https://leahwasser..com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/leahawasser"
