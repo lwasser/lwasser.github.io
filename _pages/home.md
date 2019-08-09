@@ -5,7 +5,8 @@ permalink: /
 excerpt: "Open education, open source, open science and lots of mountains and running."
 date: 2016-03-23T11:48:41-04:00
 intro:
-  - excerpt: 'I am an Ecologist, data scientist and educator. I develop and lead programs that make it easier for scientists to learn data science and for data scientists to use their skills for science.'
+  - excerpt: 'I am an Ecologist, data scientist and educator. I develop and lead programs that make it easier for scientists to learn data science and for data scientists to use their skills for science.
+  I lead the Earth Analytics Education Program at Earth Lab, University of Colorado - Boulder and pyOpenSci.'
 feature_row:
   - image_path: images/j-kelly-brito-PeUJyoylfe4-unsplash.jpg
     alt: "customizable"
@@ -14,7 +15,7 @@ feature_row:
     url: "/docs/configuration/"
     btn_label: "Learn More"
 feature_row_education:
-  - image_path: images/j-kelly-brito-PeUJyoylfe4-unsplash.jpg
+  - image_path: images/open-education-landing.png
     alt: "customizable"
     title: "Open Education"
     excerpt: "Everyone should have access to in-demand data skills. I build learning portals and publish and contribute to lessons that allow anyone to learn environmental data science skills at their own pace and on their own time."

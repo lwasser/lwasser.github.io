@@ -1,0 +1,22 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+
+$gray: #4F0845 !default;
+h1, h2, h3 {color: #4F0845;
+            font-family: 'Nanum Gothic', sans-serif!important;
+}
+
+.notice--primary h2 {
+    font-size: 2em!important;
+}
+
+.notice--primary h2.archive__item-title {
+  font-size: 1.4em!important;
+}
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
