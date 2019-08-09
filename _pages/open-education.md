@@ -36,7 +36,7 @@ feature_row_nds:
   - image_path: images/carpentries-geospatial-workshops.png
     alt: "customizable"
     title: "NEON Data Skills"
-    excerpt: "At NEON I was hired a Senior scientist to work for Wendy Gram. Here I built the NEON Data Skills program. NEON data skills was an effort to scale training surrounding working with NEON data using an online, open education learning portal. When I left NEON, the data skills portal had 12-16,000 unique global users a month and was quickly growing. The portal has since been ingested into the larger neonscience website."
+    excerpt: "At the National Ecological Observatory Network (NEON) I built the NEON Data Skills program. NEON data skills scaled training that helps the community work with and use NEON data using an online, open education learning portal. When I left NEON, the data skills portal had 12-16,000 unique global users a month and was quickly growing. The portal has since been ingested into the larger neonscience website."
     btn_label: "View Workshop (on datacarpentry.org)"
     btn_class: "btn--primary"
 feature_row_eds:

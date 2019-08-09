@@ -9,35 +9,23 @@ intro:
 feature_row:
   - image_path: images/j-kelly-brito-PeUJyoylfe4-unsplash.jpg
     alt: "customizable"
-    title: "Earth Data Science Education"
+    title: "Online and In Person Teaching - Blended Classrooms"
     excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
     url: "/docs/configuration/"
-    btn_label: "Learn More"
-  - image_path: images/mm-customizable-feature.png
-    alt: "fully responsive"
-    title: "Open Science / Open Source"
-    excerpt: "Built on HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
-    url: "/docs/layouts/"
-    btn_label: "Learn More"
-  - image_path: images/markus-spiske-466ENaLuhLY-unsplash.jpg
-    alt: "100% free"
-    title: "Tools for Education & Science"
-    excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!"
-    url: "/docs/license/"
     btn_label: "Learn More"
 feature_row_education:
   - image_path: images/j-kelly-brito-PeUJyoylfe4-unsplash.jpg
     alt: "customizable"
     title: "Open Education"
-    excerpt: "Everyone should have access to in-demand data skills. I build learning portals and publish lessons that allow anyone to learn at their own pace and on their own time."
-    url: "/categories/#open-education/"
+    excerpt: "Everyone should have access to in-demand data skills. I build learning portals and publish and contribute to lessons that allow anyone to learn environmental data science skills at their own pace and on their own time."
+    url: "/open-education/"
     btn_label: "Learn More"
 feature_row_open_source:
   - image_path: images/women-coding-unsplash.jpg
     alt: "customizable"
     title: "pyOpenSci: Open Source Python Software for Science"
     excerpt: "Open source Python tools make it easier for scientists to get to their science. pyOpenSci is a community that supports peer reviewed, discoverable and well-documented software. We also support best practices of software development for scientists."
-    url: "/docs/configuration/"
+    url:
     btn_label: "Learn More"
 feature_row_programs:
   - image_path: images/j-kelly-brito-PeUJyoylfe4-unsplash.jpg
@@ -47,24 +35,24 @@ feature_row_programs:
     url: "/docs/configuration/"
     btn_label: "Learn More"
 feature_row_tools:
-  - image_path:
+  - image_path: images/earthpy-free-open-source-tools-spatial-python.png
     alt: "customizable"
     title: "EarthPy"
-    excerpt: "A free Python package that makes it easier to plot and use spatial data using open source tools like rasterio, geopands, matplotlib and numpy."
-    url:
-    btn_label: "Learn More"
+    excerpt: "A free and open Python package that makes it easier to plot, manipulate and use spatial data using open source tools like rasterio, geopandas, matplotlib and numpy."
+    url: https://earthpy.readthedocs.io
+    btn_label: "View docs (external link)"
     btn_class: "btn--inverse"
-  - image_path:
+  - image_path: images/matplotcheck-free-open-source-tools-plots-python.png
     alt: "customizable"
     title: "Matplotcheck"
-    excerpt: "A Python package that makes it easier to test matplotlib plots."
-    url:
-    btn_label: "Learn More"
+    excerpt: "A free and open Python package that makes it easier to test and validate matplotlib plots. This was built to support autograding student assignments but also is useful for writing unit tests for software."
+    url: https://matplotcheck.readthedocs.io
+    btn_label: "View docs (external link)"
     btn_class: "btn--inverse"
-  - image_path:
+  - image_path: images/autograde-free-open-source-tools-jupyter-python.png
     alt: "customizable"
     title: "Autograding Platform"
-    excerpt: "I use github classroom, JupyterHub and nbgrader to support all things data science education. Learn more about what I have been working on."
+    excerpt: "I use github classroom, JupyterHub and nbgrader to support all things data science education. I am leading the development of a set of tools that make it easier to manage github classroom, and grade student assignments."
     url:
     btn_label: "Learn More"
     btn_class: "btn--inverse"
@@ -84,17 +72,21 @@ header:
 {% endcomment %}
 {% include feature_row id="feature_row_education" type="right" %}
 
-UNDER CONSTRUCTION __ MORE ON THE WAY
-{% comment %}
-## Open Source Tools For Science and Education
+<div markdown="1" class="notice--primary">
+## Free  Open Source Software Tools For Earth Data Science and Education - FOSS
 
-An open source tools is one where anyone can see the code and contribute.
-To make it easier to teach earth data science I help build tools. Below are some
-of the free-to-use open source projects that i'm currently leading the development of.
+Open source refers to a (programming) tool or project where the (source) or
+the code used to build the tool is available for anyone to see, use and
+contribute to. If the tool is free, it will be referred to as FOSS or Free Open
+Source Software. To make it easier to teach earth data science I help build
+free open source software tools. Below are some of the free-to-use open source
+projects that i'm currently leading.
 
 {% include feature_row id="feature_row_tools" %}
+</div>
 
 {% include feature_row id="feature_row_open_source" type="right" %}
 
 {% include feature_row id="feature_row_programs" type="left" %}
+{% comment %}
 {% endcomment %}
