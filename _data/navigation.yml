@@ -1,7 +1,8 @@
 # main links
 main:
-
+  - title: "Open Education"
+    url: /open-education-earth-data-science/
   - title: "Blog"
     url: /blog/
-  - title: "Open Education"
-    url: /open-education/
+  - title: "about"
+    url: /about-leah-wasser/
