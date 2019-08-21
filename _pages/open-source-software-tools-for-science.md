@@ -1,7 +1,7 @@
 ---
 title: "Open Source Software and Tool Development"
 layout: single
-classes: wide
+#classes: wide
 permalink: free-open-source-software-for-science-foss/
 author_profile: true
 feature_row_tools:
