@@ -8,8 +8,23 @@ h1, h2, h3 {color: #4F0845;
             font-family: 'Nanum Gothic', sans-serif!important;
 }
 
-.notice--primary h2 {
+body, p {
+  font-family: 'Open Sans', sans-serif!important;
+}
+
+body {font-size:90%}
+
+div.notice--warning {
+  padding: 1.9em 2.3em !important
+}
+
+.notice--warning p, .notice--primary p {
+  font-size: 1.1em!important;
+}
+
+.notice--primary h2, .notice--warning h2 {
     font-size: 2em!important;
+    margin: 1em 0 0.5em!important
 }
 
 .notice--primary h2.archive__item-title {

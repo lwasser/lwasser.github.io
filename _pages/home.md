@@ -79,7 +79,7 @@ header:
         - label: "Twitter"
           url: "https://twitter.com/leahawasser"
         - label: "GitHub"
-          url: "https://github.com/pyOpenSci"
+          url: "https://github.com/lwasser"
 ---
 
 {% include feature_row id="intro" type="center" %}
