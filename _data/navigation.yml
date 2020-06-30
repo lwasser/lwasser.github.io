@@ -10,7 +10,7 @@ main:
   #   url:
   - title: "Science Communication"
     url: /earth-data-science-communication/
-  - title: "Blog"
-    url: /blog/
+  #- title: "Blog"
+  #  url: /blog/
   - title: "About"
     url: /about-leah-wasser/
