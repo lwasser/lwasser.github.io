@@ -10,20 +10,27 @@ header:
     overlay_image: images/vincent-guth-Sdc35GnHgvI-unsplash.jpg
     overlay_filter: 0.6
 feature_row_courses:
+  - image_path: images/j-kelly-brito-PeUJyoylfe4-unsplash.jpg
+    alt: "Intermediate Earth Data Science Textbook"
+    title: "Intermediate Earth Data Science Textbook"
+    excerpt: "This textbook is used alongside the Earth Analytics Python course. It contains over 100 lessons that teach `Python` lessons on topics including remote sensing imagery, using APIs to get data, working with social media data and using lidar to understand vegetation health."
+    url: "https://www.earthdatascience.org/courses/use-data-open-source-python/"
+    btn_label: "<i class='fas fa-external-link-alt'></i> View Online Textbook (EarthDataScience.org)"
+    btn_class: "btn--inverse btn--large"
   - image_path: images/python-open-education-earth-data-science-course-unsplash.png
     alt: "customizable"
     title: "Earth Analytics Python Course"
-    excerpt: "There is a large workforce demand for `Python` programming skills given it is one of the most commonly used programming languages. This course contains >100 `Python` lessons on topics including remote sensing imagery, using APIs to get data, working with social media data and using lidar to understand vegetation health. The course is 1 of 3 in our Earth Analytics Professional Certificate."
+    excerpt: "There is a large workforce demand for `Python` programming skills given it is one of the most commonly used programming languages. In the course you will find the readings and assignments associated with the course which covers `Python` lessons on earth and environmental data science topics. The course is the second of 3 in the Earth Analytics Professional Graduate Certificate."
     url: "https://www.earthdatascience.org/courses/earth-analytics-python/"
     btn_label: "<i class='fas fa-external-link-alt'></i> View Course (EarthDataScience.org)"
-    btn_class: "btn--inverse"
+    btn_class: "btn--inverse btn--large"
   - image_path: images/r-open-education-earth-data-science-course-unsplash.png
     alt: "customizable"
     title: "Earth Analytics R Open Education Coding Course"
     excerpt: "I developed Earth Analytics using the `R` scientific programming language course during my first year at CU-Boulder. It was a test to see what happened when I placed an entire course online. After optimizing the course for search engine visibility (SEO) the course was discovered and people began working through it."
     url: "https://www.earthdatascience.org/courses/earth-analytics/"
     btn_label: "<i class='fas fa-external-link-alt'></i> View Course (EarthDataScience.org)"
-    btn_class: "btn--inverse"
+    btn_class: "btn--inverse btn--large"
 feature_row_carpentries:
   - image_path: images/carpentries-geospatial-workshops.png
     alt: "customizable"
@@ -40,15 +47,15 @@ feature_row_nds:
 feature_row_eds:
   - image_path:
     alt: "customizable"
-    title: "> 56,000 Unique Global Monthly Users"
+    title: "> 140,000 Global Monthly Users"
     excerpt: "Targeted search engine optimization combined with providing tutorials on in-demand skills has lead global website reach."
   - image_path:
     alt: "customizable"
-    title: "Science & Data Science Skills."
+    title: "Science + Data Science At Your Fingertips"
     excerpt: "There is a booming workforce demand for people that have both science and data science knowledge and skills. This intersection is what defines the earthdatascience.org portal."
   - image_path:
     alt: "customizable"
-    title: "Over 250 Lessons and Growing"
+    title: "> 300 Lessons (and Growing!)"
     excerpt: "The earth analytics education team is always adding content to the portal! Check back often."
 intro:
   - excerpt: 'I publish lessons online and teach using a blended in person and online approach to open doors for non traditional students who may not otherwise have access to learning earth data science.'
@@ -68,7 +75,9 @@ anyone to have access to our Earth Data Analytics program course materials. The
 growing portal contains over 250 lessons and has over 50,000 unique global users
 visit a month. Many lessons on the portal have been developed collaboratively.
 
-<a href="https://www.earthdatascience.org" target="_blank" class="btn btn--inverse"><i class="fas fa-external-link-alt"></i> Visit earthdatascience.org</a>
+<a href="https://www.earthdatascience.org" target="_blank" class="btn btn--large btn--inverse"><i class="fas fa-external-link-alt"></i> Visit earthdatascience.org</a>
+{: .text-center}
+
 {% include feature_row id="feature_row_eds" %}
 
 </div>
