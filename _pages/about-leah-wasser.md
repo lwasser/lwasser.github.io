@@ -37,8 +37,7 @@ A few tidbits about me:
 * In my free time you can find me running long distances in the mountains.  
 
 I'm currently the director of Earth Analytics Education at Earth Lab, University
-of Colorado Boulder. Here I get to work with a pretty great team of educators, students,
-scientists and data scientists.
+of Colorado Boulder.
 
 ## Related Articles
 <div class="list__item">
