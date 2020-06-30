@@ -80,6 +80,8 @@ header:
           url: "https://twitter.com/leahawasser"
         - label: "GitHub"
           url: "https://github.com/lwasser"
+        - label: "LinkedIn"
+          url: "https://www.linkedin.com/in/leah-wasser-0138883"
 ---
 
 {% include feature_row id="intro" type="center" %}
