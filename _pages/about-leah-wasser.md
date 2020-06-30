@@ -15,7 +15,8 @@ intro:
 
 ## About Leah
 
-I am an educator, ecologist and data scientists. I started my career pursuing
+I am an educator, ecologist and data scientist. I am passionate about democratizing
+data science education through online learning. I started my career pursuing
 Landscape Architecture but found myself drawn strongly to science. After spending
 some time as an AmeriCorps volunteer, I found a job at Penn State working in the
 Land Analysis Lab and among other things, teaching GIS. I decided to pursue a
