@@ -36,6 +36,7 @@ inspiration for teaching has come from many places including:
 * Teaching Landscape Architecture studios which were highly collaborative, open and include review at all stages.
 * The Carpentries model for distributed workshops and open online workshop materials.
 * My own experiences learning data skills as a graduate student in ecology.
+* Literature combined with surveys and evaluation data surrounding teaching best practices implemented in courses and workshops. 
 
 <div markdown="1" class="notice--primary">
 

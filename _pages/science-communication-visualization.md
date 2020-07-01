@@ -4,6 +4,8 @@ layout: single
 classes: wide
 permalink: earth-data-science-communication/
 author_profile: true
+header:
+  overlay_color: "#333"
 ---
 
 ## How Light Detection and Ranging (LiDAR) Remote Sensing Works

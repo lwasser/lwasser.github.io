@@ -4,28 +4,45 @@ layout: single
 #classes: wide
 permalink: free-open-source-software-for-science-foss/
 author_profile: true
+header:
+  overlay_color: "#333"
 feature_row_tools:
   - image_path: images/earthpy-free-open-source-tools-spatial-python.png
     alt: "customizable"
     title: "EarthPy"
-    excerpt: "A free and open Python package that makes it easier to plot, manipulate and use spatial data using open source tools like rasterio, geopandas, matplotlib and numpy."
+    excerpt: "A Python package that makes it easier to plot, manipulate and use spatial data. It also includes tools to manage data downloads and home directories."
     url: https://earthpy.readthedocs.io
-    btn_label: "View docs (external link)"
+    btn_label: "<i class='fas fa-external-link-alt'></i> View Docs"
     btn_class: "btn--inverse"
   - image_path: images/matplotcheck-free-open-source-tools-plots-python.png
     alt: "customizable"
     title: "Matplotcheck"
-    excerpt: "A free and open Python package that makes it easier to test and validate matplotlib plots. This was built to support autograding student assignments but also is useful for writing unit tests for software."
-    url: https://matplotcheck.readthedocs.io
-    btn_label: "View docs (external link)"
+    excerpt: "A Python package that makes it easier to test and validate matplotlib plots. This tool supports autograding student assignments and can be used in Jupyter Noteboks."
+    url: https://matplotcheck.readthedocs.io/
+    btn_label: "<i class='fas fa-external-link-alt'></i> View Docs"
     btn_class: "btn--inverse"
   - image_path: images/autograde-free-open-source-tools-jupyter-python.png
     alt: "customizable"
-    title: "Autograding Platform"
-    excerpt: "I use github classroom, JupyterHub and nbgrader to support all things data science education. I am leading the development of a set of tools that make it easier to manage github classroom, and grade student assignments."
-    url:
-    btn_label: "Learn More"
+    title: "abc-classroom Platform"
+    excerpt: "A tool that makes managing github classroom repository management and grading easier."
+    url: https://abc-classroom.readthedocs.io/
+    btn_label: "<i class='fas fa-external-link-alt'></i> View Docs"
     btn_class: "btn--inverse"
+  - image_path:
+    alt: "customizable"
+    title: "Earth Analytics Python Conda Environment"
+    excerpt: "A curated conda environment and docker container that has a suite of spatial tools that support teaching and learning spatial open source python.."
+    url: https://www.github.com/earthlab/earth-analytics-python-env/
+    btn_label: "<i class='fas fa-external-link-alt'></i> View GitHub Repo"
+    btn_class: "btn--inverse"
+  - image_path:
+    alt: "customizable"
+    title: "JupyterHub for Earth Analytics Teaching"
+    excerpt: "A JupyterHub deployment system that supports multiple hubs with different configurations including custom environments, compute settings and more setup through Google Cloud."
+    url: https://earthlab-hub-ops.readthedocs.io/
+    btn_label: "<i class='fas fa-external-link-alt'></i> View Docs"
+    btn_class: "btn--inverse"
+classes: wide
 ---
 
 Open source refers to a (programming) tool or project where the (source) or
@@ -33,20 +50,27 @@ the code used to build the tool is available for anyone to see, use and
 contribute to. If the tool is free, it will be referred to as FOSS or Free Open
 Source Software. To make it easier to teach earth data science I help build
 free open source software tools. Below are some of the free-to-use open source
-projects that i'm currently leading.
+projects that I am currently leading development of.
 
 
-## pyOpenSci
+## pyOpenSci: Peer Reviewed, Documented, Tested and Discoverable Open Source Software for Science
 
-pyOpenSci is a community that promotes open science through supporting development
-and peer review of scientific software written in the `Python` programming language.
-pyOpenSci is modeled after rOpenSci.
+pyOpenSci is a community modeled after rOpenSci that promotes open science
+through supporting development and peer review of scientific software written in
+the `Python` programming language.
 
 I currently am organizing and leading the pyOpenSci effort with several colleagues.
-We are now solidifying the peer review process and gathering community support.
-Ultimately we'd like to see it grow as rOpenSci has and have
-funded full time positions in addition to the wealth of community contributed
-time.  
+In the past 2 years we have:
+
+* Developed a robust peer review process
+* Created and published a contributing guide that provides guidelines and standards for Python packages
+* Created a partnership with JOSS (Journal of Open Source Software) to ensure they are citable.
+* Gathered extensive community support.
+* Reviewed a suite of open source python packages harnessing the power of volunteer reviewers and editors.
+
+I am currently serving as the editor in chief but am also actively
+seeking funding for this project to support hiring someone to work on this project
+full time.
 
 <!-- ** Might be cool to gather a list of collaborators here?? -->
 

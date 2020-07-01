@@ -293,6 +293,20 @@ defaults:
       comments: true
       share: true
       related: true
+  # _portfolio defaults
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
 
 head_scripts:
   - https://code.jquery.com/jquery-3.3.1.min.js
+
+# Setup collections for tools
+collections:
+  portfolio:
+    output: true
+    permalink: /tools/:path/
