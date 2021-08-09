@@ -47,7 +47,7 @@ feature_row_nds:
 feature_row_eds:
   - image_path:
     alt: "customizable"
-    title: "> 140,000 Global Monthly Users"
+    title: "> 200,000 Global Monthly Users"
     excerpt: "Targeted search engine optimization combined with providing tutorials on in-demand skills has lead global website reach."
   - image_path:
     alt: "customizable"
