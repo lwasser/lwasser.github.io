@@ -86,9 +86,9 @@ header:
 
 {% include feature_row id="intro" type="center" %}
 
-{% include feature_row id="feature_row_open_source" type="right" %}
+{% include feature_row id="feature_row_open_source" type="left" %}
 
-{% include feature_row id="feature_row_open_education" type="left" %}
+{% include feature_row id="feature_row_open_education" type="right" %}
 
 <div markdown="1" class="notice--primary">
 ## Blended Online and In-Person Classrooms, Active Learning and Teaching
@@ -103,11 +103,6 @@ support more students.
 </div>
 
 {% include feature_row id="feature_row_foss" type="left" %}
-
-
-
-
-
 {% include feature_row id="feature_row_programs" type="left" %}
 
 {% comment %}
