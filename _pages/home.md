@@ -5,8 +5,8 @@ permalink: /
 excerpt: "Open education, open source, open science and lots of mountains and running."
 date: 2016-03-23T11:48:41-04:00
 intro:
-  - excerpt: 'I am an Ecologist, data scientist and educator. I develop and lead programs that make it easier for scientists to learn data science and for data scientists to use their skills for science.
-  I lead the Earth Analytics Education Program at Earth Lab, University of Colorado - Boulder and pyOpenSci.'
+  - excerpt: 'I am an Ecologist, data scientist and educator. I develop and lead programs that make support open data science through community building, outreach and education.
+  I am the Executive Director of pyOpenSci - a global organization devoted to building diverse and skilled community around open source software that supports open science.'
 feature_row_open_education:
   - image_path: images/open-education-landing.png
     alt: "customizable"
@@ -46,7 +46,7 @@ feature_row_programs:
   - image_path: images/j-kelly-brito-PeUJyoylfe4-unsplash.jpg
     alt: "customizable"
     title: "Program Development & Leadership Including Earth Data Analytics"
-    excerpt: "I build and lead programs. Currently, I am building the earth data analytics program at the University of Colorado - Boulder. I previously developed the NEON Data Skills program."
+    excerpt: "I build and lead programs. In my previous position as Director of Earth Analytics Education, I built the earth data analytics program at the University of Colorado - Boulder. Before that I developed the NEON Data Skills program."
     url:
     btn_label: "Learn More"
 feature_row_foss:
@@ -86,6 +86,8 @@ header:
 
 {% include feature_row id="intro" type="center" %}
 
+{% include feature_row id="feature_row_open_source" type="right" %}
+
 {% include feature_row id="feature_row_open_education" type="left" %}
 
 <div markdown="1" class="notice--primary">
@@ -104,7 +106,7 @@ support more students.
 
 
 
-{% include feature_row id="feature_row_open_source" type="right" %}
+
 
 {% include feature_row id="feature_row_programs" type="left" %}
 
