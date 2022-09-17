@@ -5,6 +5,7 @@ layout: single
 classes: wide
 permalink: /earth-data-science-communication/
 author_profile: true
+comments: true
 header:
   overlay_color: "#333"
 categories:
