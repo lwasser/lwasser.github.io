@@ -3,42 +3,90 @@ title: "About Me - Leah A. Wasser"
 layout: single
 permalink: /about-leah-wasser/
 author_profile: true
-excerpt: "Universal, Open Education."
+excerpt: "I build programs that support a diverse open science community."
 category: "open-education"
 header:
     overlay_image: images/vincent-guth-Sdc35GnHgvI-unsplash.jpg
     overlay_filter: 0.6
-
 intro:
-  - excerpt: 'I publish lessons online and teach using a blended in person and online approach to open doors for non traditional students who may not otherwise have access to learning earth data science.'
+  - excerpt: "I learned to code the hard way, on my own. That experience drives me to support community around skills and tools needed to propel data intensive science forward. We don't all have to learn the hard way."
 ---
+{% include feature_row id="intro" type="center" %}
 
-## About Leah
+## About Me 
+I am formerly trained as a remote sensing ecologist. However, early on I 
+discovered that I enjoyed supporting others doing their science more than doing 
+the science myself. 
 
-I am an educator, ecologist and data scientist. I am passionate about democratizing
-data science education through online learning. I started my career pursuing
-Landscape Architecture but found myself drawn strongly to science. After spending
-some time as an AmeriCorps volunteer, I found a job at Penn State working in the
-Land Analysis Lab and among other things, teaching GIS. I decided to pursue a
-Ph.D. in ecology with a focus on using LiDAR remote sensing data to understand
-vegetation health and structure at a landscape level.
+## A Bit About Me
 
-During my Ph.D. I learned to code - the hard way on my own. After that experience,
-I was inspired to help others work with data to support their science. I moved
-on to work at the National Ecological Observatory Network in Boulder, Colorado.
-Here I build the NEON Data Skills program which was an online open education
-portal that helped people use NEON and related types of data.
+* I've never had any training in GIS, remote sensing, data science or programming. But I love them all. Learn more efficiently on my own.
+* I'm inspired by projects with high impact on others.
+* I find coding to be relaxing. It's like working on a puzzle - it frees my mind.
+* In my free time I run long distances in the mountains. Trails feed my soul.  
 
-A few tidbits about me:
 
-* I've never had any formal classes or training in GIS, remote sensing, data science or programming. But I love them all and love to learn and read even more.
-* I'm inspired by doing things that have high, positive impact on others. This is why I love teaching.
-* I find coding to be relaxing. It's kind of like working on a puzzle but more mentally engaging and infinitely rewarding.
-* In my free time you can find me running long distances in the mountains.  
+<div class=notice markdown="1">
 
-I'm currently the director of Earth Analytics Education at Earth Lab, University
-of Colorado Boulder.
+## I am passionate about building programs that: 
 
+* Build diverse communities and networks in support of Open Science. 
+* Support communities that are underrepresented in STEM.
+* Democratize open data science education through online learning. 
+</div>
+
+## Career Timeline
+My career path haven't exactly been linear but i'm psyched about where I am now! 
+
+<section class="timeline">
+  <div class="container">
+    {% for anEvent in site.data.professional-timeline %}
+      {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+        {% if thecycle == 'odd' %}
+          <div class="timeline-item">
+            <div class="timeline-img"></div>
+            <div class="timeline-content js--fadeInLeft">
+              <h2>{{ anEvent.title }}</h2>
+              <div class="date">{{ anEvent.month-year }}</div>
+              {% if anEvent.description %}
+                <p>{{ anEvent.description }}</p>
+              {% endif %}
+              {% if anEvent.quote %}
+                <blockquote>{{ anEvent.quote }}</blockquote>
+              {% endif %}
+              {% if anEvent.url %}
+                <a class="bnt-more" href="{{ anEvent.url }}">More</a>
+              {% endif %}
+            </div>
+          </div>
+        {% else %}
+          <div class="timeline-item">
+            <div class="timeline-img"></div>
+            <div class="timeline-content  js--fadeInRight">
+              <!--<div class="timeline-img-header"> removing image  timeline-card timeline-card makes space for the background image-->
+                <h2>{{ anEvent.title }}</h2>
+              <!--</div>-->
+              <div class="date">{{ anEvent.month-year }}</div>
+              {% if anEvent.description %}
+                <p>{{ anEvent.description }}</p>
+              {% endif %}
+              {% if anEvent.quote %}
+                <blockquote>{{ anEvent.quote }}</blockquote>
+              {% endif %}
+              {% if anEvent.url %}
+                <a class="bnt-more" href="{{ anEvent.url }}">More</a>
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
+        {% endfor %}
+  </div>
+</section>
+
+
+
+
+<!-- 
 ## Related Articles
 <div class="list__item">
 {% for post in site.categories[page.category] %}
@@ -52,3 +100,4 @@ of Colorado Boulder.
 </div>
 {% endfor %}
 </div>
+-->
