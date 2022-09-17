@@ -59,14 +59,13 @@ My career path haven't exactly been linear but i'm psyched about where I am now!
               {% endif %}
             </div>
           </div>
-          css? how is it grabbing random images??
         {% else %}
           <div class="timeline-item">
             <div class="timeline-img"></div>
-            <div class="timeline-content timeline-card js--fadeInRight">
-              <div class="timeline-img-header">
+            <div class="timeline-content  js--fadeInRight">
+              <!--<div class="timeline-img-header"> removing image  timeline-card timeline-card makes space for the background image-->
                 <h2>{{ anEvent.title }}</h2>
-              </div>
+              <!--</div>-->
               <div class="date">{{ anEvent.month-year }}</div>
               {% if anEvent.description %}
                 <p>{{ anEvent.description }}</p>

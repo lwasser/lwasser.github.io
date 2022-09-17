@@ -1,10 +1,10 @@
 # main links
 main:
-  - title: "Program Development"
+  - title: "Open Science Program Development"
     url: /open-science-program-development/
-  - title: "Open Science"
-    url: /free-open-source-software-for-science-foss/
-  - title: "Open Education"
+  # - title: "Open Science"
+  #   url: /free-open-source-software-for-science-foss/
+  - title: "Open Education & Teaching"
     url: /open-education-earth-data-science/
   - title: "Teaching"
     url: /blended-online-inperson-teaching-earth-data-science/
