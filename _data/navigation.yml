@@ -1,16 +1,14 @@
 # main links
 main:
+  - title: "Program Development"
+    url: /open-science-program-development/
+  - title: "Open Science"
+    url: /free-open-source-software-for-science-foss/
   - title: "Open Education"
     url: /open-education-earth-data-science/
-  - title: "Open Software"
-    url: /free-open-source-software-for-science-foss/
   - title: "Teaching"
     url: /blended-online-inperson-teaching-earth-data-science/
-  # - title: "Programs"
-  #   url:
-  - title: "Science Communication"
-    url: /earth-data-science-communication/
-  #- title: "Blog"
-  #  url: /blog/
+  - title: "Blog"
+    url: /blog/
   - title: "About"
     url: /about-leah-wasser/
