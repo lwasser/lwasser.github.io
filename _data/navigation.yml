@@ -8,9 +8,7 @@ main:
     url: /blended-online-inperson-teaching-earth-data-science/
   # - title: "Programs"
   #   url:
-  - title: "Science Communication"
-    url: /earth-data-science-communication/
-  #- title: "Blog"
-  #  url: /blog/
-  - title: "About"
+  - title: "Blog"
+    url: /blog/
+  - title: "About Me"
     url: /about-leah-wasser/
