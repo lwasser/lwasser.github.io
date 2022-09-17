@@ -29,6 +29,8 @@ header:
           url: "https://github.com/lwasser"
 ---
 
+# TURN THIS INTO BLOG! 
+
 Over the course of ~20 years, I have developed a model for teaching technical
 data skills that is flexible and scales to support impacting more people. My
 inspiration for teaching has come from many places including:
