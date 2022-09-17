@@ -2,6 +2,13 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+$primary: #CCCCCC; 
+$dark-primary: #303F9F;
+$light-primary: #C5CAE9;
+$text: #FFFFFF;
+$primary-text: #212121;
+$secondary-text: #757575;
+$accent: #4F0845;
 
 $gray: #4F0845 !default;
 h1, h2, h3 {color: #4F0845;
@@ -31,8 +38,6 @@ div.notice--warning {
   font-size: 1.4em!important;
 }
 
-
-
 /* TIMELINE About page*/
 
 $primary: #CCCCCC; 
@@ -42,6 +47,13 @@ $text: #FFFFFF;
 $primary-text: #212121;
 $secondary-text: #757575;
 $accent: #4F0845;
+
+
+.greedy-nav {
+	background: #eee!important;
+}
+
+/* TIMELINE About page*/
 
 section {
   padding: 100px 0;

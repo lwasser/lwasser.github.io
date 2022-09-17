@@ -86,17 +86,3 @@ My career path haven't exactly been linear but i'm psyched about where I am now!
 
 
 
-
-## Related Articles
-<div class="list__item">
-{% for post in site.categories[page.category] %}
-<!-- List all posts in the page category  -->
-<!-- Somehow loop through each class lesson and count - right now i'm not including category on series pages -->
-<div class="list__item">
-<article class="archive__item">
-  <h2 class="archive__item-title"><a href="{{ site.baseurl }}{{ post.url}}">{{ post.title }}</a></h2>
-  <p class="archive__item-excerpt">{{ post.excerpt }}</p>
-</article>
-</div>
-{% endfor %}
-</div>

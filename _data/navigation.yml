@@ -1,4 +1,3 @@
-# main links
 main:
   - title: "Open Science Program Development"
     url: /open-science-program-development/
@@ -10,5 +9,7 @@ main:
     url: /blended-online-inperson-teaching-earth-data-science/
   - title: "Blog"
     url: /blog/
-  - title: "About"
+  # - title: "Programs"
+  #   url:
+  - title: "About Me"
     url: /about-leah-wasser/
