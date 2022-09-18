@@ -27,6 +27,9 @@ header:
           url: "https://twitter.com/leahawasser"
         - label: "GitHub"
           url: "https://github.com/lwasser"
+categories:
+  - open-education
+  - online-learning
 ---
 
 # TURN THIS INTO BLOG! 
