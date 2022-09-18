@@ -11,6 +11,9 @@ $secondary-text: #757575;
 $accent: #4F0845;
 
 $gray: #4F0845 !default;
+
+
+
 h1, h2, h3 {color: #4F0845;
             font-family: 'Nanum Gothic', sans-serif!important;
 }
@@ -37,6 +40,17 @@ div.notice--warning {
 .notice--primary h2.archive__item-title {
   font-size: 1.4em!important;
 }
+
+/* Customize archive blocks*/
+.page__inner-wrap .archive__item-title {
+	margin-top: 0 !important;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.feature__wrapper.left-text p, .feature__wrapper.left-text H2 {
+	text-align: left;
+  }
 
 /* TIMELINE About page*/
 
