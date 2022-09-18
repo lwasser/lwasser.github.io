@@ -5,11 +5,11 @@ main:
   #   url: /free-open-source-software-for-science-foss/
   - title: "Open Education & Teaching"
     url: /open-education-earth-data-science/
-  - title: "Teaching"
-    url: /blended-online-inperson-teaching-earth-data-science/
+  - title: "Open Source"
+    url: /open-source/
   - title: "Blog"
     url: /blog/
-  # - title: "Programs"
-  #   url:
   - title: "About Me"
     url: /about-leah-wasser/
+# DO i want a page / nav link for pyopensci as my current thing?
+# Or do I want a page on open source instead??
