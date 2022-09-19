@@ -48,10 +48,43 @@ div.notice--warning {
 	font-weight: bold;
 }
 
-.feature__wrapper.left-text p, .feature__wrapper.left-text H2 {
+.page__inner-wrap .archive__item-title {
+	font-size: 1.4em !important;
+	font-weight: bold !important;
+	margin-top: 1.7em!important;
+}
+
+.page__inner-wrap .archive__item-subsection {
+	font-size: 1.05em !important;
+	font-weight: bold !important;
+	margin-top: 1.5em!important;
+}
+
+
+.feature__wrapper.left-text p, .feature__wrapper.left-text h3 {
 	text-align: left;
   }
 
+.feature__wrapper h2 {
+	font-size: 1.4em;
+	margin-top: 2em;
+	margin-bottom: 1.15em;
+  }
+
+.page__meta-readtime {
+	font-size: .8em;
+	color: #666;
+  }
+
+/* Top intro  - NOT SURE WHY THE PADDING IS SO EXTREME
+I need a new intro style... 
+
+.page__inner-wrap .archive__item-excerpt p {
+	font-size: 1.1em;
+	line-height: 1.2em;
+	padding-right: 0em;
+  }
+*/
 /* TIMELINE About page*/
 
 $primary: #CCCCCC; 

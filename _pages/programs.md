@@ -7,8 +7,6 @@ author_profile: true
 header:
   overlay_color: "#333"
 related: true
-intro:
-  - excerpt: 'I develop and lead programs that support both diversity in STEM and open science through community building, outreach and education.'
 ---
 
 <!-- TODO: I'd like for the intro to be wider and bugger font... 
@@ -23,30 +21,35 @@ TODO:
 * Make the launch text a bit lighter grey and smaller font size too
 -->
 
-{% include feature_row id="intro" type="center" %}
 
+<div class="top-intro">
+STYLE ME! I develop and lead programs that support both diversity in STEM and open science through community building, outreach and education.
+</div>
 
-## I LOVE Developing Programs That Support Open Science & Build Community
+## I Develop Programs That Support Open Science & Build Community
 
 Building programs is incredibly fun and rewarding! Below you can learn a bit 
 about the programs that I've build over the past ~10 years. 
 
 <div class="notice" markdown="1">
-## What I'm Up To Now: Executive Director, pyOpenSci
+## What I'm Up To Now: 
 
-More here... text here...
+I'm currently the Executive Director of pyOpenSci. I started working on this project 
+in 2017/2018. In July 2022, supported by funds from the Alfred Sloan foundation 
+I moved pyOpenSci to a fiscal sponsor. I am now Executive Director of the project 
+and working to build a diverse community around Python open source software in 
+support of Open Science. 
 
+<a href="https://www.pyopensci.org/blog/new-executive-director-leah-wasser">Learn more <i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a>
 
 <!-- ADD BLOG -->
 
 </div>
 
-## Previous Programs that I've Build
-
-
+## Previous Programs
 
 <div class="feature__wrapper">
-    <h2 class="archive__item-title">Building Earth & Environmental Data Science Capacity at Tribal & Hispanic Serving Colleges</h2>
+    <h3 class="archive__item-subsection">Building Earth & Environmental Data Science Capacity at Tribal & Hispanic Serving Colleges</h3>
             <p class="page__meta">
             <span class="page__meta-readtime">
             <i class="fas fa-rocket" aria-hidden="true"></i>
@@ -79,7 +82,7 @@ More here... text here...
     <h2>Open Education - Making Earth and Environmental
     Data Science Education Freely Available Online</h2>
     <div class="feature__item--right">
-        <h2 class="archive__item-title">earthdatascience.org Open Education Learning Portal</h2>
+        <h3 class="archive__item-subsection">earthdatascience.org Open Education Learning Portal</h3>
         <p class="page__meta">
             <span class="page__meta-readtime">
             <i class="fas fa-rocket" aria-hidden="true"></i>
@@ -98,15 +101,15 @@ More here... text here...
                 served as a live, and maintained reference for students in our 
                 programs. When I left CU in 2022, the site had over 2 million 
                 unique visitors each year from around the world. Design & Content
-                Collaborators: Jenny Palomino, Max Joseph, Nathan Korinek.
+                Collaborators: <i>Jenny Palomino, Max Joseph, Nathan Korinek</i>.
                 </p>
                 </div>
-                <p><a href="/" class="btn ">Learn More</a></p>
+                <p><a href="https://www.earthdatascience.org" class="btn ">View Website <i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a></p>
             </div>
       </div>
     </div>
     <div class="feature__item--right left-text">
-        <h2 class="archive__item-title">NEON Data Skills Open Education Learning Portal</h2>
+        <h3 class="archive__item-subsection">NEON Data Skills Open Education Learning Portal</h3>
         <p class="page__meta">
             <span class="page__meta-readtime">
             <i class="fas fa-rocket" aria-hidden="true"></i>
@@ -128,12 +131,11 @@ More here... text here...
                 the site was growing with ~10,000 unique global users a month.
                 </p>
                 </div>
-                <p><a href="/free-open-source-software-for-science-foss#pyopensci/" class="btn ">Learn More</a></p>
             </div>
       </div>
     </div>
     <div class="feature__item--right">
-    <h2 class="archive__item-title">Data Carpentry Geospatial Lessons in R</h2>
+    <h3 class="archive__item-subsection">Data Carpentry Geospatial Lessons in R</h3>
         <p class="page__meta">
             <span class="page__meta-readtime">
             <i class="fas fa-rocket" aria-hidden="true"></i>
@@ -154,7 +156,7 @@ More here... text here...
                     Geospatial Lessons taught all over the world! **Add link** 
                     </p>
                 </div>
-                <p><a href="/free-open-source-software-for-science-foss#pyopensci/" class="btn ">Learn More</a></p>
+                <p><a href="https://datacarpentry.org/geospatial-workshop/" class="btn ">View Lessons <i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a></p>
             </div>
       </div>
     </div>
@@ -163,19 +165,18 @@ More here... text here...
 <div class="feature__wrapper">
     <h2 class="archive__item-title">Education for Professionals Seeking 
     In-Demand Earth and Environmental Data Science Skills</h2>
-    <p class="page__meta">
-        <span class="page__meta-readtime">
-        <i class="fas fa-rocket" aria-hidden="true"></i>
-        2018
-        </span>
-    </p>
     <div class="feature__item--left">
-        <h2 class="archive__item-title">Earth Data Analytics - Foundations Professional Graduate Certificate</h2>
+        <h3 class="archive__item-subsection">Earth Data Analytics - Foundations Professional Graduate Certificate</h3>
+        <p class="page__meta">
+            <span class="page__meta-readtime">
+            <i class="fas fa-rocket" aria-hidden="true"></i>
+            2018-2022
+            </span>
+        </p>
         <div class="archive__item">
             <div class="archive__item-teaser">
                 <img src="/images/earth-data-analytics-professional-certificate-banner.png" alt="customizable">
             </div>
-            <!-- https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate-->
             <div class="archive__item-body">
                 <div class="archive__item-excerpt">
                     <p>I designed, proposed and built the Earth Data Analytics 
@@ -188,7 +189,7 @@ More here... text here...
                     work their team was doing and finally those looking for a career change. 
                     </p>
                 </div>
-                <p><a href="/free-open-source-software-for-science-foss#pyopensci/" class="btn ">Learn More</a></p>
+                <p><a href="https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate" class="btn ">View Program Overview <i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a></p>
             </div>
         </div>
     </div>
