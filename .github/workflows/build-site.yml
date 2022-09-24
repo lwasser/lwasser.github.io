@@ -32,5 +32,5 @@ jobs:
         with:
           directory: '_site'
           # The directory to scan
-          arguments: --url-swap "https\:\/\/www\.leahwasser\.com\/images:/images" --file-ignore /example-leaflet-maps/ --http-status-ignore "301"
+          arguments: --url-swap "https\:\/\/www\.leahwasser\.com\/images:/images" --http-status-ignore "301"
           # The arguments to pass to HTMLProofer
