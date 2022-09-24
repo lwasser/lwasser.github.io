@@ -26,7 +26,7 @@ feature_row_earthlab_education:
     url:
     btn_label: "Create a blog on this? I could link to the blog i wrote on the pyos website too for now"
 feature_row_neondataskills:
-  - image_path: images/women-coding-unsplash.jpg
+  - image_path: images/neon-data-skills.png
     alt: "customizable"
     title: "NEON Data Skills"
     excerpt: "NEON is an NSF funded ecological observatory collecting data to support science. I build an earth and environmental data 
@@ -39,10 +39,9 @@ lessons and by hosting training events."
 feature_row_edsc:
   - image_path: images/vincent-guth-Sdc35GnHgvI-unsplash.jpg
     title: "Earth and Environmental Data Science Corps"
-    excerpt: "This program designed and implemented through a NSF grant that 
-    I wrote while serving as director of Education at Earth Lab."
+    excerpt: "I had an NSF proposal funded that built capacity to teach and to learn earth and environmental data science skill at tribal and hispanic serving institutions. The core of the program included a summer program where we provided training to faculty and students in open, reproducible earth and environmental data science skills. The program also provided mentorship to students and training for faculty to support them added data intensive curriculum into their courses."
     url: ""
-    btn_label: "<i class='fas fa-angle-right'></i> Not eu"
+    btn_label: "<i class='fas fa-angle-right'></i> Blog coming soon..."
     btn_class: "btn--inverse"
 feature_row_open_education:
   - image_path: images/open-education-landing.png
@@ -51,11 +50,13 @@ feature_row_open_education:
     excerpt: "Everyone should have access to in-demand data science skills. Publishing curated sets of lessons and courses online allows those who may not have access otherwise to training materials. I build and then published my courses and lessons on 
     the earthdatascience.org website."
     url: "/open-education-earth-data-science/"
+    btn_label: "<i class='fas fa-angle-right'></i> Blog coming soon..."
+
 feature_row_eda_graduate_program:
-  - image_path: images/open-education-landing.png
+  - image_path: images/earth-data-analytics-professional-certificate.png
     alt: "customizable"
-    title: "Professional Graduate Program in earth data anlaytics"
-    excerpt: "MORE...."
+    title: "Earth Data Analytics Professional Graduate Certificate"
+    excerpt: "I designed, proposed built and ran a professional program in earth data analytics at CU Boulder. I also developed content for and taught courses. While that program was tuition based and designed to financially support our program, course materials were published online as open education resources."
     url: 
 feature_row_education_teaching:
   - image_path:
@@ -160,7 +161,7 @@ science. Both programs emphasized:
 </div>
 
 
-## Open Science programs that were close to my heart 
+## Open Science programs that are close to my heart 
 
 {% include feature_row id="feature_row_edsc" type="left" %}
 {% include feature_row id="feature_row_open_education" type="left" %}
@@ -170,7 +171,7 @@ science. Both programs emphasized:
 
 
 <div markdown="1" class="notice--primary">
-## Teaching approach and philosophy...
+## Teaching approach and philosophy
 
 Blended Online and In-Person Classrooms, Active Learning and Teaching
 

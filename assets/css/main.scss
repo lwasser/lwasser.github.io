@@ -18,6 +18,10 @@ h1, h2, h3 {color: #4F0845;
             font-family: 'Nanum Gothic', sans-serif!important;
 }
 
+h2, page__content h2 {
+	font-size: 2em!important;
+}
+
 body, p {
   font-family: 'Open Sans', sans-serif!important;
 }
@@ -32,8 +36,8 @@ div.notice--warning {
   font-size: 1.1em!important;
 }
 
-.notice--primary h2, .notice--warning h2 {
-    font-size: 2em!important;
+.notice h2, .notice--primary h2, .notice--warning h2 {
+    font-size: 2.2em!important;
     margin: 1em 0 0.5em!important
 }
 
@@ -76,9 +80,14 @@ div.notice--warning {
 	color: #666;
   }
 
+
+.archive__item-excerpt {
+	font-size:.9em!important;
+  }
+
 /* Top intro*/
 .archive__item-excerpt.intro p {
-	font-size: 1.3em;
+	font-size: 1.2em;
 	color:$gray;
 	font: 'Nanum Gothic', sans-serif;
   }
@@ -88,6 +97,10 @@ div.notice--warning {
 .feature__item--right {
 	text-align: left!important;
   }
+
+.notice {
+	font-size:.8em!important;
+}
 
 .notice .feature__wrapper p, .notice p {
 	font-size: 1.5em;
