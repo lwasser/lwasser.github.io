@@ -2,7 +2,7 @@
 title: "Open Source Software and Tool Development"
 layout: single
 #classes: wide
-permalink: free-open-source-software-for-science-foss/
+permalink: /open-source/
 author_profile: true
 header:
   overlay_color: "#333"
