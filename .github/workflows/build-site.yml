@@ -22,7 +22,7 @@ jobs:
             ${{ runner.os }}-gems-
               
       - name: Build Jekyll site
-        uses: helaili/jekyll-action@v2
+        uses: helaili/jekyll-action@56f7087
         with:
           build_only: true
           jekyll_build_options: -d _site
