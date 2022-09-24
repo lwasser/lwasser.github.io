@@ -27,7 +27,12 @@ header:
           url: "https://twitter.com/leahawasser"
         - label: "GitHub"
           url: "https://github.com/lwasser"
+categories:
+  - open-education
+  - online-learning
 ---
+
+# TURN THIS INTO BLOG! 
 
 Over the course of ~20 years, I have developed a model for teaching technical
 data skills that is flexible and scales to support impacting more people. My

@@ -1,9 +1,12 @@
 ---
-title: "Open Source Software and Tool Development"
+title: "Open Source Software for Education and Earth and Environmental Data Science"
+excerpt: "Teaching earth and environmental data science can be time consuming. Learn about my explorations with various open source tools to support teaching."
 layout: single
 #classes: wide
-permalink: free-open-source-software-for-science-foss/
+permalink: /open-source/
 author_profile: true
+related: true
+comments: true
 header:
   overlay_color: "#333"
 feature_row_tools:
@@ -30,19 +33,15 @@ feature_row_tools:
     btn_class: "btn--inverse"
   - image_path:
     alt: "customizable"
-    title: "Earth Analytics Python Conda Environment"
-    excerpt: "A curated conda environment and docker container that has a suite of spatial tools that support teaching and learning spatial open source python.."
-    url: https://www.github.com/earthlab/earth-analytics-python-env/
-    btn_label: "<i class='fas fa-external-link-alt'></i> View GitHub Repo"
-    btn_class: "btn--inverse"
-  - image_path:
-    alt: "customizable"
     title: "JupyterHub for Earth Analytics Teaching"
     excerpt: "A JupyterHub deployment system that supports multiple hubs with different configurations including custom environments, compute settings and more setup through Google Cloud."
     url: https://earthlab-hub-ops.readthedocs.io/
     btn_label: "<i class='fas fa-external-link-alt'></i> View Docs"
     btn_class: "btn--inverse"
-classes: wide
+categories:
+  - python
+  - open-source
+  - open-education
 ---
 
 Open source refers to a (programming) tool or project where the (source) or
@@ -71,8 +70,9 @@ In the past 2 years we have:
 I am currently serving as the editor in chief but am also actively
 seeking funding for this project to support hiring someone to work on this project
 full time.
-
+-->
 <!-- ** Might be cool to gather a list of collaborators here?? -->
+<!--
 
 <a href="https://www.pyopensci.org/" target="_blank" class="btn btn--info"><i class="fas fa-external-link-alt"></i> Learn more at pyOpenSci.org.</a>
 
@@ -90,6 +90,4 @@ Python packages that have plots.
 
 {% include feature_row id="feature_row_tools" %}
 </div>
-
-
-## Related Blog Posts
+-->
