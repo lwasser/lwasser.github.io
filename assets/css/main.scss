@@ -9,7 +9,7 @@ $text: #FFFFFF;
 $primary-text: #212121;
 $secondary-text: #757575;
 $accent: #4F0845;
-
+$font-grey: #280423;
 $gray: #4F0845 !default;
 
 
@@ -76,8 +76,38 @@ div.notice--warning {
 	color: #666;
   }
 
-/* Top intro  - NOT SURE WHY THE PADDING IS SO EXTREME
+/* Top intro*/
+.archive__item-excerpt.intro p {
+	font-size: 1.3em;
+	color:$gray;
+	font: 'Nanum Gothic', sans-serif;
+  }
+
+/*  notice block with feature wrote inside */
+
+.feature__item--right {
+	text-align: left!important;
+  }
+
+.notice .feature__wrapper p, .notice p {
+	font-size: 1.5em;
+	font-family: 'Nanum Gothic', sans-serif!important;
+	color: $font-grey;
+  }
+
+  .notice p, .notice li {
+	font-size: 1.2em!important;
+	color: $font-grey;
+	font-family: 'Nanum Gothic', sans-serif!important;
+  }
+
+  .notice .wide p, .notice .wide li {
+	margin-right: 40%;
+  }
+/* 
 I need a new intro style... 
+
+
 
 .page__inner-wrap .archive__item-excerpt p {
 	font-size: 1.1em;
