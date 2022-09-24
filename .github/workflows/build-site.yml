@@ -24,8 +24,9 @@ jobs:
       - name: Build Jekyll site
         uses: helaili/jekyll-action@v2
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           build_only: true
-          jekyll_build_options: -d _site
+          jekyll_src: _site
 
       - name: Check HTML using htmlproofer
         uses: chabad360/htmlproofer@master
