@@ -9,8 +9,11 @@ $text: #FFFFFF;
 $primary-text: #212121;
 $secondary-text: #757575;
 $accent: #4F0845;
-
+$font-grey: #280423;
 $gray: #4F0845 !default;
+
+
+
 h1, h2, h3 {color: #4F0845;
             font-family: 'Nanum Gothic', sans-serif!important;
 }
@@ -38,12 +41,96 @@ div.notice--warning {
   font-size: 1.4em!important;
 }
 
+/* Customize archive blocks*/
+.page__inner-wrap .archive__item-title {
+	margin-top: 0 !important;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.page__inner-wrap .archive__item-title {
+	font-size: 1.4em !important;
+	font-weight: bold !important;
+	margin-top: 1.7em!important;
+}
+
+.page__inner-wrap .archive__item-subsection {
+	font-size: 1.05em !important;
+	font-weight: bold !important;
+	margin-top: 1.5em!important;
+}
+
+
+.feature__wrapper.left-text p, .feature__wrapper.left-text h3 {
+	text-align: left;
+  }
+
+.feature__wrapper h2 {
+	font-size: 1.4em;
+	margin-top: 2em;
+	margin-bottom: 1.15em;
+  }
+
+.page__meta-readtime {
+	font-size: .8em;
+	color: #666;
+  }
+
+/* Top intro*/
+.archive__item-excerpt.intro p {
+	font-size: 1.3em;
+	color:$gray;
+	font: 'Nanum Gothic', sans-serif;
+  }
+
+/*  notice block with feature wrote inside */
+
+.feature__item--right {
+	text-align: left!important;
+  }
+
+.notice .feature__wrapper p, .notice p {
+	font-size: 1.5em;
+	font-family: 'Nanum Gothic', sans-serif!important;
+	color: $font-grey;
+  }
+
+  .notice p, .notice li {
+	font-size: 1.2em!important;
+	color: $font-grey;
+	font-family: 'Nanum Gothic', sans-serif!important;
+  }
+
+  .notice .wide p, .notice .wide li {
+	margin-right: 40%;
+  }
+/* 
+I need a new intro style... 
+
+
+
+.page__inner-wrap .archive__item-excerpt p {
+	font-size: 1.1em;
+	line-height: 1.2em;
+	padding-right: 0em;
+  }
+*/
+/* TIMELINE About page*/
+
+$primary: #CCCCCC; 
+$dark-primary: #303F9F;
+$light-primary: #C5CAE9;
+$text: #FFFFFF;
+$primary-text: #212121;
+$secondary-text: #757575;
+$accent: #4F0845;
+
+
 .greedy-nav {
 	background: #eee!important;
 }
 
 /* TIMELINE About page*/
-
 
 section {
   padding: 100px 0;
