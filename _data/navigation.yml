@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "Open Science Program Development"
+    url: /open-science-program-development/
   - title: "Open Education"
     url: /open-education-earth-data-science/
   - title: "Open Software"
