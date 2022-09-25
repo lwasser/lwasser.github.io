@@ -155,7 +155,7 @@ science. Both programs emphasized:
 * **Diversity, Equity, Inclusion & Accessibility:** making sure that programs are accessible to different people with different backgrounds, globally.
 </div>
 
-{% include feature_row id="feature_row_earthlab_education" type="left" %}
+{% include feature_row id="feature_row_earthlab_education" type="right" %}
 {% include feature_row id="feature_row_neondataskills" type="right" %}
 
 </div>

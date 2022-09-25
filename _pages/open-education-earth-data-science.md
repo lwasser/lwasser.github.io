@@ -1,6 +1,6 @@
 ---
 title: "Open Education"
-layout: single
+layout: single_law
 classes: wide
 permalink: /open-education-earth-data-science/
 author_profile: true
@@ -9,6 +9,7 @@ category: "open-education"
 header:
     overlay_image: images/vincent-guth-Sdc35GnHgvI-unsplash.jpg
     overlay_filter: 0.6
+related: true
 feature_row_courses:
   - image_path: images/j-kelly-brito-PeUJyoylfe4-unsplash.jpg
     alt: "Intermediate Earth Data Science Textbook"
@@ -105,20 +106,7 @@ University of Colorado - Boulder.
 {% include feature_row id="feature_row_nds" type="left" %}
 
 
-## Related Blog Posts
 
-<div class="list__item">
-{% for post in site.categories[page.category] %}
-<!-- List all posts in the page category  -->
-<!-- Somehow loop through each class lesson and count - right now i'm not including category on series pages -->
-<div class="list__item">
-<article class="archive__item">
-  <h2 class="archive__item-title"><a href="{{ site.baseurl }}{{ post.url}}">{{ post.title }}</a></h2>
-  <p class="archive__item-excerpt">{{ post.excerpt }}</p>
-</article>
-</div>
-{% endfor %}
-</div>
 
 
 <!--
