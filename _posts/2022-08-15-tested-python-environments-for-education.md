@@ -1,7 +1,7 @@
 ---
 title: "Using Tested Python Environments to Teach Earth and Environmental Data Science"
 excerpt: "Teaching earth and environmental data science can be time consuming. Learn about my explorations with various open source tools to support teaching."
-layout: single
+layout: single_law
 #classes: wide
 permalink: tested-python-environments-for-teaching-data-science/
 author_profile: true
