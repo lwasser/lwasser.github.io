@@ -10,7 +10,7 @@ header:
   overlay_color: "#333"
 categories:
   - science-communication
-  - neon-data-skills
+  - neon
 ---
 
 ## Exploring Science Communication on YouTube

@@ -1,0 +1,9 @@
+<h3> Other articles that you might enjoy...</h3>
+<div>
+    <div class="card-wrapper">
+    {% for post in site.categories[page.category] limit:4 %}
+    <!-- doing it this way so i can reuse the cards if i want to-->
+        {% include archive-cards.html %}
+    {% endfor %}
+    </div>
+</div>

@@ -8,9 +8,8 @@ header:
   overlay_color: "#333"
 categories:
   - teaching
-  - diversity-equity-inclusion-accessibility
+  - deia
   - open-education
-  - earth-lab
 comments: true
 
 ---
