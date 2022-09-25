@@ -13,24 +13,26 @@ $font-grey: #280423;
 $gray: #4F0845 !default;
 
 $custom-font: 'Nanum Gothic', sans-serif !important;
+$header-font: 'Nanum Gothic', sans-serif !important;
+$body-font: 'Nanum Gothic', sans-serif !important;
 
 h1, h2, h3 {color: #4F0845;
             font-family: $custom-font;
 }
 
 h2, page__content h2 {
-	font-size: 2.2em!important;
+	font-size: 1.6em!important;
 }
 h3 {
-	font-size: 1.4em!important;
+	font-size: 1.1em!important;
 }
 
 body, p {
-  font-family: 'Open Sans', sans-serif!important;
+  font-family: $custom-font;
 }
 
 body {
-	font-size:1.1em
+	font-size:.95em
 }
 
 figcaption {
@@ -107,7 +109,7 @@ div.notice--warning {
   }
 
 .feature__wrapper h2 {
-	font-size: 1.4em;
+	font-size: 1.3em;
 	margin-top: 2em;
 	margin-bottom: 1.15em;
   }
@@ -124,9 +126,8 @@ div.notice--warning {
 
 /* Top intro*/
 .archive__item-excerpt.intro p {
-	font-size: 1.2em;
+	font-size: 1em;
 	color:$gray;
-	font: 'Nanum Gothic', sans-serif;
   }
 
 /*  notice block with feature wrote inside */
@@ -154,8 +155,39 @@ div.notice--warning {
   .notice .wide p, .notice .wide li {
 	margin-right: 40%;
   }
+
+  // CARDS
+
+.card-title {
+	font-size: .8em!important;
+}
+.card-excerpt {
+	font-size:.65em!important;
+}
+.card-wrapper {
+	display: flex;
+}
+.card {
+	padding: 10px 30px;
+	border-radius: 4px;
+	background: #f5f5f5;
+	box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
+	text-decoration: none;
+
+	&:hover {
+    background: #ccc;
+	}
+}
+
+.card a {
+	text-decoration: none;
+	color: $secondary-text;
+}
+
 /* 
 I need a new intro style... 
+
+
 
 
 
@@ -181,6 +213,7 @@ $accent: #4F0845;
 }
 
 /* TIMELINE About page*/
+// TODO: this is messing with the broader fontss... 
 
 section {
   padding: 100px 0;
@@ -191,17 +224,17 @@ html, body {
 }
 
 body {
-  font-family: 'Roboto';
-  font-size: 17px;
-  font-weight: 400;
+//   font-family: 'Roboto';
+//   font-size: 17px;
+//   font-weight: 400;
   background-color: #eee;
 }
 
 h1 {
-  font-size: 200%;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 400;
+//   font-size: 200%;
+//   text-transform: uppercase;
+//   letter-spacing: 3px;
+//   font-weight: 400;
 }
 
 header {
@@ -337,7 +370,7 @@ header {
 	}
 }
 
-/* use this if you want an i mage background*/
+/* use this if you want an image background*/
 .timeline-item {
   .timeline-img-header {
 			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('https://picsum.photos/seed/picsum/200/300') center center no-repeat;

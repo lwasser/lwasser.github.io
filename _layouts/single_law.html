@@ -59,19 +59,12 @@ layout: default
       </footer>
 
       {% if page.related and site.categories[page.category].size > 0%}
-        <h3> Other articles that you might enjoy...</h3>
-        <div class="page__related">
-          <div class="grid__wrapper">
-            {% for post in site.categories[page.category] limit:4 %}
-            <!-- List all posts in the page category  -->
-              <!-- <article class="archive__item"> -->
-                {% include archive-single.html type="grid" %}
-                <!-- <h4 class="page__related-title"><a href="{{ site.baseurl }}{{ post.url}}">{{ post.title }}</a></42> -->
-                <!-- <p class="archive__item-excerpt">{{ post.excerpt }}</p> -->
-              <!-- </article> -->
-          </div>
-        {% endfor %}
-        </div>
+        <!-- <h3> Other articles that you might enjoy...</h3> -->
+
+        {% include related.html %}
+
+        <!-- # RELATED STUFF HERE - empty -->
+
       {% endif %}
 
 
