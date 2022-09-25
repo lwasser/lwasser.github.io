@@ -41,6 +41,10 @@ figcaption {
 	color: $primary-text;
 }
 
+// For bottom bar to allow for spacing above comments header
+.page__meta {
+	margin-bottom: 2em;
+}
 // Breakout  boxes
 
 .breakout {
