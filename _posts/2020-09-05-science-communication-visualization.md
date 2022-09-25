@@ -1,9 +1,9 @@
 ---
 title: "Exploring Science Communication of Remote Sensing Topics Using YouTube"
 excerpt: "Exploring creative ways of explaining complex scientific topics to broad audiences using YouTube"
-layout: single
+layout: single_law
 classes: wide
-permalink: /earth-data-science-communication/
+permalink: /short-videos-to-explain-complex-science-earth-data-science-/
 author_profile: true
 comments: true
 header:

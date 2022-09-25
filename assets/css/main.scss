@@ -12,29 +12,62 @@ $accent: #4F0845;
 $font-grey: #280423;
 $gray: #4F0845 !default;
 
-
+$custom-font: 'Nanum Gothic', sans-serif !important;
 
 h1, h2, h3 {color: #4F0845;
-            font-family: 'Nanum Gothic', sans-serif!important;
+            font-family: $custom-font;
 }
 
 h2, page__content h2 {
-	font-size: 2em!important;
+	font-size: 2.2em!important;
+}
+h3 {
+	font-size: 1.4em!important;
 }
 
 body, p {
   font-family: 'Open Sans', sans-serif!important;
 }
 
-body {font-size:90%}
+body {
+	font-size:1.1em
+}
+
+figcaption {
+	font-size: .9em !important;
+	line-height: 1.3em;
+	font-family: $custom-font;
+	font-weight: bold;
+	color: $primary-text;
+}
+
+// Breakout  boxes
+
+.breakout {
+	background-color: #fff;
+	padding: .2em 1.5em;
+	margin-top: 2em;
+	border-radius: .5em;
+	transition: all 0.2s ease-out;
+	box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+	top: -4px;
+	border: 1px solid #cccccc;
+}
 
 div.notice--warning {
   padding: 1.9em 2.3em !important
 }
 
-.notice--warning p, .notice--primary p {
-  font-size: 1.1em!important;
+.notice, .notice--warning, .notice--primary, .notice--success {
+	font-size: 2em!important;
 }
+.notice--success p, .notice--success li {
+	font-size: 1.2em!important;
+}
+
+// .notice--success p, .notice--warning p, .notice--primary p {
+//   font-size: 1.1em!important;
+// }
 
 .notice h2, .notice--primary h2, .notice--warning h2 {
     font-size: 2.2em!important;
