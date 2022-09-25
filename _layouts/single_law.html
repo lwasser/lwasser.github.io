@@ -45,6 +45,35 @@ layout: default
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
+
+      {% if page.related %}
+        <h3> Related articles</h3>
+        <!-- <div class="page__related">
+          <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
+          <div class="grid__wrapper">
+            {% for post in site.related_posts limit:4 %}
+              {% include archive-single.html type="grid" %}
+            {% endfor %}
+          </div>
+        </div> -->
+         
+        TODO: let's make this a card
+        <div class="page__related">
+          <div class="grid__wrapper">
+            {% for post in site.categories[page.category] limit:4 %}
+            <!-- List all posts in the page category  -->
+              <!-- <article class="archive__item"> -->
+                {% include archive-single.html type="grid" %}
+                <!-- <h4 class="page__related-title"><a href="{{ site.baseurl }}{{ post.url}}">{{ post.title }}</a></42> -->
+                <!-- <p class="archive__item-excerpt">{{ post.excerpt }}</p> -->
+              <!-- </article> -->
+          </div>
+        {% endfor %}
+        </div>
+      {% endif %}
+
+
+
       {% if page.comments %}
         {% include giscus.html %}
       {% endif %}
@@ -73,6 +102,8 @@ layout: default
   </article>
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
+
+
   {% if page.id and page.related and site.related_posts.size > 0 %}
     <div class="page__related">
       <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
