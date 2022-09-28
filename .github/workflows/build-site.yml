@@ -26,7 +26,6 @@ jobs:
         ACTIONS_STEP_DEBUG: True
         with:
           build_only: true
-          jekyll_src: _site
 
       - name: Check HTML using htmlproofer
         uses: chabad360/htmlproofer@master
