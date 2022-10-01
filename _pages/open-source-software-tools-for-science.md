@@ -49,33 +49,51 @@ classes: wide
 
 {% include intro-block id="intro" type="center" %}
 
-<!-- 
-Open source refers to a (programming) tool or project where the (source) or
-the code used to build the tool is available for anyone to see, use and
-contribute to. If the tool is free, it will be referred to as FOSS or Free Open
-Source Software. To make it easier to teach earth data science I help build
-free open source software tools. Below are some of the free-to-use open source
-projects that I am currently leading development of. -->
+<div class="feature__wrapper left-text">
+  <h2>pyOpenSci: Building diverse community around scientific Python tools through open peer review, training and mentorship </h2> 
+  <div class="feature__item--right">
+    <div class="archive__item">
+      <div class="archive__item-teaser">
+        <figure>
+            <a href="/images/xkcd-open-source-dependency.png">
+            <img src="/images/xkcd-open-source-dependency.png" ></a>
+            <figcaption>Critical scientific workflows and projects often have dependencies
+            that are maintained by volunteers. source: xkcd </figcaption>
+        </figure>
+      </div>
+      <div class="archive__item-body">
+        <div class="archive__item-excerpt">
+          pyOpenSci builds diverse community around
+          scientific Python open source tools. PyOpenSci has several core programs including:
+          <ol>
+            <li>Peer review of Python free open source software</li>
+            <li>Community building that supports both new and existing open source maintainers</li>
+            <li>Training and mentorship that will support a diverse set of new contributors supporting open source</li>
+          </ol>
+          <div class="notice">
+          <i class="fas fa-info-circle"></i> **Open Source Software (OSS)** refers to tools that are created in a way
+          that allows all of the code to be openly available for anyone to see (and
+          contribute too). FOSS adds the word "FREE" to the acronym (Free Open Source Software).
+          And simply refers to the fact that the software is free to use.
+          </div>
+
+          <h3> Open peer review of Python scientific software: </h3>
+
+          Academics are often "valued" based on their peer review publication record. 
+          However software is critical driving the workflows that are driving that research.
+
+          Peer review:
+          <ul>
+            <li>Supports credit in the form of a citable identifier (DOI) that maintainers can use to get credit for their work</li>
+            <li>Supports improved package infrastructure. Consistency can make it easier for more people to contribute / support maintaining the tool.</li>
+           <li>Supports improved documentation making it easier for scientists to use the tools.</li>
+          </ul> 
+      </div>
+    </div>
+  </div>
+</div>
 
 
-## pyOpenSci: Building diverse community around scientific Python tools through open peer review, training and mentorship  
-
-pyOpenSci is a community modeled after rOpenSci that promotes open science
-through supporting development and peer review of scientific software written in
-the `Python` programming language.
-
-I currently am organizing and leading the pyOpenSci effort with several colleagues.
-In the past 2 years we have:
-
-* Developed a robust peer review process
-* Created and published a contributing guide that provides guidelines and standards for Python packages
-* Created a partnership with JOSS (Journal of Open Source Software) to ensure they are citable.
-* Gathered extensive community support.
-* Reviewed a suite of open source python packages harnessing the power of volunteer reviewers and editors.
-
-I am currently serving as the editor in chief but am also actively
-seeking funding for this project to support hiring someone to work on this project
-full time.
 
 <!-- ** Might be cool to gather a list of collaborators here?? -->
 
@@ -83,7 +101,7 @@ full time.
 
 <!-- TODO: make this an include so i don't have to repeat so much code -->
 <div class="feature__wrapper left-text">
-    <h2>Open Source Software Tools That I Lead Development Of</h2>
+    <h2>Open source software tools that i've lead development of</h2>
     <div class="feature__item--right">
         <h3 class="archive__item-subsection">Making spatial data easier to work with in Python: EarthPy</h3>
         <p class="page__meta">
