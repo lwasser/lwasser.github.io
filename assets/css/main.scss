@@ -121,6 +121,12 @@ div.notice--warning {
 	color: #666;
   }
 
+.page__meta.condensed {
+	line-height: .8em;
+	margin-top: .25em;
+	margin-bottom: .7em;
+}
+
 
 .archive__item-excerpt {
 	font-size:.8em!important;
@@ -132,6 +138,11 @@ div.notice--warning {
 	color:$gray;
   }
 
+
+.archive__item-title.condensed {
+	font-size: 1.2em !important;
+	margin-top: 0 !important;
+  }
 //Only wide intro on non splash / wide layout pages otherwise it's too wide
   .layout--single .feature__item--center .archive__item-body {
 	width: 75%!important;

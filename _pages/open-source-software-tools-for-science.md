@@ -1,33 +1,59 @@
 ---
 title: "Open Source Software and Tool Development"
-layout: single
-#classes: wide
+layout: single_law
 permalink: /open-source/
 author_profile: true
 header:
   overlay_color: "#333"
-feature_row_tools:
-  - image_path: images/earthpy-free-open-source-tools-spatial-python.png
-    alt: "customizable"
-    title: "EarthPy"
-    excerpt: "A Python package that makes it easier to plot, manipulate and use spatial data. It also includes tools to manage data downloads and home directories."
-    url: https://earthpy.readthedocs.io
-    btn_label: "<i class='fas fa-external-link-alt'></i> View Docs"
-    btn_class: "btn--inverse"
-  - image_path: images/matplotcheck-free-open-source-tools-plots-python.png
-    alt: "customizable"
-    title: "Matplotcheck"
-    excerpt: "A Python package that makes it easier to test and validate matplotlib plots. This tool supports autograding student assignments and can be used in Jupyter Noteboks."
-    url: https://matplotcheck.readthedocs.io/
-    btn_label: "<i class='fas fa-external-link-alt'></i> View Docs"
-    btn_class: "btn--inverse"
-  - image_path: images/autograde-free-open-source-tools-jupyter-python.png
-    alt: "customizable"
-    title: "abc-classroom Platform"
-    excerpt: "A tool that makes managing github classroom repository management and grading easier."
-    url: https://abc-classroom.readthedocs.io/
-    btn_label: "<i class='fas fa-external-link-alt'></i> View Docs"
-    btn_class: "btn--inverse"
+feature_tools:
+  - image_path: /images/earthpy-free-open-source-tools-spatial-python.png
+    alt: "placeholder image 1"
+    title: "Making spatial data easier to work with in Python: EarthPy"
+    people: "2017:2022 Collaborators: Max Joseph, Jenny Palomino, Joe McGlinchy, Nathan Korinek"
+    excerpt: "EarthPy was developed to address the amount of complex code that students needed to write to open and plot raster and vector spatial data. The goal of developing this tool was always to create functions that perhaps in the future might be found in some of the bigger packages 
+                that had longer term maintenance and that were more broadly used. 
+                One of the biggest wins for EarthPy was contributing the entire clip module over to Geopandas! See below:
+                
+                * [Issue about clip module in GeoPandas repo](https://github.com/geopandas/geopandas/issues/821)
+
+                * [Pull request in GeoPandas repo](https://github.com/geopandas/geopandas/pull/1128)
+
+                * [Twitter power about upstreaming clip from EarthPy](https://twitter.com/geopandas/status/1225794664478990336)
+                "
+    url: "https://earthpy.readthedocs.io"
+    btn_label: "View Docs"
+    btn_class: "btn"
+  - image_path: /images/autograde-free-open-source-tools-jupyter-python.png
+    alt: "placeholder image 1"
+    title: "Making teaching with GitHub classroom easier: abc-classroom"
+    people: "2018-2022: Collaborators: Karen Cranston, Tim Head, Nathan Korinek "
+    excerpt: "abc-classroom is an Python open source project that makes it easier 
+                to work with GitHub classroom. [GitHub classroom](https://classroom.github.com/) 
+                is a classroom interface for GitHub that allows you to create assignments as 
+                GitHub repositories. Students can submit their assignments on 
+                GitHub as well using pull requests. Having students use GitHub 
+                every week for assignments engrains git and GitHub skills that 
+                are some of the most complex to learn for many students. "
+    url: "https://abc-classroom.readthedocs.io"
+    btn_label: "View Docs"
+    btn_class: "btn"
+  - image_path: /images/matplotcheck-free-open-source-tools-plots-python.png
+    alt: "Image that says matplotcheck"
+    title: "Testing code in student assignments to support autograding"
+    people: "Collaborators: Kristen Curry, Nathan Korinek, Jess Hamrick"
+    excerpt: "Matplotcheck is a tool built on top of Jess Hamrick's 
+              plotchecker tool. The idea behind this tool was that we'd setup
+              tests in student assignments submitted as Jupyter Notebook.
+              The long term vision was that these tests could in part run
+              on a Continuous Integration system to support them checking
+              their homework before submission. Further it would support
+              autograding using nbgrader of assignments reducing grading 
+              time. This project unfortunately took a back seat given all
+              of the other development work happening in my team at that time. "
+    url: "https://matplotcheck.readthedocs.io"
+    btn_label: "View Docs"
+    btn_class: "btn"
+feature_old_tools:
   - image_path:
     alt: "customizable"
     title: "Earth Analytics Python Conda Environment"
@@ -45,10 +71,13 @@ feature_row_tools:
 intro:
   - excerpt: "I am committed to supporting open source. If we can, we should all contribute. Open science depends on open tools. And maintaining open tools takes work."
 classes: wide
+related: true
+category: "open-source"
 ---
 
 {% include intro-block id="intro" type="center" %}
 
+<!--would be nice to make this on a white background so it pops -->
 <div class="feature__wrapper left-text">
   <h2>pyOpenSci: Building diverse community around scientific Python tools through open peer review, training and mentorship </h2> 
   <div class="feature__item--right">
@@ -71,7 +100,7 @@ classes: wide
             <li>Training and mentorship that will support a diverse set of new contributors supporting open source</li>
           </ol>
           <div class="notice">
-          <i class="fas fa-info-circle"></i> **Open Source Software (OSS)** refers to tools that are created in a way
+          <i class="fas fa-info-circle"></i> <strong>Open Source Software (OSS)</strong> refers to tools that are created in a way
           that allows all of the code to be openly available for anyone to see (and
           contribute too). FOSS adds the word "FREE" to the acronym (Free Open Source Software).
           And simply refers to the fact that the software is free to use.
@@ -88,111 +117,31 @@ classes: wide
             <li>Supports improved package infrastructure. Consistency can make it easier for more people to contribute / support maintaining the tool.</li>
            <li>Supports improved documentation making it easier for scientists to use the tools.</li>
           </ul> 
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-
-
-<!-- ** Might be cool to gather a list of collaborators here?? -->
-
 <a href="https://www.pyopensci.org/" target="_blank" class="btn btn--info"><i class="fas fa-external-link-alt"></i> Learn more at pyOpenSci.org.</a>
 
-<!-- TODO: make this an include so i don't have to repeat so much code -->
-<div class="feature__wrapper left-text">
-    <h2>Open source software tools that i've lead development of</h2>
-    <div class="feature__item--right">
-        <h3 class="archive__item-subsection">Making spatial data easier to work with in Python: EarthPy</h3>
-        <p class="page__meta">
-            <span class="page__meta-readtime">
-            <i class="fas fa-rocket" aria-hidden="true"></i>
-            2017:2022 Collaborators: Max Joseph, Jenny Palomino, Joe McGlinchy, Nathan Korinek
-            </span>
-        </p>
-        <div class="archive__item">
-            <div class="archive__item-teaser">
-            <img src="/images/earthpy-free-open-source-tools-spatial-python.png" alt="customizable">
-            </div>
-            <div class="archive__item-body">
-                <div class="archive__item-excerpt">
-                <p>EarthPy was developed to address the amount of complex code that students needed to write to open and plot raster and vector spatial data. The goal of developing this tool was always to create functions that perhaps in the future might be found in some of the bigger packages 
-                that had longer term maintenance and that were more broadly used. 
-                One of the biggest wins for EarthPy was contributing the entire clip module over to Geopandas! See below:
-                </p>
-                <ul>
-                  <li><a href="https://github.com/geopandas/geopandas/issues/821">Issue about clip module in GeoPandas repo</a></li>
-                  <li><a href="https://github.com/geopandas/geopandas/pull/1128">Pull request in GeoPandas repo</a></li>
-                  <li><a href="https://twitter.com/geopandas/status/1225794664478990336">Twitter power about upstreaming clip from EarthPy</a></li>
-                </ul>
-                </div>
-                <p><a href="https://earthpy.readthedocs.io" class="btn ">View Docs <i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a></p>
-            </div>
-      </div>
-    </div>
-    <div class="feature__item--right left-text">
-        <h3 class="archive__item-subsection">Facilitating teaching with GitHub classroom: abc-classroom</h3>
-        <p class="page__meta">
-            <span class="page__meta-readtime">
-            <i class="fas fa-rocket" aria-hidden="true"></i>
-            2018-2022: Collaborators: Karen Cranston, Tim Head, Nathan Korinek 
-            </span>
-        </p>
-        <div class="archive__item">
-            <div class="archive__item-teaser">
-            <img src="/images/autograde-free-open-source-tools-jupyter-python.png" alt="ABC-classroom tool badge.">
-            </div>
-            <div class="archive__item-body ">
-                <div class="archive__item-excerpt">
-                <p>More here...
-                </p>
-                </div>
-            </div>
-      </div>
-    </div>
-    <div class="feature__item--right">
-    <h3 class="archive__item-subsection">matplotcheck</h3>
-        <p class="page__meta">
-            <span class="page__meta-readtime">
-            <i class="fas fa-rocket" aria-hidden="true"></i>
-            Collaborators: Kristen Curry, Nathan Korinek, Jess Hamrick
-            </span>
-        </p>
-        <div class="archive__item">
-            <div class="archive__item-teaser">
-            <img src="/images/matplotcheck-free-open-source-tools-plots-python.png" alt="customizable">
-            </div>
-            <div class="archive__item-body">
-                <div class="archive__item-excerpt">
-                    <p>sdfasdfasdf
-                    </p>
-                </div>
-                <p><a href="https://datacarpentry.org/geospatial-workshop/" class="btn ">View Lessons <i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a></p>
-            </div>
-      </div>
-    </div>
-</div>
 
+## Open source software tools that i've lead development of
+
+{% include feature_block_law id="feature_tools" type="left" %}
 
 
 <div markdown="1" class="notice--primary">
-## 
-
 Below are several tools that I worked on when I was the Education director
 at Earth Lab. 
 
 The goal of these tools was to make teaching earth data science. 
-
-
-
 
 *   is used  as a part of the `earth-analytics-python` open education course.
 `Matplotcheck` was designed to support unit testing of plots for autograding
 student assignment. It also is useful for developing unit tests in
 Python packages that have plots.
 
-{% include feature_row id="feature_row_tools" %}
+{% include feature_row id="feature_old_tools" %}
 </div>
 
-
-## Related Blog Posts
