@@ -24,7 +24,7 @@ h2, page__content h2 {
 	font-size: 1.6em!important;
 }
 h3 {
-	font-size: 1.1em!important;
+	font-size: 1.2em!important;
 }
 
 body, p {
@@ -32,7 +32,7 @@ body, p {
 }
 
 body {
-	font-size:.95em
+	font-size:.85em
 }
 
 figcaption {
@@ -46,6 +46,7 @@ figcaption {
 // For bottom bar to allow for spacing above comments header
 .page__meta {
 	margin-bottom: 2em;
+	margin-top: 0;
 }
 // Breakout  boxes
 
@@ -98,9 +99,10 @@ div.notice--warning {
 }
 
 .page__inner-wrap .archive__item-subsection {
-	font-size: 1.05em !important;
+	font-size: 1.2em !important;
 	font-weight: bold !important;
 	margin-top: 1.5em!important;
+	margin-bottom: 0;
 }
 
 
@@ -115,19 +117,24 @@ div.notice--warning {
   }
 
 .page__meta-readtime {
-	font-size: .8em;
+	font-size: .7em;
 	color: #666;
   }
 
 
 .archive__item-excerpt {
-	font-size:.9em!important;
+	font-size:.8em!important;
   }
 
 /* Top intro*/
 .archive__item-excerpt.intro p {
 	font-size: 1em;
 	color:$gray;
+  }
+
+//Only wide intro on non splash / wide layout pages otherwise it's too wide
+  .layout--single .feature__item--center .archive__item-body {
+	width: 75%!important;
   }
 
 /*  notice block with feature wrote inside */
