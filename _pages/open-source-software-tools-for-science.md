@@ -1,33 +1,59 @@
 ---
 title: "Open Source Software and Tool Development"
-layout: single
-#classes: wide
+layout: single_law
 permalink: /open-source/
 author_profile: true
 header:
   overlay_color: "#333"
-feature_row_tools:
-  - image_path: images/earthpy-free-open-source-tools-spatial-python.png
-    alt: "customizable"
-    title: "EarthPy"
-    excerpt: "A Python package that makes it easier to plot, manipulate and use spatial data. It also includes tools to manage data downloads and home directories."
-    url: https://earthpy.readthedocs.io
-    btn_label: "<i class='fas fa-external-link-alt'></i> View Docs"
-    btn_class: "btn--inverse"
-  - image_path: images/matplotcheck-free-open-source-tools-plots-python.png
-    alt: "customizable"
-    title: "Matplotcheck"
-    excerpt: "A Python package that makes it easier to test and validate matplotlib plots. This tool supports autograding student assignments and can be used in Jupyter Noteboks."
-    url: https://matplotcheck.readthedocs.io/
-    btn_label: "<i class='fas fa-external-link-alt'></i> View Docs"
-    btn_class: "btn--inverse"
-  - image_path: images/autograde-free-open-source-tools-jupyter-python.png
-    alt: "customizable"
-    title: "abc-classroom Platform"
-    excerpt: "A tool that makes managing github classroom repository management and grading easier."
-    url: https://abc-classroom.readthedocs.io/
-    btn_label: "<i class='fas fa-external-link-alt'></i> View Docs"
-    btn_class: "btn--inverse"
+feature_tools:
+  - image_path: /images/earthpy-free-open-source-tools-spatial-python.png
+    alt: "placeholder image 1"
+    title: "Making spatial data easier to work with in Python: EarthPy"
+    people: "2017:2022 Collaborators: Max Joseph, Jenny Palomino, Joe McGlinchy, Nathan Korinek"
+    excerpt: "EarthPy was developed to address the amount of complex code that students needed to write to open and plot raster and vector spatial data. The goal of developing this tool was always to create functions that perhaps in the future might be found in some of the bigger packages 
+                that had longer term maintenance and that were more broadly used. 
+                One of the biggest wins for EarthPy was contributing the entire clip module over to Geopandas! See below:
+                
+                * [Issue about clip module in GeoPandas repo](https://github.com/geopandas/geopandas/issues/821)
+
+                * [Pull request in GeoPandas repo](https://github.com/geopandas/geopandas/pull/1128)
+
+                * [Twitter power about upstreaming clip from EarthPy](https://twitter.com/geopandas/status/1225794664478990336)
+                "
+    url: "https://earthpy.readthedocs.io"
+    btn_label: "View Docs"
+    btn_class: "btn"
+  - image_path: /images/autograde-free-open-source-tools-jupyter-python.png
+    alt: "placeholder image 1"
+    title: "Making teaching with GitHub classroom easier: abc-classroom"
+    people: "2018-2022: Collaborators: Karen Cranston, Tim Head, Nathan Korinek "
+    excerpt: "abc-classroom is an Python open source project that makes it easier 
+                to work with GitHub classroom. [GitHub classroom](https://classroom.github.com/) 
+                is a classroom interface for GitHub that allows you to create assignments as 
+                GitHub repositories. Students can submit their assignments on 
+                GitHub as well using pull requests. Having students use GitHub 
+                every week for assignments engrains git and GitHub skills that 
+                are some of the most complex to learn for many students. "
+    url: "https://abc-classroom.readthedocs.io"
+    btn_label: "View Docs"
+    btn_class: "btn"
+  - image_path: /images/matplotcheck-free-open-source-tools-plots-python.png
+    alt: "Image that says matplotcheck"
+    title: "Testing code in student assignments to support autograding"
+    people: "Collaborators: Kristen Curry, Nathan Korinek, Jess Hamrick"
+    excerpt: "Matplotcheck is a tool built on top of Jess Hamrick's 
+              plotchecker tool. The idea behind this tool was that we'd setup
+              tests in student assignments submitted as Jupyter Notebook.
+              The long term vision was that these tests could in part run
+              on a Continuous Integration system to support them checking
+              their homework before submission. Further it would support
+              autograding using nbgrader of assignments reducing grading 
+              time. This project unfortunately took a back seat given all
+              of the other development work happening in my team at that time. "
+    url: "https://matplotcheck.readthedocs.io"
+    btn_label: "View Docs"
+    btn_class: "btn"
+feature_old_tools:
   - image_path:
     alt: "customizable"
     title: "Earth Analytics Python Conda Environment"
@@ -42,54 +68,80 @@ feature_row_tools:
     url: https://earthlab-hub-ops.readthedocs.io/
     btn_label: "<i class='fas fa-external-link-alt'></i> View Docs"
     btn_class: "btn--inverse"
+intro:
+  - excerpt: "I am committed to supporting open source. If we can, we should all contribute. Open science depends on open tools. And maintaining open tools takes work."
 classes: wide
+related: true
+category: "open-source"
 ---
 
-Open source refers to a (programming) tool or project where the (source) or
-the code used to build the tool is available for anyone to see, use and
-contribute to. If the tool is free, it will be referred to as FOSS or Free Open
-Source Software. To make it easier to teach earth data science I help build
-free open source software tools. Below are some of the free-to-use open source
-projects that I am currently leading development of.
+{% include intro-block id="intro" type="center" %}
 
+<!--would be nice to make this on a white background so it pops -->
+<div class="feature__wrapper left-text">
+  <h2>pyOpenSci: Building diverse community around scientific Python tools through open peer review, training and mentorship </h2> 
+  <div class="feature__item--right">
+    <div class="archive__item">
+      <div class="archive__item-teaser">
+        <figure>
+            <a href="/images/xkcd-open-source-dependency.png">
+            <img src="/images/xkcd-open-source-dependency.png" ></a>
+            <figcaption>Critical scientific workflows and projects often have dependencies
+            that are maintained by volunteers. source: xkcd </figcaption>
+        </figure>
+      </div>
+      <div class="archive__item-body">
+        <div class="archive__item-excerpt">
+          pyOpenSci builds diverse community around
+          scientific Python open source tools. PyOpenSci has several core programs including:
+          <ol>
+            <li>Peer review of Python free open source software</li>
+            <li>Community building that supports both new and existing open source maintainers</li>
+            <li>Training and mentorship that will support a diverse set of new contributors supporting open source</li>
+          </ol>
+          <div class="notice">
+          <i class="fas fa-info-circle"></i> <strong>Open Source Software (OSS)</strong> refers to tools that are created in a way
+          that allows all of the code to be openly available for anyone to see (and
+          contribute too). FOSS adds the word "FREE" to the acronym (Free Open Source Software).
+          And simply refers to the fact that the software is free to use.
+          </div>
 
-## pyOpenSci: Peer Reviewed, Documented, Tested and Discoverable Open Source Software for Science
+          <h3> Open peer review of Python scientific software: </h3>
 
-pyOpenSci is a community modeled after rOpenSci that promotes open science
-through supporting development and peer review of scientific software written in
-the `Python` programming language.
+          Academics are often "valued" based on their peer review publication record. 
+          However software is critical driving the workflows that are driving that research.
 
-I currently am organizing and leading the pyOpenSci effort with several colleagues.
-In the past 2 years we have:
-
-* Developed a robust peer review process
-* Created and published a contributing guide that provides guidelines and standards for Python packages
-* Created a partnership with JOSS (Journal of Open Source Software) to ensure they are citable.
-* Gathered extensive community support.
-* Reviewed a suite of open source python packages harnessing the power of volunteer reviewers and editors.
-
-I am currently serving as the editor in chief but am also actively
-seeking funding for this project to support hiring someone to work on this project
-full time.
-
-<!-- ** Might be cool to gather a list of collaborators here?? -->
+          Peer review:
+          <ul>
+            <li>Supports credit in the form of a citable identifier (DOI) that maintainers can use to get credit for their work</li>
+            <li>Supports improved package infrastructure. Consistency can make it easier for more people to contribute / support maintaining the tool.</li>
+           <li>Supports improved documentation making it easier for scientists to use the tools.</li>
+          </ul> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <a href="https://www.pyopensci.org/" target="_blank" class="btn btn--info"><i class="fas fa-external-link-alt"></i> Learn more at pyOpenSci.org.</a>
 
 
-<div markdown="1" class="notice--primary">
-## Open Source Software Tools That I Am Currently Working On
+## Open source software tools that i've lead development of
 
-I am leading the development of several free open source software tools for
-`Python`. These tools have been developed collaboratively with colleagues at
-Earth Lab, undergraduate interns and graduate students. `EarthPy` is used
-extensively as a part of the `earth-analytics-python` open education course.
+{% include feature_block_law id="feature_tools" type="left" %}
+
+
+<div markdown="1" class="notice--primary">
+Below are several tools that I worked on when I was the Education director
+at Earth Lab. 
+
+The goal of these tools was to make teaching earth data science. 
+
+*   is used  as a part of the `earth-analytics-python` open education course.
 `Matplotcheck` was designed to support unit testing of plots for autograding
 student assignment. It also is useful for developing unit tests in
 Python packages that have plots.
 
-{% include feature_row id="feature_row_tools" %}
+{% include feature_row id="feature_old_tools" %}
 </div>
 
-
-## Related Blog Posts
