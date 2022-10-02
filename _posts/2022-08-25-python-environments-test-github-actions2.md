@@ -1,6 +1,6 @@
 ---
-title: "How to setup testing for a Python environment using GitHub Actions "
-excerpt: "How to... more"
+title: "How to setup testing for a Python conda environment using GitHub Actions"
+excerpt: "In this post I will discuss how to setup a build using GitHub actions that was created to test the earth-analytics-python conda environment on different operating systems. Testing supports building open science workflows as it ensures that the environment will run on Windows, Mac and Linux. "
 layout: single_law
 related: true
 #classes: wide
@@ -19,13 +19,24 @@ categories:
 ---
 
 
-## How to test an environment? Introducing your new best friend: Continuous Integration
+## Introducing your new best friend: Continuous Integration
 
-In the previous post, we talked about how Python environment files can help
+In the previous post, I discussed the earth-analytics-python environment that I setup to support courses I was teaching at CU Boulder. In that blog I talked about Python environment files can help
 you make a more reproducible environment that other people can install.
-However, what we didn't get to in that post is the next level:
+However, what I didn't get to in that post is how to ensure that the environment will work on Windows, Mac and Linux. 
 
-testing your environment in multiple operating systems (Windows, Mac and Linux). 
+In my courses, students often had machines with different operating systems.
+A common pain point of teaching Python for earth and environmental data science was ensuring students had a functioning Python environment to work on. 
+
+### Don't worry, testing isn't as scary as it sounds 
+
+When i first heard about the idea of testing i thought -- RUN -- the other way - fast. This isn't science. But I was wrong. If you want to create workflows that others can use, then you need to ensure that yoru environment is reproducible. 
+
+Now in another post I will talk about virtual solutions like DOcker. In fact
+the next step in this workflow is creating a docker environment so stay tuned for that post!
+
+But today - the subject at hand is creating automated tests using your new 
+best friend - Continuous integration. 
 
 While testing may sound complex, it's actually not too bad to set it up 
 if you are using GitHub. Here i'll break that all down for you!
@@ -40,11 +51,18 @@ be GitHub and GitHub actions.
 Continuous integration (CI) is a way of automating testing of changes made to a code 
 base. It can also be used to perform tasks such as - push code to another location
 or send to Docker, etc. GitHub actions is a free-to-use continuous integration
-platform that works seamlessly with GitHub. 
+platform that works seamlessly with GitHub. CI runs in the "cloud" on GitHub in this example. The GitHub cloud. 
 
-CI is your new super power enabled BFF (best friends forever). You can setup a 
+<i class="fas fa-info-circle"></i> Remember that git is the tool that runs version control. GitHub.com is just a cloud based platform that runs `git`. 
+{: .notice }
+
+Using GitHub actions, your new super power enabled BFF (best friends forever), you can setup a 
 workflow in the cloud (on GitHub)
-that runs your environment on all 3 different operating systems. You could 
+that runs your environment on all 3 different operating systems. All three! 
+
+Just like that. 
+
+You could 
 even test it on different versions of `Python` if you wanted to. 
 
 And it's all FREE. 
@@ -54,29 +72,31 @@ Am I blowing your mind yet?
 <figure>
 	<a href="/images/ci-al-pacino-scarface.jpg">
     <img src="/images/ci-al-pacino-scarface.jpg"></a>
-	<figcaption>Say hello to your new little friend -- continuous integration! :). <i>Thanks Filipe for the meme inspiration!</i>
+	<figcaption>Say hello to your new little friend -- continuous integration! :). 
   </figcaption>
 </figure> 
 
-When we first setup testing for this environment, we were using other CI platforms
-such as Travis CI and Appveyor for windows. However now we use GitHub actions 
-as this is a free platform (for now as of October 2022) and it nicely integrates
+When we first setup testing for the earth-analytics-python environment, we were using other CI platforms
+such as Travis CI and Appveyor for windows. However now we use GitHub actions. Actions is free and (for now as of October 2022). It nicely integrates
 into all pull requests and changes that you make to the repository.  
 {: .notice }
 
-## How do GitHub actions work? s
+## First, figure define clearly what your testing goals are
 
-Next I'll talk about how GitHub Actions work.
 At the most basic level, we are going to use GitHub actions to do the same thing
-that you did in the previous post, to build a conda environment. But we want to 
+that you did in the previous post: 
+
+to build a `conda` environment. 
+
+But we want to 
 build that environment on multiple operating systems:
 
 * Windows, Mac and Linux
 
-We also want this build to happen any time we update the environment on GitHub. 
-This will test whether the environment still builds or not. 
+We also want this build to happen any time we update the environment on GitHub. This will test whether the environment still builds or not after you've say migrated to the next version of python (3.8 to 3.9) or added
+a new package to your environment. 
 
-## 
+## When do GitHub actions run?
 
 GitHub actions can be customized 
 to run whenever you want them to run:
@@ -86,20 +106,26 @@ to run whenever you want them to run:
 * When someone submits a pull request
 * Or even as a "Cron" job which means they might run once a week, or once a month regardless of whether a change has been made to the repository. 
 
-### GitHub actions allows you to chose which operating system(s) you want to run on
-
-And you can chose what operating system the job is built on.
-
-You can easily, with just a few links of code tell GitHub actions to test / install your environment on 
-Windows, Mac OS and Linux. And from each build you can see if the environment 
-hangs, or doesn't install as you want it to. 
-
 Next i'll break this all down. 
 
 ### Testing the Earth Analytics Python environment with GitHub Actions
 
-To begin, to start using GitHub actions you need to create a `.yaml` file that lives
-in a directory like this in your git repo (and on GitHub):
+[First - have a look at the actions file:](https://github.com/lwasser/earth-analytics-python-env/blob/main/.github/workflows/build-test-envt.yml) 
+You may notice that the file is a .yml file. Just like our environment, 
+this is a recipe for running the CI job. It provides GitHub actions will 
+all of the steps it needs to run the job that you wish to run. 
+
+Remember that Yaml can be thought of a list that provides a computer with instructions
+to do something. 
+{: .notice }
+
+A job is simple a single "run" of the task or tasks specified on the action.
+SO in this case when I say job, i'm referring to building the environment. 
+
+## Where to you save your actions file. 
+To begin, to start using GitHub actions you need to create a `.yaml` file 
+in the `.github/workflows/filename.yml` directory
+in your git repo (and on GitHub):
 
 ```bash
 .github/
@@ -107,18 +133,19 @@ in a directory like this in your git repo (and on GitHub):
       envt-file.yml
 ```
 
+## Breaking down the pieces of the build
 
-While I won't explain [every aspect of this environment](https://github.com/lwasser/earth-analytics-python-env/blob/main/.github/workflows/build-test-envt.yml) let's look at a few
-important parts. First notice that the environment itself is a YAML file! Yup, the 
-same type of file that we talked about above which defined the environment. 
-Remember that Yaml can be thought of a list that provides a computer with instructions
-to do something. 
+Similar to our environment file in the last blog, notice that at the top of 
+this yaml file is the name. In some cases you may have multiple builds in your GitHub repo so naming each uniquely is helpful. 
 
-
+```yaml
+name: Test EA Python Envt Mac, Linux, Windows
+```
 
 ### When do you want the action to run?
-The top part of the environment gives it a `name:` and also otells it when to 
-run the action. In this case we want it to run when there is 
+
+Next, you tell GitHub when to
+run the action. In this case you want it to run when there is 
 
 1. a change on any branch and
 2. on any pull request that someone makes to the repository
@@ -133,10 +160,12 @@ on:
       - '*'
 ```
 
-Lower down we tell it to run the job on Ubuntu (Linux), Macos and windows). We
-specify the latest versions of each operating system in this example. 
+### Matrix magic 
+
+In the next section you create the  job itself. 
 
 ```yaml
+jobs:
   runtests:
     name: conda (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
@@ -144,10 +173,23 @@ specify the latest versions of each operating system in this example.
       fail-fast: false
       matrix:
         os: ["ubuntu-latest", "macos-latest", "windows-latest"]
+    defaults:
+      run:
+        shell: bash -l {0}
 ```
 
-Lower down we install `miniconda` and tell it to install the `earth-analytics-python`
-environment
+`runtests` does a few things:
+
+1. It sets up what is called a matrix. The matrix allows you to run the same build, using different setups. In this case we loop through the operating system (`os:["ubuntu-latest", "macos-latest", "windows-latest"]`). On each run, the environment will be installed on the latest version of each operating system listed above - windows, mac and linux (ubuntu).
+
+In each run Actions replaces `${{ matrix.os }}` each time with the operating system in the list
+that we told it to run on. 
+
+### GitHub actions created by others
+
+There is an entire catalog of GitHub actions that others maintain. Most of 
+the common tasks that you might want to do in a build are often already created.
+
 
 ```yaml
     steps:
@@ -163,8 +205,34 @@ environment
           activate-environment: earth-analytics-python
 ```
 
-And finally, once the environment is run, we check the environment using 
-`conda list` and then import two packages: `earthpy` and `rasterio`
+Above you use the `conda-incubator/setup-miniconda@v2` action - maintained by the conda commnity. While there are several nice conda actions available I like this one because:
+
+1. it installs `miniconda` which is a simplified python / conda bundle. I tell my students to install that over anaconda as well to avoid conflicts and the extra tools that anaconda installs (less is more)
+2. It also allows you to specify what channels you want to build to use (`conda-forge`). Refer to the previous blog if you have forgotten about channels already. Don't worry - we've all been there. There's a lot here to digest :). 
+3. Finally it allows you to specify the environment file that you wish to run
+and the name of the environment that you wisht o activate once the run is complete. 
+
+This is pretty much everything that we need to do. And these steps actually
+mimick the steps that you would take on your machine to
+
+1. install miniconda
+2. install the `earth-analytics-python` environment
+3. activate the environment
+
+### Final tests - import some packages
+
+This last step is optional. But we found with this environment that if a package was going to fail, it was often `rasterio`. Why? Because `rasterio` depends on `GDAL` and if you recall from my previous post, `GDAL` is sometimes a little troublemaker when working with spatial data. 
+
+<figure>
+	<a href="/images/gdal-meme-filipe.jpg">
+    <img src="/images/gdal-meme-filipe.jpg"></a>
+	<figcaption>Remember this? Meme created by a colleague, Filipe about installing GDAL in a 
+  Python environment.
+  </figcaption>
+</figure>
+
+Once the environment is setup, we activate and run some checks. 
+Below we're doing a few things
 
 ```yaml
     - run: conda list
@@ -172,15 +240,26 @@ And finally, once the environment is run, we check the environment using
     - run: python -c "import rasterio"
 ```
 
-If the build runs successfully, your commit will have a little green check next 
-to it. 
+1. we are calling `conda list` to see all packages that are in our new environment. 
+2. , You import two packages that we found were likely to cause issues `earthpy` and `rasterio`
+
+These steps are ofcourse specific to my build and issues that I  commonly saw when students were building the environment. You might chose to run a littls pythons cript or something specific to your workflow!
+
+* The `run` command simply tells the build to run the command at the command line. 
+
+* `python -c "import rasterio"` just tells the build to run the command in `Python`.
+
+You can also place multiple bash commands in a single line if you wish using the `|` symbol. `- run: |` 
+{: .notice }
+
+If the build runs successfully on all three operating systems, your commit will have a little green check next 
+to it. Kind of like this: 
 
 <figure>
 	<a href="/images/blog/ci-green-passing.png">
     <img src="/images/blog/ci-green-passing.png"></a>
 	<figcaption> If the build runs successfully, your commit will have a little green check next 
 to it. And if it fails, it will have a dreaded red x. 
-
   </figcaption>
 </figure>
 
@@ -189,77 +268,60 @@ And if it fails, it will have a dreaded red x.
 If the build fails, it will give you some output telling you more about why 
 it failed. This will allow you to trouble shoot the build. 
 
-## Why test an environment?
 
-Now that we've gotten the basics out of the way, let's talk about 
-why testing is important.
+<figure>
+	<a href="/images/blog/ci-green-passing.png">
+    <img src="/images/blog/ci-green-passing.png"></a>
+	<figcaption> If the build runs successfully, your commit will have a little green check next 
+to it. And if it fails, it will have a dreaded red x. 
+  </figcaption>
+</figure>
 
-
-
-
-A few other things about this environment made it great
-1. We also setup a docker container that allowed us to use it elsewhere such as to
-support testing builds of our online lessons on [earthdatascience.org](https://www.earthdatascience.org) - stay tuned for a blog post on building that site and other open education portals!
-2. We could also use the Docker container it if we wanted to spin up quick myBinder sessions for a workshop
-3. Finally it allowed us to use it in a JupyterHub which I will talk about in another blog.
-
-So all in all it was a win-win for the program. 
-
-*At the time GitHub actions wasn't available so we other platforms for CI such as 
-Travis.*
-
-SO that is how we solved the mighty Python environment problem.
-
-I'm curious if others have run into this issue with Python environments. Please
-leave a comment below if you have any thoughts.
-
-<!--
-
-Open source refers to a (programming) tool or project where the (source) or
-the code used to build the tool is available for anyone to see, use and
-contribute to. If the tool is free, it will be referred to as FOSS or Free Open
-Source Software. To make it easier to teach earth data science I help build
-free open source software tools. Below are some of the free-to-use open source
-projects that I am currently leading development of.
+<figure>
+	<a href="/images/blog/ea-python-github-actions-build-matrix-os.png">
+    <img src="/images/blog/ea-python-github-actions-build-matrix-os.png" alt="An image showing the GitHub action page when a job is initially kicked off"></a>
+	<figcaption> When you go into the "checks" section of a PR or into the actions tab within the GitHub interface you should see the job for your latest commit running. Here in my bump of Python from 3.8 to 3.9 you can see 0/3 "jobs" have completed running. A job refers to running the entire build: installing miniconda, installing the environment and trying to import 2 packages (earthpy and rasterio). 
+  </figcaption>
+</figure>
 
 
-## pyOpenSci: Peer Reviewed, Documented, Tested and Discoverable Open Source Software for Science
 
-pyOpenSci is a community modeled after rOpenSci that promotes open science
-through supporting development and peer review of scientific software written in
-the `Python` programming language.
-
-I currently am organizing and leading the pyOpenSci effort with several colleagues.
-In the past 2 years we have:
-
-* Developed a robust peer review process
-* Created and published a contributing guide that provides guidelines and standards for Python packages
-* Created a partnership with JOSS (Journal of Open Source Software) to ensure they are citable.
-* Gathered extensive community support.
-* Reviewed a suite of open source python packages harnessing the power of volunteer reviewers and editors.
-
-I am currently serving as the editor in chief but am also actively
-seeking funding for this project to support hiring someone to work on this project
-full time.
--->
-<!-- ** Might be cool to gather a list of collaborators here?? -->
-<!--
-
-<a href="https://www.pyopensci.org/" target="_blank" class="btn btn--info"><i class="fas fa-external-link-alt"></i> Learn more at pyOpenSci.org.</a>
+<figure>
+	<a href="/images/blog/ea-python-github-actions-build-running-yellow-red.png">
+    <img src="/images/blog/ea-python-github-actions-build-running-yellow-red.png" alt="Image showing the 3 yaml file specified builds in GitHub actions interface online."></a>
+	<figcaption> Here you can see the job name on the left `Test EA Python ENvt Mac,...`. You can also see a commit that I made to bump python to version 3.9. I no longer maintain this environment - I wonder if this will break the build? :) Note, the dreaded red x for the run that happened 15 days ago when a license was added by it seems like yours truly (me :) ). Oops
+  </figcaption>
+</figure>
 
 
-<div markdown="1" class="notice--primary">
-## Open Source Software Tools That I Am Currently Working On
+<figure>
+	<a href="/images/blog/ea-python-github-actions-build-run-steps.png">
+    <img src="/images/blog/ea-python-github-actions-build-run-steps.png" alt="Image showing the GitHub action screen for a single matrix job that is running."></a>
+	<figcaption> Here on the left you can see the matrix job running. Note that conda is being installed on ubuntu-latest, macos-latest and windows-latest just as you asked it to. The yellow "dot" signifies a running job. 
+  </figcaption>
+</figure>
 
-I am leading the development of several free open source software tools for
-`Python`. These tools have been developed collaboratively with colleagues at
-Earth Lab, undergraduate interns and graduate students. `EarthPy` is used
-extensively as a part of the `earth-analytics-python` open education course.
-`Matplotcheck` was designed to support unit testing of plots for autograding
-student assignment. It also is useful for developing unit tests in
-Python packages that have plots.
+And that's it.
 
-{% include feature_row id="feature_row_tools" %}
-</div>
--->
 
+## A few other things we used this environment for
+
+There are a few other elements of this environment that made it useful:
+
+1. We also setup a docker container that allowed us to use the environment in different locations - such as our Jupyter Hub (I'll write another post on that in the future)
+2. We can use it to setup a quick binder instance for anyone to play around with. 
+3. It also became the backbone of a more complex build of the lessons on [earthdatascience.org](https://www.earthdatascience.org) which i'll talk about again in another post. 
+
+This type of setup is flexible. And once you have it setup, it's not too hard to maintain.  It also saved me a lot of time trouble shooting student
+environment issues. Id simply update the environment once a semester before classes began. And I was good for the next 4 months.  
+
+## Thanks to these awesome people who contributed to this build!
+
+Filipe Fernandes, Tim Head, Karen Cranston, Max Joseph, Nathan Korinek
+
+
+## Thoughts? Comments? 
+
+So that is how we solved the mighty Python environment problem.
+
+I'm curious if others have run into this issue with Python environments. Please leave a comment below if you have any thoughts or approaches to share.
