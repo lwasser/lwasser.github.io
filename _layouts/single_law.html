@@ -58,17 +58,6 @@ layout: default
         {% endif %}
       </footer>
 
-      {% if page.related and site.categories[page.category].size > 0%}
-        <!-- <h3> Other articles that you might enjoy...</h3> -->
-
-        {% include related.html %}
-
-        <!-- # RELATED STUFF HERE - empty -->
-
-      {% endif %}
-
-
-
       {% if page.comments %}
         {% include giscus.html %}
       {% endif %}
@@ -85,16 +74,21 @@ layout: default
     {% endif %}
   </article>
 
+  {% comment %}
+  {% if page.related and site.categories[page.category].size > 0%}
+  <!-- This is for when related content is on a landing page vs a blog post -->
+  {% include related.html %}
+  {% endif %}
+  {% endcomment %}
+
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
 
-
   {% if page.id and page.related and site.related_posts.size > 0 %}
+     
     <div class="page__related">
-      <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
+      <!-- <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4> -->
       <div class="grid__wrapper">
-        {% for post in site.related_posts limit:4 %}
-          {% include archive-single.html type="grid" %}
-        {% endfor %}
+          {% include related.html %}
       </div>
     </div>
   {% comment %}<!-- otherwise show recent posts if no related when `related: true` -->{% endcomment %}
