@@ -164,7 +164,7 @@ support of Open Science.
 </div>
 
 <div class="feature__wrapper">
-    <h2 class="archive__item-title">Education for Professionals Seeking 
+    <h2>Education for Professionals Seeking 
     In-Demand Earth and Environmental Data Science Skills</h2>
     <div class="feature__item--left">
         <h3 class="archive__item-subsection">Earth Data Analytics - Foundations Professional Graduate Certificate</h3>

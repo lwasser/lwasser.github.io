@@ -11,36 +11,43 @@ $secondary-text: #757575;
 $accent: #4F0845;
 $font-grey: #280423;
 $gray: #4F0845 !default;
+$caption-color: #71616e;
 
-$custom-font: 'Nanum Gothic', sans-serif !important;
-$header-font: 'Nanum Gothic', sans-serif !important;
-$body-font: 'Nanum Gothic', sans-serif !important;
+$custom-font: 'Chivo', sans-serif; //#'Nanum Gothic', sans-serif !important;
+$caption-font: 'Roboto', sans-serif;
+$header-font: 'Playfair Display', serif;//'Nanum Gothic', sans-serif !important;
+$body-font: 'Chivo', sans-serif; //#'Nanum Gothic', sans-serif !important;
 
-h1, h2, h3 {color: #4F0845;
-            font-family: $custom-font;
+h1, h2, h3, h4, h5, h6 {color: #4F0845;
+            font-family: $header-font!important;
+			font-weight: 700;
+			//font-style: italic;
 }
 
-h2, page__content h2 {
-	font-size: 1.6em!important;
+h2, .page__content h2 {
+	font-size: 2em!important;
+	margin-bottom: 0!important;
 }
 h3 {
-	font-size: 1.2em!important;
+	font-size: 1.6em!important;
 }
 
 body, p {
-  font-family: $custom-font;
+  font-family: $body-font;
 }
 
 body {
-	font-size:.85em
+	font-size:.85em;
+	font-family: $body-font;
+	font-weight: 300;
 }
 
 figcaption {
 	font-size: .9em !important;
 	line-height: 1.3em;
-	font-family: $custom-font;
-	font-weight: bold;
-	color: $primary-text;
+	font-family: $caption-font!important;
+	font-weight: 700;
+	color: $caption-color!important;
 }
 
 // For bottom bar to allow for spacing above comments header
@@ -65,7 +72,7 @@ div.notice--warning {
   padding: 1.9em 2.3em !important
 }
 
-.notice, .notice--warning, .notice--primary, .notice--success {
+.notice, .notice--warning, .notice--primary, .notice--success, .notice p {
 	font-size: 2em!important;
 }
 .notice--success p, .notice--success li {
@@ -160,14 +167,13 @@ div.notice--warning {
 
 .notice .feature__wrapper p, .notice p {
 	font-size: 1.5em;
-	font-family: 'Nanum Gothic', sans-serif!important;
+	font-family: $body-font;
 	color: $font-grey;
   }
 
   .notice p, .notice li {
 	font-size: 1.2em!important;
 	color: $font-grey;
-	font-family: 'Nanum Gothic', sans-serif!important;
   }
 
   .notice .wide p, .notice .wide li {
