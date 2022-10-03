@@ -5,13 +5,15 @@ permalink: /blog/
 header:
     overlay_image: images/vincent-guth-Sdc35GnHgvI-unsplash.jpg
     overlay_filter: 0.6
-layout: posts
+layout: posts_gallery
 author_profile: true
 ---
 
 <!-- Somehow fix this and make it easier to see tagged content
 for now it's so small by year is easier. -->
-## Posts by category
+## Posts by Year
 
 I may reorganize this in the near future but below you will find 
-posts organized by various categories. 
+posts organized by various years. 
+
+
