@@ -1,5 +1,5 @@
 ---
-title: "Setup Tested Python Conda Environments for reproducible science and for teaching Earth and Environmental Data Science"
+title: "Setup Python Conda Environments for reproducible science and for teaching Earth and Environmental Data Science"
 excerpt: "Teaching earth and environmental data science can be time consuming. Learn about what I learned when I tried to create an consistent Python environment that was easy for students to install. (and how this could help your science as well."
 layout: single_law
 related: true
