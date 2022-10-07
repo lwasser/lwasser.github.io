@@ -186,7 +186,7 @@ on different types of computers with varying operating systems.
 including a great colleague 
 [Max Joseph](https://www.github.com/mbjoseph/). Max was really the person who
 early on introduced me to the concept of testing. At the time I didn't fully
-understand just how important it was. But I got there quickly! Another person who I want to thank is [Filipe Fernandes](https://www.github.com/ocepaf) who really helped me better understand the complexity of resolving Python environments and avoiding channel mixing.
+understand just how important it was. But I got there quickly! Another person who I want to thank is [Filipe Fernandes](https://www.github.com/ocefpaf) who really helped me better understand the complexity of resolving Python environments and avoiding channel mixing.
 {: .notice }
 
 So this is what I built:
