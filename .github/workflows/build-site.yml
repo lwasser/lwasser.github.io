@@ -31,7 +31,7 @@ jobs:
         uses: chabad360/htmlproofer@master
         with:
           directory: '_site'
-          arguments: ignore_urls ["https://www.linkedin.com/in/leah-wasser-0138883"]
+          arguments: --ignore-urls ["https://www.linkedin.com/in/leah-wasser-0138883"]
           # The directory to scan
           # arguments: --url-swap "https\:\/\/www\.leahwasser\.com\/images:/images" --http-status-ignore "301"
           # The arguments to pass to HTMLProofer
