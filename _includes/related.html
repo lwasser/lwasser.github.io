@@ -1,9 +1,21 @@
 <h3> Other articles that you might enjoy...</h3>
+
+<!-- I lost related pages on the landing pages now...  -->
+{% if page.id and page.related and site.categories[page.category].size > 0 %}
 <div>
     <div class="card-wrapper">
-    {% for post in site.categories[page.category] limit:4 %}
-    <!-- doing it this way so i can reuse the cards if i want to-->
+    {% for post in site.categories[page.category] limit:3 %}
         {% include archive-cards.html %}
     {% endfor %}
     </div>
 </div>
+{% else %}
+<!-- If there are no related posts, post most recent still including that current page-->
+<div>
+    <div class="card-wrapper">
+    {% for post in site.posts limit:3 %}
+        {% include archive-cards.html %}
+    {% endfor %}
+    </div>
+</div>
+{% endif %}

@@ -7,9 +7,11 @@ layout: single_law
 classes: wide
 permalink: /short-videos-to-explain-complex-science-earth-data-science-/
 author_profile: true
+related: true
 comments: true
 header:
   overlay_color: "#333"
+category: "education"
 categories:
   - science-communication
   - neon
