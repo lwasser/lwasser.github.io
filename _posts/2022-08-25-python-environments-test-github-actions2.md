@@ -1,5 +1,5 @@
 ---
-title: "How to setup testing for a Python conda environment using GitHub Actions"
+title: "How to setup testing for a Python conda environment using GitHub Actions (and why testing matters)"
 excerpt: "In this post I will discuss how to setup a build using GitHub actions that was created to test the earth-analytics-python conda environment on different operating systems. Testing supports building open science workflows as it ensures that the environment will run on Windows, Mac and Linux. "
 layout: single_law
 related: true
@@ -21,33 +21,51 @@ categories:
 
 ## Introducing your new best friend: Continuous Integration
 
-In [another post](2022-08-15-python-conda-environments-create.md), I discussed 
-the `earth-analytics-python` conda environment. I set this environment up to 
-make it easier for students in that courses that I taught at CU Boulder. It was 
-also used by lots of people working through lessons and courses on earthdatascience.org
-an open learning portal that I also developed. 
-In that python conda environment blog I talked about how Python conda environment 
-files can help you make a more reproducible environment that other people can install.
-However, what I didn't get to in that post is how to ensure that the environment 
+In [a previous post](/why-tested-python-environments-matter-for-science/), I discussed 
+the [`earth-analytics-python` conda environment](https://www.github.com/lwasser/earth-analytics-python-env/). I set this Python conda environment up to 
+make it easier for students in that courses that I taught at CU Boulder
+get started with using their data in Python (earth and environmental data science). 
+
+The environment was 
+also used by lots of people working through lessons and courses on [earthdatascience.org](https://www.earthdatascience.org),
+an open learning portal that I developed. 
+In that python conda environment blog I talked about:
+
+how Python conda environment files can help you make a more reproducible 
+environment that other people can install.
+
+However, what I didn't discuss is how to ensure that the environment 
 will work on Windows, Mac and Linux.
 
 In my courses, students often had machines with different operating systems.
 A common pain point of teaching `Python` for earth and environmental data science 
-was ensuring students had a functioning Python environment to work on. 
+was ensuring students had a functioning `Python` environment to use. 
 
-### Don't worry, testing isn't as scary as it sounds 
+### Testing is integral for science and education
 
 When I first heard about the idea of testing I thought -- RUN -- the other way - 
 fast. This isn't science. 
 
-But I was wrong. 
+I was wrong. 
 
+Testing is actually critical to science. Here's why.
 If you want to create workflows that others can use, then testing is actually
-your best friend. Testing allows you to setup checks that ensure that more people
-can access your workflows. And thus testing is an integral tool for open science. 
+your best friend. Testing allows you to setup checks that:
 
-While testing may sound complex, basic testing that environments work is actually not too difficult to 
-set it up if you are using GitHub. Here i'll break that all down for you!
+* the environment will run on a computer other than yours
+* the environment will work on various operating systems
+
+Testing will help more people can access your workflows, INCLUDING
+your future self! Yes you in 6 months to a year. 
+
+Testing is an integral tool for open science and education. 
+
+### Don't worry, testing isn't as scary as it sounds 
+
+While testing may sound complex, setting up basic testing to see if 
+environments install correctly on different operating systems is actually not too difficult. Especially if you are using GitHub. 
+
+Here i'll break that all down for you!
 
 ## Get started with testing a Python conda environment using GitHub Actions
 
@@ -56,29 +74,29 @@ be GitHub and GitHub actions.
 
 ### What is continuous integration (CI)?
 
-Continuous integration (CI) is a way to automate things at the highest level.
-Things such as:
-* Testing that an environment builds given new changes
+Continuous integration (CI) is a way to automate things.
+
+Those things may include:
+* Testing that an environment builds when you add a new package to it
+* Testing that an environment builds using a different version of Python
 * Pushing code to different repositories such as a live website repo from a dev repo
 * Pushing a tool to PyPI for publication
-* Running test suites that test functionality in Python packages
+* Running test suites that test functionality in Python packages (this is more complicated but just an example for this blog)
 
 ### What are GitHub actions?
 
 GitHub actions is a free-to-use continuous integration
 platform that works seamlessly with GitHub. 
-CI runs in the "cloud" on GitHub in this example. The GitHub cloud. 
+GitHub actions run in the "cloud" on GitHub. The GitHub.com cloud. 
 
-<i class="fas fa-info-circle"></i> Remember that git is the tool that runs version control. GitHub.com is just a cloud based platform that runs `git`. 
+<i class="fas fa-info-circle"></i> Remember that git is the tool that runs version control. GitHub.com is a cloud based platform that runs `git`. 
 {: .notice }
 
 Using GitHub actions, your new super power enabled BFF (best friends forever), you can setup a 
 workflow in the cloud (on GitHub)
-that runs your environment on all 3 different operating systems. All three! 
+that runs your environment on 3 different operating systems (Linux, Mac and Windows).
 
-Just like that. 
-
-You could 
+You can 
 even test it on different versions of `Python` if you wanted to. 
 
 And it's all FREE. 
@@ -87,13 +105,13 @@ Am I blowing your mind yet?
 
 <figure>
 	<a href="/images/ci-al-pacino-scarface.jpg">
-    <img src="/images/ci-al-pacino-scarface.jpg"></a>
+    <img src="/images/ci-al-pacino-scarface.jpg" alt="Meme image showing al pacino from scarface with the text say hello to my little friend continuous integration."></a>
 	<figcaption>Say hello to your new little friend -- continuous integration! :). 
   </figcaption>
 </figure> 
 
 When we first setup testing for the `earth-analytics-python` environment, we were using other CI platforms
-such as Travis CI and Appveyor for windows. However now we use GitHub actions. Actions is free and (for now as of October 2022). It nicely integrates
+such as Travis CI and Appveyor for windows. However I now use GitHub Actions. Actions is free and (for now as of October 2022). It nicely integrates
 into all pull requests and changes that you make to the repository.  
 {: .notice }
 
