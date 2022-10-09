@@ -1,5 +1,5 @@
 ---
-title: "Open Education"
+title: "Open Education, Teaching Earth and Environmental Data Science"
 layout: single_law
 classes: wide
 permalink: /open-education-earth-data-science/
@@ -63,6 +63,7 @@ intro:
 ---
 
 ## Commitment to Open Education and Teaching Earth Data Science at Scale
+{: .fancy-header }
 
 {% include feature_row id="intro" type="center" %}
 
@@ -70,6 +71,7 @@ intro:
 <div markdown="1" class="notice--primary">
 
 ## EarthDataScience.org Learning Portal
+{: .fancy-header }
 
 I designed, branded and built the earthdatascience.org learning portal to allow
 anyone to have access to our Earth Data Analytics program course materials. The

@@ -26,7 +26,7 @@ $light-gray: mix(#fff, $gray, 50%) !default;
 $lighter-gray: mix(#fff, $gray, 90%) !default;
 
 // Variables - colors
-
+$header-color: #7E026C;
 $primary: #CCCCCC; 
 $dark-primary: #303F9F;
 $light-primary: #C5CAE9;
@@ -64,12 +64,27 @@ html, body {
 	background-color: #eee;
   }
 
+// page layout items
+.sidebar.sticky {
+	margin-left: 1em; //1.5 is ok on the blog page but pushes the posts by year too much over. need to figure out why
+}
+
+.breadcrumbs {
+	margin:0!important;
+}
+
+// adjust the blog page will it adjust other pages too?
+.page {
+	width: calc(100% - 350px)!important;
+	padding-right: 350px!important;
+  }
+
 h1 {
 	font-family: $script-font!important;
 
 } 
 
-h2, h3, h4, h5, h6 {color: #4F0845;
+h2, h3, h4, h5, h6 {color: $header-color!important;
             //font-family: $header-font!important;
 			//font-weight: 700;
 			//font-style: italic;
@@ -83,7 +98,8 @@ h2.fancy-header, .notice h2.fancy-header, .notice .wide h2 {
 }
 
 h2, .page__content h2 {
-	//padding-bottom: 0em!important;
+	padding-bottom: .1em!important;
+	border-bottom: none!important;
 }
 h3 {
 	//font-size: 1.6em!important;
@@ -94,9 +110,11 @@ h3 {
 	margin-bottom: 2em;
 	margin-right: auto;
 	margin-left: auto;
-
+	padding-top: .001em;
 	max-width: 1280px;
-}
+	padding-left: 2em;
+	padding-right: 2em;
+}	
 
 .notice-white {
 	background: #fff;
@@ -106,7 +124,7 @@ h3 {
 body, p, ul li {
   //font-family: $body-font!important;
   //color: $primary-text; //maybe just a hair lighter?
-  line-height: 1.4em!important;
+  line-height: 1.5em!important;
 
   .notice {
 	font-size: 2em
@@ -126,8 +144,9 @@ body, p, ul li {
 
 }
 
-.notice .feature__wrapper, .feature_wrapper {
-	margin-top: 4em;
+.notice .feature__wrapper, .feature__wrapper {
+	margin-top: 3.5em!important;
+	border-bottom: none!important;
 
 	h2 {
 		margin-top: 0!important;
@@ -181,15 +200,14 @@ div.notice--warning {
 }
 
 .notice--primary h2.archive__item-title {
-  //font-size: 1.4em!important;
   font-weight: 400!important;
 }
 
 .archive__item-title.condensed, .archive__item-title, .feature__wrapper h2.archive__item-title {
-	// font-size: 1.2em !important;
-	margin-bottom: 0!important;
+	margin-bottom: .5em!important;
 	margin-top: 0 !important;
 	font-weight: 400;
+	color: $header-color;
   }
 /* Customize archive blocks*/
 .page__inner-wrap .archive__item-title {
@@ -216,9 +234,9 @@ div.notice--warning {
   }
 
 .feature__wrapper h2 {
-	font-size: 1.3em;
-	margin-top: 2em;
-	margin-bottom: 1.15em;
+	//font-size: 1.3em;
+	//margin-top: 2em;
+	//margin-bottom: 1.15em;
   }
 
 .page__meta-readtime {
@@ -244,6 +262,14 @@ div.notice--warning {
 	width: 75%!important;
   }
 
+//Only even middle blocks have padding
+.feature__item:nth-child(even) {
+	padding: 0 .6em;
+
+}
+.feature__item {
+	font-size: .95em!important;
+}
 /*  notice block with feature wrote inside */
 
 .feature__item--right {
@@ -257,7 +283,7 @@ div.notice--warning {
 .notice .feature__wrapper p, .notice p {
 	// font-size: 1.5em;
 	//font-family: $body-font;
-	color: $font-grey;
+	//color: $font-grey;
   }
 
 //   .notice p, .notice li {

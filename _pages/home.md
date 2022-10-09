@@ -80,36 +80,7 @@ feature_row_education_teaching:
     url: #"/blended-online-inperson-teaching-earth-data-science#autograding"
     btn_label: #"<i class='fas fa-angle-right'></i> Learn More: Autograding"
     btn_class: "btn--inverse"
-# feature_row_programs:
-#   - image_path: 
-#     alt: "customizable"
-#     title: "Program Development & Leadership Including Earth Data Analytics"
-#     excerpt: "I build and lead programs. In my previous position as Director of Earth Analytics Education, I built the earth data analytics program at the University of Colorado - Boulder. Before that I developed the NEON Data Skills program."
-#     url:
-#     btn_label: "Learn More"
-# feature_row_foss:
-#   - image_path: images/earthpy-free-open-source-tools-spatial-python.png
-#     alt: "customizable"
-#     title: "Free Open Source Software (FOSS) - Tools for Open Science"
-#     excerpt: "Free Open Source Software (FOSS) is freely available software where the code is publicly available for use and contributions. I lead development of and contribute to free tools to support teaching of earth data science skills in our Earth Analytics program."
-#     url: free-open-source-software-for-science-foss/
-#     btn_label: "Learn More"
-#     btn_class: "btn--inverse"
-# feature_row_tools:
-#   - image_path: images/earthpy-free-open-source-tools-spatial-python.png
-#     alt: "customizable"
-#     title: "EarthPy"
-#     excerpt: "A free and open Python package that makes it easier to plot, manipulate and use spatial data using open source tools like rasterio, geopandas, matplotlib and numpy."
-#     url: https://earthpy.readthedocs.io
-#     btn_label: "View docs (external link)"
-#     btn_class: "btn--inverse"
-#   - image_path: images/matplotcheck-free-open-source-tools-plots-python.png
-#     alt: "customizable"
-#     title: "Matplotcheck"
-#     excerpt: "A free and open Python package that makes it easier to test and validate matplotlib plots. This was built to support autograding student assignments but also is useful for writing unit tests for software."
-#     url: https://matplotcheck.readthedocs.io
-#     btn_label: "View docs (external link)"
-#     btn_class: "btn--inverse"
+
 header:
     overlay_image: images/vincent-guth-Sdc35GnHgvI-unsplash.jpg
     overlay_filter: 0.6
@@ -120,28 +91,15 @@ header:
           url: "https://github.com/lwasser"
         - label: "LinkedIn"
           url: "https://www.linkedin.com/in/leah-wasser-0138883"
-# feature_row_previous_programs:
-#   - image_path: 
-#     title: "Earth Lab Earth Analytics Education Program"
-#     excerpt: "
-#      remove"
-#     url: ""
-#     btn_label: "<i class='fas fa-angle-right'></i> Not eu"
-#     btn_class: "btn--inverse"
-  # - image_path:
-  #   title: "NEON Data Skills"
-  #   excerpt: ""
-  #   url: ""
-  #   btn_label: "<i class='fas fa-angle-right'></i> Not eu"
-  #   btn_class: "btn--inverse"
 
 ---
+
 
 {% include intro-block id="intro" type="center" %}
 
 <div class="body__content-block" markdown="1">
 
-## Diverse, supportive community around tools that drive open science
+## Diverse, supportive community for scientific Python
 {: .fancy-header }
 
 {% include feature_row id="feature_row_pyopensci" type="left" %}
@@ -178,7 +136,9 @@ science. Both programs emphasized:
 {% include feature_row id="feature_row_edsc" type="left" %}
 {% include feature_row id="feature_row_open_education" type="left" %}
 
-## Professional Graduate program development
+## Professional graduate program development
+{: .fancy-header }
+
 {% include feature_row id="feature_row_eda_graduate_program" type="right" %}
 
 </div>
