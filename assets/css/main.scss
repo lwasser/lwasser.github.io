@@ -2,6 +2,31 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+// Variables - font size
+$type-size-1: 2.441em !default; // ~39.056px
+$type-size-2: 1.853em !default; // ~31.248px
+$type-size-3: 1.463em !default; // ~25.008px
+$type-size-4: 1.05em !default; // ~20px
+$type-size-5: .9em !default; // ~16px
+$type-size-6: 0.85em !default; // ~12px //used for notices
+$type-size-7: 0.6875em !default; // ~11px
+$type-size-8: 0.625em !default; // ~10px
+
+// Fonts 
+$serif: Georgia, Times, serif !default;
+$sans-serif: 'Lato', sans-serif; //-apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+ // "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+$monospace: Monaco, Consolas, "Lucida Console", monospace !default;
+
+
+$gray: #7a8288 !default;
+$dark-gray: mix(#000, $gray, 50%) !default; //text color
+$darker-gray: mix(#000, $gray, 60%) !default;
+$light-gray: mix(#fff, $gray, 50%) !default;
+$lighter-gray: mix(#fff, $gray, 90%) !default;
+
+// Variables - colors
+
 $primary: #CCCCCC; 
 $dark-primary: #303F9F;
 $light-primary: #C5CAE9;
@@ -15,32 +40,99 @@ $caption-color: #71616e;
 
 $custom-font: 'Chivo', sans-serif; //#'Nanum Gothic', sans-serif !important;
 $caption-font: 'Roboto', sans-serif;
-$header-font: 'Roboto', sans-serif; //'Playfair Display', serif;//'Nanum Gothic', sans-serif !important;
-$body-font: 'Chivo', sans-serif; //#'Nanum Gothic', sans-serif !important;
+$header-font: 'Roboto', sans-serif;//'Chivo', sans-serif; //'Roboto', sans-serif; //'Playfair Display', serif;//'Nanum Gothic', sans-serif !important;
+$body-font: 'Nanum Gothic', sans-serif; //'Chivo', sans-serif; //#'Nanum Gothic', sans-serif !important;
+$script-font: 'Kalam', sans-serif;
 
-h1, h2, h3, h4, h5, h6 {color: #4F0845;
-            font-family: $header-font!important;
-			font-weight: 700;
+//@media (min-width: 80em)
+#main {
+  max-width: none!important;
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
+
+.sidebar .author__name, .site-title {
+	font-family: $script-font!important;
+}
+
+
+html, body {
+	overflow-x: hidden;
+  }
+  
+  body {
+	background-color: #eee;
+  }
+
+h1 {
+	font-family: $script-font!important;
+
+} 
+
+h2, h3, h4, h5, h6 {color: #4F0845;
+            //font-family: $header-font!important;
+			//font-weight: 700;
 			//font-style: italic;
 }
 
+
+h2.fancy-header, .notice h2.fancy-header, .notice .wide h2 {
+	font-family: $script-font!important;
+	font-size: 1.9em!important;
+	//margin-bottom: 100px!important;
+}
+
 h2, .page__content h2 {
-	font-size: 2em!important;
-	margin-bottom: 0!important;
+	//padding-bottom: 0em!important;
 }
 h3 {
-	font-size: 1.6em!important;
+	//font-size: 1.6em!important;
 }
 
-body, p {
-  font-family: $body-font;
+.body__content-block {
+	clear: both;
+	margin-bottom: 2em;
+	margin-right: auto;
+	margin-left: auto;
+
+	max-width: 1280px;
 }
 
-body {
-	font-size:.85em;
-	font-family: $body-font;
-	font-weight: 300;
+.notice-white {
+	background: #fff;
 }
+
+
+body, p, ul li {
+  //font-family: $body-font!important;
+  //color: $primary-text; //maybe just a hair lighter?
+  line-height: 1.4em!important;
+
+  .notice {
+	font-size: 2em
+  }
+}
+
+// A notice block with normal font size 
+// I think i may want to rewrite this so the theme is full screen and #main doesn't have a max width
+.notice__main-block {
+	background-color: #fff;
+	padding: 0.05em 2em !important;
+	border-radius: 1em;
+  }
+
+.page__content {
+	padding: 10px 0;
+
+}
+
+.notice .feature__wrapper, .feature_wrapper {
+	margin-top: 4em;
+
+	h2 {
+		margin-top: 0!important;
+	}
+  }
 
 figcaption {
 	font-size: .9em !important;
@@ -72,31 +164,38 @@ div.notice--warning {
   padding: 1.9em 2.3em !important
 }
 
-.notice, .notice--warning, .notice--primary, .notice--success, .notice p {
-	font-size: 2em!important;
-}
-.notice--success p, .notice--success li {
-	font-size: 1.2em!important;
-}
+// .notice, .notice--warning, .notice--primary, .notice--success, .notice p {
+// 	font-size: 2em!important;
+// }
+// .notice--success p, .notice--success li {
+// 	font-size: 1.2em!important;
+// }
 
 // .notice--success p, .notice--warning p, .notice--primary p {
 //   font-size: 1.1em!important;
 // }
 
 .notice h2, .notice--primary h2, .notice--warning h2 {
-    font-size: 2.2em!important;
+    //font-size: 2.2em!important;
     margin: 1em 0 0.5em!important
 }
 
 .notice--primary h2.archive__item-title {
-  font-size: 1.4em!important;
+  //font-size: 1.4em!important;
+  font-weight: 400!important;
 }
 
+.archive__item-title.condensed, .archive__item-title, .feature__wrapper h2.archive__item-title {
+	// font-size: 1.2em !important;
+	margin-bottom: 0!important;
+	margin-top: 0 !important;
+	font-weight: 400;
+  }
 /* Customize archive blocks*/
 .page__inner-wrap .archive__item-title {
 	margin-top: 0 !important;
 	font-size: 1.25em;
-	font-weight: bold;
+	//font-weight: bold;
 }
 
 .page__inner-wrap .archive__item-title {
@@ -111,7 +210,6 @@ div.notice--warning {
 	margin-top: 1.5em!important;
 	margin-bottom: 0;
 }
-
 
 .feature__wrapper.left-text p, .feature__wrapper.left-text h3 {
 	text-align: left;
@@ -134,22 +232,13 @@ div.notice--warning {
 	margin-bottom: .7em;
 }
 
-
-.archive__item-excerpt {
-	font-size:.8em!important;
-  }
-
-/* Top intro*/
+/* Top intro excerpt */
 .archive__item-excerpt.intro p {
-	font-size: 1em;
-	color:$gray;
+	font-style: italic;
+	font-weight: 300;
+	line-height: 1.5em;
   }
 
-
-.archive__item-title.condensed {
-	font-size: 1.2em !important;
-	margin-top: 0 !important;
-  }
 //Only wide intro on non splash / wide layout pages otherwise it's too wide
   .layout--single .feature__item--center .archive__item-body {
 	width: 75%!important;
@@ -166,15 +255,15 @@ div.notice--warning {
 }
 
 .notice .feature__wrapper p, .notice p {
-	font-size: 1.5em;
-	font-family: $body-font;
+	// font-size: 1.5em;
+	//font-family: $body-font;
 	color: $font-grey;
   }
 
-  .notice p, .notice li {
-	font-size: 1.2em!important;
-	color: $font-grey;
-  }
+//   .notice p, .notice li {
+// 	//font-size: 1.2em!important;
+// 	color: $font-grey;
+//   }
 
   .notice .wide p, .notice .wide li {
 	margin-right: 40%;
@@ -208,19 +297,7 @@ div.notice--warning {
 	color: $secondary-text;
 }
 
-/* 
-I need a new intro style... 
 
-
-
-
-
-.page__inner-wrap .archive__item-excerpt p {
-	font-size: 1.1em;
-	line-height: 1.2em;
-	padding-right: 0em;
-  }
-*/
 /* TIMELINE About page*/
 
 $primary: #CCCCCC; 
@@ -243,23 +320,8 @@ section {
   padding: 100px 0;
 }
 
-html, body {
-  overflow-x: hidden;
-}
 
-body {
-//   font-family: 'Roboto';
-//   font-size: 17px;
-//   font-weight: 400;
-  background-color: #eee;
-}
 
-h1 {
-//   font-size: 200%;
-//   text-transform: uppercase;
-//   letter-spacing: 3px;
-//   font-weight: 400;
-}
 
 header {
 	background: $primary;

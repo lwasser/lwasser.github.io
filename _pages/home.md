@@ -12,14 +12,14 @@ feature_row_pyopensci:
   - image_path: images/women-coding-unsplash.jpg
     alt: "customizable"
     title: "pyOpenSci: Open Source Python Software for Science"
-    excerpt: "**Where I am now:** I founded and am now the Executive Director of pyOpenSci - a diverse, global community that supports the Python tools that drive open science through open peer review, training and mentorship. I am incredibly excited to be building this community and look forward to writing about the experience as I learn."
+    excerpt: "I founded and am now the Executive Director of pyOpenSci - a diverse, global community that supports the Python tools that drive open science through open peer review, training and mentorship. I am incredibly excited to be building this community and look forward to writing about the experience as I learn."
     url:
     btn_label: "Create a blog on this? I could link to the blog i wrote on the pyos website too for now"
 
 feature_row_earthlab_education:
   - image_path: images/j-kelly-brito-PeUJyoylfe4-unsplash.jpg
     alt: "customizable"
-    title: "Earth Analytics Education Program (Director)"
+    title: "Director of Earth Analytics Education"
     excerpt: "I was hired as Director of Earth Analytics Education the earth analytics education program which supported scientists using complect earth and environmental data to study environmental change. I created several programs here including the earthdatascience.org online education portal, a professional program in earth data analytics,
     and the earth data science corps internship which built capacity at tribal and hispanic serving colleges to teach and to learn earth and environmental 
     data science skills."
@@ -139,13 +139,23 @@ header:
 
 {% include intro-block id="intro" type="center" %}
 
-{% include feature_row id="feature_row_pyopensci" type="left" %}
+<div class="body__content-block" markdown="1">
 
-<div markdown="1" class="notice">
+## Diverse, supportive community around tools that drive open science
+{: .fancy-header }
+
+{% include feature_row id="feature_row_pyopensci" type="left" %}
+</div>
+
+<div markdown="1" class="notice-white">
+<div class="body__content-block" markdown="1">
+
 <div markdown= "1" class="wide">
 
 <!-- ground zero graphic on the left ??? -->
-## I Love Building Programs From the Ground Up that Support Open Science
+
+## I build programs that support diversity & open science
+{: .fancy-header }
 
 I've built two programs in the past 10 years that support open 
 science. Both programs emphasized:
@@ -159,9 +169,11 @@ science. Both programs emphasized:
 {% include feature_row id="feature_row_neondataskills" type="right" %}
 
 </div>
+</div>
 
-
+<div class="body__content-block" markdown="1">
 ## Open Science programs that are close to my heart 
+{: .fancy-header }
 
 {% include feature_row id="feature_row_edsc" type="left" %}
 {% include feature_row id="feature_row_open_education" type="left" %}
@@ -169,9 +181,12 @@ science. Both programs emphasized:
 ## Professional Graduate program development
 {% include feature_row id="feature_row_eda_graduate_program" type="right" %}
 
+</div>
 
-<div markdown="1" class="notice--primary">
+<div markdown="1" class="notice-white">
+<div class="body__content-block" markdown="1">
 ## Teaching approach and philosophy
+{: .fancy-header}
 
 Blended Online and In-Person Classrooms, Active Learning and Teaching
 
@@ -182,6 +197,7 @@ support more students.
 
 {% include feature_row id="feature_row_education_teaching" %}
 
+</div>
 </div>
 
 
