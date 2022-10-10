@@ -73,6 +73,7 @@ intro:
 classes: wide
 related: true
 category: "open-source"
+author_profile: false
 ---
 
 {% include intro-block id="intro" type="center" %}
