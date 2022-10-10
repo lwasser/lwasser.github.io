@@ -6,6 +6,8 @@ permalink: /open-education-earth-data-science/
 author_profile: true
 excerpt: "Universal, Open Education."
 category: "open-education"
+classes: wide
+author_profile: false
 header:
     overlay_image: images/vincent-guth-Sdc35GnHgvI-unsplash.jpg
     overlay_filter: 0.6

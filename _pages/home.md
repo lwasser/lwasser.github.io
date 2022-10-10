@@ -143,6 +143,8 @@ science. Both programs emphasized:
 
 </div>
 
+<!-- TODO: would like to make the text in the columns a bit smaller>
+
 <div markdown="1" class="notice-white">
 <div class="body__content-block" markdown="1">
 ## Teaching approach and philosophy

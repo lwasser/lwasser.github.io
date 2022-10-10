@@ -14,7 +14,7 @@ $type-size-8: 0.625em !default; // ~10px
 
 // Fonts 
 $serif: Georgia, Times, serif !default;
-$sans-serif: 'Lato', sans-serif; //-apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+$sans-serif: 'Lato', sans-serif; //'Lato', sans-serif; //-apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
  // "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
@@ -79,6 +79,10 @@ html, body {
 	padding-right: 350px!important;
   }
 
+.wide .page {
+	padding-right: 50px!important;
+  }
+
 h1 {
 	font-family: $script-font!important;
 
@@ -125,6 +129,7 @@ body, p, ul li {
   //font-family: $body-font!important;
   //color: $primary-text; //maybe just a hair lighter?
   line-height: 1.5em!important;
+  font-weight: 300;
 
   .notice {
 	font-size: 2em
@@ -154,7 +159,7 @@ body, p, ul li {
   }
 
 figcaption {
-	font-size: .9em !important;
+	font-size: .7em !important;
 	line-height: 1.3em;
 	font-family: $caption-font!important;
 	font-weight: 700;
@@ -203,7 +208,7 @@ div.notice--warning {
   font-weight: 400!important;
 }
 
-.archive__item-title.condensed, .archive__item-title, .feature__wrapper h2.archive__item-title {
+h3.archive__item-title.condensed, .archive__item-title, .feature__wrapper h2.archive__item-title {
 	margin-bottom: .5em!important;
 	margin-top: 0 !important;
 	font-weight: 400;
@@ -242,10 +247,11 @@ div.notice--warning {
 .page__meta-readtime {
 	font-size: .7em;
 	color: #666;
+	line-height: 1em;
   }
 
 .page__meta.condensed {
-	line-height: .8em;
+	line-height: .8em!important;
 	margin-top: .25em;
 	margin-bottom: .7em;
 }
