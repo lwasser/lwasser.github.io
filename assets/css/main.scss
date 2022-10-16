@@ -349,6 +349,19 @@ h3.archive__item-title.condensed, .archive__item-title, .feature__wrapper h2.arc
 .card-wrapper {
 	display: flex;
 }
+
+.testme:nth-child(odd) {
+	background-color: #4F0845;
+}
+
+article:nth-child(odd) .card .card__bkg {
+	background-image: url("/images/blog/tested-environment-python-1.png");
+}
+
+article:nth-child(even) .card .card__bkg {
+	background-image: url("/images/blog/ci-green-passing.png");
+}
+
 .card {
 	border-radius: 4px;
 	background: #f5f5f5;
@@ -362,13 +375,10 @@ h3.archive__item-title.condensed, .archive__item-title, .feature__wrapper h2.arc
 	.card__bkg {
 		height: 8em;
 	}
-	// This isn't working as expected
-	div.card__bkg:nth-child(odd) {
-		background-image: url("/images/blog/tested-environment-python-1.png");
-	}	
-	div.card__bkg:nth-child(even) {
-		background-image: url("/images/blog/nds-code-example.png");
-	}
+	
+	// div.card__bkg:nth-child(even) {
+	// 	background-image: url("/images/blog/nds-code-example.png");
+	// }
 	.card-title {
 		font-size: .8em!important;
 		padding: 10px 30px;

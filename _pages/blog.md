@@ -16,5 +16,3 @@ for now it's so small by year is easier. -->
 {: .fancy-header }
 
 *Maybe we don't all have to reinvent the wheel...*
-
-
