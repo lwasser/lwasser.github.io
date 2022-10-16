@@ -12,12 +12,9 @@ author_profile: false
 
 <!-- Somehow fix this and make it easier to see tagged content
 for now it's so small by year is easier. -->
-## Sometimes I write about things i've learned in hopes it might help someone else...
+## Sometimes I write blog posts about things I've worked on and learned
 {: .fancy-header }
 
-I may reorganize this in the near future but below you will find 
-posts organized by various years. 
-
-tODO: maybe take that layout and make it centered like the splash page??
+*Maybe we don't all have to reinvent the wheel...*
 
 

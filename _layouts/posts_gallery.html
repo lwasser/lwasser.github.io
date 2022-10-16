@@ -22,7 +22,7 @@ layout: archive
 {% for year in postsByYear %}
   <section id="{{ year.name }}" class="taxonomy__section">
     <h2 class="archive__subtitle">{{ year.name }}</h2>
-    <div class="entries-{{ entries_layout }}">
+    <div class="blog__grid">
       {% for post in year.items %}
         {% comment %}{% include archive-single.html type=entries_layout %}{% endcomment %}
         {% include archive-cards.html %}
