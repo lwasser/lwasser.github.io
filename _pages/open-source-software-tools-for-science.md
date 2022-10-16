@@ -1,6 +1,6 @@
 ---
 title: "Open Source Software and Tool Development"
-layout: single_law
+layout: splash
 permalink: /open-source/
 author_profile: true
 header:
@@ -77,8 +77,8 @@ author_profile: false
 ---
 
 {% include intro-block id="intro" type="center" %}
+<div class="body__content-block" markdown="1">
 
-<!--would be nice to make this on a white background so it pops -->
 <div class="feature__wrapper left-text">
   <h2>pyOpenSci: Building diverse community around scientific Python tools through open peer review, training and mentorship </h2> 
   <div class="feature__item--right">
@@ -125,7 +125,10 @@ author_profile: false
 </div>
 
 <a href="https://www.pyopensci.org/" target="_blank" class="btn btn--info"><i class="fas fa-external-link-alt"></i> Learn more at pyOpenSci.org.</a>
+</div>
 
+<div class="notice-white">
+<div class="body__content-block" markdown="1">
 
 ## Open source software tools that i've lead development of
 
@@ -144,5 +147,8 @@ student assignment. It also is useful for developing unit tests in
 Python packages that have plots.
 
 {% include feature_row id="feature_old_tools" %}
+</div>
+
+</div>
 </div>
 

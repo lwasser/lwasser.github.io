@@ -1,6 +1,6 @@
 ---
 title: "Open Education, Teaching Earth and Environmental Data Science"
-layout: single_law
+layout: splash # might make sense to make a single_law layout that is wide
 classes: wide
 permalink: /open-education-earth-data-science/
 author_profile: true
@@ -51,7 +51,7 @@ feature_row_eds:
   - image_path:
     alt: "customizable"
     title: "> 200,000 Global Monthly Users"
-    excerpt: "Targeted search engine optimization combined with providing tutorials on in-demand skills has lead global website reach."
+    excerpt: "Targeted search engine optimization combined with providing maintained and tested tutorials on in-demand skills lead to global website reach."
   - image_path:
     alt: "customizable"
     title: "Science + Data Science At Your Fingertips"
@@ -59,26 +59,34 @@ feature_row_eds:
   - image_path:
     alt: "customizable"
     title: "> 300 Lessons (and Growing!)"
-    excerpt: "The earth analytics education team is always adding content to the portal! Check back often."
+    excerpt: "Lesson content was focused on earth and environmental data science skills. These skills included working with a suite of data types including spatial, tabular, time series and remote sensing."
 intro:
   - excerpt: 'I publish lessons online and teach using a blended in person and online approach to open doors for non traditional students who may not otherwise have access to learning earth data science.'
 ---
 
-## Commitment to Open Education and Teaching Earth Data Science at Scale
-{: .fancy-header }
-
 {% include feature_row id="intro" type="center" %}
 
 
-<div markdown="1" class="notice--primary">
 
-## EarthDataScience.org Learning Portal
+<!-- <div class="notice-white">
+  <div class="body__content-block" markdown="1">
+
+## I believe that high quality, maintained open education materials can make access to data science skills more universal
 {: .fancy-header }
 
-I designed, branded and built the earthdatascience.org learning portal to allow
-anyone to have access to our Earth Data Analytics program course materials. The
-growing portal contains over 250 lessons and has over 50,000 unique global users
-visit a month. Many lessons on the portal have been developed collaboratively.
+</div>
+</div> -->
+
+<div class="body__content-block" markdown="1">
+
+## EarthDataScience.org Learning Portal
+
+I designed, branded and built the earthdatascience.org learning portal. This website provided anyone with internet, access to the Earth Data Analytics 
+program course materials that I developed. 
+
+When I left this position, the portal contained over 300 lessons. It also had a global growing user base of 
+over 200,000 unique visitors a month. and has over 50,000 unique global users
+visit a month. 
 
 <a href="https://www.earthdatascience.org" target="_blank" class="btn btn--large btn--inverse"><i class="fas fa-external-link-alt"></i> Visit earthdatascience.org</a>
 {: .text-center}
@@ -87,6 +95,8 @@ visit a month. Many lessons on the portal have been developed collaboratively.
 
 </div>
 
+
+<div class="body__content-block" markdown="1">
 
 ### Online Open Education - Self Paced Earth Data Science Courses
 
@@ -99,17 +109,20 @@ University of Colorado - Boulder.
 
 
 {% include feature_row id="feature_row_courses" type="left" class="notice--primary" %}{: .notice--primary}
+</div>
+
+<div class="notice-white">
+<div class="body__content-block" markdown="1">
 
 ### Community Collaboration: Data Carpentry
 
 {% include feature_row id="feature_row_carpentries" type="right" %}
 
 
-
-
 {% include feature_row id="feature_row_nds" type="left" %}
 
-
+</div>
+</div>
 
 
 

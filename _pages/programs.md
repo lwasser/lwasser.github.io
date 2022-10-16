@@ -86,6 +86,7 @@ support of Open Science.
 
 
 <div class="body__content-block" markdown="1">
+
 <div class="feature__wrapper left-text">
     <h2 class="fancy-header">Open Education - Making Earth and Environmental
     Data Science Education Freely Available Online</h2>
