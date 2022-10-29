@@ -30,7 +30,7 @@ feature_open-education:
     title: "Building maintained and tested open education resources for learning earth and environmental data science"
     excerpt: "Everyone should have access to in-demand data science skills. Publishing consistently maintained lessons and course materials online allows everyone with access to materials that will help them develop in job market demand skills.
     
-    * [Tested python enviornments for teaching earth data science](blog/)"
+    * [Tested python environments for teaching earth data science](/why-tested-python-environments-matter-for-science/)"
     url: "/open-education-earth-data-science/"
     btn_label: "<i class='fas fa-angle-right'></i> Blog coming soon..."
 
