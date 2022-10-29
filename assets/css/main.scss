@@ -127,6 +127,7 @@ h3 {
 
 .notice-white {
 	background: #fff;
+	padding-bottom: 10px;
 }
 
 
@@ -160,6 +161,7 @@ strong {
   grid-auto-rows: 1fr;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+  margin-bottom: 20px;
 
   h3.card-title {
     font-size: 1.2em!important;
@@ -751,6 +753,14 @@ blockquote {
 
 @media screen and (max-width: 768px) {
 
+	.blog__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: 1fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+	}
+
 	.timeline {
 
 		&::before {
@@ -798,6 +808,17 @@ blockquote {
 		}
 	}
 	
+}
+
+@media screen and (max-width: 480px) {
+
+	.blog__grid {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-auto-rows: 1fr;
+		column-gap: 30px;
+		row-gap: 30px;
+	}
 }
 
 
