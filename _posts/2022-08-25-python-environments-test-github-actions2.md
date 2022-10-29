@@ -2,22 +2,22 @@
 title: "How to setup testing for a Python conda environment using GitHub Actions (and why testing matters)"
 excerpt: "In this post I will discuss how to setup a build using GitHub actions that was created to test the earth-analytics-python conda environment on different operating systems. Testing supports building open science workflows as it ensures that the environment will run on Windows, Mac and Linux. "
 layout: single_law
-related: true
 #classes: wide
 permalink: how-to-setup-testing-python-environments-github-actions/
 author_profile: true
-comments: true
 header:
   overlay_color: "#333"
 category: "open-science"
 categories:
-  - data science and dev-ops
+  - data-science-dev-ops
 tags:
   - python
   - open-source
   - open-education
   - testing
   - open-science
+related: true
+comments: true
 ---
 
 ## Introducing your new best friend: Continuous Integration

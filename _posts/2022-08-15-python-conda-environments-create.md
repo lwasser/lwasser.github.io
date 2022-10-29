@@ -8,13 +8,12 @@ related: true
 permalink: why-tested-python-environments-matter-for-science/
 #feature_img: /images/blog/tested-environment-python-1.png
 author_profile: true
-comments: true
 header:
   overlay_color: "#333"
 series: "conda-envt-testing"
 category: "data science and dev-ops"
 categories:
-  - data science and dev-ops
+  - data-science-dev-ops
 tags:
   - python
   - conda
