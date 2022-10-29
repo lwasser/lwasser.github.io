@@ -146,7 +146,13 @@ strong {
 	font-weight: 700;
 }
 
-// blog grid
+/* blog grid */
+
+/* Years on page - font */
+.taxonomy__index li strong {
+	font-size: 2em;
+	color: #555;
+  }
  
 .blog__grid {
   display: grid;
@@ -523,6 +529,7 @@ article:nth-child(5n+5) .card .card__bkg {
 
 	.card__bkg {
 		height: 11em;
+		line-height: 11em; /* This allows me to vertically align the text */
 	}
 
 	.card__bkg span {

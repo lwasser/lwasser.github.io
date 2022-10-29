@@ -7,9 +7,13 @@ author_profile: true
 header:
   overlay_color: "#333"
 categories:
+  - deia
+tags:
   - teaching
   - deia
   - open-education
+  - data science
+  - earth and environmental data science
 comments: true
 ---
 

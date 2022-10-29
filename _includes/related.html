@@ -3,7 +3,7 @@
 <!-- I lost related pages on the landing pages now...  -->
 {% if page.id and page.related and site.categories[page.category].size > 0 %}
 <div>
-    <div class="card-wrapper">
+    <div class="blog__grid">
     {% for post in site.categories[page.category] limit:3 %}
         {% include archive-cards.html %}
     {% endfor %}

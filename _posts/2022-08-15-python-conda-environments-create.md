@@ -8,21 +8,21 @@ related: true
 permalink: why-tested-python-environments-matter-for-science/
 #feature_img: /images/blog/tested-environment-python-1.png
 author_profile: true
-comments: true
 header:
   overlay_color: "#333"
 series: "conda-envt-testing"
-category: "open-science"
+category: "data-science-dev-ops"
 categories:
-  - testing
-  - python
-  - open-source
-  - open-education
+  - data-science-dev-ops
 tags:
   - python
   - conda
   - data science
   - testing
+  - testing
+  - python
+  - open-source
+  - open-education
 ---
 <!--<original permalink free-open-source-software-for-science-foss/> -->
 

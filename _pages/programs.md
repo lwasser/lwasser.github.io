@@ -47,7 +47,6 @@ support of Open Science.
 </div>
 
 
-
 <div class="notice-white">
   <div class="body__content-block" markdown="1">
 
@@ -100,7 +99,7 @@ support of Open Science.
         </p>
         <div class="archive__item">
             <div class="archive__item-teaser">
-            <img src="/images/women-coding-unsplash.jpg" alt="customizable">
+            <img src="/images/earth-environmental-data-science/open-education-earth-environmental-data-science-desola-lanre-ologun.png" alt="Image with text open education earth and environmental data science. With a woman working at a computer.">
             </div>
             <div class="archive__item-body">
                 <div class="archive__item-excerpt">
@@ -162,7 +161,7 @@ support of Open Science.
                     for scientists to work with spatial (and time series) data using 
                     open science workflows. Scientists applied to participate and 
                     supported the early development of what are now the Carpentry
-                    Geospatial Lessons taught all over the world! **Add link** 
+                    Geospatial Lessons taught all over the world!
                     </p>
                 </div>
                 <p><a href="https://datacarpentry.org/geospatial-workshop/" class="btn ">View Lessons <i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a></p>
