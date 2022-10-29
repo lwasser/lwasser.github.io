@@ -1,14 +1,16 @@
 ---
-title: "Programs that I've Developed and Run"
+title: "Programs I've Created"
 excerpt: "I've developed and lead a suite of programs over the past 2 decades and learned a lot from each one. Here I share some intel on lessons learned."
 intro:
   - excerpt: "I develop and lead programs that support both diversity in STEM and open science through community building, outreach and education."
-layout: single
+layout: splash
 permalink: /open-science-program-development/
 author_profile: true
 header:
   overlay_color: "#333"
 related: true
+classes: wide
+author_profile: false
 ---
 
 {% include intro-block id="intro" type="center" %}
@@ -27,12 +29,10 @@ TODO:
 -->
 
 
+<div class="body__content-block" markdown="1">
 ## I Develop Programs That Support Open Science & Build Community
+{: .fancy-header }
 
-Building programs is incredibly fun and rewarding! Below you can learn a bit 
-about the programs that I've build over the past ~10 years. 
-
-<div class="notice" markdown="1">
 ## What I'm Up To Now: 
 
 I'm currently the Executive Director of pyOpenSci. I started working on this project 
@@ -41,46 +41,54 @@ I moved pyOpenSci to a fiscal sponsor. I am now Executive Director of the projec
 and working to build a diverse community around Python open source software in 
 support of Open Science. 
 
-<a href="https://www.pyopensci.org/blog/new-executive-director-leah-wasser">Learn more <i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a>
+<a href="https://www.pyopensci.org/blog/new-executive-director-leah-wasser">pyOpenSci Website <i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a>
 
 <!-- ADD BLOG -->
-
 </div>
 
-## Previous Programs
 
-<div class="feature__wrapper">
-    <h3 class="archive__item-subsection">Building Earth & Environmental Data Science Capacity at Tribal & Hispanic Serving Colleges</h3>
-            <p class="page__meta">
-            <span class="page__meta-readtime">
-            <i class="fas fa-rocket" aria-hidden="true"></i>
-            NSF Funded: 2019-2022
-            </span>
-        </p>
-    <div class="feature__item--left">
-        <div class="archive__item">
-            <div class="archive__item-teaser">
-                <img src="/images/women-coding-unsplash.jpg" alt="customizable">
-            </div>
-            <div class="archive__item-body">
-                <div class="archive__item-excerpt">
-                    <p>I designed a program
-                    that 1) Provided training and career development in earth and environmental
-                    data science to undergraduate students at several institutions 2)
-                    built capacity for faculty to teach these skills at their institutions.
-                    The program was supported by a 1.3 million dollar NSF award in 2019. 
-                    Program Design Collaborator: <i>Jenny Palomino</i>
-                    </p>
-                </div>
-                <p><a href="" class="btn ">RELATED: Lessons Learned From The EDSC</a></p>
-            </div>
-        </div>
-    </div>
+
+<div class="notice-white">
+  <div class="body__content-block" markdown="1">
+
+## Previous programs that I've developed and run
+{: .fancy-header }
+  <div class="feature__wrapper">
+      <h3 class="archive__item-subsection">Building Earth & Environmental Data Science Capacity at Tribal & Hispanic Serving Colleges</h3>
+              <p class="page__meta">
+              <span class="page__meta-readtime">
+              <i class="fas fa-rocket" aria-hidden="true"></i>
+              NSF Funded: 2019-2022
+              </span>
+          </p>
+      <div class="feature__item--left">
+          <div class="archive__item">
+              <div class="archive__item-teaser">
+                  <img src="/images/women-coding-unsplash.jpg" alt="customizable">
+              </div>
+              <div class="archive__item-body">
+                  <div class="archive__item-excerpt">
+                      <p>I designed a program
+                      that 1) Provided training and career development in earth and environmental
+                      data science to undergraduate students at several institutions 2)
+                      built capacity for faculty to teach these skills at their institutions.
+                      The program was supported by a 1.3 million dollar NSF award in 2019. 
+                      Program Design Collaborator: <i>Jenny Palomino</i>
+                      </p>
+                  </div>
+                  <p><a href="" class="btn ">RELATED: Lessons Learned From The EDSC</a></p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
 </div>
 
+
+<div class="body__content-block" markdown="1">
 
 <div class="feature__wrapper left-text">
-    <h2>Open Education - Making Earth and Environmental
+    <h2 class="fancy-header">Open Education - Making Earth and Environmental
     Data Science Education Freely Available Online</h2>
     <div class="feature__item--right">
         <h3 class="archive__item-subsection">earthdatascience.org Open Education Learning Portal</h3>
@@ -162,9 +170,12 @@ support of Open Science.
       </div>
     </div>
 </div>
+</div>
 
+
+<div class="body__content-block" markdown="1">
 <div class="feature__wrapper">
-    <h2>Education for Professionals Seeking 
+    <h2 class="fancy-header">Education for Professionals Seeking 
     In-Demand Earth and Environmental Data Science Skills</h2>
     <div class="feature__item--left">
         <h3 class="archive__item-subsection">Earth Data Analytics - Foundations Professional Graduate Certificate</h3>
@@ -194,6 +205,7 @@ support of Open Science.
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <!-- POTENTIAL FUTURE TODO

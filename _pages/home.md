@@ -5,21 +5,69 @@ permalink: /
 excerpt: "Open education, open source, open science and lots of mountains and running."
 date: 2016-03-23T11:48:41-04:00
 intro:
-  - excerpt: "Hi there! I’m leah. I am an Ecologist, data scientist and educator. I develop and lead programs that support open science through community building, outreach and education. I am also an avid long distance mountain trail runner."
-  # - image_path: images/leah-wasser-open-education-earth-data-science.jpg
-  #   alt: "customizable"
+  - title: Hi there! I'm Leah :)
+    excerpt: "I'm a Remote Sensing Ecologist by training. Data scientist and educator by 
+  passion. I develop and lead programs that support open science through community building, outreach and education. I am also an avid long distance mountain trail runner."
+    image_path: images/leah-wasser-executive-director-pyopensci.jpg
+    alt: "Image of Leah Wasser generated from a headshot using an AI tool."
+feature_open-science: 
+  - excerpt: "I build programs that help scientists process their data more efficiently 
+            using open reproducible methods. <br><br>
+            
+            *Why re-invent a wheel that has already been painstakingly created?*
+             <br><br>
+  
+  Open and reproducible workflows allow scientists to build upon each others work. 
+  When scientists can reuse existing workflows, they focus more of their time 
+  in developing new analyses that in turn advance 
+  science more quickly. "
+    title: "Helping scientists build upon each other's work..."
+    image_path: images/blog/open-reproducible-science-badge.png
+    alt: "Banner with green leaves in the background that says Open Reproducible science allows scientists to build upon each others work."
+feature_open-education:
+  - image_path: images/blog/open-education-earth-environmental-data-science-card.png
+    alt: "customizable"
+    title: "Building maintained and tested open education resources for learning earth and environmental data science"
+    excerpt: "Everyone should have access to in-demand data science skills. Publishing consistently maintained lessons and course materials online allows everyone with access to materials that will help them develop in job market demand skills.
+    
+    * [Tested python enviornments for teaching earth data science](blog/)"
+    url: "/open-education-earth-data-science/"
+    btn_label: "<i class='fas fa-angle-right'></i> Blog coming soon..."
+
+feature_teaching-eds:
+  - image_path:
+    alt: "aac"
+    title: "We don't have to all suffer from imposter syndrome when learning data science."
+    excerpt: "Imposter syndrome is real in the science community when it comes to learning data science. I am passionate about helping people gain these valuable skills which are in high demand in today's job market. <br><br>
+    
+    I designed and use a blended online & in-person teaching method which **empowers students to chose the learning approach that best suits their needs**. 
+    
+    All of my courses ultimately are published online as open education resources because not everyone has the resources to attend a college to learn these skills."
+    url: #
+
+feature_edsc:
+  - image_path: /images/women-coding-unsplash.jpg
+    title: "Empowering students at tribal and hispanic Serving schools with Earth and Environmental Data Science Skills"
+    excerpt: "The Earth and Environmental Data Science Corps (EDSC) was a funded NSF-HDR program that I designed and developed. The goal: to build build capacity to teach and to learn earth and environmental data science skills at tribal and hispanic serving institutions. 
+    
+    While training and a summer internship were one part of the program, I believe that training alone is not enough. The program sought to empower faculty at institutions to add data intensive curriculum to their courses. The core of the program included a summer program where we provided training to faculty and students in open, reproducible earth and environmental data science skills. The program supported faculty in both learning the skills and adding it to their existing courses. "
+    url: "/training-diverse-communities-earth-data-science-corps/"
+    btn_label: "<i class='fas fa-angle-right'></i> Read More about the EDSC program"
+    btn_class: "btn--inverse"
+
+
 feature_row_pyopensci:
   - image_path: images/women-coding-unsplash.jpg
     alt: "customizable"
     title: "pyOpenSci: Open Source Python Software for Science"
-    excerpt: "**Where I am now:** I founded and am now the Executive Director of pyOpenSci - a diverse, global community that supports the Python tools that drive open science through open peer review, training and mentorship. I am incredibly excited to be building this community and look forward to writing about the experience as I learn."
+    excerpt: "I founded and am now the Executive Director of pyOpenSci - a diverse, global community that supports the Python tools that drive open science through open peer review, training and mentorship. I am incredibly excited to be building this community and look forward to writing about the experience as I learn."
     url:
     btn_label: "Create a blog on this? I could link to the blog i wrote on the pyos website too for now"
 
 feature_row_earthlab_education:
   - image_path: images/j-kelly-brito-PeUJyoylfe4-unsplash.jpg
     alt: "customizable"
-    title: "Earth Analytics Education Program (Director)"
+    title: "Director of Earth Analytics Education"
     excerpt: "I was hired as Director of Earth Analytics Education the earth analytics education program which supported scientists using complect earth and environmental data to study environmental change. I created several programs here including the earthdatascience.org online education portal, a professional program in earth data analytics,
     and the earth data science corps internship which built capacity at tribal and hispanic serving colleges to teach and to learn earth and environmental 
     data science skills."
@@ -36,21 +84,7 @@ lessons and by hosting training events."
     url:
     btn_label: "Create a blog on this? I could link to the blog i wrote on the pyos website too for now"
 
-feature_row_edsc:
-  - image_path: images/vincent-guth-Sdc35GnHgvI-unsplash.jpg
-    title: "Earth and Environmental Data Science Corps"
-    excerpt: "I had an NSF proposal funded that built capacity to teach and to learn earth and environmental data science skill at tribal and hispanic serving institutions. The core of the program included a summer program where we provided training to faculty and students in open, reproducible earth and environmental data science skills. The program also provided mentorship to students and training for faculty to support them added data intensive curriculum into their courses."
-    url: ""
-    btn_label: "<i class='fas fa-angle-right'></i> Blog coming soon..."
-    btn_class: "btn--inverse"
-feature_row_open_education:
-  - image_path: images/open-education-landing.png
-    alt: "customizable"
-    title: "Open Education Resources: earthdatascience.org"
-    excerpt: "Everyone should have access to in-demand data science skills. Publishing curated sets of lessons and courses online allows those who may not have access otherwise to training materials. I build and then published my courses and lessons on 
-    the earthdatascience.org website."
-    url: "/open-education-earth-data-science/"
-    btn_label: "<i class='fas fa-angle-right'></i> Blog coming soon..."
+
 
 feature_row_eda_graduate_program:
   - image_path: images/earth-data-analytics-professional-certificate.png
@@ -80,36 +114,7 @@ feature_row_education_teaching:
     url: #"/blended-online-inperson-teaching-earth-data-science#autograding"
     btn_label: #"<i class='fas fa-angle-right'></i> Learn More: Autograding"
     btn_class: "btn--inverse"
-# feature_row_programs:
-#   - image_path: 
-#     alt: "customizable"
-#     title: "Program Development & Leadership Including Earth Data Analytics"
-#     excerpt: "I build and lead programs. In my previous position as Director of Earth Analytics Education, I built the earth data analytics program at the University of Colorado - Boulder. Before that I developed the NEON Data Skills program."
-#     url:
-#     btn_label: "Learn More"
-# feature_row_foss:
-#   - image_path: images/earthpy-free-open-source-tools-spatial-python.png
-#     alt: "customizable"
-#     title: "Free Open Source Software (FOSS) - Tools for Open Science"
-#     excerpt: "Free Open Source Software (FOSS) is freely available software where the code is publicly available for use and contributions. I lead development of and contribute to free tools to support teaching of earth data science skills in our Earth Analytics program."
-#     url: free-open-source-software-for-science-foss/
-#     btn_label: "Learn More"
-#     btn_class: "btn--inverse"
-# feature_row_tools:
-#   - image_path: images/earthpy-free-open-source-tools-spatial-python.png
-#     alt: "customizable"
-#     title: "EarthPy"
-#     excerpt: "A free and open Python package that makes it easier to plot, manipulate and use spatial data using open source tools like rasterio, geopandas, matplotlib and numpy."
-#     url: https://earthpy.readthedocs.io
-#     btn_label: "View docs (external link)"
-#     btn_class: "btn--inverse"
-#   - image_path: images/matplotcheck-free-open-source-tools-plots-python.png
-#     alt: "customizable"
-#     title: "Matplotcheck"
-#     excerpt: "A free and open Python package that makes it easier to test and validate matplotlib plots. This was built to support autograding student assignments but also is useful for writing unit tests for software."
-#     url: https://matplotcheck.readthedocs.io
-#     btn_label: "View docs (external link)"
-#     btn_class: "btn--inverse"
+
 header:
     overlay_image: images/vincent-guth-Sdc35GnHgvI-unsplash.jpg
     overlay_filter: 0.6
@@ -120,72 +125,132 @@ header:
           url: "https://github.com/lwasser"
         - label: "LinkedIn"
           url: "https://www.linkedin.com/in/leah-wasser-0138883"
-# feature_row_previous_programs:
-#   - image_path: 
-#     title: "Earth Lab Earth Analytics Education Program"
-#     excerpt: "
-#      remove"
-#     url: ""
-#     btn_label: "<i class='fas fa-angle-right'></i> Not eu"
-#     btn_class: "btn--inverse"
-  # - image_path:
-  #   title: "NEON Data Skills"
-  #   excerpt: ""
-  #   url: ""
-  #   btn_label: "<i class='fas fa-angle-right'></i> Not eu"
-  #   btn_class: "btn--inverse"
 
 ---
 
-{% include intro-block id="intro" type="center" %}
 
-{% include feature_row id="feature_row_pyopensci" type="left" %}
+{% include feature_row id="intro" type="center person-highlight" %}
 
-<div markdown="1" class="notice">
+<div class="body__content-block" markdown="1">
+## I build programs that support open reproducible science
+{: .fancy-header }
+
+{% include feature_row id="feature_open-science" type="left" %} 
+</div>
+
+<div class="container">
+  <div class="wave"></div>
+</div>
+
+
+<div markdown="1" class="notice-white">
+<div class="body__content-block" markdown="1">
 <div markdown= "1" class="wide">
 
 <!-- ground zero graphic on the left ??? -->
-## I Love Building Programs From the Ground Up that Support Open Science
+## Data science education should be open and available to everyone 
+{: .fancy-header }
 
-I've built two programs in the past 10 years that support open 
-science. Both programs emphasized:
-
-* **Earth & Environmental Data Science Education:** Empowering people with technical, in workforce demand skills.  
-* **Open Education:** Some programs require, others ensure  as many people as possible have access to learning materials and training
-* **Diversity, Equity, Inclusion & Accessibility:** making sure that programs are accessible to different people with different backgrounds, globally.
+{% include feature_row id="feature_open-education" type="right" %}
+</div>
+</div>
 </div>
 
-{% include feature_row id="feature_row_earthlab_education" type="right" %}
-{% include feature_row id="feature_row_neondataskills" type="right" %}
-
+<div class="container__white">
+  <div class="wave__white"></div>
 </div>
 
+<div class="body__content-block" markdown="1">
+## I am passionate about helping scientists understand all things related to data and data science
+{: .fancy-header }
 
-## Open Science programs that are close to my heart 
-
-{% include feature_row id="feature_row_edsc" type="left" %}
-{% include feature_row id="feature_row_open_education" type="left" %}
-
-## Professional Graduate program development
-{% include feature_row id="feature_row_eda_graduate_program" type="right" %}
-
-
-<div markdown="1" class="notice--primary">
-## Teaching approach and philosophy
-
-Blended Online and In-Person Classrooms, Active Learning and Teaching
-
-Through time, I have developed a teaching framework that combines active
-learning, blended online and in-person student participation and cloud based
-tools that support both teaching earth data science and scaling courses to
-support more students.
-
-{% include feature_row id="feature_row_education_teaching" %}
+{% include feature_row id="feature_teaching-eds" type="left" %}
 
 </div>
 
+<div class="container">
+  <div class="wave"></div>
+</div>
 
-<!-- {% include feature_row id="feature_row_foss" type="left" %} -->
+<div markdown="1" class="notice-white">
+<div class="body__content-block" markdown="1">
+<div markdown= "1" class="wide">
+
+<!-- ground zero graphic on the left ??? -->
+## I design programs that support diverse groups pursuing careers in STEM 
+{: .fancy-header }
+
+Supporting groups that have been traditionally underrepresented in STEM (Science Technology Engineering and Math) is core to all of the programs that I have developed. This work inspires me to do more, every day. 
+
+To support programmatic diversity, equity, inclusion and accessibility I:
+
+* Apply adaptive, evaluation-driven program design.
+* Let communities drive the program design based upon their needs. 
+* Try my best to always listen and support.
+* Work to empower individuals when I see motivation and interest.
+* Create content that is accessibility to a broad audience.
+
+Blog coming soon...
+{: .btn } 
+
+{% include feature_row id="feature_edsc" type="right" %}
+</div>
+</div>
+</div>
+
+
+<div class="container__white">
+  <div class="wave__white"></div>
+</div>
+
+<div class="body__content-block" markdown="1">
+## I development tools and build community around the open source tools that enable and drive open science
+{: .fancy-header }
+
+Free and open source software (FOSS) refers to free tools that make their code available to the public online. [These free tools are critical as they drive an enable open science](), by:
+
+* simplifying scientists workflows and 
+* allowing scientists to more easily build upon each other's work given the tools to run the workflows are freely available.
+
+Over the past decade i've dedicated a significant amount of my time to learning best practices associated with using building open source tools.
+
+And more recently I decided to dedicate my current career path to [building community around open source software](LINK TO BLOG on pyopensci about me?).
+
+{% include feature_row id="feature_row_pyopensci" type="left" %}
+
+</div>
+
+<div class="container">
+  <div class="wave"></div>
+</div>
+
+<div markdown="1" class="notice-white">
+<div class="body__content-block" markdown="1">
+<div markdown= "1" class="wide">
+
+<!-- ground zero graphic on the left ??? -->
+## Recent ramblings from my blog... 
+{: .fancy-header }
+
+<div class="blog__grid">
+  {% for post in site.posts limit:3 %}
+    {% include archive-cards.html %}
+  {% endfor %}
+</div>
+
+<p><a href="/blog/" class="btn btn--info btn--large">View All Posts <i class="fa fa-4 fa-arrow-circle-right" aria-hidden="true"></i></a></p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="container__white">
+  <div class="wave__white"></div>
+</div>
+
+
+
 
 {% comment %}
 <div markdown="1" class="notice--primary">
@@ -203,3 +268,49 @@ Probably should reconsider this blog and make it a highlights block w 3 things
 [Learn More FOSS](/free-open-source-software-tools-for-science-foss/)
 </div>
 {% endcomment %}
+
+
+{% include feature_row id="feature_row_edsc" type="left" %}
+{% include feature_row id="feature_row_open_education" type="left" %}
+
+<!-- I've built two programs in the past 10 years that support open 
+science. Both programs emphasized:
+
+* **Earth & Environmental Data Science Education:** Empowering people with technical, in workforce demand skills.  
+* **Open Education:** Some programs require, others ensure  as many people as possible have access to learning materials and training
+* **Diversity, Equity, Inclusion & Accessibility:** making sure that programs are accessible to different people with different backgrounds, globally.
+</div>
+
+{% include feature_row id="feature_row_earthlab_education" type="right" %}
+{% include feature_row id="feature_row_neondataskills" type="right" %} -->
+
+<!-- Open Science programs that are close to my heart 
+ -->
+<!-- TODO: would like to make the text in the columns a bit smaller>
+
+<div markdown="1" class="notice-white">
+<div class="body__content-block" markdown="1">
+## Teaching approach and philosophy
+{: .fancy-header}
+
+Blended Online and In-Person Classrooms, Active Learning and Teaching
+
+Through time, I have developed a teaching framework that combines active
+learning, blended online and in-person student participation and cloud based
+tools that support both teaching earth data science and scaling courses to
+support more students.
+
+{% include feature_row id="feature_row_education_teaching" %}
+
+</div>
+</div>
+
+
+<!-- {% include feature_row id="feature_row_foss" type="left" %} -->
+
+
+<!-- ## Professional graduate program development
+{: .fancy-header }
+
+{% include feature_row id="feature_row_eda_graduate_program" type="right" %}
+ -->

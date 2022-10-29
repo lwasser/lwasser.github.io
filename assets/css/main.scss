@@ -2,6 +2,33 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+// Variables - font size
+$type-size-1: 2.441em !default; // ~39.056px
+$type-size-2: 1.853em !default; // ~31.248px
+$type-size-3: 1.463em !default; // ~25.008px
+$type-size-4: 1.05em !default; // ~20px
+$type-size-5: .9em !default; // ~16px
+$type-size-6: 0.85em !default; // ~12px //used for notices
+$type-size-7: 0.6875em !default; // ~11px
+$type-size-8: 0.625em !default; // ~10px
+
+// Fonts 
+$serif: Georgia, Times, serif !default;
+$sans-serif: 'Lato', sans-serif; //'Lato', sans-serif; //-apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+ // "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+$monospace: Monaco, Consolas, "Lucida Console", monospace !default;
+
+
+$gray: #7a8288 !default;
+$dark-gray: mix(#000, $gray, 50%) !default; //text color
+$darker-gray: mix(#000, $gray, 60%) !default;
+$light-gray: mix(#fff, $gray, 50%) !default;
+$lighter-gray: mix(#fff, $gray, 90%) !default;
+
+// Variables - colors
+$page-background-color: #eee;
+$header-color: #7E026C;
+$header2-color: #212121;
 $primary: #CCCCCC; 
 $dark-primary: #303F9F;
 $light-primary: #C5CAE9;
@@ -15,35 +42,168 @@ $caption-color: #71616e;
 
 $custom-font: 'Chivo', sans-serif; //#'Nanum Gothic', sans-serif !important;
 $caption-font: 'Roboto', sans-serif;
-$header-font: 'Roboto', sans-serif; //'Playfair Display', serif;//'Nanum Gothic', sans-serif !important;
-$body-font: 'Chivo', sans-serif; //#'Nanum Gothic', sans-serif !important;
+$header-font: 'Raleway', san-serif;//'Vollkorn', serif; //'Roboto', sans-serif;//'Chivo', sans-serif; //'Roboto', sans-serif; //'Playfair Display', serif;//'Nanum Gothic', sans-serif !important;
+$body-font: 'Raleway', san-serif;//'Overpass', san-serif;//'Nanum Gothic', sans-serif; //'Chivo', sans-serif; //#'Nanum Gothic', sans-serif !important;
+$script-font: 'Kalam', sans-serif; //'Kalam', sans-serif;
 
-h1, h2, h3, h4, h5, h6 {color: #4F0845;
+//@media (min-width: 80em)
+#main {
+  max-width: none!important;
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
+
+.sidebar .author__name, .site-title {
+	font-family: $script-font!important;
+}
+
+
+html, body {
+	overflow-x: hidden;
+	font-family: $body-font;
+  }
+  
+  body {
+	background-color: $page-background-color;
+  }
+
+// page layout items
+.sidebar.sticky {
+	margin-left: 1em; //1.5 is ok on the blog page but pushes the posts by year too much over. need to figure out why
+}
+
+.breadcrumbs {
+	margin:0!important;
+}
+
+// adjust the blog page will it adjust other pages too?
+.page {
+	width: calc(100% - 350px)!important;
+	padding-right: 350px!important;
+  }
+
+.wide .page {
+	padding-right: 50px!important;
+  }
+
+h1 {
+	font-family: $script-font!important;
+
+} 
+
+h2, h3, h4, h5, h6 {color: $header2-color!important;
             font-family: $header-font!important;
-			font-weight: 700;
-			//font-style: italic;
+			//font-weight: 700;
+}
+
+
+h2.fancy-header, .notice h2.fancy-header, .notice .wide h2 {
+	color: $header-color!important;
+	font-family: $script-font!important;
+	font-size: 2.4em!important;
+	//margin-bottom: 100px!important;
 }
 
 h2, .page__content h2 {
-	font-size: 2em!important;
-	margin-bottom: 0!important;
+	padding-bottom: .1em!important;
+	border-bottom: none!important;
+	font-size: 1.6em;
 }
+
 h3 {
-	font-size: 1.6em!important;
+	//font-size: 1.6em!important;
 }
 
-body, p {
-  font-family: $body-font;
+.body__content-block {
+	clear: both;
+	margin-bottom: 2em;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: .001em;
+	max-width: 1280px;
+	padding-left: 2em;
+	padding-right: 2em;
+}	
+
+.notice-white {
+	background: #fff;
 }
 
-body {
-	font-size:.85em;
-	font-family: $body-font;
-	font-weight: 300;
+
+body, p, ul li {
+  font-family: $body-font!important;
+  //color: $primarurl("paper.gif")y-text; //maybe just a hair lighter?
+  line-height: 1.5em!important;
+  font-weight: 300;
+  font-size: .9em; 
+
+  .notice {
+	font-size: 2em
+  }
 }
+
+strong {
+	font-weight: 700;
+}
+
+// blog grid
+ 
+.blog__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+
+  h3.card-title {
+    font-size: 1.2em!important;
+    text-align: left;
+	margin-top: 0;
+	text-align: center;
+	vertical-align: middle;
+	text-shadow: 2px 2px 9px #000;
+  }
+  article {
+	display: contents;
+  }
+  a {
+	text-decoration: none;
+  }
+  p {
+	font-size: 1.2em!important;
+	font-weight: 400;
+	color: $gray;
+  }
+}
+
+.masthead__menu-item {
+    font-weight: 400;
+}
+
+// A notice block with normal font size 
+// I think i may want to rewrite this so the theme is full screen and #main doesn't have a max width
+.notice__main-block {
+	background-color: #fff;
+	padding: 0.05em 2em !important;
+	border-radius: 1em;
+  }
+
+.page__content {
+	padding: 10px 0;
+
+}
+
+.notice .feature__wrapper, .feature__wrapper {
+	margin-top: 3.5em!important;
+	border-bottom: none!important;
+
+	h2 {
+		margin-top: 0!important;
+	}
+  }
 
 figcaption {
-	font-size: .9em !important;
+	font-size: .7em !important;
 	line-height: 1.3em;
 	font-family: $caption-font!important;
 	font-weight: 700;
@@ -72,31 +232,47 @@ div.notice--warning {
   padding: 1.9em 2.3em !important
 }
 
-.notice, .notice--warning, .notice--primary, .notice--success, .notice p {
-	font-size: 2em!important;
-}
-.notice--success p, .notice--success li {
-	font-size: 1.2em!important;
-}
+// .notice, .notice--warning, .notice--primary, .notice--success, .notice p {
+// 	font-size: 2em!important;
+// }
+// .notice--success p, .notice--success li {
+// 	font-size: 1.2em!important;
+// }
 
 // .notice--success p, .notice--warning p, .notice--primary p {
 //   font-size: 1.1em!important;
 // }
 
 .notice h2, .notice--primary h2, .notice--warning h2 {
-    font-size: 2.2em!important;
+    //font-size: 2.2em!important;
     margin: 1em 0 0.5em!important
 }
 
 .notice--primary h2.archive__item-title {
-  font-size: 1.4em!important;
+  font-weight: 400!important;
 }
 
+/* Drop shadow for image items in feature elements  */
+.archive__item-teaser img {
+	/* box-shadow: 7px 7px 4px #999; */
+	-webkit-filter: drop-shadow(5px 5px 5px #999);
+	filter: drop-shadow(5px 5px 5px #999);
+	width: 100%;
+	border-radius: 10%;
+	padding: 1em;
+}
+
+h3.archive__item-title.condensed, .archive__item-title, .feature__wrapper h2.archive__item-title {
+	margin-bottom: .3em!important;
+	margin-top: 0 !important;
+	font-weight: 400;
+	color: $header-color;
+  }
 /* Customize archive blocks*/
 .page__inner-wrap .archive__item-title {
 	margin-top: 0 !important;
 	font-size: 1.25em;
-	font-weight: bold;
+	//font-weight: bold;
 }
 
 .page__inner-wrap .archive__item-title {
@@ -112,49 +288,43 @@ div.notice--warning {
 	margin-bottom: 0;
 }
 
-
 .feature__wrapper.left-text p, .feature__wrapper.left-text h3 {
 	text-align: left;
   }
 
 .feature__wrapper h2 {
-	font-size: 1.3em;
-	margin-top: 2em;
-	margin-bottom: 1.15em;
+	//font-size: 1.3em;
+	//margin-top: 2em;
+	//margin-bottom: 1.15em;
   }
 
 .page__meta-readtime {
 	font-size: .7em;
 	color: #666;
+	line-height: 1em;
   }
 
 .page__meta.condensed {
-	line-height: .8em;
+	line-height: .8em!important;
 	margin-top: .25em;
 	margin-bottom: .7em;
 }
 
 
-.archive__item-excerpt {
-	font-size:.8em!important;
-  }
 
-/* Top intro*/
-.archive__item-excerpt.intro p {
-	font-size: 1em;
-	color:$gray;
-  }
-
-
-.archive__item-title.condensed {
-	font-size: 1.2em !important;
-	margin-top: 0 !important;
-  }
 //Only wide intro on non splash / wide layout pages otherwise it's too wide
   .layout--single .feature__item--center .archive__item-body {
 	width: 75%!important;
   }
 
+//Only even middle blocks have padding
+.feature__item:nth-child(even) {
+	padding: 0 .6em;
+
+}
+.feature__item {
+	font-size: .95em!important;
+}
 /*  notice block with feature wrote inside */
 
 .feature__item--right {
@@ -166,33 +336,182 @@ div.notice--warning {
 }
 
 .notice .feature__wrapper p, .notice p {
-	font-size: 1.5em;
-	font-family: $body-font;
-	color: $font-grey;
+	// font-size: 1.5em;
+	//font-family: $body-font;
+	//color: $font-grey;
   }
 
-  .notice p, .notice li {
-	font-size: 1.2em!important;
-	color: $font-grey;
-  }
+//   .notice p, .notice li {
+// 	//font-size: 1.2em!important;
+// 	color: $font-grey;
+//   }
 
   .notice .wide p, .notice .wide li {
 	margin-right: 40%;
   }
 
-  // CARDS
+// Div section dividers
+// https://wweb.dev/resources/css-separator-generator/
+.container {
+	position: relative;
+	background: $page-background-color;
+	height: 10vh;
+  }
+  
+  .wave {
+	position: absolute;
+	height: 58px;
+	width: 100%;
+	background: $page-background-color;
+	bottom: 0;
+  }
+  
+  .wave::before, .wave::after {
+	content: "";
+	display: block;
+	position: absolute;
+	border-radius: 50% 100%;
+  }
+  
+  .wave::before {
+	width: 55%;
+	height: 100%;
+	background-color: $page-background-color;
+	right: -1.5%;
+	top: 40%;
+  }
+  .wave::after {
+	width: 55%;
+	height: 109%;
+	background-color: #fff;
+	left: -1.5%;
+	top: 60%;
+  }
 
-.card-title {
-	font-size: .8em!important;
-}
+.container {
+	position: relative;
+	background: $page-background-color;
+	height: 10vh;
+  }
+  
+  .wave {
+	position: absolute;
+	height: 58px;
+	width: 100%;
+	background: $page-background-color;
+	bottom: 0;
+  }
+  
+  .wave::before, .wave::after {
+	content: "";
+	display: block;
+	position: absolute;
+	border-radius: 50% 100%;
+  }
+  
+  .wave::before {
+	width: 55%;
+	height: 100%;
+	background-color: $page-background-color;
+	right: -1.5%;
+	top: 40%;
+  }
+  .wave::after {
+	width: 55%;
+	height: 109%;
+	background-color: #fff;
+	left: -1.5%;
+	top: 60%;
+  }  
+
+// Opposite colors grey
+.container__white {
+	position: relative;
+	background: #fff;
+	height: 2vh;
+  }
+  
+  .wave__white {
+	position: absolute;
+	height: 70px;
+	width: 100%;
+	background: #fff;
+	bottom: 0;
+  }
+  
+  .wave__white::before, .wave__white::after {
+	content: "";
+	display: block;
+	position: absolute;
+	border-radius: 100% 50%;
+  }
+  
+  .wave__white::before {
+	width: 55%;
+	height: 109%;
+	background-color: $page-background-color;
+	right: -1.5%;
+	top: 60%;
+  }
+  .wave__white::after {
+	width: 55%;
+	height: 100%;
+	background-color: #fff;
+	left: -1.5%;
+	top: 40%;
+  }
+
+  
+/* intro teaser  with image  - not there is another style that may be handling
+this above*/
+
+/* Top intro excerpt */
+.archive__item-excerpt.intro p {
+	font-style: italic;
+	font-weight: 300;
+	line-height: 1.5em;
+  }
+
+  .feature__item--center.person-highlight img {
+	width: 40%;
+	border-radius: 40%;
+	padding-bottom: .7em;
+  }
+
+  .feature__item--center {
+	position: relative;
+	float: left;
+	margin-left: 0;
+	margin-right: 0;
+	width: 50%;
+	// clear: both;
+	font-size: 1.125em; //Make this a variable
+  }
+
+// CARDS
+
 .card-excerpt {
-	font-size:.65em!important;
+	font-size:.80em!important;
+	height: 18em;
 }
 .card-wrapper {
 	display: flex;
 }
+
+article .card .card__bkg {
+	background-image: url("/images/blog/1.png");
+	background-size: cover;
+}
+article:nth-child(3n+3) .card .card__bkg {
+	background-image: url("/images/blog/2.png");
+}
+article:nth-child(4n+4) .card .card__bkg {
+	background-image: url("/images/blog/3.png")!important;
+}
+article:nth-child(5n+5) .card .card__bkg {
+	background-image: url("/images/blog/4.png")!important;
+}
 .card {
-	padding: 10px 30px;
 	border-radius: 4px;
 	background: #f5f5f5;
 	box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
@@ -201,6 +520,25 @@ div.notice--warning {
 	&:hover {
     background: #ccc;
 	}
+
+	.card__bkg {
+		height: 11em;
+	}
+
+	.card__bkg span {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: normal;
+	  }
+	
+	.card-title {
+		font-size: .8em!important;
+		padding: 10px 30px;
+		color: #fff!important;
+	}
+	p {
+		padding: 10px 30px;
+	}
 }
 
 .card a {
@@ -208,19 +546,7 @@ div.notice--warning {
 	color: $secondary-text;
 }
 
-/* 
-I need a new intro style... 
 
-
-
-
-
-.page__inner-wrap .archive__item-excerpt p {
-	font-size: 1.1em;
-	line-height: 1.2em;
-	padding-right: 0em;
-  }
-*/
 /* TIMELINE About page*/
 
 $primary: #CCCCCC; 
@@ -241,24 +567,6 @@ $accent: #4F0845;
 
 section {
   padding: 100px 0;
-}
-
-html, body {
-  overflow-x: hidden;
-}
-
-body {
-//   font-family: 'Roboto';
-//   font-size: 17px;
-//   font-weight: 400;
-  background-color: #eee;
-}
-
-h1 {
-//   font-size: 200%;
-//   text-transform: uppercase;
-//   letter-spacing: 3px;
-//   font-weight: 400;
 }
 
 header {

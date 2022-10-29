@@ -42,7 +42,7 @@ the science myself.
 My career path haven't exactly been linear but i'm psyched about where I am now! 
 
 <section class="timeline">
-  <div class="container">
+  <div class="timeline-container">
     {% for anEvent in site.data.professional-timeline %}
       {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
         {% if thecycle == 'odd' %}
@@ -85,6 +85,9 @@ My career path haven't exactly been linear but i'm psyched about where I am now!
         {% endfor %}
   </div>
 </section>
+
+
+
 
 
 

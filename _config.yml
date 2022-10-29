@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "Leah A. Wasser"
 title_separator          : "-"
-name                     : "Leah Wasser"
+name                     : "Leah A. Wasser"
 description              : "After building many websites, it's about time that I have my own."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : ""# the subpath of your site, e.g. "/blog"
@@ -30,15 +30,17 @@ breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  giscus:
+  repo_id              : # Shown during giscus setup at https://giscus.app
+  category_name        : # Full text name of the category
+  category_id          : # Shown during giscus setup at https://giscus.app
+  discussion_term      : # "pathname" (default), "url", "title", "og:title"
+  reactions_enabled    : # '1' for enabled (default), '0' for disabled
+  theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
   disqus:
     shortname            : "www-leahwasser-com" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
   utterances:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
@@ -84,10 +86,6 @@ naver_site_verification  :
 # Social Sharing
 twitter:
   username               :
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
 og_image                 : # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
@@ -117,13 +115,10 @@ author:
       # url: mailto:your.name@email.com
     #- label: "Website"
       #icon: "fas fa-fw fa-link"
-      #url: "https://leahwasser..com"
+      #url: "https://leahwasser.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/leahawasser"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/lwasser"
@@ -137,21 +132,19 @@ footer:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/leahawasser"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: https://github.com/lwasser
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: https://github.com/lwasser
+    - label: "StackOverflow"
+      icon: "fa-brands fa-stack-overflow"
+      url: https://stackoverflow.com/users/3908816/leah-wasser
+    - label: "ORCID ID"
+      icon: "fa-brands fa-orcid"
+      url: https://orcid.org/0000-0002-8177-6550
+
 
 
 # Reading Files
