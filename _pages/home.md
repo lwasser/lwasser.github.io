@@ -214,7 +214,7 @@ Free and open source software (FOSS) refers to free tools that make their code a
 
 Over the past decade i've dedicated a significant amount of my time to learning best practices associated with using building open source tools.
 
-And more recently I decided to dedicate my current career path to [building community around open source software](LINK TO BLOG on pyopensci about me?).
+And more recently I decided to dedicate my current career path to [building community around open source software](https://www.pyopensci.org/blog/new-executive-director-leah-wasser).
 
 {% include feature_row id="feature_row_pyopensci" type="left" %}
 
