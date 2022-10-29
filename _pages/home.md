@@ -46,7 +46,7 @@ feature_teaching-eds:
     url: #
 
 feature_edsc:
-  - image_path: images/vincent-guth-Sdc35GnHgvI-unsplash.jpg
+  - image_path: /images/women-coding-unsplash.jpg
     title: "Empowering students at tribal and hispanic Serving schools with Earth and Environmental Data Science Skills"
     excerpt: "The Earth and Environmental Data Science Corps (EDSC) was a funded NSF-HDR program that I designed and developed. The goal: to build build capacity to teach and to learn earth and environmental data science skills at tribal and hispanic serving institutions. 
     
