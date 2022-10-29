@@ -12,17 +12,18 @@ comments: true
 header:
   overlay_color: "#333"
 series: "conda-envt-testing"
-category: "open-science"
+category: "data science and dev-ops"
 categories:
-  - testing
-  - python
-  - open-source
-  - open-education
+  - data science and dev-ops
 tags:
   - python
   - conda
   - data science
   - testing
+  - testing
+  - python
+  - open-source
+  - open-education
 ---
 <!--<original permalink free-open-source-software-for-science-foss/> -->
 

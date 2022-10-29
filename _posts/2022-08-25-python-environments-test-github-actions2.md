@@ -11,13 +11,14 @@ header:
   overlay_color: "#333"
 category: "open-science"
 categories:
+  - data science and dev-ops
+tags:
   - python
   - open-source
   - open-education
   - testing
   - open-science
 ---
-
 
 ## Introducing your new best friend: Continuous Integration
 
