@@ -86,7 +86,7 @@ author_profile: false
       <div class="archive__item-teaser">
         <figure>
             <a href="/images/xkcd-open-source-dependency.png">
-            <img src="/images/xkcd-open-source-dependency.png" ></a>
+            <img src="/images/xkcd-open-source-dependency.png" alt="Image of a xkcd comic showing a large maching with a very small leg holding the entire thing up. An arrow points to it and says A project some random person in nebraska has been thanklessly maintaining since 2008."></a>
             <figcaption>Critical scientific workflows and projects often have dependencies
             that are maintained by volunteers. source: xkcd </figcaption>
         </figure>

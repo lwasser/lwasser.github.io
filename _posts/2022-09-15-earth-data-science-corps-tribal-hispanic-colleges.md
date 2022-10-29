@@ -11,7 +11,6 @@ categories:
   - deia
   - open-education
 comments: true
-
 ---
 
 ## Years of experience, but i'm still learning...
@@ -56,7 +55,7 @@ sentiment around belonging to the science community and around learning.
 
 <figure>
 	<a href="/images/edsc-infographic.png">
-    <img src="/images/edsc-infographic.png"></a>
+    <img src="/images/edsc-infographic.png" alt="Round infographic that describes the elements on the earth data science corps program including hundreds of people who would be trained, 75 students who would receive internships and training, tens of thousands of people who would use website lessons and 5 distinct institutions that would participate in the project."></a>
 	<figcaption>Conceptual image showing the core components of the EDSC program
   The program was significantly modified once we began offering it due to both 
   lessons learned working with the schools and also the COVID-19 pandemic which 
@@ -140,8 +139,8 @@ more on that in a bit.
 
 <figure>
 	<a href="/images/edsc-data-science-capability.png">
-    <img src="/images/edsc-data-science-capability.png"></a>
-	<figcaption>Capacity building. Our goal was to meet each instition where they were in terms of capacity to teach data skills. We would then build capacity from that starting place to avoid overwhelming faculty.</figcaption>
+    <img src="/images/edsc-data-science-capability.png" alt="Graphic showing how we designed the program to be adaptive and meet institutions at their current data science teaching capacity and then build from there."></a>
+	<figcaption>Capacity building. Our goal was to meet each institution where they were in terms of capacity to teach data skills. We would then build capacity from that starting place to avoid overwhelming faculty.</figcaption>
 </figure>
 
 ## EDSC program components
@@ -220,7 +219,7 @@ this.
 
 <figure>
 	<a href="/images/edsc-timeline-activities.png">
-    <img src="/images/edsc-timeline-activities.png"></a>
+    <img src="/images/edsc-timeline-activities.png" alt="Timeline showing when each program element would occur starting with the carpentries training, then our training and then an applied internship. The program ultimately looked very different once we actually implemented it but conceptually was this type of design."></a>
 	<figcaption>Our original program design was a 3-semester program. After 
   working more closely with faculty and considering resource challenges at the 
   schools, we opted to create a summer program to make student and faculty 

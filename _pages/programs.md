@@ -76,7 +76,7 @@ support of Open Science.
                       Program Design Collaborator: <i>Jenny Palomino</i>
                       </p>
                   </div>
-                  <p><a href="" class="btn ">RELATED: Lessons Learned From The EDSC</a></p>
+                  <p><a href="/training-diverse-communities-earth-data-science-corps/" class="btn ">RELATED: Lessons Learned From The EDSC</a></p>
               </div>
           </div>
       </div>
