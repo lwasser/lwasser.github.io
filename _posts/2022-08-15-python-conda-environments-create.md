@@ -11,7 +11,7 @@ author_profile: true
 header:
   overlay_color: "#333"
 series: "conda-envt-testing"
-category: "data science and dev-ops"
+category: "data-science-dev-ops"
 categories:
   - data-science-dev-ops
 tags:
