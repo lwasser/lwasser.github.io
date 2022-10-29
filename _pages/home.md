@@ -180,13 +180,15 @@ header:
 ## I design programs that support diverse groups pursuing careers in STEM 
 {: .fancy-header }
 
-Designing programs that serve traditionally underrepresented groups in STEM (Science Technology Engineering and Math) is core to all of the programs that I have developed. And what drives me to do more every day. This type of work requires:
+Supporting groups that have been traditionally underrepresented in STEM (Science Technology Engineering and Math) is core to all of the programs that I have developed. This work inspires me to do more, every day. 
 
-* Adaptive, evaluation-driven program design
-* Sincere willingness to allow the explicit needs of those groups to drive program design. 
-* Sensitivity to the needs, hesitations and xxx of all groups involved
-* Time and dedication
-* Consideration of accessibility of all content provided in the program. 
+To support programmatic diversity, equity, inclusion and accessibility I:
+
+* Apply adaptive, evaluation-driven program design.
+* Let communities drive the program design based upon their needs. 
+* Try my best to always listen and support.
+* Work to empower individuals when I see motivation and interest.
+* Create content that is accessibility to a broad audience.
 
 Blog coming soon...
 {: .btn } 
