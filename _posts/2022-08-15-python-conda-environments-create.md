@@ -1,6 +1,8 @@
 ---
-title: "Why tested Python Environments matter for science"
+title: "Why tested Python environments matter for science"
 excerpt: "Teaching earth and environmental data science can be time consuming. Learn about what I learned when I tried to create an consistent Python environment that was easy for students to install. (and how this could help your science as well."
+# feature_img: /images/science-communication/tested-python-environments.png
+# feature_alt: "Text here"
 layout: single_law
 related: true
 permalink: why-tested-python-environments-matter-for-science/

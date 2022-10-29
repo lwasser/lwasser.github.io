@@ -1,7 +1,8 @@
 ---
 title: "Using Youtube as a Science Communication to Explain Complex Remote Sensing Topics"
 excerpt: "Exploring creative ways of explaining complex scientific topics to broad audiences using YouTube"
-feature_img: /images/blog/how-does-lidar-remote-sensing-work.jpg
+feature_img: /images/science-communication/use-youtube-communicate-remote-sensing-science.png
+#feature_img: /images/blog/how-does-lidar-remote-sensing-work.jpg
 feature_alt: "Lidar remote sensing badge - how does lidar work."
 layout: single_law
 classes: wide

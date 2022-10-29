@@ -26,6 +26,7 @@ $light-gray: mix(#fff, $gray, 50%) !default;
 $lighter-gray: mix(#fff, $gray, 90%) !default;
 
 // Variables - colors
+$page-background-color: #eee;
 $header-color: #7E026C;
 $header2-color: #212121;
 $primary: #CCCCCC; 
@@ -63,7 +64,7 @@ html, body {
   }
   
   body {
-	background-color: #eee;
+	background-color: $page-background-color;
   }
 
 // page layout items
@@ -157,6 +158,10 @@ strong {
   h3.card-title {
     font-size: 1.2em!important;
     text-align: left;
+	margin-top: 0;
+	text-align: center;
+	vertical-align: middle;
+	text-shadow: 2px 2px 9px #000;
   }
   article {
 	display: contents;
@@ -247,6 +252,16 @@ div.notice--warning {
   font-weight: 400!important;
 }
 
+/* Drop shadow for image items in feature elements  */
+.archive__item-teaser img {
+	/* box-shadow: 7px 7px 4px #999; */
+	-webkit-filter: drop-shadow(5px 5px 5px #999);
+	filter: drop-shadow(5px 5px 5px #999);
+	width: 100%;
+	border-radius: 10%;
+	padding: 1em;
+}
+
 h3.archive__item-title.condensed, .archive__item-title, .feature__wrapper h2.archive__item-title {
 	margin-bottom: .3em!important;
 	margin-top: 0 !important;
@@ -295,12 +310,7 @@ h3.archive__item-title.condensed, .archive__item-title, .feature__wrapper h2.arc
 	margin-bottom: .7em;
 }
 
-/* Top intro excerpt */
-.archive__item-excerpt.intro p {
-	font-style: italic;
-	font-weight: 300;
-	line-height: 1.5em;
-  }
+
 
 //Only wide intro on non splash / wide layout pages otherwise it's too wide
   .layout--single .feature__item--center .archive__item-body {
@@ -340,28 +350,167 @@ h3.archive__item-title.condensed, .archive__item-title, .feature__wrapper h2.arc
 	margin-right: 40%;
   }
 
-  // CARDS
+// Div section dividers
+// https://wweb.dev/resources/css-separator-generator/
+.container {
+	position: relative;
+	background: $page-background-color;
+	height: 10vh;
+  }
+  
+  .wave {
+	position: absolute;
+	height: 58px;
+	width: 100%;
+	background: $page-background-color;
+	bottom: 0;
+  }
+  
+  .wave::before, .wave::after {
+	content: "";
+	display: block;
+	position: absolute;
+	border-radius: 50% 100%;
+  }
+  
+  .wave::before {
+	width: 55%;
+	height: 100%;
+	background-color: $page-background-color;
+	right: -1.5%;
+	top: 40%;
+  }
+  .wave::after {
+	width: 55%;
+	height: 109%;
+	background-color: #fff;
+	left: -1.5%;
+	top: 60%;
+  }
 
+.container {
+	position: relative;
+	background: $page-background-color;
+	height: 10vh;
+  }
+  
+  .wave {
+	position: absolute;
+	height: 58px;
+	width: 100%;
+	background: $page-background-color;
+	bottom: 0;
+  }
+  
+  .wave::before, .wave::after {
+	content: "";
+	display: block;
+	position: absolute;
+	border-radius: 50% 100%;
+  }
+  
+  .wave::before {
+	width: 55%;
+	height: 100%;
+	background-color: $page-background-color;
+	right: -1.5%;
+	top: 40%;
+  }
+  .wave::after {
+	width: 55%;
+	height: 109%;
+	background-color: #fff;
+	left: -1.5%;
+	top: 60%;
+  }  
+
+// Opposite colors grey
+.container__white {
+	position: relative;
+	background: #fff;
+	height: 2vh;
+  }
+  
+  .wave__white {
+	position: absolute;
+	height: 70px;
+	width: 100%;
+	background: #fff;
+	bottom: 0;
+  }
+  
+  .wave__white::before, .wave__white::after {
+	content: "";
+	display: block;
+	position: absolute;
+	border-radius: 100% 50%;
+  }
+  
+  .wave__white::before {
+	width: 55%;
+	height: 109%;
+	background-color: $page-background-color;
+	right: -1.5%;
+	top: 60%;
+  }
+  .wave__white::after {
+	width: 55%;
+	height: 100%;
+	background-color: #fff;
+	left: -1.5%;
+	top: 40%;
+  }
+
+  
+/* intro teaser  with image  - not there is another style that may be handling
+this above*/
+
+/* Top intro excerpt */
+.archive__item-excerpt.intro p {
+	font-style: italic;
+	font-weight: 300;
+	line-height: 1.5em;
+  }
+
+  .feature__item--center.person-highlight img {
+	width: 40%;
+	border-radius: 40%;
+	padding-bottom: .7em;
+  }
+
+  .feature__item--center {
+	position: relative;
+	float: left;
+	margin-left: 0;
+	margin-right: 0;
+	width: 50%;
+	// clear: both;
+	font-size: 1.125em; //Make this a variable
+  }
+
+// CARDS
 
 .card-excerpt {
-	font-size:.65em!important;
+	font-size:.80em!important;
+	height: 18em;
 }
 .card-wrapper {
 	display: flex;
 }
 
-.testme:nth-child(odd) {
-	background-color: #4F0845;
+article .card .card__bkg {
+	background-image: url("/images/blog/1.png");
+	background-size: cover;
 }
-
-article:nth-child(odd) .card .card__bkg {
-	background-image: url("/images/blog/tested-environment-python-1.png");
+article:nth-child(3n+3) .card .card__bkg {
+	background-image: url("/images/blog/2.png");
 }
-
-article:nth-child(even) .card .card__bkg {
-	background-image: url("/images/blog/ci-green-passing.png");
+article:nth-child(4n+4) .card .card__bkg {
+	background-image: url("/images/blog/3.png")!important;
 }
-
+article:nth-child(5n+5) .card .card__bkg {
+	background-image: url("/images/blog/4.png")!important;
+}
 .card {
 	border-radius: 4px;
 	background: #f5f5f5;
@@ -373,15 +522,19 @@ article:nth-child(even) .card .card__bkg {
 	}
 
 	.card__bkg {
-		height: 8em;
+		height: 11em;
 	}
+
+	.card__bkg span {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: normal;
+	  }
 	
-	// div.card__bkg:nth-child(even) {
-	// 	background-image: url("/images/blog/nds-code-example.png");
-	// }
 	.card-title {
 		font-size: .8em!important;
 		padding: 10px 30px;
+		color: #fff!important;
 	}
 	p {
 		padding: 10px 30px;
@@ -415,9 +568,6 @@ $accent: #4F0845;
 section {
   padding: 100px 0;
 }
-
-
-
 
 header {
 	background: $primary;
