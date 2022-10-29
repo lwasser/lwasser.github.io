@@ -133,7 +133,7 @@ other thing and something else would break.
 
 <figure>
 	<a href="/images/xkcd-python-environment.png">
-    <img src="/images/xkcd-python-environment.png"></a>
+    <img src="/images/xkcd-python-environment.png" alt="Image of a xkcd comic showing a large maching with a very small leg holding the entire thing up. An arrow points to it and says A project some random person in nebraska has been thanklessly maintaining since 2008."></a>
 	<figcaption>Environment pain when working with Python is real. However, Python
   is an awesome programming language that is broadly used across disciplines. So 
   it's worth figuring this all out. <i>Source: xkcd.</i> 
@@ -149,7 +149,7 @@ Why do you hate me, GDAL? Whyyyyy?
  
 <figure>
 	<a href="/images/gdal-meme-filipe.jpg">
-    <img src="/images/gdal-meme-filipe.jpg"></a>
+    <img src="/images/gdal-meme-filipe.jpg" alt="A funny meme created by colleague Filipe Fernandes that shows someone smoking a cigar with the text One Does not simply pip install GDAL."></a>
 	<figcaption>Meme created by a colleague, Filipe about installing GDAL in a 
   Python environment. It just is never pretty, friends. Now imagine students who 
   are new to python and want to get setup for spatial data trying just to install
@@ -321,8 +321,6 @@ You can think of a channel as a big box of tools. A toolbox! In Python,
 and specifically when you are using the `conda` package manager, there 
 are multiple toolboxes containing tools (Python packages) that you 
 can install things from. 
-
-
 
 <figure>
 	<a href="/images/blog/conda-channel-geohackweek.jpeg">

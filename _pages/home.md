@@ -43,7 +43,7 @@ feature_teaching-eds:
     I designed and use a blended online & in-person teaching method which **empowers students to chose the learning approach that best suits their needs**. 
     
     All of my courses ultimately are published online as open education resources because not everyone has the resources to attend a college to learn these skills."
-    url: #
+    url: /open-education-earth-data-science/
 
 feature_edsc:
   - image_path: /images/women-coding-unsplash.jpg
