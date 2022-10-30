@@ -753,6 +753,11 @@ blockquote {
 
 @media screen and (max-width: 768px) {
 
+	.feature__item--center {	
+		padding-left: 30px!important;
+		padding-right: 30px!important;	
+	}
+
 	.blog__grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -818,6 +823,11 @@ blockquote {
 		grid-auto-rows: 1fr;
 		column-gap: 30px;
 		row-gap: 30px;
+	}
+
+	.feature__item--center {	
+		padding-left: 20px!important;
+		padding-right: 20px!important;	
 	}
 }
 

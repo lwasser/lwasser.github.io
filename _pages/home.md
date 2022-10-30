@@ -22,10 +22,10 @@ feature_open-science:
   in developing new analyses that in turn advance 
   science more quickly. "
     title: "Helping scientists build upon each other's work..."
-    image_path: images/blog/open-reproducible-science-badge.png
+    image_path: images/home/open-reproducible-science-desola-lanre-ologun.png
     alt: "Banner with green leaves in the background that says Open Reproducible science allows scientists to build upon each others work."
 feature_open-education:
-  - image_path: images/blog/open-education-earth-environmental-data-science-card.png
+  - image_path: images/home/open-earth-environmental-data-science-education-desola-lanre-ologun.png
     alt: "customizable"
     title: "Building maintained and tested open education resources for learning earth and environmental data science"
     excerpt: "Everyone should have access to in-demand data science skills. Publishing consistently maintained lessons and course materials online allows everyone with access to materials that will help them develop in job market demand skills.
@@ -35,8 +35,8 @@ feature_open-education:
     btn_label: "<i class='fas fa-angle-right'></i> Blog coming soon..."
 
 feature_teaching-eds:
-  - image_path:
-    alt: "aac"
+  - image_path: /images/home/technical-earth-environmental-data-science-skills-for-science-desola-lanre-ologun.png
+    alt: "Image of people working at a computer."
     title: "We don't have to all suffer from imposter syndrome when learning data science."
     excerpt: "Imposter syndrome is real in the science community when it comes to learning data science. I am passionate about helping people gain these valuable skills which are in high demand in today's job market. <br><br>
     
@@ -57,8 +57,8 @@ feature_edsc:
 
 
 feature_row_pyopensci:
-  - image_path: images/women-coding-unsplash.jpg
-    alt: "customizable"
+  - image_path: images/home/pyopensci-python-open-source-software-for-science.png
+    alt: "Imaging showing a person holding a yellow sticky note that says Python."
     title: "pyOpenSci: Open Source Python Software for Science"
     excerpt: "I founded and am now the Executive Director of pyOpenSci - a diverse, global community that supports the Python tools that drive open science through open peer review, training and mentorship. I am incredibly excited to be building this community and look forward to writing about the experience as I learn."
     url:
