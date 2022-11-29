@@ -157,6 +157,20 @@ programming language.
 When I say reproducible, I mean that someone can copy the code from your lesson and
 download, get or easily create the data needed to run the code.
 
+Your reader should have everything that they need in your post to 
+run the workflow from start to finish. Yes, this means that your 
+open education resources ALSO need to be fully reproducible!
+
+To really enforce this idea, I created an automated continuous integration 
+build at CU boulder to ensure that every lesson that we published 
+ran from start to finish in the cloud (in a new, clean environment) because
+any lesson was published online for our audience! Stay tuned for 
+more on how this worked. 
+
+There is nothing more frustrating then trying to run a workflow in 
+an online lesson and quickly discovering that it just doesn't work. 
+
+
 ### 3. Carefully Consider Your Audience
 
  Consider who you want to use the lessons
