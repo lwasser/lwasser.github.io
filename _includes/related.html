@@ -12,7 +12,7 @@
 {% else %}
 <!-- If there are no related posts, post most recent still including that current page-->
 <div>
-    <div class="card-wrapper">
+    <div class="blog__grid">
     {% for post in site.posts limit:3 %}
         {% include archive-cards.html %}
     {% endfor %}

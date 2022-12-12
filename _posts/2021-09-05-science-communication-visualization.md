@@ -6,7 +6,7 @@ feature_img: /images/science-communication/use-youtube-communicate-remote-sensin
 feature_alt: "Lidar remote sensing badge - how does lidar work."
 layout: single_law
 classes: wide
-permalink: /short-videos-to-explain-complex-science-earth-data-science/
+permalink: /short-videos-to-explain-complex-science-earth-data-science
 author_profile: true
 related: true
 comments: true
