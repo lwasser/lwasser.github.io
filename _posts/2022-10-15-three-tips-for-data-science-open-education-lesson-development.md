@@ -3,6 +3,7 @@ title: "Three Tips for Building A Discoverable Open Education Website for Scient
 excerpt: "Open Education Resources (OER) referred to lessons and materials that are published online for anyone to use. Here I present a few lessons learned from my experiences."
 layout: single_law
 author_profile: true
+permalink: /three-tips-for-data-science-open-education-lesson-development
 related: true
 comments: true
 header:

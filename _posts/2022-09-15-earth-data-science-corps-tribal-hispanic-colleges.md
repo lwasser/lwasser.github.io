@@ -2,7 +2,7 @@
 title: "Empowering Underserved Communities With Data Science Skills - the Earth and Environmental Data Science Corps"
 excerpt: "Students at colleges serving underrepresented communities often don't have access to earth and environmental science data skills. Learn about a 1.3 million dollar NSF award that built capacity to teach and learn data skills at hispanic and tribal colleges."
 layout: single_law
-permalink: /training-diverse-communities-earth-data-science-corps/
+permalink: /training-diverse-communities-earth-data-science-corps
 author_profile: true
 header:
   overlay_color: "#333"

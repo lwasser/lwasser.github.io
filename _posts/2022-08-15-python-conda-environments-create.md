@@ -5,7 +5,7 @@ excerpt: "Teaching earth and environmental data science can be time consuming. L
 # feature_alt: "Text here"
 layout: single_law
 related: true
-permalink: why-tested-python-environments-matter-for-science/
+permalink: why-tested-python-environments-matter-for-science
 #feature_img: /images/blog/tested-environment-python-1.png
 author_profile: true
 header:
