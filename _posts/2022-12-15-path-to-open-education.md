@@ -1,7 +1,7 @@
 ---
-title: "How My Career Brought Me to the Value of Open Education for Earth and Environmental Data Scientists"
+title: "How I Became an Open Education Advocate for Earth and Environmental Data Science"
 excerpt: "The idea of Open Education Resources (OER) and the field of  earth and environmental sciences are not new. But the terms have become popular in recent years. While I only recently identified with these terms, i've been working in this space for years. Here I talk about how my career evolved in this space as it relates to the development of online portals such as NEON data skills (and more recently earthdatascience.org)."
-permalink: /how-i-discovered-the-value-of-open-education-to-grow-programs
+permalink: /my-path-to-open-education-earth-environmental-data-science
 layout: single_law
 author_profile: true
 related: true
@@ -22,15 +22,16 @@ period: 2-3 years). It’s the thing that people want to do in many cases for a
 greater good of helping other people. And that greater good is a noble thing to 
 think about. 
 
-But while open education as a buzz word is shiny and new today to many, it's 
-not actually a new concept at all. In fact institutions and people have been 
-publishing resources online that others can use to learn for decades. 
+But while open education is a shiny, new buzz word to many, it's 
+not actually been around for a while. In fact institutions and people have been 
+publishing high-quality learning resources online for decades. 
 
 Including me. 
 
-Below, i'll discuss my career evolution as it evolved to use open education 
-resources as a core tool to support communities. Specifically communities 
-in the earth and environmental sciences.   
+Below, i'll discuss how I discovered the value of open education as a core tool 
+to both support communities and democratize access to education. I'll focus 
+specifically on communities in the earth and environmental sciences; as it's 
+the community that I know best.   
 
 ## Open education is not new, but it's a new-ish buzz word today (2022)
 In the same way that data science isn’t new, open education is not new. I 
@@ -39,11 +40,12 @@ of the Land Analysis Lab at Penn state almost 20 years ago (*circa 2003ish?*).
 At that time there was no buzz word associated with publishing lessons online. 
 Earth and environment data 
 science wasn’t a thing even though people were processing data (old school at 
-the command line 
+the command line: 
 
 HELLO ARCINFO if you are a GIS nerd
 
-and waiting days for workflows to run. 
+Given the lack of compute resources that we have today, we'd wait days for 
+workflows to run. 
 
 <figure>
   <img src="/images/blog/gis-arc-info.png" alt="Image showing the old arcInfo 
@@ -69,9 +71,13 @@ Talk about novel!
 
 ### We published soil data lessons and GIS lessons online 
 
-Online soil data and GIS lessons The lessons that we published at the time supported 
-training that we were doing. Thus, we had to update the lessons from time to time.
-These updates were often annual. 
+The lessons that we published at the time supported the
+training that we were doing at Penn State. Thus, we had to update the lessons 
+from time to time. These updates were often annual. 
+
+At the time, ESRI loved to come out with new versions of their emerging 
+GIS suite. It wasn't uncommon for the entire interface to change in these 
+new releases!
 
 The website was a manually generated website. Remember Dreamweaver (now an Adobe 
 product)?. Somehow, I became responsible for maintaining the site even though I was a 
@@ -114,7 +120,7 @@ You see, the head of the interdisciplinary Ecology program at Penn State
 (white, male and much much older than me at the time) devoted his life to 
 studying [Mycorrhizae fungi](https://mycorrhizae.com/how-it-works/). That is he 
 studied the tiny fungi that live on the roots of plants in the soil. He was not 
-convinced that using remote sensing data to student landscape level ecological 
+convinced that using remote sensing data to study landscape level ecological 
 change was really science. 
 
 Friends, this is indeed a true story.
@@ -125,19 +131,33 @@ Friends, this is indeed a true story.
   </figcaption>
 </figure>
 
-There was a lot of work to do to help the community develop the data skills
-that they needed. 
+There was a lot of work to do to help the ecological community develop the data 
+skills that they needed. 
 
 At the time, the head of the ecology program at Penn State did not understand 
-that we were at the precipice of the data-intensive science revolution. And within 
-years most scientists were going to be desperately searching for these technical 
-data science skills.  
+that we were at the precipice of the data-intensive science revolution.
+
+A massive transition in how science was done. 
+
+This transition would inspire scientists all over the world to work with
+data that others collected. And within years most scientists were going to be 
+desperately searching for these technical data science skills.  
 
 ## How could the NEON data skills program scale offering data science training to ecologists around the country and globe?
 
-Back to building the NEON data skills program, there was no way that running workshops 
-would reach the entire country! And while the Carpentries had a fantastic scalable 
-training model, our training content was specific and focused.
+Back to building the NEON data skills program, there was no way that my building 
+a program that only involved in-person workshops 
+would reach the entire country! And while the Carpentries had a fantastic 
+scalable training model, our NEON training content was specific and focused.
+
+<figure>
+  <img src="/images/blog/neon-training-workshop.png" alt="Image showing a bunch 
+  of people working at the computer with the NEON logo (in a NEON workshop).">
+  <figcaption>While we did hold workshops at NEON, a workshop was not enough to 
+  reach the entire country. Thus we created online lessons to support our 
+  workshops. This allowed students to use the lessons from any computer, anywhere!
+  </figcaption>
+</figure>
 
 We were teaching scientists how to use HDF5 data containing spectral remote 
 sensing. Or large lidar point clouds. We were teaching scientists how to use 
@@ -151,17 +171,27 @@ A simple online portal containing lessons was a great idea because it allowed th
 program to reach hundreds to millions of people across the 
 globe (if developed well).
 
+<figure>
+  <img src="/images/blog/neon-data-skills-banner.png" alt="Image showing the old arcInfo 
+  command line interface.">
+  <figcaption>A banner that we used at the top of the NEONdataskills.org website
+  (this site is no longer stand-alone, it is a part of the neonscience.org 
+  website)  
+  </figcaption>
+</figure>
 
-### Unknowingly I was also support self-directed learning 
-
+### Unknowingly I was also supporting self-directed learning 
 This idea was at the time to me, novel. And what I didn't understand at the time 
 is that having online lessons available to students during workshops also supported 
 [student-directed learning](https://en.wikipedia.org/wiki/Student-directed_teaching).
+
 Student-directed learning being this idea that students could chose to:
 
 * only listen to the workshop instructor. 
 * read through the online lessons.
 * Or even take the materials home to work through them at their own pace and on their own time 
+
+> Let the student chose how they learn best. 
 
 As such, online lessons complemented workshops when we held them.
 
@@ -172,13 +202,13 @@ as NEON data skills. 
 I wrote some lessons inspired by the Carpentries styles of online lessons.  I 
 taught some prototype workshops at major conferences like ESA with the help of 
 people like Ted Hart who at the time was my Git and GitHub guru (thank you Ted!) 
+
 ### Core elements that increased the value of each lesson 
 
 We added some elements to each lesson to improve the user experience:
 
 * At the top of each lesson we have learning goals. 
 * We also provided a link to the data needed to complete the lesson so a user could run through each lesson from beginning to end. 
-
 
 <figure>
   <img src="/images/blog/neon-data-skills-lesson-learning-goals.png" alt="Image showing the learning goals and data information at the top of each NEON data lesson.">
@@ -191,14 +221,24 @@ We added some elements to each lesson to improve the user experience:
 
 We also made sure to include any and all authors who contributed to lesson development. 
 
-[Lesson example - working with lidar chm raster data in R](https://www.neonscience.org/resources/learning-hub/tutorials/create-chm-rasters-r)
+[Lesson example - working with lidar chm raster data in R](https://www.neonscience.org/resources/learning-hub/tutorials/create-chm-rasters-r).
+
+Finally, quality graphics were used to help emphasize core ideas.
+
+<figure>
+  <img src="/images/blog/neon-lidar-points-forest.png" alt="Image showing a rendering 
+  of a forest with the lidar point cloud profile below..">
+  <figcaption>Core fundamental concepts drove lesson learning goals. Thus graphics 
+  like this were used to explain data concepts to scientists.  
+  </figcaption>
+</figure>
 
 I got better at `R` through teaching and saw how valuable those workshops were to 
 participates. And how much that appreciated having the online lessons to support the in 
 person learning (self directed learning is a powerful  thing! More on that in at OER 
 blog.)
 
-## Use of the portal steadily grew while I was leading that program
+## Use of the NEON data skills website steadily grew while I was leading that program
 
 <figure>
   <img src="/images/blog/nds-stats.png" alt="Image showing a lesson on the portal that uses code and graphics.">
@@ -225,24 +265,42 @@ The program vision included:
 3. Build community around the lessons so others could contribute resources as they developed them
 
 ### We were successful in 2/3 items above 
-We were successful at doing 2/3 goals stated above. THe lessons grew in populating
-over time reaching over 4000 unique global users a week after a year or so. We held
-workshops and got positive evaluation feedback from students that they were learning. 
+We were successful at doing 2/3 goals stated above. The NEON data skills site 
+became more popular over time. The website reach in just the first year was close 
+to 16,000 unique global users a month. We held workshops and got positive evaluation 
+feedback from students both from the online lessons and the in person learning 
+experience. 
+
+Scientists were learning!  
 
 yay! 
 
 ### We didn't quite hit the community mark that I wanted to hit  
 
-In my opinion, we failed at the community piece. 
+In my opinion, we failed in building real community around NEON data skills. 
+
 The lessons were published on a GitHub pages site at https://www.neondataskills.org
 The idea was that anyone could then add a lesson to the site or edit / provide
 feedback on existing lessons. 
 
-This didn't quite happen because we didn't support the community piece of the program. 
-And this likely was because our staff was soo small (it was only me early on).
+This didn't quite happen because we didn't support the community piece of the 
+program. 
+
+* We weren't able to keep up with questions and comments at the bottom of the lessons
+* We didn't get ideas for new lessons as there wasn't a community yet. 
+
+This lack of community was likely due to a small team (it was only me early on)
+and lack of focus on the community develop structures.
+
 After I left, the neondataskills.org url was merged into NEONscience.org which 
-is now branded by the management - Batelle. This means that it's even more closed 
-then it was before. 
+is now branded by their management company - Batelle. 
+
+Unfortunately, this means that the lessons and site are now owned by NEON and 
+Batelle, rather than the community.
+
+> Community ownership of the content will never grow that way
+
+### You win some and you lose some :) 
 
 All in all the program was a success. However, even to this day I think about what
 could have evolved had the program been kept in an online space that the community 
@@ -268,10 +326,7 @@ the content changes as tech changes. 
 Further, as content begins to become dated, search engines will pick up on that.
 This means that early success does not determine long term success.
 
-
-
 ## Online earth and environmental data science lessons need to be maintained over time to be useful 
-
 
 ### Search is often the most common way that someone finds your website
 For better or worse, it is well known that most people, are finding answers to 
@@ -307,8 +362,8 @@ And also users will get frustrated with lessons that likely have bugs in them.
 
 ### Open education resources as living online documents that require maintenance
 
-In my next blog, i'm going to talk about why open education online resources should 
-be thought about as living documents that need to be maintained. This maintenance 
+In a followup blog post, i'll talk about why open education online resources should 
+be thought of as living documents that need to be maintained. This maintenance 
 is similar to the maintenance that any open software tool requires. As tools change, 
 the lessons need to be updated.
 
@@ -317,4 +372,4 @@ you stop updating your content (and adding new content). As your site becomes le
 relevant to both users and the search engines. 
 
 I will talk about those challenges and more. 
-Click here to learn more. 
+Stay tuned...
