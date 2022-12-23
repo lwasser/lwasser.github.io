@@ -1,5 +1,5 @@
 ---
-title: "Why You Shouldn't Publish Open Education Resources (Or Should You?): Learning Earth and Environmental Data Science"
+title: "Why You Shouldn't Publish Open Education Resources (Or Should You?): Earth and Environmental Data Science"
 excerpt: "There is a huge number of open education / online tutorials that teach earth and environmental data science skills. However, these lessons will quickly become obsolete as tools evolve. This blog is about why simply publishing a lesson online is not enough."
 permalink: /open-education-data-science-posting-online-is-not-enough
 layout: single_law
@@ -16,45 +16,38 @@ tags:
 
 ## Open education resources for earth and environmental data science 
 Open education resources, as discussed here refer to lessons that are published
-online with the intent that other people can learn, or use them to teach, free
-of charge. 
-
-
-### What license should open education resources for earth and environmental data science avoid and why?
-
-Ideally, online open education resources have an open license such as [Creative Commons Share Alike](https://creativecommons.org/licenses/by-sa/4.0/). The Creative 
-Commons SHare Alike license is a great license because
-it's [copyleft](https://snyk.io/learn/what-is-copyleft-license/) like in nature. This 
-means that the content is open, but it must continue to be open if it's reused
-in any way.
-
-#### No commercial licenses are not ideal even if they are creative commons 
-Ideally the license on open education resources does not have a 
-[no commercial clause](https://creativecommons.org/licenses/by-nc/2.0/) 
-attached to it.
-
-No commercial, allows the lessons to be used by individuals. However, it's limitations
-may surprise you. It 
-technically prevents anyone who teaches with that license, in an 
-environment where there is monetary exchange involved.
-
-Examples of such environments include:
-
-* paid workshops 
-* college level courses where tuition is involved
-* or even training events where funding supports a non profit cause
-
-This type of restriction can potentially hurt those who may need the resources
-the most. Institutions that are smaller, and serve students who have been 
-traditionally under-served and underrepresented in STEM are examples of schools 
-that may lose more if our open education materials have a no commercial creative 
-commons license.
+online. The goal of publishing such lessons roots in democratizing access - giving anyone with a computer and internet access to learning 
+specific skills. In this case the skills are the ones needed by scientists to 
+develop open, reproducible earth and environmental data science workflows.
 
 ### Open education resources for earth and environmental data science (and tech in general)
-Open education resources for earth and environmental data science can be profoundly useful and 
-impactful. At the most basic level, open education resources democratize access 
-to learning. These resources open the door to learning to anyone who has a computer 
-and internet access.
+
+These skills are technical, can have a steep learning curve to learn and 
+often are not available in the form of formal courses at many schools - especially schools serving groups that have been traditionally underrepresented and underserved in STEM.
+
+
+<figure>
+  <img src="/images/blog/learning-curve-earth-environmental-data-science-wasser.png"  
+     style="width: 80%;" alt="Image that i made showing the skills associated with earth and environmental data science.">
+  <figcaption>Graphic that I created from a curve chart that was similar but 
+  with different tools showing the challenges that scientists often face when 
+  learning data science. The learning curve can be initially steep and challenging
+  . However it's well worth the effort as automating workflows saves huge amounts of 
+  time.  
+  </figcaption>
+</figure>
+
+Open education resources for earth and environmental data science are in demand 
+by so many scientists today. And there are millions of jobs available to people
+with skills that cross the intersection of science and data science 
+
+<figure>
+  <img src="/images/blog/earth-environmental-data-science-skills-overview.png"  
+     style="width: 80%;" alt="Image that i made showing the skills associated with earth and environmental data science.">
+  <figcaption>Graphic that I made showing the skills associated with earth and environmental data science.  
+  </figcaption>
+</figure>
+
 
 **<i class="far fa-lightbulb"></i> Using Open Source Tools is Also Ideal:** Ideally 
 if your online lessons deal with data science, they also have no fees to access them. And no license, or paywalls 
@@ -69,21 +62,17 @@ content, a one time effort
 will be short lived in its relevance and usefulness. 
 
 Perhaps tech content that is not intended to be maintained over time is better 
-served as a short blog post rather than an open education 
-resource. 
+served as a short blog post rather than an open education resource that has a 
+goal of delivering learning content to someone entering or in the field. 
 
 Before you publish the content, or even write a grant to create the content, 
-it's  worth considering how long you are able to maintain these resources.
+it's worth considering how long you are able to maintain these resources.
 
-What is your true end goal?
-
-Below, I explain why you should think twice before publishing open education 
-resources or extended online tutorials related to earth and environmental data 
-science. 
+Below I explain why.
 
 ## Just as tech is rapidly evolving so is data science
-The field of data science is rapidly evolving and with it the tools that support 
-data processing evolve. In the scientific open source world, versions of `Python` 
+The field of data science is rapidly evolving. And so are the tools that support 
+data processing. In the scientific open source world, versions of `Python` 
 change. Ways to process data efficiently change. 
 
 All of the open source R and Python tools that make data processing easier in 
@@ -97,40 +86,82 @@ Some
 specific examples of how the changing landscape has impacted resources that 
 I have created are discussed next.
 
-### Data structures can change over time - an example from NEON hyperspectral remote sensing data  
+### Example 1: Data structures can change over time - an example from NEON hyperspectral remote sensing data  
 
-Even in the 5 years that I was at NEON developing data lessons, data structures
-changed. 
+<figure>
+  <img src="/images/blog/neon-hdf5-lesson-graphic-colin-williams.png"  
+     style="width: 80%;" alt="Image
+     showing the general structure of the HDF5 file format.">
+  <figcaption>Image that graphic artist Colin Williams made 
+     showing the general structure of the HDF5 file format. This format is 
+     commonly used for large datasets such as remote sensing imagery. 
+  </figcaption>
+</figure>
+
+Even in the 5 years that I was at NEON developing data-focused lessons, data 
+structures changed. 
 
 Our published suite of [lessons on using the `hdf5` file format](https://www.neonscience.org/resources/learning-hub/tutorials/hdf5-intro-r) needed to change
 because NEON created a new and better organizational structure for the H5 files 
 that it was sharing with the public during that time. 
 
+
 The `hdf5` file format is a hierarchical file format that can store complex data sets 
 with varying structures. It is the format that NEON delivers it's raw 
 hyperspectral remote sensing data in. 
+{: .notice .notice-info }
 
 This change in data structure meant that all of the 
-online lessons that taught people how to use teh data needed to change too.
+online lessons that taught people how to use the data needed to change too.
+While this takes time it's ok if you are running a program that depends on the 
+lessons and have the resources to update lessons.
+
+But what happens if you don't have those resources to update the lessons 
+and they remain online?
+
+Users get frustrated. Waste time fighting with lessons that don't work.
+And many (*imposter syndrome in science is real*) may think they aren't cut out for data science.
 
 ### Trends in data science tools used to process data change too
 
-Trends in what tools we should use to process data change too. 
-
-### Example 1: base R vs tidyverse
+### Example 2: base R vs tidyverse
   
 As I was starting to move away from `R`, discussion of the raster package being 
 replaced by stars was emerging. And `tidyverse` was replacing `base R` as the new 
 “sexy” and efficient way to do data science. 
 
-When I made the leap of faith to teach `Python` instead of `R` at CU Boulder, a lot 
-had changed there too.
+When I started teaching earth and environmental data science at CU Boulder, I 
+migrated all of my lessons over from base R to tidyverse. 
 
-### Example 2: Spatial data processing in open source Python
+That also took time!
 
-In the spatial realm at hte time there was one solid book on geospatial processing 
-in `Python`. I bought it at the time. As thorough of a book as it was, it's 
-definitely the last book I'd buy on technical approaches to working with data. 
+### Example 3: Spatial data processing in open source Python
+
+In around 2018 I decided to move away from R and teach Python. 
+Python was more commonly used in the earth science space. It was also more commonly 
+found in industry based on a survey that I lead at the time. Finally, surveys 
+such as [Stack Overflow as showed Python as a rising star](https://insights.stackoverflow.com/survey/2019) in the world of 
+development and data science.  
+
+
+<figure>
+  <img src="/images/blog/stack-overflow-2019-survey-python-popular.png"  
+     style="width: 80%;" alt="Image
+     showing the general structure of the HDF5 file format.">
+  <figcaption> This image is from the 2019 Stack Overflow developer survey. 
+  In 2019 stack overflow concluded that Python was *the fastest-growing major 
+  programming language.*. It had just edged out Java. In 2021 Python moved to 
+  3rd position ahead of SQL with almost 48% of developers using it.
+  </figcaption>
+</figure>
+
+In the world of spatial data, back around that time, there was one solid book 
+on geospatial data processing for scientists in `Python`. I bought it. As 
+thorough of a book that it was, it would be the last book I'd buy on technical 
+approaches to working with data. 
+
+This is no dig at the author! 
+Things simply change way too fast. 
 
 <figure>
   <img src="/images/blog/geoprocessing-python-chris-garrard.png"  
@@ -139,19 +170,35 @@ definitely the last book I'd buy on technical approaches to working with data.
   </figcaption>
 </figure>
 
-Why would I not buy another book like this? Because this book used core GDAL (which 
-is profoundly hard to install and use). And this approach at the time was probably
-the best option. 
+I needed to build a program that was cutting edge. This book taught spatial 
+data science using core 
+GDAL (an open source tool for processing spatial data). GDAL is profoundly hard 
+to install and learn if you are a beginner. And this approach at the time was 
+probably the best option. 
 
-The value of online resources, vs. a published book is that online resources 
-can be changed at any time. The downside of a printed book is that it’s pretty darn difficult to modify the contents on the fly. 
-{: .notice }
 
-When this book was published, tools like `rasterio` and `xarray`, which carefully wraps around 
-GDAL removing levels of complexity from data processing, were still in early stages
-of development. Or perhaps the author didn't want to go "all in" on these tools?
+<figure>
+  <img src="/images/blog/gdal-pip-install-filipe.png" alt="Image showing the book cover of chris garrard's book geoprocessing with python.">
+  <figcaption>Meme created by a colleague Filipe, which makes fun at the fact
+  that it's hard to just `pip install` gdal without running into issues in a
+  Python environment. If you've ever tried to `pip install gdal` you might understand 
+  what this means! :)  If you haven't , take my word for it. It can be complicated. 
+ 
+  </figcaption>
+</figure>
 
-Thus the code used in the book was much more complex than it 
+
+ [<i class="fas fa-lightbulb"></i> **Link:** Read more about issues with Python 
+ environments for spatial data that require GDAL here in this blog](/why-tested-python-environments-matter-for-science) 
+ {: .notice}
+
+
+When this book was published, tools like `rasterio` and `xarray`, which 
+removing multiple levels of complexity from raster data processing, were still 
+in early stagesof development. Or perhaps the author didn't want to go "all in" 
+on these tools?
+
+Thus, the code used in the book was much more complex than it 
 needed to be. 
 
 ```python
@@ -186,7 +233,7 @@ using both:
 * hard coded paths and 
 * repeated code 
 
-Here is a similar snipped from the textbook that I developed:
+Here is a similar code example from the textbook that I developed using rioxarray:
 
 ```python
 # Create the path to your data
@@ -203,41 +250,27 @@ band_1 = rxr.open_rasterio(post_fire_paths[0], masked=True).squeeze()
 ```
 
 
-In fact geospatial data processing in `Python` in general was dominated by ArcGIS 
-based `Python` command line tools just 5 years ago. This requires a proprietary 
-license. Unfortunately, licenses were not helpful to scientists trying to build
-open reproducible workflows (workflows that other scientists can
-use and reuse to build on each others work). This is because proprietary licenses 
-can't be openly shared in the way that a Python based workflow can. 
-{: .notice .notice-success}
 
-### A conventional textbook was already dated, so I built my own online textbook to use in my courses
+### A conventional textbook was already dated, 
+
+This book while great was probably dated when it was published (writing books 
+takes a long time!).
 
 I had hoped to use that published book as my bible for what to teach. Instead I 
-found myself creating [my own geospatial lessons in Python bible](https://www.earthdatascience.org/courses/use-data-open-source-python/intro-vector-data-python/spatial-data-vector-shapefiles/). 
-This online textbook could openly licensed to allow anyone to use the lesson. 
+found myself creating [my own geospatial lessons in Python text](https://www.earthdatascience.org/courses/use-data-open-source-python/intro-vector-data-python/spatial-data-vector-shapefiles/). A text that I could keep current. 
+This online textbook is openly licensed to allow anyone to use the lesson. 
 
-Anyone could use the lessons:
+The value of online resources, vs. a published book is that online resources 
+can be changed at any time. The downside of a printed book is that it’s pretty darn difficult to modify the contents on the fly. 
+{: .notice }
+
+Anyone could use my textbook lessons:
 
 * In teaching. 
 * In learning.
 * Online. 
 
-### A complementary Python package to make writing code even easier
-
-Supported by my team and the amazing folks in our analytics hub, we also created 
-a learning helper package called `earthpy` that made some spatial operations easier
-and simpler. Some of the tools that we added to earthpy including:
-
-* plotting helpers 
-* and a clip function to clip vector vector data in Python
-
-[Our lessons were even accompanied by a tested Python environment to avoid any 
-installation issues.](/why-tested-python-environments-matter-for-science).
- 
-I'll go into that topic of producing this textbook in more detail in another blog! 
-
-### Example 3: from rasterio to xarray and rioxarray 
+### Example 4: from rasterio to xarray and rioxarray 
 
 But alas, my original geospatial data in Python lessons were soon also dated
 
@@ -246,11 +279,6 @@ Ironically, just 2 years after I wrote my first iteration of spatial lessons in
 students to use. This meant, less code. Less complexity to teach and learn. 
 
 And they all centered around `xarray`, and `rioxarray`.  
-
-The clip functionality in earthpy was moved to geopandas (yay! upstreaming open source!)
-
-* I moved all of the lessons to `xarray` and `rioxarray` for raster data.
-* And the beloved `geopandas` for vector data.
 
 This change in our textbooks: 
 
@@ -275,20 +303,15 @@ else does). There are many really great spatial libraries out there now to
 simplify and improve the lessons even more!
 {: .notice}
 
-Finally, because I was actively teaching these approaches in my courses, ever year, 
-it was my job to keep the content current. People need to get jobs with these 
-skills. Skills, similar to online content, are always more useful when they are 
-current and relevant. 
-
-## Current and relevant content will score higher in google
-It is important to note that current and relevant content will always get a 
-higher rating by google. Because people will spend more time working through it.
-And because the content answers questions that all of those *Googlers* out there 
-have. This in turn makes the content easier to find in a search. 
+Finally, because I was actively teaching these approaches in my courses. 
+Every year, it was my job to keep the content current. People need to get jobs 
+with these skills. 
 
 ## What business model sustains maintained online earth and environmental data science lessons?
 
-After a few years I had a small team to help me with this effort - which actually is a lot of work. And use of our online lessons grew to thousands of (global) users each week. 
+After a few years, I had a small team to help me with this effort - which 
+actually is a lot of work. And use of our online lessons grew from thousands of 
+(global) users each month to hundreds of thousands. 
 
 > Skills, similar to online content, are always more useful when they are 
 > current and relevant. 
@@ -300,18 +323,16 @@ The benefit of creating lessons that I (and my team) also taught was that:
 * Students working through the online lessons in their homework, would also catch and report issues that we could fix (we gave them participation points for identifying bugs or typos in the lessons!) 
 * Finally, as the tools changed and updated we updated the lessons.
 
-These lessons were more than just a one-time publication of open education resources, they were living resources that like software or any other technology needed to evolve and be updated as the data ecosystem evolved. Online lessons, open education resources are living documents.
+These lessons were more than just a one-time publication of open education 
+resources. They were living resources, that like software or any other 
+technology needed to evolve and be updated as the data-science ecosystem evolved. 
+
+> Online open education lessons are living documents.
 
 ## Weekly testing of lessons as the environment updated
 
-THe final element that we setup for our lessons is an automated build. This build, 
-uses a docker image with R and python packages to test the lessons before
-they are published. THis ensures that every lesson runs from beginning to end. 
-
-Lessons were also tested weekly.
-
-The environment image could be updated to represent current versions of python 
-and associated tools. Then the lessons would be tested again on the newer tools. 
+To further ensure that our lessons were current and worked, I also developed a 
+weekly automated build that tested each lesson from beginning to end. 
 
 While all of this takes a lot of effort. It's important to consider. If you don't, 
 you're just creating another resource that will be obsolete fairly quickly. 
@@ -326,47 +347,47 @@ There are numerous challenges today in the online earth and environmental data s
 It is most likely that these posts will never be updated as that is the nature 
 of a blog post
 
-* Online lessons are being created, through grants and other efforts that are funded
-for a few years. However there is no long term plan to update them as the technology changes. Thus years are spent developing books and other online resources and in just a few months they can become dated. 
+* Online lessons and books are being created, through grants and other efforts that are funded
+for a few years. However there is often no long-term plan to update them as the technology changes. Thus, years are spent developing books and other online resources and in just a few months they can become dated. 
 
-* Lessons are being published with no testing to ensure that they work (in the similar way that you would test software). Thus a user might find a userful resources that simply doesn’t run on their computer.  
+* Lessons are being published with no testing to ensure that they work (in the similar way that you would test software). Thus a user might find a useful resources that simply don’t run on their computer.  
 
 ## Make a plan for updating and maintaining your resources 
 
-We know that technology changes and as such if you plan on publishing online lessons. Be prepared to update them as those changes happen. This might mean 
-that you publish less content that is higher quality that can be maintained over time.
+Data science is quickly evolving. And as such online education resources need 
+to evolve with the times as data and tools change.  
+
+If you plan on publishing online lessons, be 
+prepared to update them as those changes happen. This might mean 
+that you publish less content that is higher quality that can be maintained over 
+time.
 
 Or you partner with other groups that have an interest in maintaining high quality 
-content. 
+content in a collaborative way. 
 
 If you can, try to think about these resources as a part of a funded program
-that you are already working on. Getting funding for maintenance is hard, so write in updates to your content, in any grants or funding that you seek.  
+that you are already working on. Getting funding for maintenance is hard, so 
+write in updates to your content, in any grants or funding that you seek.  
 
-## What's next? How to create a tested online open education portal (and attract millions of global users a year)
+<div markdown="1" class="notice notice--success"> 
+## What's next? 
 
-### And how to keep those users...
+> How to create a tested online open education portal (and attract millions of 
+> global users a year)
 
-In a future blog, I will write about 
-1.  Why online open education resources should be viewed as software that needs consistent maintenance and testing
-2. I will discuss this in the context of the earthdatascience.org portal that I designed and built at CU Boulder. 
-
-Earthdatascience.org was built upon everything that I leared while creating the 
-NEON data skills. It addressed the issues discussed above by:
-
-*  Creating a testing infrastructure baked into the publication of lessons that ensured lessons ran end to end prior to going online
-* Utilized a program that was self funded through tuition to support updating lesson content. 
-    * And incentivized students to identify bugs and issues in the online lessons to enhance lesson quality. 
+In a future blog, I will discuss all of the above ideas in the context of 
+creating the earthdatascience.org website. Earthdatascience.org was built 
+considering all of my experiences with online lessons. 
+This website:
+*  Had testing infrastructure baked into the publication of lessons that ensured lessons ran end to end prior to going online and there after
+* Was funded by a program that 
+    * continually demanded content updates
+    * incentivized students to identify bugs and issues in the online lessons to enhance lesson quality. 
 * Was carefully seo optimized to ensure discoverability of content. 
 
 Ultimately that site before I left had over 2 million unique global annual users 
-and consistently was returned in google searches. (NOTE that as i write this the 
-site is not currently being actively maintained but lessons learned can still be 
-drawn from this program)
+and consistently was returned in google searches. 
 
+Stay tuned for more!
 
-## Data science is quickly evolving, a one-time publication of learning materials is not enough
-Data science is quickly evolving. And as such online education resources need to evolve with the times as data and tools change. 
-
-Open education resources for earth and environmental data science need to be maintained and updated (and tested) in the same way that we update our operating systems and our suites of data science tools.
- 
-Stay tuned for more...
+</div>

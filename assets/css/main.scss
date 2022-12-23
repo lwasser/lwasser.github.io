@@ -86,12 +86,16 @@ html, body {
 	padding-right: 50px!important;
   }
 
-h1 {
+h1, h2 {
 	font-family: $script-font!important;
 
 } 
+h2 {
+	font-size: 2em!important;
+	color: $header2-color!important;
+}
 
-h2, h3, h4, h5, h6 {color: $header2-color!important;
+h3, h4, h5, h6 {color: $header2-color!important;
             font-family: $header-font!important;
 			//font-weight: 700;
 }
@@ -555,7 +559,11 @@ article:nth-child(5n+5) .card .card__bkg {
 	color: $secondary-text;
 }
 
-
+.card .card__bkg, .card .card-excerpt {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: calc(100%);
+  }
 /* TIMELINE About page*/
 
 $primary: #CCCCCC; 
