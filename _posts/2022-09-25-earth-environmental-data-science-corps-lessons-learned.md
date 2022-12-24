@@ -1,6 +1,6 @@
 ---
 title: "Lessons Learned from Working With Tribal And Hispanic Serving schools to Build Earth and Environmental Data Science Skills"
-excerpt: ""
+excerpt: "Working in the diversity, equity, inclusion and accessibility space (DEIA) requires time, patience and lifelong learning. Here I present a few lessons learned from working with students & faculty at tribal & hispanic serving schools to support learning earth and environmental data science."
 layout: single_law
 permalink: /lessons-learned-working-with-tribal-hispanic-serving-schools-earth-data-science-corps
 author_profile: true
