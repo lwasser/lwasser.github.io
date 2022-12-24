@@ -511,8 +511,19 @@ this above*/
 
 .card-excerpt {
 	font-size:.80em!important;
-	height: 18em;
+	height: 20em;
 }
+
+/* implement ellipsis to fix overflowing text */
+.card-excerpt > p {
+	display: -webkit-box;
+	-webkit-line-clamp: 9;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-bottom: 0!important;
+  }
+
 .card-wrapper {
 	display: flex;
 }

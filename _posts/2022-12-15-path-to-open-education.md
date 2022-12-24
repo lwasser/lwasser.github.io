@@ -1,6 +1,6 @@
 ---
 title: "How I Became an Open Education Advocate for Earth and Environmental Data Science"
-excerpt: "The idea of Open Education Resources (OER) and the field of  earth and environmental sciences are not new. But the terms have become popular in recent years. While I only recently identified with these terms, i've been working in this space for years. Here I talk about how my career evolved in this space as it relates to the development of online portals such as NEON data skills (and more recently earthdatascience.org)."
+excerpt: "The idea of Open Education Resources (OER) and the field of  earth and environmental sciences are not new. But the terms have become popular in recent years. While I only recently identified with these terms, i've been working in this space for years. Here I talk about how I discovered open education in the context of building online resources."
 permalink: /my-path-to-open-education-earth-environmental-data-science
 layout: single_law
 author_profile: true
