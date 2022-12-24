@@ -1,6 +1,6 @@
 ---
-title: "Empowering Underserved Communities With Data Science Skills - the Earth and Environmental Data Science Corps"
-excerpt: "Students at colleges serving underrepresented communities often don't have access to earth and environmental science data skills. Learn about a 1.3 million dollar NSF award that built capacity to teach and learn data skills at hispanic and tribal colleges."
+title: "Empowering Under-served Communities With Data Science Skills - the Earth and Environmental Data Science Corps"
+excerpt: "Undergraduate students at colleges serving underrepresented communities often don't have access to earth and environmental science data skills. Learn about a NSF award that built capacity to teach and learn data skills at hispanic and tribal serving colleges."
 layout: single_law
 permalink: /training-diverse-communities-earth-data-science-corps
 author_profile: true
@@ -17,15 +17,16 @@ tags:
 comments: true
 ---
 
-## Designing programs for underserved communities: the earth and environmental data science corps
+## A program to build capacity to teach earth and environmental data science at tribal and hispanic serving schools: the earth and environmental data science corps (EDSC)
 
 In 2019, I wrote an NSF proposal to create a program that supported
 students and faculty at schools that serve communities 
-traditionally underrepresented in STEM. The program had a small emphasis
-on tribal colleges, a group that I had worked with previously in my 
-job at the Land Analysis Lab at Penn State! Yay! 
+traditionally underrepresented in STEM. The program focused on 
+supporting hispanic and tribal serving colleges in adding earth and 
+environmental data science curriculum to their courses. It also focused 
+on training students to be leaders in this space. 
 
-The program was designed a hybrid in-person / online program. I had been 
+The program was designed as a hybrid in-person / online program. I had been 
 teaching in this type of hybrid environment for years, and have found 
 this way to teaching to be effective as it can [support student-directed 
 learning](https://en.wikipedia.org/wiki/Student-directed_teaching), if done well.
@@ -33,17 +34,16 @@ learning](https://en.wikipedia.org/wiki/Student-directed_teaching), if done well
 This program pulled together a solid 15 years of my experience 
 working on and creating different education programs that served a suite
 of different audiences including under-served communities. And I was lucky 
-enough at the time to be working with a wonderful colleague who was 
-on my team, Jenny Palomino, who also had deep experience and was excited 
-to help design this program. 
+enough at the time to be working with a wonderful colleague, Jenny Palomino, who also had deep experience in education and training 
+and was excited to help design this program. 
 
-It was my first (and only!) NSF proposal. And it was funded at 1.3 million!
+It was my first (and only!) NSF proposal. And it was funded for 3 years. 
 
 This award in my mind was not about funding my team (although that 
-was important so we could get the work done!). Most of the funding in 
+was important so we could get the work done). Most of the funding in 
 the proposal, went to faculty and students at partner 
 schools. Schools that served tribal and hispanic students - two groups
-that have been traditionally underserved and underrepresented in both STEM and data science (probably more so underrepresented in data science!). 
+that have been traditionally under-served and underrepresented in both STEM and data science (probably more so underrepresented in data science!). 
 
 We called the program the Earth and Environmental Data Science Corps (EDSC).
 
@@ -77,23 +77,7 @@ science skills at schools that serve historically under-represented groups in ST
 2. Train undergraduate students with technical data 
 skills needed to support a strong career in data-intensive science.
 3. Increase awareness of job potential in the data-intensive science space. This supported students "seeing" a career path potential that could be empowered by technical data science skills.
-3. Support and empower faculty in adding data-intensive curriculum into their existing courses. This would then scale data skills being available at each institution rather than depending upon our team to teach! This step was critical. 
-
-### Components of the program
-
-The program components included: 
-
-* Weekly data skills workshops
-* Student-driven project based learning (internship style) to reinforce skills through application. 
-* Faculty mentorship and training to add technical data skills elements to their courses (train the trainer)
-* Peer to peer mentorship where students from the previous years would return and mentor the current cohort. 
-* Lots of evaluation surrounding both participant satisfaction with the program,
-sentiment around belonging to the science community and around learning.
-
-
-I will talk more specifically about the elements of this program in a separate
-blog. Each of the above elements were carefully designed with this 
-audience in mind. 
+3. Support and empower faculty in adding data-intensive curriculum into their existing courses. This would then scale data skills being available at each institution rather than depending upon our team to teach. This goal was critical. This goal was the element that would scale the effort empower others. 
 
 <div class="notice--success" markdown="1">
 **IMPORTANT:** Students and faculty were financially supported to participate in this program. It is critical in any effort focused 
@@ -103,12 +87,34 @@ so many different reasons. Staff time was of course also covered.
 **Participant time was simply prioritized.** 
 </div>
 
+### Components of the program
+
+The program components included: 
+
+A student paid summer internship that was comprised of:
+* Weekly data skills workshops
+* Student-driven project based learning (internship style) to reinforce skills through application. 
+* Peer to peer mentorship where students from the previous years would return as a mentor/intern that would mentor students in the current cohort.
+
+Faculty support to:
+* Add add technical data skills elements to their courses (train the trainer)
+ 
+And: 
+* Lots of evaluation surrounding both participant satisfaction with the program,
+sentiment around belonging to the science community and around learning.
+
+
+Evaluation was a critical part of this work (and the entire program that 
+I build at CU Boulder. As such i'll talk about 
+it separately in another blog post. I will also talk more specifically about the elements of this program in a separately. Each of the above elements were carefully designed with this 
+audience in mind. 
+{: .notice }
 
 ## What is earth and environmental data science?
 
-It's important to place this program in the context of earth and 
-environmental data science. I define earth and environmental data 
-science as skills at the intersection of science and data science 
+It's important to place this program in the context of the field of 
+earth and environmental data science. I define earth and environmental data 
+science as skills at the intersection of open science and data science 
 including:
 
 * technical data science skills
@@ -132,10 +138,13 @@ data science.
   </figcaption>
 </figure> 
 
+I started teaching earth and environmental data science skills (minus the open reproducible elements) in my first science related job at Penn State; and they were core to the 
+program that I built at NEON to support ecologists using NEON data. 
+{: .notice }
 
 ## Our Partner Institutions
 
-In addition to CU Boulder, my home institution at the time, we had 3 other partner institutions (actually 4 but one had to drop out after year 1):
+In addition to CU Boulder, we had 3 other partner institutions (actually 4 but one had to drop out after year 1):
 
 ### Tribal colleges 
 * [Oglala Lakota College](https://www.olc.edu/)
@@ -146,26 +155,34 @@ In addition to CU Boulder, my home institution at the time, we had 3 other partn
 
 ## If there is a job market for these skills, why aren't smaller schools teaching earth and environmental data science already?  
 
-You may be wondering why it's so important to work with these schools? 
-If there is a job market for these skills, isn't everyone already teaching them? 
+You may be wondering: if there is such a demand for these schools, why 
+aren't all schools, big and small, well-funded and lesson funded, teaching 
+them to their students? 
 
-The answer to that is no! Even at larger universities, most 
-have traditionally taught data science in isolation from science (atleast this was the case in at the time).  And at smaller schools courses offering these skill were even more scarce. 
+The answer to that is - it's complicated :). Even at larger universities, most 
+have traditionally taught data science in isolation from science skills(atleast this was the case in at the time).  Or perhaps they teach 
+the skills together but don't talk about reproducibility, and communication and collaboration skills. 
 
-There are many, often complex reasons for this: 
+And at smaller schools courses offering these skill were even more scarce. 
+
+There are many, often complex, reasons for this including: 
 
 1. Lack of faculty and instructors with skills needed to teach earth and environmental data science. 
 2. Faculty who might be interested in teaching these skills, often don't have resources to learn them.  
 3. Faculty that have the skills don't necessarily have the time to modify curriculum.
 3. Lack of institutional funding to develop new programs and curriculum.
 
+### Plan a: Give schools a course that's ready to teach (spoiler: this didn't work)
 Originally when starting this program, my vision was that we could provide 
-schools with a well designed entry-level earth data science focused 
+schools with a well designed entry-level earth and environmental data science focused 
 course and curriculum that they could just teach at their school. 
 
-This idea was of course extremely naive. Creating a new course at these schools
-was a massive undertaking. Even when provided with the curriculum! It required things these schools didn't have extra of: time & money. It  also needed to 
-fit into existing curriculum. Finally there needed to be enough students at the school who wanted to take such courses, to warrant resources for such a curriculum!  
+This idea was extremely naive. Add a new course to the catalog of offerings at these schools
+was a massive undertaking. Even when provided with the curriculum! 
+
+* the course needed needed to fit into existing curriculum
+* they needed someone with skills that could teach the content year after year 
+* finally, and most importantly there needed to be enough students at the school who wanted to take such courses, to warrant resources for such a curriculum!  
 
 ### Students don't see themselves as data scientists and thus don't know to pursue such skills
 
@@ -188,16 +205,19 @@ Yes, we are talking here about how
 systemic racism actually impacts demand for curriculum that could have 
 huge job potential. 
 
-### Seeing yourself in and having a sense of belonging to a field matters
+### Having a sense of belonging matters as does confidence 
+
 To me, the systemic nature of this issue was the most profound. In 
-working with many students from diverse background, I found that they often don't think they are capable of coding.
+working with many students from diverse backgrounds, I have found that 
+many often don't think they are capable of coding.
 
-Frankly, I was one of them years ago and I have the inherent systemic 
-"privilege", that comes with being a white, american female!
+Frankly, I was one of those many years ago and I have the inherent systemic 
+"privilege", that comes with being a white, american female! I lacked confidence. I had imposter syndrome. I still do carry soem of that with me in my daily work. 
 
-I've seen this a lot in my courses. 
+I've seen this a lot in my teaching. 
 
 Lack of confidence also tends to be more common with women compared to men. 
+{: .notice--success }
 
 But, there are so many well-paying 
 jobs for those with domain specific data science skills!! And I knew that these
@@ -206,8 +226,9 @@ different ways. And they needed support to commit to the process.
 
 ## Building earth and environmental data science capacity at smaller schools 
 
-Our program goal was to build capacity at these schools to teach earth and environmental data intensive 
-science. We also wanted to build awareness of job potential in this space. 
+Back to the EDSC, our program goal was to build capacity at these 
+schools to teach earth and environmental data intensive 
+science. We also wanted to build student awareness of job potential in this space. 
 
 While I think we did the former well, I am not convinced about the latter...
 more on that in a bit.
@@ -220,7 +241,7 @@ more on that in a bit.
 
 ## How The Earth Data Science Corps (EDSC) worked
 
-Our EDSC program can be broader broken up into three sub-programs. 
+Our EDSC program was broken up into three sub-programs. 
 
 ### Program 1. Provide earth and environmental data science training to faculty and students
 
@@ -228,12 +249,15 @@ We lead initial workshops. The idea here
 was that faculty could learn in year 1 from our training. And then in 
 years 2 and 3, they could slowly build skills to teach some of the 
 curriculum (with our support!). The ultimate goal was that this 
-experience would help them when they added curriculum to their courses. 
+experience would help faculty build skills and confidence to teach this content in their courses.
 
 This program worked on some levels. While faculty never ended up leading
 the workshops, they did end up setting up work sessions with the students. 
 And through helping in those session they built confidence and skills. 
 
+Some direct thoughts from participants are below
+
+> I am taking away some more confidence with python and data science as my department is moving into this direction. As for our tribal enrolled students and their projects, it was good to see that they were able to show the importance of doing a practical verse theoretical summer project.
 
 ### Program 2. Supporting faculty in adding earth and environmental data science curriculum to their courses
 
@@ -242,21 +266,26 @@ faculty-specific mentoring sessions where they developed curriculum in small gro
 that they could teach in their programs. We provided a lot of curriculum 
 through our online textbooks on [https://www.earthdatascience.org.](https://www.earthdatascience.org/courses/intro-to-earth-data-science/).
 
-And we also provided Jupyter notebooks through Google Colab that served as resources 
+
+> I aim to build on the data science and coding skills I learned this summer and implement them into my research program at my institution.
+
+And we also provided Jupyter notebooks through Google Colab (in year two) that served as resources 
 to support teaching. 
 
 ### Program 3. Build career awareness 
 
 The third activity involved career awareness webinars. The idea was to connect students to people in both industry and academia who were early career
-and pursuing earth and environmental data science related careers. We quickly learned 
-that the impact of these activities wasn't as powerful as we imagined. Why?
+and pursuing earth and environmental data science related careers. 
 
-Because our panelists often had PhDs. Our panelists came from very different 
-backgrounds. They were not tribal. They were not hispanic. There were women, and women of color. But, it was difficult for our students to connect with those in the 
+This worked for some who said things like: 
+
+> It was a great sampling of people who have found their way into the field of EDSci, including someone who does freelance database management, which I hadn’t even considered as a possibility. Eye opening.
+
+However for others it was not enough. Our panelists often had PhDs. Our panelists came from very different 
+backgrounds. However, none were tribal. Nor hispanic. There were women, and women of color. But, it was difficult for some students to connect with those in the 
 webinars. 
 
-**Why? Because students didn't see themselves in the panelists! (Note that common theme!)
-**
+**Why? Because students didn't see themselves in the panelists! (Note that common theme!)**
 
 > Finally for job hunting the guest should not all have PhDs and having a person who actually had
 > some difficulty <finding a job> would round the guest out better as well.
@@ -274,22 +303,31 @@ after that first round of activities to try again!
 ## The importance of evaluation and adaptive program design
 
 Evaluation and adaptive program design is critical for any program's success. It is particularly important for programs serving groups
-that have been traditionally under-represented and underserved. 
+that have been traditionally under-represented and underserved. And the quotes above were obtained because of consistent surveys that were filled out after each training informally (using mentimeter) and formally using Qualtrics. 
 
 Even though I entered into this program design with years of experience,
-there was a lot for me to learn. I took notes and learned. Lots of notes. 
+there was (and will always be) a lotto learn. I took notes. 
+Lots of notes. 
 
-This is how all diversity focused programs need to run.
+And we improved both iteratively in year one on the fly, as we could. We 
+also modified the program year-to-year. This is how all diversity 
+focused programs need to run.
 
-They need to adapt via constant learning. 
+Be flexible.
 
-I'd design this program much differently if I were to do it again. But I'll save that topic for another blog post...
+Adapt to your audience. 
 
+These programs need to adapt through constant learning and asking questions. 
 
-## Wrapping up part 1 of a two?-part blog series
+I'd design this program much differently if I were to do it again. But 
+I'll save that topic for another blog post...
 
-This is part one of a series of posts on this program. In part two,
-I'll share some more about the program's core design, infrastructure
+## Wrapping up part 1 of a blog series on working with tribal and hispanic-serving colleges
+
+This is part one of a series of posts on the earth and environmental 
+data science corps program. In part two,
+I'll share some more details about the program's core design, with a 
+focus on the infrastructure
 that we used to support the program.
 
 I'll talk about what worked, and what didn't work. 
