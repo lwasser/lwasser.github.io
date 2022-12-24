@@ -4,7 +4,7 @@ excerpt: "I've developed and lead a suite of programs over the past 2 decades an
 intro:
   - excerpt: "I develop and lead programs that support both diversity in STEM and open science through community building, outreach and education."
 layout: splash
-permalink: /open-science-program-development/
+permalink: /open-science-program-development
 author_profile: true
 header:
   overlay_color: "#333"
@@ -75,7 +75,7 @@ support of Open Science.
                       Program Design Collaborator: <i>Jenny Palomino</i>
                       </p>
                   </div>
-                  <p><a href="/training-diverse-communities-earth-data-science-corps/" class="btn ">RELATED: Lessons Learned From The EDSC</a></p>
+                  <p><a href="/training-diverse-communities-earth-data-science-corps" class="btn ">RELATED: Lessons Learned From The EDSC</a></p>
               </div>
           </div>
       </div>
@@ -192,7 +192,7 @@ support of Open Science.
                 <div class="archive__item-excerpt">
                     <p>I designed, proposed and built the Earth Data Analytics 
                     graduate program at CU Boulder in 2016. The 3-course  
-                    program <LINK TO COURSES> targeted professional students who wanted 
+                    program targeted professional students who wanted 
                     technical earth and environmental data science skills.
                     Students who 
                     came to the program included recent graduates, professionals seeking to 
@@ -200,7 +200,7 @@ support of Open Science.
                     work their team was doing and finally those looking for a career change. 
                     </p>
                 </div>
-                <p><a href="https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate" class="btn ">View Program Overview <i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a></p>
+                <p><a href="https://www.colorado.edu/geography/earth-data-analytics-foundations-professional-certificate" class="btn ">View Program Overview <i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a></p>
             </div>
         </div>
     </div>

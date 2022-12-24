@@ -22,12 +22,12 @@ comments: true
 
 ## Introducing your new best friend: Continuous Integration
 
-In [a previous post](/why-tested-python-environments-matter-for-science/), I discussed 
+In [a previous post](/why-tested-python-environments-matter-for-science), I discussed 
 the [`earth-analytics-python` conda environment](https://www.github.com/lwasser/earth-analytics-python-env/). I set this Python conda environment up to support the Python earth and environmental data science
 courses and [online lessons](https://www.earthdatascience.org) that I was developing and teaching at 
 CU Boulder. 
 
-In that [previous post](/why-tested-python-environments-matter-for-science/) I talked about
+In that [previous post](/why-tested-python-environments-matter-for-science) I talked about
 how Python conda environment files can help you make a more reproducible 
 environment that other people can install. 
 
@@ -274,7 +274,7 @@ the conda community. While there are several nice conda actions available I like
 this one because:
 
 1. It installs `miniconda` which is a simplified python / conda bundle. I tell my students to install that over anaconda as well to avoid conflicts and the extra tools that anaconda installs (less is more)
-2. It also allows you to specify what channels you want to build to use (`conda-forge`). [Refer to the previous blog](/why-tested-python-environments-matter-for-science/#the-environmentyml-file-specifies-channels) if you have forgotten about channels already. Don't worry - we've all been there. There's a lot here to digest :). 
+2. It also allows you to specify what channels you want to build to use (`conda-forge`). [Refer to the previous blog](/why-tested-python-environments-matter-for-science#the-environmentyml-file-specifies-channels) if you have forgotten about channels already. Don't worry - we've all been there. There's a lot here to digest :). 
 3. Finally it allows you to specify the environment file that you wish to run
 and the name of the environment that you wish to activate once the run is complete. 
 

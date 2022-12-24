@@ -12,13 +12,13 @@ related content page ... but its rendering crazy on the related content page
         {% else %}
         <div class="card__bkg">
             <span> 
-            <h3 class="card-title">{{ post.title | markdownify | strip_html | truncate: 200 }}</h3>    
+            <h3 class="card-title">{{ post.title | markdownify | strip_html  }}</h3>    
             </span>
         </div>
         {% endif %}
         <!-- <div>{{ post.category }}</div> -->
         <div class="card-excerpt">
-            <p>{{ post.excerpt | truncate: 200 }} </p>
+            <p>{{ post.excerpt  }} </p>
         </div>
     </div>
   </a>

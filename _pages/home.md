@@ -30,8 +30,8 @@ feature_open-education:
     title: "Building maintained and tested open education resources for learning earth and environmental data science"
     excerpt: "Everyone should have access to in-demand data science skills. Publishing consistently maintained lessons and course materials online allows everyone with access to materials that will help them develop in job market demand skills.
     
-    * [Tested python environments for teaching earth data science](/why-tested-python-environments-matter-for-science/)"
-    url: "/open-education-earth-data-science/"
+    * [Tested python environments for teaching earth data science](/why-tested-python-environments-matter-for-science)"
+    url: "/open-education-earth-data-science"
     btn_label: "<i class='fas fa-angle-right'></i> Blog coming soon..."
 
 feature_teaching-eds:
@@ -43,7 +43,7 @@ feature_teaching-eds:
     I designed and use a blended online & in-person teaching method which **empowers students to chose the learning approach that best suits their needs**. 
     
     All of my courses ultimately are published online as open education resources because not everyone has the resources to attend a college to learn these skills."
-    url: /open-education-earth-data-science/
+    url: /open-education-earth-data-science
 
 feature_edsc:
   - image_path: /images/women-coding-unsplash.jpg
@@ -51,7 +51,7 @@ feature_edsc:
     excerpt: "The Earth and Environmental Data Science Corps (EDSC) was a funded NSF-HDR program that I designed and developed. The goal: to build build capacity to teach and to learn earth and environmental data science skills at tribal and hispanic serving institutions. 
     
     While training and a summer internship were one part of the program, I believe that training alone is not enough. The program sought to empower faculty at institutions to add data intensive curriculum to their courses. The core of the program included a summer program where we provided training to faculty and students in open, reproducible earth and environmental data science skills. The program supported faculty in both learning the skills and adding it to their existing courses. "
-    url: "/training-diverse-communities-earth-data-science-corps/"
+    url: "/training-diverse-communities-earth-data-science-corps"
     btn_label: "<i class='fas fa-angle-right'></i> Read More about the EDSC program"
     btn_class: "btn--inverse"
 
@@ -83,7 +83,6 @@ in using that data through an open education portal offering free open education
 lessons and by hosting training events."
     url:
     btn_label: "Create a blog on this? I could link to the blog i wrote on the pyos website too for now"
-
 
 
 feature_row_eda_graduate_program:
@@ -207,7 +206,7 @@ Blog coming soon...
 ## I development tools and build community around the open source tools that enable and drive open science
 {: .fancy-header }
 
-Free and open source software (FOSS) refers to free tools that make their code available to the public online. [These free tools are critical as they drive an enable open science](), by:
+Free and open source software (FOSS) refers to free tools that make their code available to the public online. These free tools are critical as they drive an enable open science, by:
 
 * simplifying scientists workflows and 
 * allowing scientists to more easily build upon each other's work given the tools to run the workflows are freely available.

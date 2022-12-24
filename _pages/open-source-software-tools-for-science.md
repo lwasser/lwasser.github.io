@@ -1,7 +1,7 @@
 ---
 title: "Open Source Software and Tool Development"
 layout: splash
-permalink: /open-source/
+permalink: /open-source
 author_profile: true
 header:
   overlay_color: "#333"
