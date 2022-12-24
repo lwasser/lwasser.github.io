@@ -51,7 +51,7 @@ feature_edsc:
     excerpt: "The Earth and Environmental Data Science Corps (EDSC) was a funded NSF-HDR program that I designed and developed. The goal: to build build capacity to teach and to learn earth and environmental data science skills at tribal and hispanic serving institutions. 
     
     While training and a summer internship were one part of the program, I believe that training alone is not enough. The program sought to empower faculty at institutions to add data intensive curriculum to their courses. The core of the program included a summer program where we provided training to faculty and students in open, reproducible earth and environmental data science skills. The program supported faculty in both learning the skills and adding it to their existing courses. "
-    url: "/training-diverse-communities-earth-data-science-corps/"
+    url: "/training-diverse-communities-earth-data-science-corps"
     btn_label: "<i class='fas fa-angle-right'></i> Read More about the EDSC program"
     btn_class: "btn--inverse"
 
@@ -207,7 +207,7 @@ Blog coming soon...
 ## I development tools and build community around the open source tools that enable and drive open science
 {: .fancy-header }
 
-Free and open source software (FOSS) refers to free tools that make their code available to the public online. [These free tools are critical as they drive an enable open science](), by:
+Free and open source software (FOSS) refers to free tools that make their code available to the public online. These free tools are critical as they drive an enable open science, by:
 
 * simplifying scientists workflows and 
 * allowing scientists to more easily build upon each other's work given the tools to run the workflows are freely available.

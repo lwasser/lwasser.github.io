@@ -509,4 +509,4 @@ At a minimum you will want to test that the environment can install on:
 on Windows, Mac and Linux. These are the common operating systems that 
 most people use. 
 
-In the [next blog post](/how-to-setup-testing-python-environments-github-actions/) I will discuss setting up testing in more detail. 
+In the [next blog post](how-to-setup-testing-python-environments-github-actions) I will discuss setting up testing in more detail. 
