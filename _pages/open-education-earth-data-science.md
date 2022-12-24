@@ -2,7 +2,7 @@
 title: "Open Education, Teaching Earth and Environmental Data Science"
 layout: splash # might make sense to make a single_law layout that is wide
 classes: wide
-permalink: /open-education-earth-data-science/
+permalink: /open-education-earth-data-science
 author_profile: true
 excerpt: "Universal, Open Education."
 category: "open-education"

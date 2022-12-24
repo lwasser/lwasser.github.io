@@ -1,7 +1,7 @@
 ---
 title: "About Me - Leah A. Wasser"
 layout: single_law
-permalink: /about-leah-wasser/
+permalink: /about-leah-wasser
 author_profile: true
 excerpt: "I build programs that support a diverse open science community."
 category: "open-education"
