@@ -778,6 +778,10 @@ blockquote {
 }
 
 @media screen and (max-width: 768px) {
+	.page {
+		width: 100% !important;
+		padding-right: 0px !important;
+		}
 
 	.feature__item--center {	
 		padding-left: 30px!important;
@@ -841,7 +845,22 @@ blockquote {
 	
 }
 
+@media screen and (max-width: 1024px) {
+
+	.page {
+		width: 100% !important;
+		padding-right: 5% !important;
+		padding-left: 5% !important;
+		}
+}
+
 @media screen and (max-width: 480px) {
+
+	.page {
+		width: 100% !important;
+		padding-right: 2% !important;
+		padding-left: 2% !important;
+		}
 
 	.blog__grid {
 		display: grid;
