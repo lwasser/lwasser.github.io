@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - '*'
+  pull_request:
+    branches:
+      - '*'
       
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -18,7 +21,7 @@ jobs:
 
       # Set up Ruby and enable bundler cache
       - name: Set up Ruby (with Bundler cache)
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@ab177d40ee5483edb974554986f56b33477e21d0 # v1.263.0
         with:
           ruby-version: '3.1'
           cache: 'bundler'
