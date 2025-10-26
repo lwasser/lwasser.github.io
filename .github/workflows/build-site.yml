@@ -1,4 +1,4 @@
-name: Build and Jekyll site and run htmlproofer
+name: Build Jekyll site, publish on main and run htmlproofer
 
 on:
   push:
@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Check out the code
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v4
+        with:
+          fetch-depth: 1
 
       # Set up Ruby and enable bundler cache
       - name: Set up Ruby (with Bundler cache)
