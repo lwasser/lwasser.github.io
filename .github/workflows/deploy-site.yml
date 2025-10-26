@@ -1,63 +1,64 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll site to Pages
+name: Build Jekyll (PRs & branches) and Deploy (only main)
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: main
+    branches:
+      - main
+  pull_request:
+    branches:
+      - '*'
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  # Build job
   build:
+    name: Build site
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
-      - name: Setup Ruby
+      - name: Check out
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Ruby (with bundler cache)
         uses: ruby/setup-ruby@v1
         with:
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Build site with Jekyll
+        run: bundle exec jekyll build --destination _site
         env:
           JEKYLL_ENV: production
-      - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
-        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b #v4
 
-  # Deployment job
+      - name: Run htmlproofer (only on main; don't fail workflow)
+        if: github.ref == 'refs/heads/main'
+        uses: chabad360/htmlproofer@v2
+        continue-on-error: true
+        with:
+          directory: '_site'
+          arguments: --ignore-urls "https://www.linkedin.com/in/leah-wasser-0138883,https://fonts.googleapis.com,https://fonts.gstatic.com,https://docs.github.com/en/actions"
+
+      - name: Upload Pages artifact (only on main)
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./_site
+
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    name: Deploy to GitHub Pages
     needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Configure Pages
+        uses: actions/configure-pages@v3
+
+      - name: Deploy to Pages
+        uses: actions/deploy-pages@v1

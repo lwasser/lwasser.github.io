@@ -1,5 +1,5 @@
 name: Build Jekyll site, publish on main and run htmlproofer
-
+# TODO: delete this...
 on:
   push:
     branches:
