@@ -5,7 +5,7 @@ title = 'Leah A Wasser'
 # Customize theme parameters here
 [params]
   author = "Leah A. Wasser"
-  tagline = "Your tagline here"
+  tagline = "Empowering Communities to Advance Science Through Open, Equitable Practices"
 
 [[menu.main]]
   name = "About"
