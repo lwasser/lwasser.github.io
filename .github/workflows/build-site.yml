@@ -21,18 +21,11 @@ jobs:
         with:
           fetch-depth: 1
 
-      # Set up Ruby and enable bundler cache
-      - name: Set up Ruby (with Bundler cache)
-        uses: ruby/setup-ruby@ab177d40ee5483edb974554986f56b33477e21d0 # v1.263.0
-        with:
-          ruby-version: '3.1'
-          cache: 'bundler'
-          cache-dependency-path: 'Gemfile.lock'
-
-      - name: Setup Ruby
+      - name: Set up Ruby and run bundle install (auto cache)
         uses: ruby/setup-ruby@v1
         with:
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          ruby-version: '3.1'
+          bundler-cache: true
 
       - name: Build with Jekyll
         run: bundle exec jekyll build
