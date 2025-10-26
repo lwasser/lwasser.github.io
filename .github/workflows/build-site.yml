@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - '*'
+      
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   github-pages:
@@ -12,20 +16,24 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v4
 
-      # Use GitHub Actions' cache to shorten build times and decrease load on servers
-      - name: Use cache to shorten build time
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+      # Set up Ruby and enable bundler cache
+      - name: Set up Ruby (with Bundler cache)
+        uses: ruby/setup-ruby@v1
         with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-              
+          ruby-version: '3.1'
+          cache: 'bundler'
+          cache-dependency-path: 'Gemfile.lock'
+
+      - name: Install Ruby gems
+        env:
+          BUNDLE_PATH: vendor/bundle
+          BUNDLE_WITHOUT: "development:test"
+        run: |
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3 --path vendor/bundle
+
       - name: Build Jekyll site
-        uses: helaili/jekyll-action@c1527523361ec3ecc54b2371ddef44826e28c0f5 
-        with:
-          build_only: true
-          build_dir: _site
+        run: bundle exec jekyll build --destination _site
 
       - name: Check HTML using htmlproofer
         uses: chabad360/htmlproofer@v2
@@ -33,6 +41,3 @@ jobs:
         with:
           directory: '_site'
           arguments: --ignore-urls "https://www.linkedin.com/in/leah-wasser-0138883,https://fonts.googleapis.com,https://fonts.gstatic.com,https://docs.github.com/en/actions"
-          # The directory to scan
-          # arguments: --url-swap "https\:\/\/www\.leahwasser\.com\/images:/images" --http-status-ignore "301"
-          # The arguments to pass to HTMLProofer
