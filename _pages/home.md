@@ -2,12 +2,14 @@
 layout: splash
 title: "Leah A. Wasser"
 permalink: /
-excerpt: "Open education, open source, open science and lots of mountains and running."
+excerpt: "Empowering Communities to Advance Science Through Open, Equitable Practices"
 date: 2016-03-23T11:48:41-04:00
+header:
+    overlay_image: images/vincent-guth-Sdc35GnHgvI-unsplash.jpg
+    overlay_filter: 0.6
 intro:
-  - title: Hi there! I'm Leah :)
-    excerpt: "I'm a Remote Sensing Ecologist by training. Data scientist and educator by 
-  passion. I develop and lead programs that support open science through community building, outreach and education. I am also an avid long distance mountain trail runner."
+  - title: Founder & Executive Director, pyOpenSci
+    excerpt: "I build equitable global programs that harness the power of community to advance open science. My work empowers participants with both technical and leadership skills, breaking down barriers so scientists everywhere can spend less time struggling and more time solving the world's greatest challenges."
     image_path: images/leah-wasser-executive-director-pyopensci.jpg
     alt: "Image of Leah Wasser generated from a headshot using an AI tool."
 feature_open-science: 
@@ -114,16 +116,7 @@ feature_row_education_teaching:
     btn_label: #"<i class='fas fa-angle-right'></i> Learn More: Autograding"
     btn_class: "btn--inverse"
 
-header:
-    overlay_image: images/vincent-guth-Sdc35GnHgvI-unsplash.jpg
-    overlay_filter: 0.6
-    actions:
-        - label: "Twitter"
-          url: "https://twitter.com/leahawasser"
-        - label: "GitHub"
-          url: "https://github.com/lwasser"
-        - label: "LinkedIn"
-          url: "https://www.linkedin.com/in/leah-wasser-0138883"
+
 
 ---
 
