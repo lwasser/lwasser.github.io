@@ -3,7 +3,7 @@ name: Build and Jekyll site and run htmlproofer
 on:
   push:
     branches:
-      - '*'
+      - main  
   pull_request:
     branches:
       - '*'
