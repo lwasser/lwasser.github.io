@@ -27,7 +27,6 @@ jobs:
         with:
           ruby-version: '3.1'
           bundler-cache: true
-          cache-dependency-path: 'Gemfile.lock'
 
       - name: Build site with Jekyll
         run: bundle exec jekyll build --destination _site
