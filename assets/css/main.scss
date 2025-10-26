@@ -2,6 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+
 // Variables - font size
 $type-size-1: 2.441em !default; // ~39.056px
 $type-size-2: 1.853em !default; // ~31.248px
@@ -44,7 +45,7 @@ $custom-font: 'Chivo', sans-serif; //#'Nanum Gothic', sans-serif !important;
 $caption-font: 'Roboto', sans-serif;
 $header-font: 'Raleway', san-serif;//'Vollkorn', serif; //'Roboto', sans-serif;//'Chivo', sans-serif; //'Roboto', sans-serif; //'Playfair Display', serif;//'Nanum Gothic', sans-serif !important;
 $body-font: 'Raleway', san-serif;//'Overpass', san-serif;//'Nanum Gothic', sans-serif; //'Chivo', sans-serif; //#'Nanum Gothic', sans-serif !important;
-$script-font: 'Kalam', sans-serif; //'Kalam', sans-serif;
+$script-font: 'Raleway', sans-serif; //'Kalam', sans-serif;
 
 //@media (min-width: 80em)
 #main {
