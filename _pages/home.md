@@ -123,6 +123,16 @@ feature_row_education_teaching:
 
 {% include feature_row id="intro" type="center person-highlight" %}
 
+## What I Do
+ 
+<div class="body__content-block" markdown="1">
+<div class="blog__grid">
+  {% include archive-cards.html title="Community Building" excerpt="Building inclusive, global communities that advance open science. I create spaces where scientists **collaborate, share knowledge, and support each** other—from founding pyOpenSci to fostering peer networks that make open research sustainable and welcoming." %}
+  {% include archive-cards.html title="Open Source Leadership" excerpt="Maintaining and championing the tools that power open science. As an open source maintainer and advocate, I contribute to and support the FOSS ecosystem that makes reproducible research possible—because science advances when tools are accessible to everyone." %}
+  {% include archive-cards.html title="Equitable Education" excerpt="Designing accessible programs that build technical and leadership skills. I create training that meets scientists where they are, breaking down barriers so researchers at all institutions can gain the data science skills needed to work openly and collaboratively." %}
+</div>
+</div>
+
 <div class="body__content-block" markdown="1">
 ## I build programs that support open reproducible science
 {: .fancy-header }

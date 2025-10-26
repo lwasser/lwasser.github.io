@@ -2,25 +2,24 @@
 related content page ... but its rendering crazy on the related content page
  -->
 <article>
-    <a href="{{ post.url }}">
+  {% assign link = include.url | default: post.url %}
+  {% if link %}<a href="{{ include.url | default: post.url }}">{% endif %}
     <div class="card">
-        {% if post.feature_img %}
-        <img src="{{ post.feature_img }}" alt="{{ post.feature_alt }}">
-        <h3 class="hidden">
-        {{ post.title | markdownify | strip_html }}
-        </h3>
-        {% else %}
+      {% assign img = include.image_path | default: post.feature_img %}
+      {% if img %}
+        <img src="{{ img }}" alt="{{ include.alt | default: post.feature_alt }}">
+        <h3 class="hidden">{{ include.title | default: post.title | markdownify | strip_html }}</h3>
+      {% else %}
         <div class="card__bkg">
-            <span> 
-            <h3 class="card-title">{{ post.title | markdownify | strip_html  }}</h3>    
-            </span>
+          <span>
+            <h3 class="card-title">{{ include.title | default: post.title | markdownify | strip_html }}</h3>
+          </span>
         </div>
-        {% endif %}
-        <!-- <div>{{ post.category }}</div> -->
-        <div class="card-excerpt">
-            <p>{{ post.excerpt  }} </p>
-        </div>
+      {% endif %}
+      <div class="card-excerpt">
+        <p>{{ include.excerpt | default: post.excerpt | markdownify }}</p>
+      </div>
     </div>
-  </a>
+  {% if link %}</a>{% endif %}
 </article>
 
