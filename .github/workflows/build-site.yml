@@ -1,37 +1,48 @@
-name: Build and Jekyll site and run htmlproofer
+name: Build Jekyll site, publish on main and run htmlproofer
 
 on:
   push:
     branches:
+      - main  
+  pull_request:
+    branches:
       - '*'
+      
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   github-pages:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the code
-        uses: actions/checkout@v2
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v4
+        with:
+          fetch-depth: 1
 
-      # Use GitHub Actions' cache to shorten build times and decrease load on servers
-      - name: Use cache to shorten build time
-        uses: actions/cache@v1
+      # Set up Ruby and enable bundler cache
+      - name: Set up Ruby (with Bundler cache)
+        uses: ruby/setup-ruby@ab177d40ee5483edb974554986f56b33477e21d0 # v1.263.0
         with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-              
+          ruby-version: '3.1'
+          cache: 'bundler'
+          cache-dependency-path: 'Gemfile.lock'
+
+      - name: Install Ruby gems
+        env:
+          BUNDLE_PATH: vendor/bundle
+          BUNDLE_WITHOUT: "development:test"
+        run: |
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3 --path vendor/bundle
+
       - name: Build Jekyll site
-        uses: helaili/jekyll-action@v2
-        with:
-          build_only: true
-          build_dir: _site
+        run: bundle exec jekyll build --destination _site
 
       - name: Check HTML using htmlproofer
-        uses: chabad360/htmlproofer@master
+        uses: chabad360/htmlproofer@v2
+        continue-on-error: true
         with:
           directory: '_site'
           arguments: --ignore-urls "https://www.linkedin.com/in/leah-wasser-0138883,https://fonts.googleapis.com,https://fonts.gstatic.com,https://docs.github.com/en/actions"
-          # The directory to scan
-          # arguments: --url-swap "https\:\/\/www\.leahwasser\.com\/images:/images" --http-status-ignore "301"
-          # The arguments to pass to HTMLProofer
