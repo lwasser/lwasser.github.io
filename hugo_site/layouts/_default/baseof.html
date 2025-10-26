@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+  {{ $styles := resources.Get "css/main.scss" | toCSS | postCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+</head>
+<body class="bg-gray-50">
+  <!-- Navigation on every page -->
+  <nav class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold">{{ .Site.Params.author }}</a>
+      <div class="space-x-6">
+        {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}" class="hover:text-[#71B3B5]">{{ .Name }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </nav>
+
+  {{ block "main" . }}{{ end }}
+</body>
+</html>
