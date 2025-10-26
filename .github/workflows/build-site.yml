@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the code
-        uses: actions/checkout@v2
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v4
 
       # Use GitHub Actions' cache to shorten build times and decrease load on servers
       - name: Use cache to shorten build time
@@ -22,13 +22,13 @@ jobs:
             ${{ runner.os }}-gems-
               
       - name: Build Jekyll site
-        uses: helaili/jekyll-action@v2
+        uses: helaili/jekyll-action@c1527523361ec3ecc54b2371ddef44826e28c0f5 
         with:
           build_only: true
           build_dir: _site
 
       - name: Check HTML using htmlproofer
-        uses: chabad360/htmlproofer@master
+        uses: chabad360/htmlproofer@v2
         with:
           directory: '_site'
           arguments: --ignore-urls "https://www.linkedin.com/in/leah-wasser-0138883,https://fonts.googleapis.com,https://fonts.gstatic.com,https://docs.github.com/en/actions"
