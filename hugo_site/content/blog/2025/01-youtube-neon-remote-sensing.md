@@ -8,6 +8,8 @@ categories:
 tags:
   - ecology
   - remote-sensing
+  - data-skills
+  - sensors
 ---
 
 ## The Challenge

@@ -82,3 +82,47 @@ Edit `assets/css/main.scss` to add custom SCSS or Tailwind utilities.
 - **"npx not found" error**: Make sure you deactivated conda and installed postcss-cli globally
 - **Styles not loading**: Check that `assets/css/main.scss` exists
 - **Hugo not finding templates**: Verify files are in correct `layouts/` subdirectories
+
+
+## Images 
+
+I created a custom shortcode for adding images with captions. Use it like this:
+
+```markdown
+{{< figure src="/images/my-image.jpg" 
+    alt="Description of image" 
+    caption="This is my image caption." >}}
+```
+
+The shortcode will render the image with the specified alt text and caption below it. And if there is a webp format of the image available, it will use that for better performance.
+
+
+## Converting JPG to PNG (if needed)
+
+To convert a jpg to png and webp formats, you can use the following commands:
+
+Use `sips` (built-in on Mac):
+```bash
+sips -s format png image.jpg --out image.png
+```
+
+Install `cwebp`:
+
+```bash
+brew install webp
+```
+
+Convert individual files:
+```bash
+cwebp -q 85 image.jpg -o image.webp
+cwebp -q 85 image.png -o image.webp
+```
+
+Batch convert all images in a directory:
+```bash
+for file in *.jpg *.png; do
+  [ -f "$file" ] && cwebp -q 85 "$file" -o "${file%.*}.webp"
+done
+```
+
+**Note:** The figure shortcode automatically tries to load the `.webp` version first and falls back to the original format if WebP doesn't exist.
