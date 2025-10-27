@@ -106,6 +106,14 @@ Use `sips` (built-in on Mac):
 sips -s format png image.jpg --out image.png
 ```
 
+or to run on a dir
+```bash
+for f in *.jpg(N) *.jpeg(N); do
+  [ -f "$f" ] || continue
+  sips -s format png "$f" --out "${f%.*}.png"
+done
+```
+
 Install `cwebp`:
 
 ```bash

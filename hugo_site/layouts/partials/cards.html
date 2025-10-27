@@ -1,0 +1,47 @@
+<!-- This partial renders a card component with an optional Font Awesome icon displayed to the left of the title. -->
+<!-- Reusable card partial.
+     - Use text_only: true in front matter to render a plain white, non-interactive text card.
+     - Otherwise renders the interactive peach card (supports Font Awesome class strings or raw HTML icons).
+-->
+
+{{ $icon := .icon }}
+{{ $textOnly := and (isset . "text_only") (eq .text_only true) }}
+
+{{ if $textOnly }}
+<article class="rounded-2xl p-10 md:p-12 bg-white h-full md:min-h-[260px]">
+  <div class="flex items-center justify-center text-center h-full">
+    <div>
+      <h2 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight max-w-lg">
+        {{ .title }}
+      </h2>
+      {{ with .excerpt }}
+        <p class="card__body mt-6 text-lg md:text-xl max-w-xl mx-auto text-gray-700">{{ . }}</p>
+      {{ end }}
+      {{ with .url }}
+        <div class="mt-6">
+          <a class="card__cta" href="{{ . }}">{{ $.cta | default "Learn more →" }}</a>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</article>
+{{ else }}
+<article class="card {{ .modifier | default "card--peach" }} h-full md:min-h-[260px]">
+  <div>
+    {{ if and (isset . "icon") (in (printf "%s" $icon) "fa-") }}
+      <i class="card__icon {{ $icon }}" aria-hidden="true" title="{{ $.title }}"></i>
+    {{ else if and (isset . "icon") (ne (printf "%s" $icon) "") }}
+      <div class="card__icon">{{ $icon | safeHTML }}</div>
+    {{ end }}
+
+    <h3 class="card__title">{{ .title }}</h3>
+    {{ with .excerpt }}
+      <p class="card__body">{{ . }}</p>
+    {{ end }}
+  </div>
+
+  {{ with .url }}
+    <a class="card__cta" href="{{ . }}">{{ $.cta | default "Learn more →" }}</a>
+  {{ end }}
+</article>
+{{ end }}
