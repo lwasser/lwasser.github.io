@@ -1,0 +1,30 @@
+{{ $hero := .Params.hero }}
+{{ $title := $hero.title }}
+{{ $excerpt := $hero.excerpt }}
+{{ $img := $hero.image }}
+{{ $alt := $hero.alt }}
+
+<section class="bg-verdigris min-h-[70vh] flex items-center">
+  <div class="max-w-7xl mx-auto px-4 py-20 w-full">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Left side - Text -->
+      <div class="order-2 md:order-1">
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+          {{ $title }}
+        </h1>
+        <p class="text-xl md:text-2xl leading-relaxed text-white">
+          {{ $excerpt }}
+        </p>
+      </div>
+
+      <!-- Right  - Photo -->
+      <div class="order-1 md:order-2 flex justify-center md:justify-end">
+        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl">
+          <img src="{{ $img }}" alt="{{ $alt }}" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

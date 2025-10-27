@@ -22,7 +22,7 @@ npm install -g postcss-cli
 ### Development
 
 ```bash
-# Make sure conda is deactivated!!!!
+# Make sure conda is deactivated if you use conda
 conda deactivate
 
 # Start the development server
@@ -126,3 +126,12 @@ done
 ```
 
 **Note:** The figure shortcode automatically tries to load the `.webp` version first and falls back to the original format if WebP doesn't exist.
+
+
+
+## Brand colors
+EDB88B - Buff (warm peachy/tan)
+71B3B5 - Verdigris (teal/cyan)
+42213D - Dark purple
+AC87A0 - Mountbatten pink (you considered dropping this)
+395E66 - Dark slate gray (you considered dropping this)

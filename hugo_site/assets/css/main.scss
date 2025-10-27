@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+  .card {
+    @apply rounded-2xl p-12 shadow-sm transition-transform duration-200 transform;
+    @apply hover:-translate-y-2 hover:shadow-xl;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* light-peach base + buff hover */
+  .card--peach {
+    background-color: #fff6f2;
+    transition: background-color .2s ease, color .2s ease;
+  }
+  .card--peach:hover {
+    background-color: #EDB88B; /* buff */
+  }
+
+  .card__icon { @apply text-5xl md:text-6xl mb-6; }
+  .card__title { @apply text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4; transition: color .2s ease; }
+  .card__body  { @apply text-lg md:text-xl lg:text-2xl text-gray-700; transition: color .2s ease; }
+  .card__cta   { @apply mt-6 text-base md:text-lg text-verdigris; transition: color .2s ease; }
+
+  /* hover text color for peach cards */
+  .card--peach:hover .card__title,
+  .card--peach:hover .card__body,
+  .card--peach:hover .card__cta {
+    color: #fff;
+  }
+}
