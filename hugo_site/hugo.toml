@@ -20,22 +20,9 @@ params.licenseURL = "/license"
   author = "Leah A. Wasser"
   tagline = "Empowering Communities to Advance Science Through Open, Equitable Practices"
 
-[[menu.main]]
-  name = "About"
-  url = "/about"
-  weight = 1
 
 [[menu.main]]
   name = "Blog"
-  url = "/blog"
+  url = "/blog/"
   weight = 2
 
-[[menu.main]]
-  name = "Projects"
-  url = "/projects"
-  weight = 3
-
-[[menu.main]]
-  name = "Contact"
-  url = "/contact"
-  weight = 4

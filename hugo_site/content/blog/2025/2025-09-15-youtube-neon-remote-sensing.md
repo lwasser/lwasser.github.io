@@ -1,8 +1,10 @@
 ---
 title: "Using YouTube to Make Remote Sensing Data Accessible to Ecologists"
-date: 2021-09-05
+date: 2025-09-15
 excerpt: "How I used YouTube to bridge the gap between traditional ecology and landscape scale ecological research at NEON."
-image: /images/science-communication/use-youtube-communicate-remote-sensing-science.png
+image: /images/headers/norway-northern-lights.png
+photo_credit_author: "Leah Wasser"
+photo_credit_description: "Northern lights--Tromsø, Norway"
 categories:
   - science-communication
 tags:
