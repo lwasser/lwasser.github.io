@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "hugo server",
-    "build": "hugo --minify"
+    "build:css": "tailwindcss -i ./assets/css/main.scss -o ./assets/css/main.css --minify",
+    "build": "hugo --minify -d ../public"
   },
   "keywords": [],
   "author": "",

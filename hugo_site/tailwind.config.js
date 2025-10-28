@@ -8,6 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
+        sora: ['Sora', 'Inter', 'ui-sans-serif', 'system-ui'],
+      },
       colors: {
         buff: '#EDB88B',        // Buff (warm peachy/tan)
         verdigris: '#71B3B5',    // Verdigris (teal/cyan)

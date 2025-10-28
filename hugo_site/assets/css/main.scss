@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply font-sans; /* Inter via tailwind.config.js */
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sora;
+  }
+}
 
 @layer components {
   .card {

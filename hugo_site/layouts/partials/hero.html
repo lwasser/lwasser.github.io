@@ -7,10 +7,11 @@
 
 <section class="bg-verdigris py-4 flex items-center">
   <div class="max-w-7xl mx-auto px-4 py-20 w-full">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
+    <!-- Use a 12-column grid and give the text more columns than the image -->
+    <div class="grid md:grid-cols-12 gap-12 items-center">
 
-      <!-- Left side - Text -->
-      <div class="order-2 md:order-1">
+      <!-- Left side - Text (wider on md+) -->
+      <div class="order-2 md:order-1 md:col-span-8">
         <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
           {{ $title }}
         </h1>
@@ -22,9 +23,9 @@
         </p>
       </div>
 
-      <!-- Right  - Photo -->
-      <div class="order-1 md:order-2 flex justify-center md:justify-end">
-        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl">
+      <!-- Right  - Photo (narrower on md+) -->
+      <div class="order-1 md:order-2 md:col-span-4 flex justify-center md:justify-end">
+        <div class="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-8 border-white shadow-2xl">
           <img src="{{ $img }}" alt="{{ $alt }}" class="w-full h-full object-cover">
         </div>
       </div>
