@@ -17,7 +17,8 @@ module.exports = {
         verdigris: '#71B3B5',    // Verdigris (teal/cyan)
         darkPurple: '#42213D',   // Dark purple
         mountbatten: '#AC87A0',  // Mountbatten pink
-        slateDark: '#395E66'     // Dark slate gray
+        slateDark: '#395E66',     // Dark slate gray
+        darkTeal: '#0b5757',    // Dark teal
       },
     },
   },

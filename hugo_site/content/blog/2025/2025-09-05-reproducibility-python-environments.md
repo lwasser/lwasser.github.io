@@ -1,17 +1,29 @@
 ---
 title: "Python's Reproducibility Crisis: And How We Fixed It for Open Science Education"
-date: 2021-09-05
+date: 2025-09-05
 excerpt: "What I learned building tested Python environments at scale—and how it shaped the way we teach open science at pyOpenSci today."
-image: /images/science-communication/tested-python-environments.png
+image: /images/headers/norway-northern-lights.png
+photo_credit_author: "Leah Wasser"
+photo_credit_description: "Northern lights--Tromsø, Norway"
+learn_more:
+  - title: "Tutorial: How to Create a Python Package"
+    description: "Complete guide to creating Python packages"
+    url: "https://www.pyopensci.org/python-package-guide/"
+    icon: "fa-book-open"
+  - title: "GitHub Teaching Repo With Codespace: Python Packaging"
+    description: "Hands-on workshops with GitHub Codespaces"
+    url: "https://github.com/pyOpenSci/python-package-guide"
+    icon: "fa-code"
+  - title: "The original Earth Analytics Environment I created in 2016"
+    description: "The original tested environment from 2016"
+    url: "https://github.com/earthlab/earth-analytics-python-env"
+    icon: "fa-archive"
 categories:
-  - data-science-dev-ops
+  - open-science
 tags:
   - python
-  - conda
+  - education
   - data-science
-  - testing
-  - open-source
-  - open-education
   - reproducibility
 ---
 
@@ -19,7 +31,8 @@ tags:
 
 We obsess over reproducible analysis, version control, and open data. But there's an earlier barrier that kills scientific momentum before research even begins: **installation friction**.
 
-If a scientist can't install your tools, your open science dies on arrival.
+If a scientist can't install your tools, your open science dies on arrival. And
+the same is true for open education lessons and tutorials, too.
 
 I learned this the hard way when I switched from R to Python while building data science education programs. What started as a teaching frustration became a lesson in scientific infrastructure—one that shapes how we approach Python education at [pyOpenSci](https://www.pyopensci.org) today.
 
@@ -34,11 +47,17 @@ Then they spend three days trying to install GDAL.
 
 This is how you lose people. Not because the science is too hard. Not because they lack aptitude. But because the **infrastructure fails them before they write a single line of code**.
 
+This friction isn't new to data-intensive science. I had similar experiences 
+trying to use GIS on public computer labs with students years ago. Software and 
+tool installation is a **reproducibility crisis in disguise**.
+
 ## My crash course in Python's fragmentation
 
 ### R came with a safety net
 
-When I worked at NEON building their data skills program, I started with R. It just worked *out of the box*. 
+When I worked at NEON building their data skills program, I started building 
+lessons and training materials with R. It was what the ecology community was using
+at the time AND, it just worked *out of the box*. 
 
 *(Does anyone actually put software in boxes anymore?)*
 
@@ -59,6 +78,9 @@ Should I use `pip` or `conda`? Which channel—`conda-forge` or `defaults`? Wait
 
 I'd install one package. Something else would break. I'd fix that. Something else would fail.
 
+I cried just a little bit getting HDF5 dependencies to install. Forget it. 
+Students trying to install GDAL for spatial data analysis? A nightmare.
+
 ### GDAL: And tears, lots of tears
 
 {{< figure src="/images/python/gdal-meme-filipe.png" alt="Meme showing someone smoking a cigar with text: One Does not simply pip install GDAL" caption="Meme created by colleague Filipe Fernandes about installing GDAL in a Python environment. Now imagine students new to Python trying to get set up for spatial data analysis... ouch!" >}}
@@ -69,11 +91,16 @@ Why do you hate me, GDAL? Whyyyyy?
 
 I realized this wasn't just a teaching problem—it was a **reproducibility crisis in disguise**.
 
-If students couldn't install packages reliably, how could researchers share reproducible workflows? How could we expect open science when the entry point was broken?
+If students couldn't install packages reliably, how could researchers share reproducible workflows? How could we create open science workflows when the entry point was
+actually broken?
 
 ### The breakthrough: Tested, cross-platform environments
 
-Working with colleagues who knew a lot about these topics, I built the [Earth Analytics Python environment](https://github.com/earthlab/earth-analytics-python-env). The magic wasn't the environment file itself—it was being able to **test how our lessons ran on different systems**.
+Working with colleagues, like my friend Filipe (who created that meme above!),
+who knew a lot about these topics, I built the [Earth Analytics Python environment](https://github.com/earthlab/earth-analytics-python-env). The magic wasn't the environment file itself—it was 
+
+1. being able to create a lock file that pinned versions of dependencies down and
+2. being able to **test how our lessons ran on different systems** in a Continuous Integration environment on GitHub.
 
 We tested on:
 - Linux
@@ -83,6 +110,17 @@ We tested on:
 Before students even tried to install, we knew where the pain points were. We could troubleshoot *before* class, not during.
 
 This changed everything.
+
+We used this environment everywhere. In our Docker-supported Jupyter Hub which 
+fueled the hybrid courses that I taught as a part of the [Earth Data Analytics 
+Graduate program](https://www.colorado.edu/geography/earth-data-analytics-foundations-professional-certificate) that I had built. 
+
+* We used it in workshops.
+* We used it in our Jupyter Hub
+* We used it to test each lesson that was published on our open education website (which is no longer but was earthdatascience.org).
+
+Millions of users used our open lessons, built with this environment. Hundreds 
+of students learned Python with it.
 
 ### What I learned
 
@@ -100,15 +138,18 @@ These lessons aren't just history—they're the foundation of how we approach Py
 
 ### Locked environments for teaching & learning
 
-When we teach, we use **locked environments**—typically Docker containers like GitHub Codespaces. Check out our [packaging workshop](https://github.com/pyOpenSci/pyopensci-workshop-create-python-package) that runs entirely in a Codespace.
+When we teach, we use **locked environments**—typically Docker containers like those
+that power GitHub Codespaces. Check out our [packaging workshop](https://github.com/pyOpenSci/pyopensci-workshop-create-python-package) that runs entirely in a Codespace.
 
 Why? Because students should focus on learning packaging, not fighting their local setup. Clear pathways to working environments means they get to coding faster.
 
 ### The tooling has evolved (The principles haven't)
 
-Ten years ago, conda-lock was our salvation. Today we have:
-- **UV** for pip-based workflows
-- **Pixi** for conda-based workflows  
+Ten years ago, [conda-lock](https://conda.github.io/conda-lock/) was our salvation. Today we have:
+- [**UV**](https://docs.astral.sh/uv/concepts/projects/sync/) for pip-based workflows
+- [**Pixi**](https://pixi.sh/v0.22.0/features/lockfile/) for conda-based workflows  
+
+And yes [pip does them too](https://pip.pypa.io/en/stable/cli/pip_lock/).
 
 Locking environments is now easier than ever. But it's just as critical.
 
@@ -122,9 +163,12 @@ Not every environment needs the same approach:
 
 **For teaching:** Lock them down if you are in an online environment like JupyterHub. But also, sometimes, flexible environments that resolve to recent, compatible versions can work too. Update them regularly. Test them constantly.
 
-**For research workflows:** Lock everything when you need someone (including future you) to reproduce exact results.
+**For research workflows:** Lock everything when you need someone (including future you) to reproduce exact results. UV and Pixi are great for creating projects with locked environments out of the gate.
 
-**For applications:** Always lock. Your users need predictability.
+**For applications:** Always lock. Your users need predictability.  
+
+**For Software:** Lock your development environment if you can (especially in CI for security reasons), but don't lock your package dependencies. Instead, specify compatible version ranges to allow flexibility while avoiding conflicts in user's environments 
+as they install your package.
 
 ## The fundamentals: environment management principles
 
@@ -141,40 +185,16 @@ A Python environment is an isolated space containing specific package versions. 
 - **Safety**: Test new packages without breaking your working setup
 - **Consistency**: Ensure everyone on your team or in your lab uses similar or identical environments
 
-### The lock file pattern
-
-Modern Python tools use lock files to ensure reproducibility:
-
-```bash
-# With uv
-uv lock  # creates uv.lock from pyproject.toml
-uv sync  # installs dependencies from uv.lock
-
-# With pixi
-pixi install  # reads pixi.toml, creates pixi.lock
-
-# You can use conda-lock too but pixi does it all for you
-```
-
-**The pattern:** A human-editable file (what you want) → a lock file (exact versions) → reproducible installs.
-
-For more on managing Python environments, see:
-- [uv documentation](https://docs.astral.sh/uv/)
-- [pixi documentation](https://pixi.sh/)
-- [conda documentation](https://docs.conda.io/)
-
 ## The Bigger Picture
 
-Reproducibility doesn't start when you write code. It starts when someone tries to run your code for the first time.
+Reproducibility doesn't start when you write code. It starts when someone tries to run your code for the first time. And that someone could be you, months later.
 
 Installation friction isn't a minor inconvenience—it's a fundamental barrier to open science. Every researcher who gives up during installation is lost potential for collaboration, validation, and building on your work.
 
-**At pyOpenSci, we're working to lower that barrier.** Through better tooling, clearer documentation, and engaging directly with the Python packaging ecosystem, we're making scientific Python more accessible.
+When I founded pyOpenSci in 2018, I brought these hard-won lessons with me. What started as solving installation problems for students evolved into a broader mission: making Python's scientific ecosystem more accessible to researchers everywhere. The same principles that made our Earth Analytics lessons work—tested environments, clear documentation, reproducible setups—now guide how we support the entire Python open science community.
+
+**At pyOpenSci, we're working to lower these barriers.** Through [lessons](https://www.pyopensci.org/python-package-guide/package-structure-code/declare-dependencies.html#), workshops 
+and events that help researchers build better tools and workflows. We engage 
+directly with the core Python packaging ecosystem to make scientific Python more accessible to more people.
 
 Because open science only works when people can actually access it.
-
-### Learn More
-
-- [pyOpenSci Python Package Guide](https://www.pyopensci.org/python-package-guide/)
-- [Our packaging workshops (with Codespaces!)](https://github.com/pyOpenSci/python-package-guide)
-- [Earth Analytics Python Environment](https://github.com/earthlab/earth-analytics-python-env) (the original tested environment)

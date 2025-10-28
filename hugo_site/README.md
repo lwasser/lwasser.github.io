@@ -1,9 +1,20 @@
-# Hugo + Tailwind CSS Site
+# Welcome to My Website!  
 
-This is a minimal Hugo site with Tailwind CSS v3 for styling.
+[![DOI](https://zenodo.org/badge/87748882.svg)](https://zenodo.org/badge/latestdoi/87748882)
+
+This is my personal site built with Hugo, styled with Tailwind CSS v3, and using Google Fonts for typography. I deploy it via GitHub Pages.
+
+## Tech Stack
+
+- Hugo Extended (v0.118.2+) - Static site generator
+- Tailwind CSS v3 - Utility-first CSS framework
+- Google Fonts - Web typography
+- Node.js (v22+) - For build tooling
+- GitHub Pages - Hosting and deployment
 
 ## Prerequisites
 
+You'll need:
 - Hugo Extended (v0.118.2 or later)
 - Node.js (v22 or later)
 
@@ -22,14 +33,14 @@ npm install -g postcss-cli
 ### Development
 
 ```bash
-# Make sure conda is deactivated if you use conda
+# If you use conda, make sure to deactivate it first
 conda deactivate
 
 # Start the development server
 npm run dev
 ```
 
-Site will be available at `http://localhost:1313`
+Your site will be available at `http://localhost:1313`
 
 ### Build for Production
 
@@ -37,10 +48,11 @@ Site will be available at `http://localhost:1313`
 npm run build
 ```
 
-Output will be in the `public/` directory.
+The site's output will be in the `public/` directory.
 
 ## Project Structure
-```
+
+```console
 .
 ├── assets/css/main.scss       # Main stylesheet (Tailwind)
 ├── content/                    # All content (markdown)
@@ -58,33 +70,28 @@ Output will be in the `public/` directory.
 
 ## Creating Content
 
-### New Blog Post
-```bash
-hugo new blog/my-post.md
-```
+### Writing a Blog Post
 
-Edit the file in `content/blog/my-post.md` with frontmatter:
+Create a new post in `content/blog/my-post.md` with frontmatter like this:
+
 ```yaml
+---
 ---
 title: "My Post Title"
 date: 2025-10-26
+excerpt: "A brief description of your post."
+image: /images/my-post/featured-image.png
+categories:
+  - category-name
+tags:
+  - tag-one
+  - tag-two
 ---
 
 Your content here...
 ```
 
-## Customizing Styles
-
-Edit `assets/css/main.scss` to add custom SCSS or Tailwind utilities.
-
-## Troubleshooting
-
-- **"npx not found" error**: Make sure you deactivated conda and installed postcss-cli globally
-- **Styles not loading**: Check that `assets/css/main.scss` exists
-- **Hugo not finding templates**: Verify files are in correct `layouts/` subdirectories
-
-
-## Images 
+## Images
 
 I created a custom shortcode for adding images with captions. Use it like this:
 
@@ -94,52 +101,62 @@ I created a custom shortcode for adding images with captions. Use it like this:
     caption="This is my image caption." >}}
 ```
 
-The shortcode will render the image with the specified alt text and caption below it. And if there is a webp format of the image available, it will use that for better performance.
+The shortcode will render the image with the specified alt text and caption below it. If there's a WebP format of the image available, it'll use that for better performance and automatically fall back to the original format if needed.
 
+### Converting Images
 
-## Converting JPG to PNG (if needed)
+#### JPG/JPEG to PNG
 
-To convert a jpg to png and webp formats, you can use the following commands:
+I use `sips` (built-in on Mac) to convert images:
 
-Use `sips` (built-in on Mac):
 ```bash
+# Single file
 sips -s format png image.jpg --out image.png
-```
 
-or to run on a dir
-```bash
+# Batch convert a directory
 for f in *.jpg(N) *.jpeg(N); do
   [ -f "$f" ] || continue
   sips -s format png "$f" --out "${f%.*}.png"
 done
 ```
 
-Install `cwebp`:
+#### Converting to WebP
+
+First, install `cwebp`:
 
 ```bash
 brew install webp
 ```
 
-Convert individual files:
+Then convert your images:
+
 ```bash
+# Single file
 cwebp -q 85 image.jpg -o image.webp
 cwebp -q 85 image.png -o image.webp
-```
 
-Batch convert all images in a directory:
-```bash
+# Batch convert all images in a directory
 for file in *.jpg *.png; do
   [ -f "$file" ] && cwebp -q 85 "$file" -o "${file%.*}.webp"
 done
 ```
 
-**Note:** The figure shortcode automatically tries to load the `.webp` version first and falls back to the original format if WebP doesn't exist.
+## Customizing Styles
 
+To update the CSS, edit the `assets/css/main.scss` file. You can add custom SCSS or additional Tailwind utilities there.
 
+### Brand Colors
 
-## Brand colors
-EDB88B - Buff (warm peachy/tan)
-71B3B5 - Verdigris (teal/cyan)
-42213D - Dark purple
-AC87A0 - Mountbatten pink (you considered dropping this)
-395E66 - Dark slate gray (you considered dropping this)
+Here are the brand colors I use:
+
+- **#EDB88B** - Buff (warm peachy/tan)
+- **#71B3B5** - Verdigris (teal/cyan)
+- **#42213D** - Dark purple
+- **#AC87A0** - Mountbatten pink
+- **#395E66** - Dark slate gray
+
+## Troubleshooting
+
+- **"npx not found" error**: Make sure you've deactivated conda and installed postcss-cli globally
+- **Styles not loading**: Check that `assets/css/main.scss` exists
+- **Hugo not finding templates**: Verify your files are in the correct `layouts/` subdirectories
