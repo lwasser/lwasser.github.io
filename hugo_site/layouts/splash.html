@@ -1,23 +1,12 @@
 {{ define "main" }}
 
-<!-- Hero -->
- {{ partial "hero.html" . }}
+<!-- Hero - vision - who i am-->
+{{ partial "hero.html" . }}
 
-<!-- What i do -->
-  {{ partial "impact-cards.html" . }}
+<!-- What I do - emphasis on pyos -->
+{{ partial "impact-cards.html" . }}
 
-<!-- Recent Posts Section -->
-<div class="max-w-4xl mx-auto px-4 py-16">
-  <h2 class="text-3xl font-bold text-gray-900 mb-8">Recent Posts</h2>
-  <div class="space-y-6">
-    {{ range first 5 (where .Site.RegularPages "Type" "blog") }}
-    <article class="border-b pb-6">
-      <a href="{{ .Permalink }}" class="text-2xl font-semibold text-[#71B3B5] hover:text-[#5a9294]">
-        {{ .Title }}
-      </a>
-      <p class="text-gray-600 text-sm mt-2">{{ .Date.Format "January 2, 2006" }}</p>
-    </article>
-    {{ end }}
-  </div>
-</div>
+<!-- Recent Blog Posts Section -->
+{{ partial "blog-list.html" . }}
+
 {{ end }}

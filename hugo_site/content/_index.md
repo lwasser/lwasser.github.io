@@ -5,7 +5,8 @@ draft: false
 layout: "splash"
 hero:
   title: "I'm Leah 👋"
-  excerpt: "I build equitable global programs that harness the power of community to advance open science."
+  subtitle: "Executive Director & Founder of pyOpenSci"
+  excerpt: "I build equitable global programs that harness the power of community to advance open science. My work empowers participants with both technical and leadership skills, breaking down barriers so scientists everywhere can spend less time struggling and more time solving the world’s greatest challenges."
   image: "/images/leah-headshot.png"
 cards:
   - grid: "md:row-start-1 md:col-start-1"
@@ -16,27 +17,25 @@ cards:
     modifier: "card--white"
     icon: "fa-solid fa-sun"
     title: "pyOpenSci"
-    excerpt: "An inclusive community of practice that makes scientific open source accessible to everyone, everywhere"
+    excerpt: "**Founder and Executive Director** of an inclusive community of practice that makes scientific open source better and accessible to everyone, everywhere. Together we support open source tool developers and users through peer review, training, and supportive community."
     url: "https://www.pyopensci.org"
   - grid: "md:row-start-3 md:col-start-2"   # bottom-right
     icon: "fa-solid fa-seedling"
-    title: "Community Building"
-    excerpt: "Building inclusive, global communities..."
+    title: "Open Science Leader"
+    excerpt: "Championing the free and open source tools that power reproducible research—breaking down technical barriers to make open science accessible and sustainable"
   - grid: "md:row-start-2 md:col-start-1"   # bottom-left
     icon: "fa-solid fa-seedling"
-    title: "Open Source Leadership"
-    excerpt: "Maintaining and championing..."
-    url: "/projects"
+    title: "Accessible Education Expert"
+    excerpt: "I have **20+ years experience in designing technical training** that tackles the hardest technical pain points—equipping scientists with the skills to work openly, reproducibly, and collaboratively"
   - grid: "md:row-start-2 md:col-start-2"
     icon: "fa-solid fa-flower"
-    title: "Workshops & Training"
-    excerpt: "Hands-on courses..."
+    title: "Inclusive Community Architect"
+    excerpt: "At pyOpenSci, I have spent the last 9 years, creating and nurturing a vibrant community of practice from the ground up—building the human infrastructure needed to ensure open science practices thrive."
     url: "/workshops"
   - grid: "md:row-start-3 md:col-start-1"
     icon: "fa-solid fa-flower"
-    title: "Global Programs"
-    excerpt: "Designing equitable programs..."
-    url: "/programs"
+    title: " Open Source Steward"
+    excerpt: "I rebuild and sustain maintainer teams—from the all-contributors bot to stravalib—keeping essential open source infrastructure alive."
 ---
 
 I build equitable global programs that harness the power of community to advance open science. My work empowers participants with both technical and leadership skills, breaking down barriers so scientists everywhere can spend less time struggling and more time solving the world’s greatest challenges.

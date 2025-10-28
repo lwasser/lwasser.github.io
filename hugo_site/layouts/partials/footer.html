@@ -1,0 +1,45 @@
+<footer class="bg-teal-800 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h3 class="text-white text-xl font-semibold mb-6">Let's Connect</h3>
+      <div class="flex justify-center space-x-6">
+        <a href="{{ .Site.Params.social.github | default "https://github.com/lwasser" }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-white hover:text-teal-200 transition-colors duration-300">
+          <i class="fab fa-github text-3xl"></i>
+        </a>
+
+        <a href="{{ .Site.Params.social.linkedin | default "https://linkedin.com/in/leahawasser" }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-white hover:text-teal-200 transition-colors duration-300">
+          <i class="fab fa-linkedin text-3xl"></i>
+        </a>
+
+        <a href="{{ .Site.Params.social.mastodon | default "https://fosstodon.org/@lwasser" }}" target="_blank" rel="noopener noreferrer" aria-label="Mastodon" class="text-white hover:text-teal-200 transition-colors duration-300">
+          <i class="fab fa-mastodon text-3xl"></i>
+        </a>
+
+        <a href="{{ .Site.Params.social.bluesky | default "https://bsky.social/lwasser" }}" target="_blank" rel="noopener noreferrer" aria-label="Bluesky" class="text-white hover:text-teal-200 transition-colors duration-300">
+          <i class="fa-solid fa-globe text-3xl"></i>
+        </a>
+
+        <a href="{{ .Site.Params.social.orcid | default "https://orcid.org/YOUR-ORCID-ID" }}" target="_blank" rel="noopener noreferrer" aria-label="ORCID" class="text-white hover:text-teal-200 transition-colors duration-300">
+          <i class="fab fa-orcid text-3xl"></i>
+        </a>
+
+        <a href="{{ .Site.Params.social.zenodo | default "https://zenodo.org" }}" target="_blank" rel="noopener noreferrer" aria-label="Zenodo" class="text-white hover:text-teal-200 transition-colors duration-300">
+          <i class="fa-solid fa-archive text-3xl"></i>
+        </a>
+
+        <a href="{{ .Site.Params.social.rss | default "/index.xml" }}" aria-label="RSS" class="text-white hover:text-teal-200 transition-colors duration-300">
+          <i class="fa-solid fa-rss text-3xl"></i>
+        </a>
+
+        <a href="{{ .Site.Params.social.email | default "mailto:you@example.com" }}" aria-label="Email" class="text-white hover:text-teal-200 transition-colors duration-300">
+          <i class="fa-solid fa-envelope text-3xl"></i>
+        </a>
+      </div>
+
+      <p class="text-teal-200 text-sm mt-8">
+        © {{ now.Format "2006" }} Leah A. Wasser.
+        {{ with .Site.Params.licenseURL }}· <a href="{{ . }}" class="underline text-teal-100">License</a>{{ end }}
+      </p>
+    </div>
+  </div>
+</footer>

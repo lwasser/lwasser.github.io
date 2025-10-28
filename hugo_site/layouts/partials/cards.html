@@ -36,7 +36,7 @@
 
     <h3 class="card__title">{{ .title }}</h3>
     {{ with .excerpt }}
-      <p class="card__body">{{ . }}</p>
+      <div class="card__body">{{ . | markdownify }}</div>
     {{ end }}
   </div>
 
