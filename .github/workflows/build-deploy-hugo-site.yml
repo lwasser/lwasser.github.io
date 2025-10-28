@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./hugo_site
 
     steps:
       - name: Checkout
@@ -29,7 +32,6 @@ jobs:
 
       - name: Install npm dependencies
         run: npm ci
-        working-directory: ./hugo_site
 
       - name: Setup Hugo (extended)
         uses: peaceiris/actions-hugo@v2
