@@ -1,0 +1,38 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: klakegg/hugo:ext-alpine-ci  # Hugo Extended + node preinstalled
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-npm-deps-{{ checksum "hugo_site/package-lock.json" }}
+            - v1-npm-deps-
+
+      - run:
+          name: Install dependencies and build
+          command: |
+            cd hugo_site
+            npm ci && npm run build
+            ls
+
+      - save_cache:
+          paths:
+            - hugo_site/node_modules
+          key: v1-npm-deps-{{ checksum "hugo_site/package-lock.json" }}
+
+      - store_artifacts:
+          path: public
+          destination: public
+
+workflows:
+  build_and_preview:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - hugo

@@ -1,31 +1,18 @@
 ---
 title: "Why tested Python environments matter for science"
+date: 2025-09-05
 excerpt: "Teaching earth and environmental data science can be time consuming. Learn about what I learned when I tried to create an consistent Python environment that was easy for students to install. (and how this could help your science as well."
-# feature_img: /images/science-communication/tested-python-environments.png
-# feature_alt: "Text here"
-layout: single_law
-related: true
-permalink: why-tested-python-environments-matter-for-science
-#feature_img: /images/blog/tested-environment-python-1.png
-author_profile: true
-header:
-  overlay_color: "#333"
-series: "conda-envt-testing"
-category: "data-science-dev-ops"
+image: /images/science-communication/tested-python-environments.png
 categories:
   - data-science-dev-ops
 tags:
   - python
   - conda
-  - data science
+  - data-science
   - testing
-  - testing
-  - python
   - open-source
   - open-education
 ---
-<!--<original permalink free-open-source-software-for-science-foss/> -->
-
 
 ## Why should scientists care about environments and testing things?
 
@@ -43,7 +30,6 @@ of my scientific and teaching toolbox was laughable.
 Frankly, if you told me 
 i'd be teaching data science 20 years later and running an organization devoted
 to the tools that support data science, I'd laugh even harder. 
-{: .notice }
 
 But today, testing and CI (Continuous Integration) I will talk about this in my next blog) has become an important part of any infrastructure that I create 
 be it:
@@ -113,7 +99,6 @@ how to code in `Python`.
 
 *By the way, I still think `R` is great for many things! 
 I still use `R` too! No judgement here!*
-{: .notice }
 
 ### How Does One Install GDAL Anyway?
 
@@ -180,133 +165,68 @@ This was huge!
 Students use all sorts of computers and OS' - you can't assume only one.
 You can assume that scientists using your workflow will similarly work 
 on different types of computers with varying operating systems.
-{: .notice }
 
 
 ### Enter the Earth Analytics Python Environment
 
-<i class="fas fa-hands-helping"></i> Thanks to the help of several people 
-including a great colleague 
-[Max Joseph](https://www.github.com/mbjoseph/). Max was really the person who
-early on introduced me to the concept of testing. At the time I didn't fully
-understand just how important it was. But I got there quickly! Another person who I want to thank is [Filipe Fernandes](https://www.github.com/ocefpaf) who really helped me better understand the complexity of resolving Python environments and avoiding channel mixing.
-{: .notice }
+Thanks to the help of several people including Max Joseph, Tim Head and Filipe, I was able to create a conda environment that:
 
-So this is what I built:
+1. worked on multiple operating systems (mac, windows, linux)
+2. was tested regularly so that when we updated packages things didn't break
+3. was easier to install for students
 
-1. [A vetted Python environment:](https://www.github.com/lwasser/earth-analytics-python-env/) The original repo was in the `earthlab` organization. However, because it doesn't appear to be maintained (I am not longer there), I made a fork that I can maintain. This environment has all of the Python tools needed to complete my [earth-analytics-python class](https://www.earthdatascience.org/courses/earth-analytics-python/) which was heavily spatial and remote sensing focused but also included a sine natural language processing, API data access and other critical skills. The environment can be installed quickly and easily using a recipe file (also known as an environment file). I'll walk you through that, below.
-2. The environment has a [GitHub Actions workflow that tested it on Windows, Mac and Linux.](https://github.com/lwasser/earth-analytics-python-env/tree/main/.github/workflows). I'll talk about that part more in a second, followup blog. 
+This environment was then used in all of our online lessons for several years. 
 
-*The original workflow was built using the CI platforms: Travis CI and Appveyor. I prefer GitHub actions these days*
+[Check out the Earth Analytics Python environment on GitHub](https://github.com/earthlab/earth-analytics-python-env)
 
-<i class="fas fa-hands-helping"></i> Thanks to [Filipe's help](https://www.github.com/ocefpaf), in a separate 
-environment that I created for an automated build, we used Conda Lock. We did 
-this so we could pin down exactly what versions of all tools and dependencies 
-were being installed once we have a working environment. Boy this made 
-troubleshooting easier! More on that in another blog.
-{: .notice}
+It still lives there (and has over 100 stars which is a lot for an environment!) and some people still use it. But as conda has evolved, some of the approaches that we had to use to make this environment work are no longer needed. 
 
-## What do all of the pieces in this earth-analytics-python repository do?
+## What is a conda environment anyway?
 
-Stick with me here. Next, I will break down the structure and files in this [`earth-analytics-python` GitHub repo](https://www.github.com/lwasser/earth-analytics-python-env):
+A conda environment is a self-contained directory that contains a specific collection of packages that you have installed. For example, you may have one environment with NumPy 1.7 and its dependencies, and another environment with NumPy 1.6 for legacy testing. 
 
-### First you have the conda Python environment file. What's that? 
+If you change one environment, your other environments are not affected. You can easily activate or deactivate environments, which is how you switch between them.
 
-You can think of a `Python` environment file as a recipe for
-what to install and where. This environment file, 
-allows you to specify:
+### Why use environments?
 
-* What packages you want in your environment
-* How you want to install them (e.g. using pip or conda - more on package managers below).
+Environments allow you to:
 
+* **Isolate dependencies**: Different projects can require different versions of the same package
+* **Reproduce workflows**: Share your environment file so others can recreate your exact setup
+* **Experiment safely**: Test new packages without breaking your working setup
+* **Teach effectively**: Ensure all students have the same working environment
 
-<div class="notice" markdown="1">
-<i class="fas fa-info-circle"></i> **About package managers**
+## The anatomy of an environment.yml file
 
-`pip` and `conda` are two different package managers. A package manager installs:
-
-* the packages you want to use AND 
-* the dependencies of that package on your computer. 
-
-It also will decide the best version of the dependencies to install that 
-will reduce conflicts across your entire environment (image installing 10 packages each that have 3 dependencies). It is doing a lot of work for you. 
-
-Every package is going to rely on other packages to run. Each of those packages that it relies on is called a dependency. 
-
-The package manager installs everything that you need so you don't 
-need to think about it. A package manager also allows you to decide
-what channel you want to install the tools from. 
-
-More on channels below. 
-</div>
-
-
-### Let's check out the environment.yml file
-
-Below you can see a snippet of 
-what the `earth-analytics-python` environment looks like. The file is always 
-called `environment.yml` by default. 
+An `environment.yml` file is a recipe that tells conda what to install. Here's a simplified example:
 
 ```yaml
-name: earth-analytics-python
+name: my-project
 channels:
   - conda-forge
   - defaults
-
 dependencies:
   - python=3.9
   - pip
   # Core scientific python
   - numpy
-  
+  - pandas
   # Plotting
   - matplotlib
-  - plotly
   - seaborn
 ```
 
-[The file is in `YAML` format.](https://github.com/lwasser/earth-analytics-python-env/blob/main/environment.yml) You can think of
-the `.yaml` as a 
- list of things. This list can have a hierarchy too. In this case, this
- list of things is for a **recipe to build a Python** environment 
- **using the conda package manager**.  
+Let's break this down:
 
-<i class="fab fa-leanpub"></i> [Here's a lesson that I wrote and used to use to teach my students about Python Environments.](https://www.earthdatascience.org/workshops/setup-earth-analytics-python/setup-python-conda-earth-analytics-environment/)
-{: .notice}
-
-Notice a few things:
-
-### The file has an environment *name:*
-
+### The environment name
 
 ```yaml
-name: earth-analytics-python
-channels:
-  - conda-forge
-  - defaults
+name: my-project
 ```
 
-At the top of the file, you can see the environment `name: earth-analytics-python`: As you might guess this specifies the name of the environment. 
-The name allows you to **activate it**. 
+This is what you'll use to activate the environment. Choose something descriptive like `spatial-analysis` or `ml-project`.
 
-### What is activating an environment? 
-
-Activating refers to the process of telling your computer to use that 
-environment to run your Python code. 
-
-So running:
-
-```bash
-$ conda activate earth-analytics-python
-```
-
-will ensure that when you open a Jupyter Notebook or open the Python
-prompt in bash, it will use that environment with all of the tools loaded. 
-
-Yup, this means that you can have multiple environments on your computer if you wish.
-{ : .notice }
-
-### The environment.yml file specifies *channels*
+### Channels: The package toolboxes
 
 ```yaml
 channels:
@@ -314,13 +234,10 @@ channels:
   - defaults
 ```
 
-Next notice the `channels:` element in your file. Channels tell the installer where to get
-the installation files from. 
+Think of channels as different toolboxes that contain packages. The most common channels are:
 
-You can think of a channel as a big box of tools. A toolbox! In Python,
-and specifically when you are using the `conda` package manager, there 
-are multiple toolboxes containing tools (Python packages) that you 
-can install things from. 
+* **conda-forge**: Community-maintained, great for scientific packages
+* **defaults**: Anaconda's official channel
 
 <figure>
 	<a href="/images/blog/conda-channel-geohackweek.jpeg">
@@ -334,13 +251,12 @@ Here's the confusing part:
 
 
 For instance `conda` 
-has a default channel <i class="fas fa-toolbox"></i> that it uses to install packages. So if you install the 
+has a default channel that it uses to install packages. So if you install the 
 `Anaconda` distribution it will likely use the `default` toolbox. 
 
-<i class="fas fa-info-circle"></i> I advise that you do NOT INSTALL ANACONDA. While it's a great distribution it has a lot of things that you don't use. And it can set you up for conflicts later down the road if you need to install other things. 
-{: .notice }
+**Pro tip:** I advise that you do NOT INSTALL ANACONDA. While it's a great distribution it has a lot of things that you don't use. And it can set you up for conflicts later down the road if you need to install other things. 
 
-The `conda-forge` channel <i class="fas fa-toolbox"></i> is separate and tends to be great if 
+The `conda-forge` channel is separate and tends to be great if 
 you are using a lot of spatial packages. It is my preferred channel. 
 
 You can install `matplotlib` from:
@@ -352,7 +268,7 @@ OR
 
 * using the pip package manager `pip install matplotlib` 
 
-### <i class="fas fa-skull-crossbones"></i> Mixing channels is dangerous! 
+### Mixing channels is dangerous! 
 
 The problem here is that each tool within each channel and within each package 
 manager can be slightly different in terms of how dependencies are resolved. 
@@ -369,8 +285,7 @@ package managers. Pick one package manager (and channel) for most tools (sometim
 conda). Similarly if you are using conda, stick with a channel. Use `defaults` 
 or `conda-forge`. But try as hard as you can to avoid using both. This is often why people's Python environments "break". 
 
-<i class="fas fa-info-circle"></i> Sometimes you will have to mix channels a little bit. Don't worry, it happens and it is OK! 
-{: .notice }
+**Note:** Sometimes you will have to mix channels a little bit. Don't worry, it happens and it is OK! 
  
 ### Conda-forge and defaults channels in your environment.yml file  
 
@@ -410,10 +325,9 @@ to run!
 Below is a list of packages (and version 
 if you want to be specific) that you want to install in that environment. 
 
-<i class="fas fa-info-circle"></i> Remember that every package has a bunch of dependencies or other packages that it relies 
+**Remember:** Every package has a bunch of dependencies or other packages that it relies 
 on to run properly. So when you install `matplotlib` for example. It's  going to 
 install other things that `matplotlib` needs. 
-{: .notice }
 
 The `conda` installer will find the best mix of package versions and dependencies 
 to install. This ensures (*most of the time*) that your environment works. 
@@ -509,4 +423,4 @@ At a minimum you will want to test that the environment can install on:
 on Windows, Mac and Linux. These are the common operating systems that 
 most people use. 
 
-In the [next blog post](how-to-setup-testing-python-environments-github-actions) I will discuss setting up testing in more detail. 
+In the next blog post I will discuss setting up testing in more detail.

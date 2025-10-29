@@ -1,0 +1,19 @@
+Thumbs.db
+.DS_Store
+.dist
+.tmp
+.lock
+.sass-cache
+npm-debug.log
+node_modules
+builds
+public
+resources
+.hugo_build.lock
+jsconfig.json
+hugo_stats.json
+go.sum
+public/
+# Tailwind generated files
+**/assets/css/main.css
+**/assets/css/main.css.map

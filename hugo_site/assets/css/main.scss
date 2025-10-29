@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* base color for all fonts */
+  :root {
+    --site-text: #111827;
+  }
+  body {
+    @apply font-sans;
+    color: var(--site-text);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sora;
+    color: inherit;
+  }
+  h2 {
+    @apply text-2xl md:text-3xl font-semibold leading-tight;
+  }
+}
+
+@layer components {
+  /* scoped list styles for the resume-cards partial */
+  .resume-cards ul,
+  .resume-cards ol {
+    @apply list-disc pl-6 md:pl-8 space-y-2;
+  }
+
+  .resume-cards li {
+    @apply text-lg md:text-xl leading-relaxed text-current;
+  }
+
+  /* links in lists inherit color and remain underlined */
+  .resume-cards a {
+    @apply text-current underline;
+  }
+
+  /* when a card uses `.group` hover, turn headings + list items white */
+  .resume-cards .group:hover h3,
+  .resume-cards .group:hover li {
+    @apply text-white;
+  }
+
+  .card {
+    @apply rounded-2xl p-12 shadow-sm transition-transform duration-200 transform;
+    @apply hover:-translate-y-2 hover:shadow-xl;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* light-peach base + buff hover */
+  .card--peach {
+    background-color: #fff6f2;
+    transition: background-color .2s ease, color .2s ease;
+  }
+  .card--peach:hover {
+    background-color: #EDB88B; /* buff */
+  }
+
+  .card__icon { @apply text-5xl md:text-6xl mb-6; }
+  .card__title { @apply text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4; transition: color .2s ease; }
+  .card__body  { @apply text-lg md:text-xl lg:text-2xl text-gray-700; transition: color .2s ease; }
+  .card__cta   { @apply mt-6 text-base md:text-lg text-verdigris; transition: color .2s ease; }
+
+  /* hover text color for peach cards */
+  .card--peach:hover .card__title,
+  .card--peach:hover .card__body,
+  .card--peach:hover .card__cta {
+    color: #fff;
+  }
+}
