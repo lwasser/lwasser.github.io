@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <h1 class="text-3xl font-semibold mb-6">{{ .Title | default "Topics" }}</h1>
+
+  <ul class="space-y-2">
+    {{ range $term, $data := .Data.Terms }}
+      <li>
+        <a href="{{ $data.Page.Permalink }}" class="text-lg text-gray-800 hover:text-dark-teal">
+          {{ $term }} <span class="text-sm text-gray-500">({{ $data.Count }})</span>
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

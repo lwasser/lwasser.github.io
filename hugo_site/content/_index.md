@@ -17,7 +17,11 @@ cards:
     modifier: "card--white"
     icon: "fa-solid fa-sun"
     title: "pyOpenSci"
-    excerpt: "**Founder and Executive Director** of an inclusive community of practice that makes scientific open source better and accessible to everyone, everywhere. Together we support open source tool developers and users through peer review, training, and supportive community."
+    excerpt: |
+      **Founder and Executive Director** of an inclusive non profit organization and community of practice that supports researchers in building, discovering and maintainer better scientific software. Together, we make open source accessible to everyone, everywhere.
+
+      * 350+ contributors & maintainers 
+      * 50+ packages supported
     url: "https://www.pyopensci.org"
   - grid: "md:row-start-3 md:col-start-2"   # bottom-right
     icon: "fa-solid fa-seedling"
