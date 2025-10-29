@@ -14,3 +14,6 @@ jsconfig.json
 hugo_stats.json
 go.sum
 public/
+# Tailwind generated files
+**/assets/css/main.css
+**/assets/css/main.css.map
