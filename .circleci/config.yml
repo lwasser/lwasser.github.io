@@ -20,11 +20,11 @@ jobs:
 
       - save_cache:
           paths:
-            - node_modules
+            - hugo_site/node_modules
           key: v1-npm-deps-{{ checksum "hugo_site/package-lock.json" }}
 
       - store_artifacts:
-          path: /public
+          path: hugo_site/public
           destination: public
 
 workflows:
