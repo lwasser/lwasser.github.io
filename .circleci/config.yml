@@ -17,6 +17,7 @@ jobs:
           command: |
             cd hugo_site
             npm ci && npm run build
+            ls
 
       - save_cache:
           paths:
@@ -24,7 +25,7 @@ jobs:
           key: v1-npm-deps-{{ checksum "hugo_site/package-lock.json" }}
 
       - store_artifacts:
-          path: hugo_site/public
+          path: public
           destination: public
 
 workflows:
