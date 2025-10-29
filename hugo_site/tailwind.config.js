@@ -19,6 +19,7 @@ module.exports = {
         mountbatten: '#AC87A0',  // Mountbatten pink
         slateDark: '#395E66',     // Dark slate gray
         darkTeal: '#0b5757',    // Dark teal
+        verdigrisDark:'#2E6060', // Darker verdigris
       },
     },
   },

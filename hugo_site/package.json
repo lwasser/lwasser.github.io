@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "hugo server",
+    "watch:css": "tailwindcss -i ./assets/css/main.scss -o ./assets/css/main.css --watch",
+    "serve": "hugo server -D --disableFastRender",
+    "dev": "concurrently \"npm:watch:css\" \"npm:serve\"",
     "build:css": "tailwindcss -i ./assets/css/main.scss -o ./assets/css/main.css --minify",
     "build": "hugo --minify -d ../public"
   },
@@ -15,6 +17,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
     "autoprefixer": "^10.4.21",
+    "concurrently": "^9.2.1",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "tailwindcss": "^3.4.18"
