@@ -1,0 +1,4 @@
+# netlify.toml
+[build]
+  command = "npm ci && npm run build"
+  publish = "public"
