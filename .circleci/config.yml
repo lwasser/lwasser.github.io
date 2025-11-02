@@ -15,13 +15,12 @@ jobs:
       - run:
           name: Install dependencies and build
           command: |
-            cd hugo_site
             npm ci && npm run build
             ls
 
       - save_cache:
           paths:
-            - hugo_site/node_modules
+            - node_modules
           key: v1-npm-deps-{{ checksum "hugo_site/package-lock.json" }}
 
       - store_artifacts:
