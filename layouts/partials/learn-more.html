@@ -1,0 +1,25 @@
+{{ $resources := .Params.learn_more }}
+{{ $defaultIcon := .Params.learn_more_icon | default "fa-book" }}
+{{ $title := .Params.learn_more_title | default "Learn More" }}
+
+{{ if $resources }}
+<div class="my-12 bg-slate-100 rounded-3xl p-8 shadow-lg">
+  <div class="flex items-center gap-3 mb-6">
+
+    <h3 class="text-2xl font-bold text-gray-900 m-0"><i class="fas fa-graduation-cap text-gray-900"></i> {{ $title }}</h3>
+  </div>
+
+  <ul class="space-y-4 list-none p-0 m-0">
+    {{ range $resources }}
+    <li>
+      <a href="{{ .url }}"
+         target="_blank"
+         rel="noopener"
+         class="flex items-center gap-4 text-gray-900 no-underline transition-colors duration-200 hover:text-teal-600 group">
+        <span class="text-lg font-semibold"><i class="fas {{ .icon | default $defaultIcon }}"></i> {{ .title }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

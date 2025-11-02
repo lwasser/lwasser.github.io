@@ -1,0 +1,28 @@
+baseURL = 'https://leahwasser.come/'
+languageCode = 'en-us'
+title = 'Leah A Wasser'
+
+# Socials
+[params.social]
+  github = "https://github.com/lwasser"
+  linkedin = "https://linkedin.com/in/leahawasser"
+  mastodon = "https://fosstodon.org/@leahawasser"
+  bluesky = "https://bsky.app/profile/leahawasser.bsky.social"
+  orcid = "https://orcid.org/0000-0002-8177-6550"
+  zenodo = "https://zenodo.org/communities/pyopensci"
+  rss = "/index.xml"
+  email = "mailto:leah+website@pyopensci.org"
+
+params.licenseURL = "/license"
+
+# Customize theme parameters here
+[params]
+  author = "Leah A. Wasser"
+  tagline = "Empowering Communities to Advance Science Through Open, Equitable Practices"
+
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 2
+

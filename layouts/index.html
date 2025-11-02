@@ -1,0 +1,43 @@
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="bg-[#71B3B5] min-h-[70vh] flex items-center">
+  <div class="max-w-7xl mx-auto px-4 py-20 w-full">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Left side - Text -->
+      <div class="order-2 md:order-1">
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+          Hey Friends 👋
+        </h1>
+        <p class="text-xl md:text-2xl leading-relaxed text-white">
+          I'm {{ .Site.Params.author }}. [Add your punchy description here - what you do and why it matters in 1-2 sentences]
+        </p>
+      </div>
+
+      <!-- Right  - Photo -->
+      <div class="order-1 md:order-2 flex justify-center md:justify-end">
+        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl">
+          <img src="/images/your-photo.jpg" alt="{{ .Site.Params.author }}" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Recent Posts Section -->
+<div class="max-w-4xl mx-auto px-4 py-16">
+  <h2 class="text-3xl font-bold text-gray-900 mb-8">Recent Posts</h2>
+  <div class="space-y-6">
+    {{ range first 5 (where .Site.RegularPages "Type" "blog") }}
+    <article class="border-b pb-6">
+      <a href="{{ .Permalink }}" class="text-2xl font-semibold text-[#71B3B5] hover:text-[#5a9294]">
+        {{ .Title }}
+      </a>
+      <p class="text-gray-600 text-sm mt-2">{{ .Date.Format "January 2, 2006" }}</p>
+    </article>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
