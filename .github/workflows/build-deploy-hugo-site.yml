@@ -2,9 +2,11 @@ name: Build Hugo Site
 
 on:
   push:
-    branches: [ hugo ]
+    branches:
+      - main
   pull_request:
-    branches: [ hugo ]
+    branches:
+      - '*'
 
 jobs:
   build:
@@ -44,19 +46,19 @@ jobs:
         with:
           name: hugo-public
           path: public
-  # deploy:
-  #   name: Deploy to GitHub Pages
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   if: github.ref == 'refs/heads/main' && (github.event.pull_request == null || github.event.pull_request.head.repo.fork == false)
-  #   permissions:
-  #     contents: read
-  #     pages: write
-  #     id-token: write
-  #   # steps:
-  #   #   - name: Deploy to GitHub Pages
-  #   #     id: deployment
-  #   #     uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
+  deploy:
+    name: Deploy to GitHub Pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && (github.event.pull_request == null || github.event.pull_request.head.repo.fork == false)
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
