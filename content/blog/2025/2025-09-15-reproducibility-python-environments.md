@@ -1,6 +1,6 @@
 ---
 title: "Python's Reproducibility Crisis: And How We Fixed It for Open Science Education"
-date: 2025-09-05
+date: 2025-09-15
 excerpt: "What I learned building tested Python environments at scale—and how it shaped the way we teach open science at pyOpenSci today."
 image: /images/headers/norway-northern-lights.png
 photo_credit_author: "Leah Wasser"

@@ -20,6 +20,7 @@ module.exports = {
         slateDark: '#395E66',     // Dark slate gray
         darkTeal: '#0b5757',    // Dark teal
         verdigrisDark:'#2E6060', // Darker verdigris
+        verdigrisBackground: '#D6E3E3', // Light verdigris background
       },
     },
   },

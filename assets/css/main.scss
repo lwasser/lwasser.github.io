@@ -21,6 +21,27 @@
 }
 
 @layer components {
+  .card-hover {
+    @apply transition-transform duration-200 ease-in-out;
+    will-change: transform, box-shadow;
+  }
+
+  .card-hover:hover,
+  .card-hover:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(17,24,39,0.08);
+  }
+
+  /* ensure hover does NOT change text color */
+  .card-hover :is(.card__title, .card__body, .card__cta, h2, h3, p, li, a) {
+    color: inherit;
+  }
+
+  /* optional compact variant */
+  .card-hover--compact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(17,24,39,0.06);
+  }
   /* scoped list styles for the resume-cards partial */
   .resume-cards ul,
   .resume-cards ol {
@@ -36,13 +57,7 @@
     @apply text-current underline;
   }
 
-  /* when a card uses `.group` hover, turn headings + list items white */
-  .resume-cards .group:hover h3,
-  .resume-cards .group:hover li {
-    @apply text-white;
-  }
-
-  .card {
+  .card, .resume-cards.resume-block {
     @apply rounded-2xl p-12 shadow-sm transition-transform duration-200 transform;
     @apply hover:-translate-y-2 hover:shadow-xl;
     display: flex;
@@ -52,22 +67,18 @@
 
   /* light-peach base + buff hover */
   .card--peach {
-    background-color: #fff6f2;
+    background-color: #D6E3E3; /* light verdigris */
     transition: background-color .2s ease, color .2s ease;
   }
-  .card--peach:hover {
-    background-color: #EDB88B; /* buff */
-  }
 
-  .card__icon { @apply text-5xl md:text-6xl mb-6; }
+  .card__icon { @apply text-4xl md:text-5xl mb-4; }
   .card__title { @apply text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4; transition: color .2s ease; }
   .card__body  { @apply text-lg md:text-xl lg:text-2xl text-gray-700; transition: color .2s ease; }
-  .card__cta   { @apply mt-6 text-base md:text-lg text-verdigris; transition: color .2s ease; }
+  .card__cta   { @apply mt-4 text-sm md:text-base text-verdigris; transition: color .2s ease; }
 
   /* hover text color for peach cards */
   .card--peach:hover .card__title,
   .card--peach:hover .card__body,
   .card--peach:hover .card__cta {
-    color: #fff;
   }
 }
