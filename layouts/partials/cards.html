@@ -11,7 +11,7 @@
 <article class="rounded-2xl p-10 md:p-12 bg-white h-full md:min-h-[260px]">
   <div class="flex items-center justify-center text-center h-full">
     <div>
-      <h2 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight max-w-lg">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight max-w-lg">
         {{ .title }}
       </h2>
       {{ with .excerpt }}
@@ -28,13 +28,13 @@
 {{ else }}
 <article class="card {{ .modifier | default "card--peach" }} h-full md:min-h-[260px]">
   <div>
-    {{ if and (isset . "icon") (in (printf "%s" $icon) "fa-") }}
+    
+
+    <h3 class="card__title">{{ if and (isset . "icon") (in (printf "%s" $icon) "fa-") }}
       <i class="card__icon {{ $icon }}" aria-hidden="true" title="{{ $.title }}"></i>
     {{ else if and (isset . "icon") (ne (printf "%s" $icon) "") }}
       <div class="card__icon">{{ $icon | safeHTML }}</div>
-    {{ end }}
-
-    <h3 class="card__title">{{ .title }}</h3>
+    {{ end }} {{ .title }}</h3>
     {{ with .excerpt }}
       <div class="card__body prose prose-sm text-gray-700">{{ . | markdownify }}</div>
     {{ end }}
