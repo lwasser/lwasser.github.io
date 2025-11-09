@@ -1,41 +1,178 @@
-## Hey there! Welcome to My Website! :wave:
+# Welcome to My Website!  
 
 [![DOI](https://zenodo.org/badge/87748882.svg)](https://zenodo.org/badge/latestdoi/87748882)
 
-This repository contains the source for my personal site built with Jekyll using the Minimal Mistakes theme (which i'm slowly breaking away from).  
+This is my personal site built with Hugo, styled with Tailwind CSS v3, and using Google Fonts for typography. I deploy it via GitHub Pages.
 
-## Prerequisites (macOS)
-- Ruby (compatible with your Gemfile)
-- Bundler (`gem install bundler`)
-- Node.js & npm (only required if you build Tailwind locally; Homebrew recommended: `brew install node`)
+## Tech Stack
 
-## Quickstart
-1. Fork, clone and create a branch to work on
-2. Install Ruby gems using Bundler:
+- Hugo Extended (v0.118.2+) - Static site generator
+- Tailwind CSS v3 - Utility-first CSS framework
+- Google Fonts - Web typography
+- Node.js (v22+) - For build tooling
+- GitHub Pages - Hosting and deployment
+
+## Prerequisites
+
+You'll need:
+- Hugo Extended (v0.118.2 or later)
+- Node.js (v22 or later)
+
+## Getting Started
+
+### First Time Setup
 
 ```bash
-bundle install
+# Install dependencies
+npm install
+
+# Install postcss-cli globally (required for Hugo)
+npm install -g postcss-cli
 ```
 
-3. Serve Jekyll
+### Development
+
 ```bash
-bundle exec jekyll serve
+# If you use conda, make sure to deactivate it first
+conda deactivate
+
+# Start the development server
+npm run dev
 ```
 
-Open http://127.0.0.1:4000 to preview the site.
+Your site will be available at `http://localhost:1313`
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The site's output will be in the `public/` directory.
+
+## Project Structure
+
+```console
+.
+├── assets/css/main.scss       # Main stylesheet (Tailwind)
+├── content/                    # All content (markdown)
+│   ├── _index.md              # Home page
+│   └── blog/                  # Blog posts
+├── layouts/
+│   ├── _default/
+│   │   ├── baseof.html        # Base template
+│   │   └── single.html        # Blog post template
+│   └── index.html             # Home page template
+├── hugo.toml                  # Hugo config
+├── tailwind.config.js         # Tailwind config
+└── postcss.config.js          # PostCSS config
+```
+
+## Creating Content
+
+### Writing a Blog Post
+
+Create a new post in `content/blog/my-post.md` with frontmatter like this:
+
+```yaml
+---
+---
+title: "My Post Title"
+date: 2025-10-26
+excerpt: "A brief description of your post."
+image: /images/my-post/featured-image.png
+categories:
+  - category-name
+tags:
+  - tag-one
+  - tag-two
+---
+
+Your content here...
+```
+
+## Images
+
+I created a custom shortcode for adding images with captions. Use it like this:
+
+```markdown
+{{< figure src="/images/my-image.jpg" 
+    alt="Description of image" 
+    caption="This is my image caption." >}}
+```
+
+The shortcode will render the image with the specified alt text and caption below it. If there's a WebP format of the image available, it'll use that for better performance and automatically fall back to the original format if needed.
+
+### Converting Images
+
+#### JPG/JPEG to PNG
+
+I use `sips` (built-in on Mac) to convert images:
+
+```bash
+# Single file
+sips -s format png image.jpg --out image.png
+
+# Batch convert a directory
+for f in *.jpg(N) *.jpeg(N); do
+  [ -f "$f" ] || continue
+  sips -s format png "$f" --out "${f%.*}.png"
+done
+```
+
+#### Converting to WebP
+
+First, install `cwebp`:
+
+```bash
+brew install webp
+```
+
+Then convert your images:
+
+```bash
+# Single file
+cwebp -q 85 image.jpg -o image.webp
+cwebp -q 85 image.png -o image.webp
+
+# Batch convert all images in a directory
+for file in *.jpg *.png; do
+  [ -f "$file" ] && cwebp -q 85 "$file" -o "${file%.*}.webp"
+done
+```
+
+## Customizing Styles
+
+To update the CSS, edit the `assets/css/main.scss` file. You can add custom SCSS or additional Tailwind utilities there.
+
+### Brand Colors
+
+Here are the brand colors I use:
+
+- **#EDB88B** - Buff (warm peachy/tan)
+- **#71B3B5** - Verdigris (teal/cyan)
+- **#42213D** - Dark purple
+- **#AC87A0** - Mountbatten pink
+- **#395E66** - Dark slate gray
+
+## Troubleshooting
+
+- **"npx not found" error**: Make sure you've deactivated conda and installed postcss-cli globally
+- **Styles not loading**: Check that `assets/css/main.scss` exists
+- **Hugo not finding templates**: Verify your files are in the correct `layouts/` subdirectories
+
+## Plant gallery
 
 
-I have created a set of styles, includes and layouts on top of it to customize it to my liking. It runs on the gem version of Minimal Mistakes
-for easy updating! 
+The plant gallery section showcases a collection of plant profiles. Each plant has its own markdown file under `content/plants/` with details like name, species, care instructions, and images. The plant pages are created using archetypes to ensure consistent frontmatter. to make a new page for a plant, run:
 
-To build the site locally:
+`hugo new plants/plant-name/index.md`  
+For example, to add a Hoya Lacunosa plant profile, run:
 
-RUN: `$ bundle install`
-RUN: `bundle exec jekyll serve`
+`hugo new plants/hoya-lacunosa/index.md`  
 
-## Comments powered by https://giscus.app/
+The plant gallery layout uses a responsive grid to display plant cards and filter buttons that are managed using front end javascript. 
 
-Comments on this site are powered by `Giscus`. It's a really cool project
-that provides comments via the GitHub api. Comments will appear as 
-discussion threads if you turn on discussions in your repo!
+### Styling and partials 
 
+The plant page layout and styling can be found in `layouts/plants/list.html` with individual pages in `layouts/plants/single.html`.

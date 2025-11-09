@@ -1,0 +1,28 @@
+{{/* Layout for a single plant */}}
+{{ define "main" }}
+  {{ partial "hero-plant.html" . }}
+
+  <article class="max-w-4xl mx-auto px-4 md:px-6 py-12">
+    <h1 class="text-3xl font-bold mb-2">{{ .Title }}</h1>
+    {{ with .Params.common_name }}<p class="text-lg text-gray-600 mb-4">{{ . }}</p>{{ end }}
+    <div class="prose max-w-none">
+      {{ .Content }}
+    </div>
+
+   <!-- Small masonry gallery -->
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold mb-4">Gallery</h2>
+    <div class="gallery-masonry">
+      {{ $images := .Resources.ByType "image" }}
+      {{ range $images }}
+        <figure class="gallery-item">
+          <img src="{{ .RelPermalink }}" alt="{{ or .Title $.Title }}" loading="lazy">
+        </figure>
+      {{ end }}
+    </div>
+  </div>
+
+
+    
+  </article>
+{{ end }}

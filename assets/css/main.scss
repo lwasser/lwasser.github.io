@@ -81,4 +81,8 @@
   .card--peach:hover .card__body,
   .card--peach:hover .card__cta {
   }
+
+  /* Import filter components */
+  @import 'filter';
+  @import 'hero';
 }

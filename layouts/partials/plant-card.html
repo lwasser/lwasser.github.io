@@ -1,0 +1,49 @@
+{{ $page := . }}
+{{ $groups := "" }}
+{{ with $page.Params.groups }}
+  {{ $groups = delimit . " " }}
+{{ else }}
+  {{ if $page.Params.group }}
+    {{ $groups = $page.Params.group }}
+  {{ end }}
+{{ end }}
+
+<article class="plant-card" data-groups='{{ $groups }}'>
+  {{ $featuredParam := $page.Params.featured_image }}
+  {{ $img := "" }}
+
+  {{ if $featuredParam }}
+    {{ $tmp := $page.Resources.GetMatch $featuredParam }}
+    {{ if $tmp }}
+      {{ $img = $tmp }}
+    {{ else if not (findRE "\\." $featuredParam) }}
+      {{ $matches := $page.Resources.Match (print $featuredParam ".*") }}
+      {{ if gt (len $matches) 0 }}
+        {{ $img = index $matches 0 }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ if not $img }}
+    {{ $all := $page.Resources.Match "*.{png,jpg,jpeg,gif,webp}" }}
+    {{ if gt (len $all) 0 }}
+      {{ $img = index $all 0 }}
+    {{ end }}
+  {{ end }}
+
+  <a href="{{ $page.RelPermalink }}" class="plant-card__link group" aria-label="{{ $page.Title }}">
+    {{ with $img }}
+      {{ $thumb := .Fill "800x800 center" }}
+      <div class="plant-card__image">
+        <img src="{{ $thumb.RelPermalink }}" alt="{{ $page.Title }}" loading="lazy">
+      </div>
+    {{ end }}
+
+    <div class="plant-card__content">
+      <h3 class="plant-card__title">{{ $page.Title }}</h3>
+      {{ with $page.Params.common_name }}
+        <p class="plant-card__common-name">{{ . }}</p>
+      {{ end }}
+    </div>
+  </a>
+</article>

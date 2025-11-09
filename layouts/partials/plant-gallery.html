@@ -1,0 +1,14 @@
+{{ $ctx := . }}
+{{ $pages := cond (isset $ctx "Pages") $ctx.Pages .Pages }}
+{{ $cols := cond (isset $ctx "Cols") $ctx.Cols 3 }}
+<div class="max-w-7xl mx-auto px-4 md:px-6 py-8">
+  {{ if isset $ctx "Title" }}
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">{{ $ctx.Title }}</h2>
+  {{ end }}
+  <!-- set the breakpoints for this grid using tailwind. -->
+  <div class="grid gap-6 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]">
+    {{ range $pages }}
+      {{ partial "plant-card.html" . }}
+    {{ end }}
+  </div>
+</div>
