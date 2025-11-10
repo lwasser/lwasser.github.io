@@ -1,7 +1,7 @@
 +++
 title = 'Hoya Latifolia Silver'
 date = 2025-11-08T20:34:26-07:00
-draft = true
+draft = false
 common_name = ""
 family = ""
 summary = "A lovely and less common latifolia with silver-variegated leaves."

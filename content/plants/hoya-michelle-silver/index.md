@@ -2,7 +2,7 @@
 title = 'Hoya Michelle Silver'
 date = 2025-11-09
 acquired = "2025-08-27"
-draft = true
+draft = false
 common_name = ""
 family = ""
 summary = ""

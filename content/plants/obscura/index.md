@@ -1,7 +1,7 @@
 +++
 title = 'Hoya Obscura Silver'
 date = 2025-11-10T13:32:43-07:00
-draft = true
+draft = false
 acquired = "2025-11-09"
 common_name = ""
 family = ""

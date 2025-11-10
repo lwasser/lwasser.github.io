@@ -1,6 +1,6 @@
 +++
 date = 2025-11-09
-draft = true
+draft = false
 title = 'Hoya Polyneura'  # Used for page title & card
 excerpt = "Fast-growing Hoya that tolerates cooler temperatures better than most Hoyas. Native to higher elevation mountainous regions of Burma and India"
 featured_image = "featured.jpg"  # Shows on gallery listing page

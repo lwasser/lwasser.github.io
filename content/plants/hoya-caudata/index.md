@@ -1,7 +1,6 @@
 +++
 title = 'Hoya Caudata Silver'
 date = 2025-11-10T13:32:08-07:00
-draft = true
 acquired = "2025-11-09"
 common_name = ""
 family = ""
