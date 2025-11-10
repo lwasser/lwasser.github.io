@@ -1,5 +1,5 @@
 +++
-title = 'Obscura'
+title = 'Hoya Obscura Silver'
 date = 2025-11-10T13:32:43-07:00
 draft = true
 acquired = "2025-11-09"

@@ -105,6 +105,16 @@ The shortcode will render the image with the specified alt text and caption belo
 
 ### Converting Images
 
+photos should generally use jpg and webp to optimize performance and quality. Other graphics that are illustrations can be png.
+
+#### compression
+
+`brew install imagemagick`
+
+```console
+find content/plants -type f \( -iname "*.jpg" -o -iname "*.jpeg" \) -exec mogrify -quality 85 -resize '1400x1400>' {} \;
+```
+
 #### JPG/JPEG to PNG
 
 I use `sips` (built-in on Mac) to convert images:

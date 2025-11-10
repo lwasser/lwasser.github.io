@@ -1,7 +1,8 @@
 +++
 date = 2025-11-09
 draft = true
-title = 'Hoya Polyneura'  # Species name - used for page title & card
+title = 'Hoya Polyneura'  # Used for page title & card
+excerpt = "Fast-growing Hoya that tolerates cooler temperatures better than most Hoyas. Native to higher elevation mountainous regions of Burma and India"
 featured_image = "featured.jpg"  # Shows on gallery listing page
 groups = ["silver", "unicorn"]   # Filter tags
 
@@ -24,4 +25,7 @@ acquired = "2025-09-01"
 images = ["jas-1.jpg", "jas-2.jpg", "jas-3.jpg"]
 +++
 
-Content about the overall species/variety goes here.
+I've found this species to be a fast and easy growing in my cabinets. 
+
+The Hoya Polyneura Inner Variegated seems to have thinner more sensitive leaves. The first cutting I received died. Then my new one that I grew from a tiny baby barely rooted plant had a 
+hard time with the last sulfur treatments. All of the other varieties are easy growing.

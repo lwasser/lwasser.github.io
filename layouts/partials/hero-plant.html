@@ -10,15 +10,17 @@
       <div class="hero__content">
         <h1 class="hero__title">{{ $.Title }}</h1>
         {{ with $subtitle }}<p class="hero__subtitle">{{ . }}</p>{{ end }}
-        {{ with $excerpt }}<div class="hero__excerpt">{{ . | markdownify }}</div>{{ end }}
+        {{ with .Params.excerpt }}<div class="hero__excerpt">{{ . | markdownify }}</div>{{ end }}
       </div>
     </div>
   </div>
 
   {{ with $img }}
-    <!-- Right-side image overlay that fills height and fades on the left -->
-    <div class="hero-plant__image">
-      <img src="{{ . }}" alt="{{ $alt }}">
-    </div>
+    <!-- Right-side image in a rounded square -->
+      <div class="hero__image-wrapper">
+        <div class="hero__image-container__plant">
+          <img src="{{ . }}" alt="{{ $alt }}" class="hero__image">
+        </div>
+      </div>
   {{ end }}
 </section>

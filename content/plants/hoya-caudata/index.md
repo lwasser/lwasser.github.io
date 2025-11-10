@@ -1,5 +1,5 @@
 +++
-title = 'Hoya Caudata'
+title = 'Hoya Caudata Silver'
 date = 2025-11-10T13:32:08-07:00
 draft = true
 acquired = "2025-11-09"
@@ -9,6 +9,12 @@ summary = ""
 weight = 0
 featured_image = "featured.jpg"
 groups = []
+excerpt = ""
+
+[ hero ]
+image = "caudata-silver-leaf-feature.jpg"
+subtitle = "A beautifully elegant Hoya with crinkly, silver-edged leaves."
+
 
 # Optional--explicit list of images
 [image_roles]
@@ -18,4 +24,4 @@ images = []
 tags = []
 +++
 
-A short summary or notes about this plant. Add more details below.
+This beauty is newer to my collection so it's just starting to grow. Caudatas are known for their beautiful fuzzy flowers. 
