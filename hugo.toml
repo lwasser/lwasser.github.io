@@ -24,5 +24,10 @@ params.licenseURL = "/license"
 [[menu.main]]
   name = "Blog"
   url = "/blog/"
+  weight = 1
+
+[[menu.main]]
+  name = "Plants"
+  url = "/plants/"
   weight = 2
 

@@ -1,0 +1,94 @@
+/* Hero section components */
+
+.hero {
+  @apply bg-verdigrisDark py-4 flex items-center;
+
+  &__container {
+    @apply max-w-7xl mx-auto px-4 py-8 md:py-12 w-full;
+  }
+
+  &__grid {
+    @apply grid md:grid-cols-12 gap-12 items-center;
+  }
+
+  &__content {
+    @apply order-2 md:order-1 md:col-span-8;
+  }
+
+  &__title {
+    @apply text-5xl md:text-6xl font-bold text-white mb-6;
+  }
+
+  &__subtitle {
+    @apply text-2xl md:text-3xl font-semibold text-white mb-6;
+  }
+
+  &__excerpt {
+    @apply text-xl md:text-2xl leading-[1.5] md:leading-[1.9] text-white;
+  }
+
+  &__image-wrapper {
+    @apply order-1 md:order-2 md:col-span-4 flex justify-center md:justify-end;
+  }
+
+  &__image-container {
+    @apply w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-8 border-white shadow-2xl;
+  }
+
+  &__image {
+    @apply w-full h-full object-cover;
+  }
+}
+
+
+.hero__image-container__plant {
+    @apply w-64 h-64 md:w-72 md:h-72 rounded-lg overflow-hidden border-4 border-white shadow-2xl mx-8;
+    margin: 2rem 8rem
+}
+
+/* Plants hero (image overlay right, fade left) */
+.hero-plant {
+  @apply relative bg-verdigrisDark overflow-hidden;
+  @apply min-h-[360px] md:min-h-[320px] flex items-stretch;
+
+  .hero__container {
+    @apply relative mx-auto w-full max-w-7xl px-4 md:px-6 py-8 md:py-12;
+    /*@apply pr-[200px] md:pr-[260px] lg:pr-[300px]; *//* reserve space for right image */
+  }
+
+  .hero__grid { @apply grid items-center; }
+  .hero__content { @apply flex flex-col justify-center; }
+  .hero__title { @apply text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4; }
+  .hero__subtitle { @apply text-xl md:text-2xl font-semibold text-white mb-3; }
+  .hero__excerpt { @apply text-lg md:text-xl text-white/90 leading-relaxed; }
+
+  /* Overlay image on right */
+  .hero-plant__image {
+    @apply absolute top-0 right-0 bottom-0 w-[260px] md:w-[340px] lg:w-[400px];
+  }
+
+  .hero-plant__image img {
+    @apply w-full h-full object-cover;
+    object-position: 65% center;
+    display: block;
+  }
+
+  /* Left fade using pseudo element (Tailwind utilities) */
+  .hero-plant__image::before {
+    content: "";
+    @apply absolute inset-0;
+    @apply bg-gradient-to-l from-transparent via-verdigrisDark/40 to-verdigrisDark;
+    /* ensures gradient overlays image */
+    @apply pointer-events-none;
+  }
+}
+
+
+/* Pure CSS masonry using CSS columns */
+.gallery-masonry {
+  column-width: 14rem;   /* minimum column width */
+  column-gap: 1rem;      /* spacing between columns */
+}
+
+.gallery-item { break-inside: avoid; margin-bottom: 1rem; }
+.gallery-item img { @apply w-full h-auto rounded-lg; display: block; }
