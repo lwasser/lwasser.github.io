@@ -42,20 +42,6 @@
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(17,24,39,0.06);
   }
-  /* scoped list styles for the resume-cards partial */
-  .resume-cards ul,
-  .resume-cards ol {
-    @apply list-disc pl-6 md:pl-8 space-y-2;
-  }
-
-  .resume-cards li {
-    @apply text-lg md:text-xl leading-relaxed text-current;
-  }
-
-  /* links in lists inherit color and remain underlined */
-  .resume-cards a {
-    @apply text-current underline;
-  }
 
   .card, .resume-cards.resume-block {
     @apply rounded-2xl p-12 shadow-sm transition-transform duration-200 transform;
@@ -85,4 +71,5 @@
   /* Import filter components */
   @import 'filter';
   @import 'hero';
+  @import 'resume';
 }
