@@ -1,5 +1,10 @@
 /* scoped list styles for the resume-cards partial */
-  .resume-cards ul,
+
+.resume__card {
+    @apply bg-[#F1DDE5] border border-gray-300 p-12 shadow-lg
+}
+
+ .resume-cards ul,
   .resume-cards ol {
     @apply list-disc pl-6 md:pl-8 space-y-2;
   }
@@ -18,7 +23,7 @@
   }
 
   .resume-cards h4 {
-    @apply text-xl mb-6 opacity-80 py-6; 
+    @apply text-xl mb-6 opacity-80 py-6;
 }
 
 .resume-cards {
@@ -38,7 +43,7 @@
 
   &__section-title {
     @apply text-2xl font-bold mb-4 mt-8;
-    
+
     &:first-of-type {
       @apply mt-0;
     }

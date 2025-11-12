@@ -186,3 +186,8 @@ The plant gallery layout uses a responsive grid to display plant cards and filte
 ### Styling and partials 
 
 The plant page layout and styling can be found in `layouts/plants/list.html` with individual pages in `layouts/plants/single.html`.
+
+
+## Brand colors
+
+![static/color-palette.png](Color palette)
