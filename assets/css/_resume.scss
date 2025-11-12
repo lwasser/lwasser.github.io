@@ -1,0 +1,63 @@
+/* scoped list styles for the resume-cards partial */
+
+.resume__card {
+    @apply bg-[#F1DDE5] border border-gray-300 p-12 shadow-lg
+}
+
+ .resume-cards ul,
+  .resume-cards ol {
+    @apply list-disc pl-6 md:pl-8 space-y-2;
+  }
+
+  .resume-cards li {
+    @apply text-lg md:text-xl leading-relaxed text-current;
+  }
+
+  /* links in lists inherit color and remain underlined */
+  .resume-cards a {
+    @apply text-current underline;
+  }
+
+  .resume-cards p {
+    @apply text-xl mb-12;
+  }
+
+  .resume-cards h4 {
+    @apply text-xl mb-6 opacity-80 py-6;
+}
+
+.resume-cards {
+  @apply max-w-7xl mx-auto px-6 py-20;
+
+  &__title {
+    @apply text-5xl md:text-6xl font-bold mb-2;
+  }
+
+  &__subtitle {
+    @apply text-xl mb-12;
+  }
+
+  &__card {
+    @apply bg-teal-50 border border-teal-200 p-8 shadow-lg rounded-xl;
+  }
+
+  &__section-title {
+    @apply text-2xl font-bold mb-4 mt-8;
+
+    &:first-of-type {
+      @apply mt-0;
+    }
+  }
+
+  &__section-subtitle {
+    @apply text-base text-gray-600 mb-6;
+  }
+
+  &__list {
+    @apply space-y-3 text-base;
+  }
+
+  &__link {
+    @apply text-teal-700 hover:text-teal-900 underline;
+  }
+}
