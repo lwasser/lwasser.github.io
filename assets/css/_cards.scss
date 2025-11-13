@@ -1,0 +1,63 @@
+/* Card components */
+
+
+  /* Impact section */
+  .impact { @apply max-w-7xl mx-auto px-6 py-20; }
+  .impact__grid { @apply grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-8; }
+  .impact__item { @apply contents; } /* wrapper is neutral; card handles its own layout */
+
+
+  .card--text  { @apply rounded-2xl p-10 md:p-12 bg-white h-full md:min-h-[260px] }
+  .card__inner { @apply flex items-center justify-center text-center h-full;
+    h2 { @apply text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight max-w-lg; }
+    // p { @apply mt-6 text-lg md:text-xl max-w-xl mx-auto text-gray-700; }
+    }
+  .card__body  { @apply text-lg md:text-xl lg:text-2xl text-gray-700; transition: color .2s ease; }
+
+  .card-hover {
+    @apply transition-transform duration-200 ease-in-out;
+    will-change: transform, box-shadow;
+  }
+
+  .card-hover:hover,
+  .card-hover:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(17,24,39,0.08);
+  }
+
+  /* ensure hover does NOT change text color */
+  .card-hover :is(.card__title, .card__body, .card__cta, h2, h3, p, li, a) {
+    color: inherit;
+  }
+
+  /* optional compact variant */
+  .card-hover--compact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(17,24,39,0.06);
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-gray-200 shadow-sm
+         p-5 sm:p-6 md:p-8 lg:p-10  /* smaller padding on narrow screens */
+         h-full md:min-h-[260px]
+         flex flex-col justify-between
+         transition-transform duration-200 ease-in-out;
+}
+
+  .resume-cards.resume-block {
+    @apply rounded-2xl p-12 shadow-sm transition-transform duration-200 transform;
+    @apply hover:-translate-y-2 hover:shadow-xl;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* light-peach base + buff hover */
+  .card--peach {
+    background-color: #D6E3E3; /* light verdigris */
+    @apply transition-colors duration-200 ease-in-out;  }
+
+  .card__icon { @apply text-4xl md:text-5xl mb-4; }
+  .card__title { @apply text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4; transition: color .2s ease; }
+  .card__cta   { @apply mt-4 text-sm md:text-base text-verdigris; transition: color .2s ease; }
+
