@@ -1,14 +1,19 @@
 /* Hero section components */
 
+/* Tailwind breakpoints:
+
+
+*/
+
 .hero {
-  @apply bg-verdigrisDark py-4 flex items-center;
+  @apply bg-verdigrisDark py-2 flex items-center overflow-hidden;
 
   &__container {
-    @apply max-w-7xl mx-auto px-4 py-8 md:py-12 w-full;
+    @apply max-w-7xl mx-auto px-4 py-4 md:py-12 w-full;
   }
 
   &__grid {
-    @apply grid md:grid-cols-12 gap-12 items-center;
+    @apply grid md:grid-cols-12 gap-6 md:gap-8 items-center;
   }
 
   &__content {
@@ -16,15 +21,15 @@
   }
 
   &__title {
-    @apply text-5xl md:text-6xl font-bold text-white mb-6;
+    @apply text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 md:mb-6;
   }
 
   &__subtitle {
-    @apply text-2xl md:text-3xl font-semibold text-white mb-6;
+    @apply text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-4 md:mb-6;
   }
 
   &__excerpt {
-    @apply text-xl md:text-2xl leading-[1.5] md:leading-[1.9] text-white;
+    @apply text-base sm:text-lg md:text-xl leading-[1.5] md:leading-[1.6] text-white;
   }
 
   &__image-wrapper {
@@ -32,7 +37,7 @@
   }
 
   &__image-container {
-    @apply w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-8 border-white shadow-2xl;
+    @apply w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-8 border-white shadow-2xl;
   }
 
   &__image {
@@ -40,10 +45,8 @@
   }
 }
 
-
 .hero__image-container__plant {
-    @apply w-64 h-64 md:w-72 md:h-72 rounded-lg overflow-hidden border-4 border-white shadow-2xl mx-8;
-    margin: 2rem 8rem
+    @apply w-64 h-64 md:w-72 md:h-72 rounded-lg overflow-hidden border-4 border-white shadow-2xl mx-0 sm:mx-4 md:mx-8;
 }
 
 /* Plants hero (image overlay right, fade left) */
