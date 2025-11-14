@@ -1,28 +1,35 @@
-{{/* Layout for a single plant */}}
+{{/* Layout for a single plant page */}}
 {{ define "main" }}
   {{ partial "hero-plant.html" . }}
 
-  <article class="max-w-4xl mx-auto px-4 md:px-6 py-12">
-    <h1 class="text-3xl font-bold mb-2">{{ .Title }}</h1>
-    {{ with .Params.common_name }}<p class="text-lg text-gray-600 mb-4">{{ . }}</p>{{ end }}
-    <div class="prose max-w-none">
+  <article class="plant-content">
+    <header class="plant-header">
+      <h2>{{ .Title }}</h2>
+      {{ with .Params.common_name }}<p class="common-name">{{ . }}</p>{{ end }}
+    </header>
+
+    <div class="plant-description prose">
       {{ .Content }}
     </div>
 
-   <!-- Small masonry gallery -->
-  <div class="max-w-7xl mx-auto px-4 py-12">
-    <h2 class="text-2xl font-bold mb-4">Gallery</h2>
-    <div class="gallery-masonry">
-      {{ $images := .Resources.ByType "image" }}
-      {{ range $images }}
-        <figure class="gallery-item">
-          <img src="{{ .RelPermalink }}" alt="{{ or .Title $.Title }}" loading="lazy">
-        </figure>
-      {{ end }}
-    </div>
-  </div>
-
-
-    
+    <section class="plant-gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        {{ $images := .Resources.ByType "image" }}
+        {{ range $images }}
+          <figure>
+            <a href="{{ .RelPermalink }}" class="glightbox" data-gallery="plant-gallery" data-glightbox="title: {{ or .Title $.Title }}">
+              <img src="{{ .RelPermalink }}" alt="{{ or .Title $.Title }}" loading="lazy">
+            </a>
+          </figure>
+        {{ end }}
+      </div>
+    </section>
   </article>
+{{ end }}
+
+{{ define "scripts" }}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>GLightbox();</script>
 {{ end }}
