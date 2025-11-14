@@ -86,12 +86,3 @@
   }
 }
 
-
-/* Pure CSS masonry using CSS columns */
-.gallery-masonry {
-  column-width: 14rem;   /* minimum column width */
-  column-gap: 1rem;      /* spacing between columns */
-}
-
-.gallery-item { break-inside: avoid; margin-bottom: 1rem; }
-.gallery-item img { @apply w-full h-auto rounded-lg; display: block; }

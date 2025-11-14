@@ -1,0 +1,32 @@
+@layer components {
+  /* Article wrapper */
+  .plant-content { @apply max-w-4xl mx-auto px-4 md:px-6 py-12; }
+
+  /* Header */
+  .plant-header { @apply mb-8; }
+  .plant-header h2 { @apply text-3xl font-bold mb-2; }
+  .plant-header .common-name { @apply text-lg text-gray-600 mb-4; }
+
+  /* Markdown body */
+  .plant-description { @apply prose max-w-none; }
+
+  /* Gallery section wrapper */
+  .plant-gallery { @apply max-w-7xl mx-auto px-4 md:px-6 py-12; }
+  .plant-gallery h2 { @apply text-2xl font-bold mb-4; }
+
+  /* Masonry (CSS columns) */
+  .gallery-grid {
+    @apply columns-1 sm:columns-2 lg:columns-3 space-y-4;
+    column-gap: 1rem;
+  }
+
+  .gallery-grid figure { @apply break-inside-avoid mb-4; }
+
+  .gallery-grid a { @apply block; } /* removed group */
+
+  .gallery-grid img {
+    @apply w-full h-auto rounded-lg transition-transform duration-200 ease-out cursor-zoom-in;
+  }
+
+  .gallery-grid a.group:hover img { @apply scale-[1.03]; }
+}
