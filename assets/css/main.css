@@ -1739,14 +1739,7 @@ h2 {
   transition: color .2s ease;
 }
 
-.card__cta {
-  margin-top: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(113 179 181 / var(--tw-text-opacity, 1));
-  transition: color .2s ease;
-}
+
 
 @media (min-width: 768px) {
   .card__cta {
