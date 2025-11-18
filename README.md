@@ -173,20 +173,34 @@ Here are the brand colors I use:
 
 ## Plant gallery
 
-
-The plant gallery section showcases a collection of plant profiles. Each plant has its own markdown file under `content/plants/` with details like name, species, care instructions, and images. The plant pages are created using archetypes to ensure consistent frontmatter. to make a new page for a plant, run:
+The plant gallery section showcases a collection of plant profiles. Each plant *group* has its own markdown file under `content/plants/` with details like name, species, difficulty, and images. The plant pages are created using archetypes to ensure consistent Front Matter. To make a new page for a plant, run:
 
 `hugo new plants/plant-name/index.md`  
 For example, to add a Hoya Lacunosa plant profile, run:
 
 `hugo new plants/hoya-lacunosa/index.md`  
 
-The plant gallery layout uses a responsive grid to display plant cards and filter buttons that are managed using front end javascript. 
+The plant gallery layout uses a responsive grid to display plant cards and filter buttons that are managed using front end javascript.
+
+Individual plant pages use a tailwind driven masonry 
+layout. The popup image viewer is powered by [GLightbox](https://glightbox.mcstudios.com.mx/) which 
+is essentially plug and play for easy maintenance.
 
 ### Styling and partials 
 
 The plant page layout and styling can be found in `layouts/plants/list.html` with individual pages in `layouts/plants/single.html`.
 
+Backup all images in a directory to another location using rsync:
+
+```bash
+rsync -av --include='*/' --include='*.jpg' --exclude='*' . ../../../_law_tests/plant-photos
+```
+
+Then compress the images using ImageMagick:
+
+```bash
+$ mogrify -auto-orient -strip -resize '1600x1600>' -quality 82 *.jpg
+```
 
 ## Brand colors
 
