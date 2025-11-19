@@ -22,17 +22,17 @@ Being named a PSF Fellow recognizes the work I’ve poured years into building [
 
 ## The complexity of individual recognition
 
-Individual recognition for deeply collaborative work feels complicated. pyOpenSci thrives because over 300 people have contributed as reviewers, maintainers, mentors, and participants. While I led the vision and carved out the space for this community to grow, it also exists because of their dedication and passion for the work and the mission. My name is on this fellowship because of the work I’ve led—but it’s the hands of many that have made it possible.
+Individual recognition for deeply collaborative work feels complicated. pyOpenSci thrives because over 300 people have contributed as reviewers, maintainers, mentors, and participants. While I led the vision and carved out the space for this community to grow, it also exists because of their dedication and passion for the work and the mission. My name is listed as a fellow because of the work I’ve led—but it’s the hands of many that have made it possible.
 
 ## Recognition and Privilege
 
-Recognition itself is shaped by visibility, networks, and privilege. Many people doing extraordinary work in the Python ecosystem—educators, maintainers, local community builders—may never receive this kind of acknowledgment. This fellowship highlights what is seen, but it doesn’t capture all the vital contributions happening quietly across the ecosystem.
+Recognition itself is shaped by visibility, networks, and privilege. Many people doing extraordinary work in the Python ecosystem—educators, maintainers, local community builders—may never receive this kind of acknowledgment. This recognition highlights what is seen, but it doesn’t capture all the vital contributions happening quietly across the ecosystem.
 
 Someone had to know about the nomination process. Someone had to take the time to advocate. I’m grateful to those who saw and articulated the impact of my work; Hugo, if you are reading this, I'm forever grateful for your ongoing support!! This is a generous act I don’t take lightly.
 
 ## What This Means Going Forward
 
-This fellowship comes with responsibility. It gives me a platform to amplify others, highlight contributors, and make recognition more accessible. I’m proud of what I’ve built and committed to continuing to grow a community where people everywhere feel welcome in open source.
+This award comes with responsibility. It gives me a platform to amplify others, highlight contributors, and make recognition more accessible. I’m proud of what I’ve built and committed to continuing to grow a community where people everywhere feel welcome in open source.
 
 pyOpenSci has ambitious plans ahead: sustainability, training resources, empowering the community to run peer review, and continuing to build an ecosystem where diverse voices thrive and everyone learns and grows together.
 
