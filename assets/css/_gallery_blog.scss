@@ -1,0 +1,169 @@
+// Styles for the blog gallery listing landing page
+.blog-listing {
+  @apply max-w-7xl mx-auto px-6 py-16;
+
+  .container { @apply w-full; }
+
+  h2 { @apply text-3xl font-bold mb-8; }
+
+  .blog-grid {
+    @apply grid gap-8 md:grid-cols-2 lg:grid-cols-3;
+  }
+
+  article {
+    @apply relative bg-white rounded-lg overflow-hidden
+           flex flex-col
+           shadow-lg hover:shadow-2xl
+           transition-all duration-300 ease-out;
+
+    &:hover {
+      @apply -translate-y-1;
+    }
+
+    .card-media {
+      @apply w-full overflow-hidden;
+
+      img {
+        @apply w-full h-40 object-cover
+               transition-transform duration-500 ease-out;
+      }
+    }
+
+    &:hover .card-media img {
+      @apply scale-110;
+    }
+
+    .card-body {
+      @apply p-4 flex flex-col grow;
+    }
+
+    h3 {
+      @apply mt-0 text-lg font-semibold leading-tight;
+
+      a {
+        @apply text-gray-900 no-underline;
+      }
+    }
+
+    time {
+      @apply block mt-2 text-xs text-gray-500;
+    }
+
+    .excerpt {
+      @apply mt-2 text-sm text-gray-600 leading-relaxed;
+    }
+
+    .stretched-link::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+    }
+  }
+
+  // Pagination styling
+  .pagination {
+    @apply mt-12 flex justify-center gap-2;
+  }
+}
+
+
+// This is styling for the blog list cards on the home page
+// these cards are more compact and discrete compared to the blog listing page.
+.blog-highlight {
+  @apply bg-gray-900 py-24 sm:py-32;
+
+  .container {
+    @apply mx-auto max-w-7xl px-6 lg:px-8;
+  }
+
+  .intro {
+    @apply mx-auto max-w-2xl lg:mx-0;
+
+    h2 {
+      @apply text-4xl font-semibold tracking-tight text-white sm:text-5xl;
+    }
+  }
+
+  .highlight-grid {
+    @apply mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16
+           border-t border-gray-700 pt-10
+           sm:mt-16 sm:pt-16
+           lg:mx-0 lg:max-w-none lg:grid-cols-3;
+  }
+
+  article {
+    @apply flex max-w-xl flex-col
+           p-6 rounded-lg
+           transition-all duration-300 ease-out;
+
+    &:hover {
+      @apply bg-gray-800/30;
+    }
+
+    .meta {
+      @apply flex items-center gap-x-4 text-xs;
+
+      time {
+        @apply text-gray-400;
+      }
+
+      .category {
+        @apply inline-block rounded-full
+               bg-teal-500/10 border border-teal-500/20
+               px-3 py-1.5 font-medium text-teal-400
+               transition-colors duration-200;
+
+        &:hover {
+          @apply bg-teal-500/20 border-teal-500/30;
+        }
+      }
+    }
+
+    .content {
+      @apply relative grow flex flex-col;
+    }
+
+    h3 {
+      @apply mt-3 text-lg font-semibold leading-6 text-white
+             transition-colors duration-200;
+
+      a {
+        @apply text-white no-underline;
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+        }
+      }
+    }
+
+    &:hover h3 {
+      @apply text-gray-300;
+    }
+
+    .excerpt {
+      @apply mt-5 line-clamp-3 text-sm leading-6 text-gray-400;
+    }
+
+    .read-more {
+      @apply mt-4 inline-flex items-center gap-2
+             text-sm font-medium text-teal-400
+             transition-all duration-200
+             relative z-10;
+
+      i {
+        @apply text-xs transition-transform duration-200;
+      }
+
+      &:hover {
+        @apply text-teal-300;
+
+        i {
+          @apply translate-x-1;
+        }
+      }
+    }
+  }
+}
