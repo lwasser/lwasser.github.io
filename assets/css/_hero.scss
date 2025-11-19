@@ -45,8 +45,8 @@
   }
 }
 
-.hero__image-container__plant {
-    @apply w-64 h-64 md:w-72 md:h-72 rounded-lg overflow-hidden border-4 border-white shadow-2xl mx-0 sm:mx-4 md:mx-8;
+.hero__image-container__square {
+    @apply w-[260px] md:w-[340px] lg:w-[400px] rounded-lg overflow-hidden border-4 border-white shadow-2xl mx-0 sm:mx-4 md:mx-8;
 }
 
 /* Plants hero (image overlay right, fade left) */
@@ -56,7 +56,6 @@
 
   .hero__container {
     @apply relative mx-auto w-full max-w-7xl px-4 md:px-6 py-8 md:py-12;
-    /*@apply pr-[200px] md:pr-[260px] lg:pr-[300px]; *//* reserve space for right image */
   }
 
   .hero__grid { @apply grid items-center; }
@@ -66,9 +65,9 @@
   .hero__excerpt { @apply text-lg md:text-xl text-white/90 leading-relaxed; }
 
   /* Overlay image on right */
-  .hero-plant__image {
-    @apply absolute top-0 right-0 bottom-0 w-[260px] md:w-[340px] lg:w-[400px];
-  }
+//   .hero-plant__image {
+//     @apply absolute top-0 right-0 bottom-0 w-[260px] md:w-[340px] lg:w-[400px];
+//   }
 
   .hero-plant__image img {
     @apply w-full h-full object-cover;

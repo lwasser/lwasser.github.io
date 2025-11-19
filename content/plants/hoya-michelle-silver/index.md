@@ -10,6 +10,11 @@ weight = 0
 featured_image = "featured.jpg"  # recommended filename to use for the main photo
 groups = []
 
+
+[ hero ]
+image = "michelle-silver-leaf.jpg"
+subtitle = "A elegant variegated small leaved hoya with delicate magenta colored flowers."
+
 # Optional--explicit list of images
 [image_roles]
 flower = "flower.jpg"
