@@ -21,11 +21,10 @@ thumbnail = "polyneura-inner-leaf.jpg"
 summary = ""
 
 [[plants]]
-name = "Hoya Polyneura Broget (Silver)" # Section h2
+name = "Hoya Polyneura Broget (Silver)"
 acquired = "2025-08-27"
-thumbnail = "silver-thumb.jpg"  # Thumbnail for plant card
+thumbnail = "broget-leaf.jpg"  
 summary = ""
-images = ["silver-1.jpg", "silver-2.jpg", "silver-3.jpg"]  # Gallery photos
 
 [[plants]]
 name = "Hoya Polyneura Jasminka" 
@@ -37,6 +36,7 @@ images = ["var-1.jpg", "var-2.jpg"]
 [[plants]]
 name = "Hoya Polyneura"
 acquired = "2025-09-01"
+thumbnail = "hoya-polyneura-leaf.jpg"
 images = ["jas-1.jpg", "jas-2.jpg", "jas-3.jpg"]
 +++
 

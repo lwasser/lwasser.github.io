@@ -17,10 +17,18 @@
       <div class="gallery-grid">
         {{ $images := .Resources.ByType "image" }}
         {{ range $images }}
+          {{ $filename := .Name | replaceRE "\\.[^.]+$" "" | replaceRE "-" " " | title }}
+          {{ $caption := printf "%s · %s" $.Title $filename }}
           <figure>
-            <a href="{{ .RelPermalink }}" class="glightbox" data-gallery="plant-gallery" data-glightbox="title: {{ or .Title $.Title }}">
+            <a href="{{ .RelPermalink }}"
+                class="glightbox"
+                data-gallery="plant-gallery"
+                data-glightbox="title: {{ $caption }};">
               <img src="{{ .RelPermalink }}" alt="{{ or .Title $.Title }}" loading="lazy">
             </a>
+            <p style="background: padding: 10px;">
+                {{ $caption }}
+            </p>
           </figure>
         {{ end }}
       </div>

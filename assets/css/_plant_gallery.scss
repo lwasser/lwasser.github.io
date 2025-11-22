@@ -22,11 +22,12 @@
 
   .gallery-grid figure { @apply break-inside-avoid mb-4; }
 
-  .gallery-grid a { @apply block; } /* removed group */
+  .gallery-grid a { @apply block; }
 
   .gallery-grid img {
     @apply w-full h-auto rounded-lg transition-transform duration-200 ease-out cursor-zoom-in;
   }
 
   .gallery-grid a.group:hover img { @apply scale-[1.03]; }
+
 }

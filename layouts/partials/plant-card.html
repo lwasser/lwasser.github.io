@@ -53,7 +53,10 @@
 
   <a href="{{ $page.RelPermalink }}" class="plant-card__link group" aria-label="{{ $title }}">
     {{ with $img }}
-      {{ $thumb := .Fill "800x800 center" }}
+      <!-- This is rotating the image - something to do with how my camera captures it? -->
+
+      {{ $thumb := .Fill "750x500 center" }}
+
       <div class="plant-card__image">
         <img src="{{ $thumb.RelPermalink }}" alt="{{ $title }}" loading="lazy">
       </div>
