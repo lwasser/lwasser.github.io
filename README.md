@@ -202,6 +202,12 @@ Then compress the images using ImageMagick:
 $ mogrify -auto-orient -strip -resize '1600x1600>' -quality 82 *.jpg
 ```
 
+NOTE: images when shot are saved with a exif metadata tag that indicates orientation. Use `-auto-orient` to fix this.
+
+```bash
+mogrify -auto-orient *.jpg
+```
+
 ## Brand colors
 
 ![static/color-palette.png](Color palette)

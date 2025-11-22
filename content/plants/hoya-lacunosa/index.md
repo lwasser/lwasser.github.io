@@ -2,19 +2,33 @@
 title = 'Hoya Lacunosa'
 date = 2025-11-08T20:45:17-07:00
 draft = false
-common_name = ""
-family = ""
+species = "Hoya Lacunosa"
 summary = "This was a cutting I received from a purchase. I suspect it's a vanilla *Hoya lacunosa*."
-groups = ["green", "common"]
 weight = 0
-featured_image = "featured.jpg"  # recommended filename to use for the main photo
+featured_image = "asami-clone-leaf.jpg"
 
-# Optional--explicit list of images
-[image_roles]
-flower = "flower.jpg"
-habit = "habit.jpg"
-images = []
-tags = []
+
+[[plants]]
+name = "Hoya Lacunosa"
+acquired = "2024-01-27"
+thumbnail = "hoya-lacunosa-green-leaf.jpg"
+summary = "A deep green leaved variety with small heart shaped leaves and subtle veining."
+groups = ["green", "common"]
+
+[[plants]]
+name = "Hoya Lacunosa Asami Clone"
+acquired = "2024-01-27"
+thumbnail = "asami-clone-leaf.jpg"
+summary = ""
+groups = ["variagated", "less common"]
+
+[[plants]]
+name = "Hoya Lacunosa Silver Mint Coin"
+acquired = "2024-01-27"
+thumbnail = "lacunosa-silver-mint-coin-leaf.jpg"
+summary = ""
+groups = ["green", "common"]
+
 +++
 
 A short summary or notes about this plant. Add more details below.

@@ -3,25 +3,40 @@ date = 2025-11-09
 draft = false
 title = 'Hoya Polyneura'  # Used for page title & card
 excerpt = "Fast-growing Hoya that tolerates cooler temperatures better than most Hoyas. Native to higher elevation mountainous regions of Burma and India"
+species= "Hoya Polyneura"
 featured_image = "featured.jpg"  # Shows on gallery listing page
 groups = ["silver", "unicorn"]   # Filter tags
 
 # Individual plants in this collection
 [[plants]]
-name = "Hoya Polyneura Broget (Silver)" # Section h2
-acquired = "2025-08-27"
+name = "Hoya Polyneura Inner Variegated"
+acquired = "2024-01-27"
+thumbnail = "polyneura-inner-leaf.jpg"
 summary = ""
-images = ["silver-1.jpg", "silver-2.jpg", "silver-3.jpg"]  # Gallery photos
+
+[[plants]]
+name = "Hoya Polyneura Outer Variegated"
+acquired = "2024-01-27"
+thumbnail = "polyneura-inner-leaf.jpg"
+summary = ""
+
+[[plants]]
+name = "Hoya Polyneura Broget (Silver)"
+acquired = "2025-08-27"
+thumbnail = "broget-leaf.jpg"  
+summary = ""
 
 [[plants]]
 name = "Hoya Polyneura Jasminka" 
 acquired = "2025-06-15"
+thumbnail = "jasminka-leaf.jpg"
 summary = "Beautiful variegation"
 images = ["var-1.jpg", "var-2.jpg"]
 
 [[plants]]
 name = "Hoya Polyneura"
 acquired = "2025-09-01"
+thumbnail = "hoya-polyneura-leaf.jpg"
 images = ["jas-1.jpg", "jas-2.jpg", "jas-3.jpg"]
 +++
 
