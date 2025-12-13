@@ -6,7 +6,6 @@ groups = ["silver"]
 tags = []
 
 [ hero ]
-title = 'Hoya Latifolia'
 image = "featured.jpg"
 subtitle = "A collection of Hoya Latifolia varieties with silver-variegated leaves."
 
