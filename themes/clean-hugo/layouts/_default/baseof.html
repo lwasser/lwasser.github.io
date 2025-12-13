@@ -54,6 +54,10 @@
       {{ with $colors.gray700 }}--color-gray-700: {{ . }};{{ end }}
       {{ with $colors.gray800 }}--color-gray-800: {{ . }};{{ end }}
       {{ with $colors.gray900 }}--color-gray-900: {{ . }};{{ end }}
+      {{ with $colors.blogHighlight }}--color-blog-highlight: {{ . }};{{ end }}
+      {{ with $colors.link }}--color-link: {{ . }};{{ end }}
+      {{ with $colors.footerBg }}--color-footer-bg: {{ . }};{{ end }}
+      {{ with $colors.resumeCard }}--color-resume-card: {{ . }};{{ end }}
     }
   </style>
 
@@ -90,7 +94,6 @@
     </div>
   </nav>
 
-  HI THERE IS SOME CONTENT
   {{ block "main" . }}{{ end }}
   {{ partial "footer.html" . }}
   {{ block "scripts" . }}{{ end }}

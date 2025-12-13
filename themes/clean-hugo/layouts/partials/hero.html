@@ -1,17 +1,25 @@
 {{ $hero := .Params.hero | default dict }}
-{{ $title := .Title }}
+{{ $isGallery := or (eq .Section "gallery") (eq .Section "plants") }}
+{{/* For plant pages, always use main front matter title; otherwise use hero.title if available */}}
+{{ $title := "" }}
+{{ if $isGallery }}
+  {{ $title = .Title }}
+{{ else }}
+  {{ $title = $hero.title | default .Title }}
+{{ end }}
+{{/* Final fallback to ensure title always exists */}}
+{{ if not $title }}{{ $title = .Title }}{{ end }}
 {{ $subtitle := $hero.subtitle }}
 {{ $excerpt := $hero.excerpt }}
 {{ $img := $hero.image | default "" }}
-{{ $alt := $hero.alt | default .Title | default (printf "Image for %s" .Title) }}
-{{ $isGallery := or (eq .Section "gallery") (eq .Section "plants") }}
+{{ $alt := $hero.alt | default $title | default (printf "Image for %s" .Title) }}
 
 
 <section class="hero">
   <div class="hero__container">
     <div class="hero__grid">
-      <div class="hero__content">This should render on the homage pageTE
-        <!-- <h1 class="hero__title">{{ $title }}</h1> -->
+      <div class="hero__content">
+        <h1 class="hero__title">{{ $title }}</h1>
         {{ with $subtitle }}<p class="hero__subtitle">{{ . }}</p>{{ end }}
       </div>
 

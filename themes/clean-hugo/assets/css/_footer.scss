@@ -1,7 +1,7 @@
 @layer components {
   .site-footer {
     @apply py-10;
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-footer-bg);
   }
 
   .site-footer > .container {

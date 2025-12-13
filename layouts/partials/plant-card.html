@@ -1,3 +1,4 @@
+{{/* Compatibility partial for plants - uses same styling as gallery-card but with plant-specific structure */}}
 {{ $isVariety := false }}
 {{ $page := . }}
 {{ $plant := dict }}
@@ -17,26 +18,19 @@
   {{ end }}
 {{ end }}
 
-<article class="plant-card" data-groups='{{ $groups }}'>
+<article class="gallery-card plant-card" data-groups='{{ $groups }}'>
   {{ $img := "" }}
 
-  {{ if isset . "Plant" }}
+  {{ if $isVariety }}
     <!-- Variety: use thumbnail from frontmatter -->
     {{ with $plant.thumbnail }}
       {{ $img = $page.Resources.GetMatch . }}
     {{ end }}
   {{ else }}
-    <!-- Regular page: use featured_image -->
-    {{ $featuredParam := $page.Params.featured_image }}
-    {{ if $featuredParam }}
-      {{ $tmp := $page.Resources.GetMatch $featuredParam }}
-      {{ if $tmp }}
-        {{ $img = $tmp }}
-      {{ else if not (findRE "\\." $featuredParam) }}
-        {{ $matches := $page.Resources.Match (print $featuredParam ".*") }}
-        {{ if gt (len $matches) 0 }}
-          {{ $img = index $matches 0 }}
-        {{ end }}
+    <!-- Regular page: use hero image or first image -->
+    {{ with $page.Params.hero }}
+      {{ with .image }}
+        {{ $img = $page.Resources.GetMatch . }}
       {{ end }}
     {{ end }}
   {{ end }}
@@ -51,24 +45,17 @@
 
   {{ $title := cond $isVariety $plant.name $page.Title }}
 
-  <a href="{{ $page.RelPermalink }}" class="plant-card__link group" aria-label="{{ $title }}">
+  <a href="{{ $page.RelPermalink }}" class="gallery-card__link group" aria-label="{{ $title }}">
     {{ with $img }}
-      <!-- This is rotating the image - something to do with how my camera captures it? -->
-
       {{ $thumb := .Fill "750x500 center" }}
 
-      <div class="plant-card__image">
+      <div class="gallery-card__image">
         <img src="{{ $thumb.RelPermalink }}" alt="{{ $title }}" loading="lazy">
       </div>
     {{ end }}
 
-    <div class="plant-card__content">
-      <h3 class="plant-card__title">{{ $title }}</h3>
-      {{ if not $isVariety }}
-        {{ with $page.Params.common_name }}
-          <p class="plant-card__common-name">{{ . }}</p>
-        {{ end }}
-      {{ end }}
+    <div class="gallery-card__content">
+      <h3 class="gallery-card__title">{{ $title }}</h3>
     </div>
   </a>
 </article>

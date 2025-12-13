@@ -4,6 +4,11 @@
   .highlight__grid { @apply grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-8; }
   .highlight__item { @apply contents; } /* wrapper is neutral; card handles its own layout */
 
+  /* Impact section (same as highlight, kept for compatibility) */
+  .impact { @apply max-w-7xl mx-auto px-6 py-20; }
+  .impact__grid { @apply grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-8; }
+  .impact__item { @apply contents; } /* wrapper is neutral; card handles its own layout */
+
   .card--text  { 
     @apply rounded-2xl p-10 md:p-12 h-full md:min-h-[260px];
     background-color: var(--color-white);
@@ -69,6 +74,6 @@
     @apply mt-6;
   }
 
-  .card__cta   { @apply mt-4 text-sm md:text-base; color: var(--color-primary); transition: color .2s ease; }
+  .card__cta   { @apply mt-4 text-sm md:text-base; color: var(--color-link); transition: color .2s ease; }
 }
 

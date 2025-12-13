@@ -1,4 +1,4 @@
-# Welcome to My Website!  
+# Welcome to My Website!
 
 [![DOI](https://zenodo.org/badge/87748882.svg)](https://zenodo.org/badge/latestdoi/87748882)
 
@@ -6,31 +6,26 @@ This is my personal site built with Hugo, styled with Tailwind CSS v3, and using
 
 ## Tech Stack
 
-- Hugo Extended (v0.118.2+) - Static site generator
-- Tailwind CSS v3 - Utility-first CSS framework
-- Google Fonts - Web typography
-- Node.js (v22+) - For build tooling
-- GitHub Pages - Hosting and deployment
-
-## Prerequisites
-
-You'll need:
-- Hugo Extended (v0.118.2 or later)
-- Node.js (v22 or later)
+The site is built with Hugo Extended (v0.118.2+), styled with Tailwind CSS v3, and uses Google Fonts for typography. Node.js (v22+) handles the build tooling, and everything is deployed to GitHub Pages.
 
 ## Getting Started
 
+### Prerequisites
+
+You'll need Hugo Extended (v0.118.2 or later) and Node.js (v22 or later) installed on your system.
+
 ### First Time Setup
 
-```bash
-# Install dependencies
-npm install
+Install the project dependencies and postcss-cli globally:
 
-# Install postcss-cli globally (required for Hugo)
+```bash
+npm install
 npm install -g postcss-cli
 ```
 
 ### Development
+
+Start the development server with:
 
 ```bash
 # If you use conda, make sure to deactivate it first
@@ -42,7 +37,9 @@ npm run dev
 
 Your site will be available at `http://localhost:1313`
 
-### Build for Production
+### Building for Production
+
+Build the site for production:
 
 ```bash
 npm run build
@@ -52,21 +49,7 @@ The site's output will be in the `public/` directory.
 
 ## Project Structure
 
-```console
-.
-├── assets/css/main.scss       # Main stylesheet (Tailwind)
-├── content/                    # All content (markdown)
-│   ├── _index.md              # Home page
-│   └── blog/                  # Blog posts
-├── layouts/
-│   ├── _default/
-│   │   ├── baseof.html        # Base template
-│   │   └── single.html        # Blog post template
-│   └── index.html             # Home page template
-├── hugo.toml                  # Hugo config
-├── tailwind.config.js         # Tailwind config
-└── postcss.config.js          # PostCSS config
-```
+The site follows a standard Hugo structure. Content lives in `content/`, layouts in `layouts/`, and styles in `assets/css/main.scss`. The main configuration is in `hugo.toml`, with Tailwind and PostCSS configs in their respective files.
 
 ## Creating Content
 
@@ -75,7 +58,6 @@ The site's output will be in the `public/` directory.
 Create a new post in `content/blog/my-post.md` with frontmatter like this:
 
 ```yaml
----
 ---
 title: "My Post Title"
 date: 2025-10-26
@@ -91,7 +73,7 @@ tags:
 Your content here...
 ```
 
-## Images
+## Working with Images
 
 I created a custom shortcode for adding images with captions. Use it like this:
 
@@ -101,21 +83,27 @@ I created a custom shortcode for adding images with captions. Use it like this:
     caption="This is my image caption." >}}
 ```
 
-The shortcode will render the image with the specified alt text and caption below it. If there's a WebP format of the image available, it'll use that for better performance and automatically fall back to the original format if needed.
+The shortcode automatically uses WebP format when available for better performance, falling back to the original format if needed.
 
-### Converting Images
+### Image Formats
 
-photos should generally use jpg and webp to optimize performance and quality. Other graphics that are illustrations can be png.
+Photos should generally use JPG and WebP formats to optimize performance and quality. Other graphics and illustrations can be PNG.
 
-#### compression
+### Image Compression
 
-`brew install imagemagick`
+Install ImageMagick first:
 
-```console
+```bash
+brew install imagemagick
+```
+
+Then compress images:
+
+```bash
 find content/plants -type f \( -iname "*.jpg" -o -iname "*.jpeg" \) -exec mogrify -quality 85 -resize '1400x1400>' {} \;
 ```
 
-#### JPG/JPEG to PNG
+### Converting Images
 
 I use `sips` (built-in on Mac) to convert images:
 
@@ -130,9 +118,9 @@ for f in *.jpg(N) *.jpeg(N); do
 done
 ```
 
-#### Converting to WebP
+### Converting to WebP
 
-First, install `cwebp`:
+First, install the WebP tools:
 
 ```bash
 brew install webp
@@ -157,38 +145,37 @@ To update the CSS, edit the `assets/css/main.scss` file. You can add custom SCSS
 
 ### Brand Colors
 
-Here are the brand colors I use:
+The site uses these brand colors:
 
-- **#EDB88B** - Buff (warm peachy/tan)
-- **#71B3B5** - Verdigris (teal/cyan)
-- **#42213D** - Dark purple
-- **#AC87A0** - Mountbatten pink
-- **#395E66** - Dark slate gray
+* **#EDB88B** - Buff (warm peachy/tan)
+* **#71B3B5** - Verdigris (teal/cyan)
+* **#42213D** - Dark purple
+* **#AC87A0** - Mountbatten pink
+* **#395E66** - Dark slate gray
 
-## Troubleshooting
+## Plant Gallery
 
-- **"npx not found" error**: Make sure you've deactivated conda and installed postcss-cli globally
-- **Styles not loading**: Check that `assets/css/main.scss` exists
-- **Hugo not finding templates**: Verify your files are in the correct `layouts/` subdirectories
+The plant gallery section showcases a collection of plant profiles. Each plant group has its own markdown file under `content/plants/` with details like name, species, difficulty, and images.
 
-## Plant gallery
+To create a new plant page, use the Hugo archetype:
 
-The plant gallery section showcases a collection of plant profiles. Each plant *group* has its own markdown file under `content/plants/` with details like name, species, difficulty, and images. The plant pages are created using archetypes to ensure consistent Front Matter. To make a new page for a plant, run:
+```bash
+hugo new plants/plant-name/index.md
+```
 
-`hugo new plants/plant-name/index.md`  
-For example, to add a Hoya Lacunosa plant profile, run:
+For example, to add a Hoya Lacunosa plant profile:
 
-`hugo new plants/hoya-lacunosa/index.md`  
+```bash
+hugo new plants/hoya-lacunosa/index.md
+```
 
-The plant gallery layout uses a responsive grid to display plant cards and filter buttons that are managed using front end javascript.
+The plant gallery layout uses a responsive grid to display plant cards with filter buttons managed by front-end JavaScript. Individual plant pages use a Tailwind-driven masonry layout. The popup image viewer is powered by [GLightbox](https://glightbox.mcstudios.com.mx/), which is essentially plug and play for easy maintenance.
 
-Individual plant pages use a tailwind driven masonry 
-layout. The popup image viewer is powered by [GLightbox](https://glightbox.mcstudios.com.mx/) which 
-is essentially plug and play for easy maintenance.
-
-### Styling and partials 
+### Styling and Partials
 
 The plant page layout and styling can be found in `layouts/plants/list.html` with individual pages in `layouts/plants/single.html`.
+
+### Image Workflow
 
 Backup all images in a directory to another location using rsync:
 
@@ -199,15 +186,19 @@ rsync -av --include='*/' --include='*.jpg' --exclude='*' . ../../../_law_tests/p
 Then compress the images using ImageMagick:
 
 ```bash
-$ mogrify -auto-orient -strip -resize '1600x1600>' -quality 82 *.jpg
+mogrify -auto-orient -strip -resize '1600x1600>' -quality 82 *.jpg
 ```
 
-NOTE: images when shot are saved with a exif metadata tag that indicates orientation. Use `-auto-orient` to fix this.
+Note: Images when shot are saved with EXIF metadata tags that indicate orientation. Use `-auto-orient` to fix this:
 
 ```bash
 mogrify -auto-orient *.jpg
 ```
 
-## Brand colors
+## Troubleshooting
 
-![static/color-palette.png](Color palette)
+If you encounter a "npx not found" error, make sure you've deactivated conda and installed postcss-cli globally. If styles aren't loading, check that `assets/css/main.scss` exists. If Hugo isn't finding templates, verify your files are in the correct `layouts/` subdirectories.
+
+## License
+
+This project is licensed under the BSD 3-Clause License. See the [LICENSE](LICENSE) file for details.

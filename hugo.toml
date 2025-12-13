@@ -41,6 +41,10 @@ params.licenseURL = "/license"
     accent = "#42213D"        # Dark purple
     accentLight = "#AC87A0"    # Mountbatten pink
     neutral = "#395E66"        # Dark slate gray
+    blogHighlight = "#111827"  # Blog highlight section background (RGB: 17, 24, 39)
+    link = "#2DD4BF"           # Link color (RGB: 45, 212, 191)
+    footerBg = "#115E59"      # Footer background (RGB: 17, 94, 89)
+    resumeCard = "#EBC1D3"    # Resume card background (RGB: 235, 193, 211)
 
 # Gallery configuration
 [params.gallery]

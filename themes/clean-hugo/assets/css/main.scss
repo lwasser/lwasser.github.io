@@ -36,6 +36,10 @@ xl: 1280px
     --color-gray-700: #374151;     /* Gray-700 */
     --color-gray-800: #1F2937;     /* Gray-800 */
     --color-gray-900: #111827;     /* Gray-900 */
+    --color-blog-highlight: #111827; /* Blog highlight section background (RGB: 17, 24, 39) */
+    --color-link: #2DD4BF;         /* Link color (RGB: 45, 212, 191) */
+    --color-footer-bg: #115E59;    /* Footer background (RGB: 17, 94, 89) */
+    --color-resume-card: #EBC1D3;   /* Resume card background (RGB: 235, 193, 211) */
   }
 
   body {
@@ -64,6 +68,7 @@ xl: 1280px
   @import 'hero';
   @import 'feature';
   @import 'cards';
+  @import 'resume';
   @import 'footer';
   @import 'gallery';
   @import 'gallery_blog';

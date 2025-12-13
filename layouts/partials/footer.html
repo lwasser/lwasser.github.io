@@ -1,14 +1,30 @@
 <footer class="site-footer">
   <div class="container">
-    <h3>Let's Connect</h3>
+    <h3>{{ .Site.Params.footer.title | default "Let's Connect" }}</h3>
     <ul>
-      <li><a href="{{ .Site.Params.social.github     | default "https://github.com/lwasser" }}" aria-label="GitHub"><i class="fab fa-github text-3xl"></i></a></li>
-      <li><a href="{{ .Site.Params.social.linkedin   | default "https://linkedin.com/in/leahawasser" }}" aria-label="LinkedIn"><i class="fab fa-linkedin text-3xl"></i></a></li>
-      <li><a href="{{ .Site.Params.social.mastodon   | default "https://fosstodon.org/@lwasser" }}" aria-label="Mastodon"><i class="fab fa-mastodon text-3xl"></i></a></li>
-      <li><a href="{{ .Site.Params.social.bluesky    | default "https://bsky.social/lwasser" }}" aria-label="Bluesky"><i class="fa-solid fa-globe text-3xl"></i></a></li>
-      <li><a href="{{ .Site.Params.social.orcid      | default "https://orcid.org/0000-0002-8177-6550" }}" aria-label="ORCID"><i class="fab fa-orcid text-3xl"></i></a></li>
-      <li><a href="{{ .Site.Params.social.rss        | default "/index.xml" }}" aria-label="RSS"><i class="fa-solid fa-rss text-3xl"></i></a></li>
+      {{ with .Site.Params.social.github }}
+        <li><a href="{{ . }}" aria-label="GitHub"><i class="fab fa-github site-footer__icon"></i></a></li>
+      {{ end }}
+      {{ with .Site.Params.social.linkedin }}
+        <li><a href="{{ . }}" aria-label="LinkedIn"><i class="fab fa-linkedin site-footer__icon"></i></a></li>
+      {{ end }}
+      {{ with .Site.Params.social.mastodon }}
+        <li><a href="{{ . }}" aria-label="Mastodon"><i class="fab fa-mastodon site-footer__icon"></i></a></li>
+      {{ end }}
+      {{ with .Site.Params.social.bluesky }}
+        <li><a href="{{ . }}" aria-label="Bluesky"><i class="fa-solid fa-globe site-footer__icon"></i></a></li>
+      {{ end }}
+      {{ with .Site.Params.social.orcid }}
+        <li><a href="{{ . }}" aria-label="ORCID"><i class="fab fa-orcid site-footer__icon"></i></a></li>
+      {{ end }}
+      {{ with .Site.Params.social.rss }}
+        <li><a href="{{ . }}" aria-label="RSS"><i class="fa-solid fa-rss site-footer__icon"></i></a></li>
+      {{ end }}
+      {{/* Allow custom social links */}}
+      {{ range .Site.Params.social.custom }}
+        <li><a href="{{ .url }}" aria-label="{{ .name }}"><i class="{{ .icon }} site-footer__icon"></i></a></li>
+      {{ end }}
     </ul>
-    <p>© {{ now.Format "2006" }} Leah A. Wasser{{ with .Site.Params.licenseURL }} · <a href="{{ . }}">License</a>{{ end }}</p>
+    <p>© {{ now.Format "2006" }} {{ .Site.Params.author | default .Site.Title }}{{ with .Site.Params.licenseURL }} · <a href="{{ . }}">License</a>{{ end }}</p>
   </div>
 </footer>
