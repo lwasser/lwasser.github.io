@@ -6,6 +6,7 @@ groups = ["silver", "unicorn"]
 tags = []
 
 [ hero ]
+title = 'Hoya Polyneura'
 image = "hoya-polyneura-leaf.jpg"
 subtitle = "A fast-growing Hoya collection with beautiful variegated varieties."
 

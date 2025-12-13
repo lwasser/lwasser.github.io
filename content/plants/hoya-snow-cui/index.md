@@ -6,6 +6,7 @@ groups = ["silver"]
 tags = []
 
 [ hero ]
+title = 'Hoya Snow Cui'
 image = "hoya-snow-cui-leaf.jpg"
 subtitle = "A less common hoya with striking sunstressing and slender silvery leaves."
 
