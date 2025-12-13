@@ -26,17 +26,10 @@
       {{ $img = $page.Resources.GetMatch . }}
     {{ end }}
   {{ else }}
-    <!-- Regular page: use featured_image -->
-    {{ $featuredParam := $page.Params.featured_image }}
-    {{ if $featuredParam }}
-      {{ $tmp := $page.Resources.GetMatch $featuredParam }}
-      {{ if $tmp }}
-        {{ $img = $tmp }}
-      {{ else if not (findRE "\\." $featuredParam) }}
-        {{ $matches := $page.Resources.Match (print $featuredParam ".*") }}
-        {{ if gt (len $matches) 0 }}
-          {{ $img = index $matches 0 }}
-        {{ end }}
+    <!-- Regular page: use hero image or first image -->
+    {{ with $page.Params.hero }}
+      {{ with .image }}
+        {{ $img = $page.Resources.GetMatch . }}
       {{ end }}
     {{ end }}
   {{ end }}
@@ -62,11 +55,6 @@
 
     <div class="gallery-card__content">
       <h3 class="gallery-card__title">{{ $title }}</h3>
-      {{ if not $isVariety }}
-        {{ with $page.Params.common_name }}
-          <p class="gallery-card__common-name">{{ . }}</p>
-        {{ end }}
-      {{ end }}
     </div>
   </a>
 </article>

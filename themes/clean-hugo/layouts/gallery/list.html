@@ -5,16 +5,17 @@
     <!-- Build unique group list from pages -->
     {{ $seen := dict }}
     {{ range .Pages.ByWeight.Reverse }}
-      {{ if isset .Params "groups" }}
-        {{ range .Params.groups }}
-          {{ if not (isset $seen .) }}
+      {{ with .Params.groups }}
+        {{ range . }}
+          {{ if not (index $seen .) }}
             {{ $seen = merge $seen (dict . true) }}
           {{ end }}
         {{ end }}
-      {{ else if isset .Params "group" }}
-        {{ $g := .Params.group }}
-        {{ if not (isset $seen $g) }}
-          {{ $seen = merge $seen (dict $g true) }}
+      {{ else }}
+        {{ with .Params.group }}
+          {{ if not (index $seen .) }}
+            {{ $seen = merge $seen (dict . true) }}
+          {{ end }}
         {{ end }}
       {{ end }}
     {{ end }}

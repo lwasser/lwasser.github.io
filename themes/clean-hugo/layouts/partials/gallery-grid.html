@@ -1,6 +1,5 @@
 {{ $ctx := . }}
 {{ $pages := cond (and (reflect.IsMap $ctx) $ctx.Pages) $ctx.Pages .Pages }}
-{{ $cols := cond (and (reflect.IsMap $ctx) $ctx.Cols) $ctx.Cols 3 }}
 
 <div class="gallery-grid-container">
   {{ if and (reflect.IsMap $ctx) $ctx.Title }}
@@ -12,7 +11,7 @@
   {{ $singles := slice }}
 
   {{ range $pages }}
-    {{ $category := .Params.species | default .Params.category | default "" }}
+    {{ $category := .Params.category | default "" }}
     {{ if .Params.items }}
       {{/* Page has varieties/sub-items */}}
       {{ $itemCount := len .Params.items }}

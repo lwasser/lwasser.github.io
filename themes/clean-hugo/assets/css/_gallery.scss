@@ -70,8 +70,6 @@
     background-color: var(--color-white);
     border-color: var(--color-gray-200);
 
-    &:hover {  }
-
     &__link {
       @apply block focus:outline-none focus:ring-2;
       --tw-ring-color: var(--color-primary);
@@ -85,35 +83,14 @@
       }
     }
 
-    /* Content area (no overlay, regular flow) */
-    &__body {
+    /* Content area */
+    &__content {
       @apply flex flex-col gap-3 p-6;
-    }
-
-    &__badges {
-      @apply flex flex-wrap gap-2;
-    }
-
-    &__badge {
-      @apply text-xs font-semibold px-3 py-1 rounded-full border;
-      background-color: color-mix(in srgb, var(--color-gray-900) 5%, transparent);
-      color: var(--color-gray-700);
-      border-color: var(--color-gray-300);
     }
 
     &__title {
       @apply font-sora font-bold text-lg md:text-lg py-2 px-3;
       color: var(--color-gray-900);
-    }
-
-    &__common-name {
-      @apply text-sm;
-      color: var(--color-gray-600);
-    }
-
-    &__summary {
-      @apply text-sm leading-relaxed;
-      color: var(--color-gray-700);
     }
   }
 }

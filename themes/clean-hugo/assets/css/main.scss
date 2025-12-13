@@ -11,7 +11,11 @@ xl: 1280px
 */
 
 @layer base {
-  /* CSS Variables for theme colors - can be overridden via params */
+  /*
+    CSS Variables for theme colors - DEFAULT VALUES
+    These defaults are overridden by user-defined colors in hugo.toml
+    (injected via inline <style> block in baseof.html)
+  */
   :root {
     --color-primary: #71B3B5;        /* Verdigris (teal/cyan) - default */
     --color-primary-dark: #2E6060;  /* Darker verdigris */
@@ -64,5 +68,6 @@ xl: 1280px
   @import 'gallery';
   @import 'gallery_blog';
   @import 'shortcodes';
+  @import 'figure';
 }
 

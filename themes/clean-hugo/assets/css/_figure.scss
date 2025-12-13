@@ -1,0 +1,24 @@
+@layer components {
+  /* Figure shortcode styles */
+  .figure {
+    @apply my-6;
+  }
+
+  .figure__link {
+    @apply block;
+  }
+
+  .figure__picture {
+    @apply block;
+  }
+
+  .figure__image {
+    @apply w-full h-auto rounded-lg;
+  }
+
+  .figure__caption {
+    @apply mt-2 text-sm text-center;
+    color: var(--color-gray-600);
+  }
+}
+

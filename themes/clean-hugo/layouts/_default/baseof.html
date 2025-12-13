@@ -26,7 +26,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   {{ end }}
 
-  {{/* Inject CSS variables from theme config */}}
+  {{/*
+    Inject CSS variables from theme config (hugo.toml).
+    NOTE: This must be in baseof.html (not SCSS) because:
+    1. SCSS files cannot access Hugo template variables (.Site.Params)
+    2. This inline <style> block loads BEFORE the compiled SCSS, allowing
+       user-defined colors from hugo.toml to override the defaults in main.scss
+    3. This is a standard Hugo pattern for theme customization
+  */}}
   {{ $colors := .Site.Params.theme.colors | default dict }}
   <style>
     :root {

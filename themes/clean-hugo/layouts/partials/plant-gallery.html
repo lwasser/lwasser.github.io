@@ -1,7 +1,6 @@
 {{/* Compatibility partial for plants section - uses plant-card instead of gallery-card */}}
 {{ $ctx := . }}
 {{ $pages := cond (and (reflect.IsMap $ctx) $ctx.Pages) $ctx.Pages .Pages }}
-{{ $cols := cond (and (reflect.IsMap $ctx) $ctx.Cols) $ctx.Cols 3 }}
 
 <div class="gallery-grid-container">
   {{ if and (reflect.IsMap $ctx) $ctx.Title }}
@@ -13,7 +12,7 @@
   {{ $singles := slice }}
 
   {{ range $pages }}
-    {{ $species := .Params.species | default "" }}
+    {{ $species := .Params.category | default "" }}
     {{ if .Params.plants }}
       {{/* Page has varieties */}}
       {{ $plantCount := len .Params.plants }}
