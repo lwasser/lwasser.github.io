@@ -1,0 +1,28 @@
+@layer components {
+  /* Site navigation */
+  .site-nav {
+    @apply bg-white border-b;
+  }
+
+  .site-nav__container {
+    @apply max-w-7xl mx-auto px-4 py-4 flex justify-between items-center;
+  }
+
+  .site-nav__brand {
+    @apply text-2xl font-bold;
+  }
+
+  .site-nav__menu {
+    @apply space-x-6;
+  }
+
+  .site-nav__link {
+    @apply transition-colors duration-200;
+    color: var(--color-text);
+    
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
+

@@ -2,7 +2,7 @@
 {{ define "main" }}
   {{ partial "hero.html" . }}
 
-  <section class="max-w-7xl mx-auto px-4 md:px-6 py-8">
+  <section class="gallery-list-wrapper">
     <!-- Build unique group list from pages -->
     {{ $seen := dict }}
     {{ range .Pages.ByWeight.Reverse }}

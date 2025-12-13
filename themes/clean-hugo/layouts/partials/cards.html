@@ -5,7 +5,12 @@
 -->
 
 {{ $icon := .icon }}
-{{ $textOnly := and (isset . "text_only") (eq .text_only true) }}
+{{ $textOnly := false }}
+{{ if reflect.IsMap . }}
+  {{ if .text_only }}
+    {{ $textOnly = eq .text_only true }}
+  {{ end }}
+{{ end }}
 
 {{ if $textOnly }}
 <article class="card card--text">
@@ -30,13 +35,13 @@
   <div>
 
 
-    <h3 class="card__title">{{ if and (isset . "icon") (in (printf "%s" $icon) "fa-") }}
+    <h3 class="card__title">{{ if and $icon (in (printf "%s" $icon) "fa-") }}
       <i class="card__icon {{ $icon }}" aria-hidden="true" title="{{ $.title }}"></i>
-    {{ else if and (isset . "icon") (ne (printf "%s" $icon) "") }}
+    {{ else if and $icon (ne (printf "%s" $icon) "") }}
       <div class="card__icon">{{ $icon | safeHTML }}</div>
     {{ end }} {{ .title }}</h3>
     {{ with .excerpt }}
-      <div class="card__body prose prose-sm text-gray-700">{{ . | markdownify }}</div>
+      <div class="card__body">{{ . | markdownify }}</div>
     {{ end }}
   </div>
 

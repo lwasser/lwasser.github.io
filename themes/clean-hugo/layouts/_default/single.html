@@ -1,10 +1,12 @@
 {{ define "main" }}
-<article class="max-w-3xl mx-auto px-4 py-16">
-  <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ .Title }}</h1>
+<article class="content-container">
+  <header class="content-header">
+    <h1>{{ .Title }}</h1>
+  </header>
   {{ if not .Params.hideDate }}
-    <p class="text-gray-600 mb-8">{{ .Date.Format "January 2, 2006" }}</p>
+    <p class="content-date">{{ .Date.Format "January 2, 2006" }}</p>
   {{ end }}
-  <div class="prose lg:prose-xl">
+  <div class="content-body">
     {{ .Content }}
   </div>
 </article>

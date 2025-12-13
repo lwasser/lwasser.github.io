@@ -1,11 +1,11 @@
 {{/* Compatibility partial for plants section - uses plant-card instead of gallery-card */}}
 {{ $ctx := . }}
-{{ $pages := cond (isset $ctx "Pages") $ctx.Pages .Pages }}
-{{ $cols := cond (isset $ctx "Cols") $ctx.Cols 3 }}
+{{ $pages := cond (and (reflect.IsMap $ctx) $ctx.Pages) $ctx.Pages .Pages }}
+{{ $cols := cond (and (reflect.IsMap $ctx) $ctx.Cols) $ctx.Cols 3 }}
 
-<div class="max-w-7xl mx-auto px-4 md:px-6 py-8">
-  {{ if isset $ctx "Title" }}
-    <h2 class="text-2xl md:text-3xl font-bold mb-4">{{ $ctx.Title }}</h2>
+<div class="gallery-grid-container">
+  {{ if and (reflect.IsMap $ctx) $ctx.Title }}
+    <h2 class="gallery-grid__title">{{ $ctx.Title }}</h2>
   {{ end }}
 
   {{/* Step 1: Build species map and count plants */}}
@@ -42,9 +42,9 @@
   {{ $sortedSpecies := sort $speciesList }}
   {{ range $species := $sortedSpecies }}
     {{ $speciesPages := index $speciesMap $species }}
-    <section class="mb-12">
-      <h3 class="text-xl md:text-2xl font-semibold mb-4 capitalize">{{ $species }}</h3>
-      <div class="grid gap-6 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]">
+    <section class="gallery-grid__section">
+      <h3 class="gallery-grid__category-title">{{ $species }}</h3>
+      <div class="gallery-grid__items">
         {{ range $speciesPages }}
           {{ $parentPage := . }}
           {{/* Sort plants by name */}}
@@ -59,9 +59,9 @@
 
   {{/* Step 3: Render singles as "Other Hoyas" */}}
   {{ if gt (len $singles) 0 }}
-    <section class="mb-12">
-      <h3 class="text-xl md:text-2xl font-semibold mb-4">{{ .Site.Params.gallery.otherTitle | default "Other Hoyas" }}</h3>
-      <div class="grid gap-6 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]">
+    <section class="gallery-grid__section">
+      <h3 class="gallery-grid__category-title">{{ .Site.Params.gallery.otherTitle | default "Other Hoyas" }}</h3>
+      <div class="gallery-grid__items">
         {{ range sort $singles "Title" }}
           {{ if .Params.plants }}
             {{/* Single variety page */}}

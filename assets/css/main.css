@@ -1742,6 +1742,11 @@ h2 {
   margin-right: 0px;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1876,6 +1881,10 @@ h2 {
   height: 10rem;
 }
 
+.h-48 {
+  height: 12rem;
+}
+
 .h-64 {
   height: 16rem;
 }
@@ -1906,6 +1915,10 @@ h2 {
 
 .w-40 {
   width: 10rem;
+}
+
+.w-48 {
+  width: 12rem;
 }
 
 .w-64 {
@@ -1997,6 +2010,16 @@ h2 {
 .columns-1 {
   -moz-columns: 1;
        columns: 1;
+}
+
+.columns-2 {
+  -moz-columns: 2;
+       columns: 2;
+}
+
+.columns-3 {
+  -moz-columns: 3;
+       columns: 3;
 }
 
 .break-inside-avoid {
@@ -2220,6 +2243,11 @@ h2 {
   border-color: rgb(153 246 228 / var(--tw-border-opacity, 1));
 }
 
+.border-teal-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(20 184 166 / var(--tw-border-opacity, 1));
+}
+
 .border-teal-500\/20 {
   border-color: rgb(20 184 166 / 0.2);
 }
@@ -2270,6 +2298,11 @@ h2 {
 .bg-teal-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(240 253 250 / var(--tw-bg-opacity, 1));
+}
+
+.bg-teal-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 184 166 / var(--tw-bg-opacity, 1));
 }
 
 .bg-teal-500\/10 {
@@ -2336,6 +2369,11 @@ h2 {
   --tw-gradient-stops: var(--tw-gradient-from), rgb(0 0 0 / 0.5) var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
+.via-verdigrisDark {
+  --tw-gradient-to: rgb(46 96 96 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #2E6060 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
 .via-verdigrisDark\/40 {
   --tw-gradient-to: rgb(46 96 96 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), rgb(46 96 96 / 0.4) var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -2360,6 +2398,14 @@ h2 {
 
 .p-12 {
   padding: 3rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-2\.5 {
+  padding: 0.625rem;
 }
 
 .p-4 {
@@ -3047,10 +3093,6 @@ xl: 1280px
 .hover\:text-\[\#71B3B5\]:hover {
   --tw-text-opacity: 1;
   color: rgb(113 179 181 / var(--tw-text-opacity, 1));
-}
-
-.hover\:text-\[var\(--color-primary\)\]:hover {
-  color: var(--color-primary);
 }
 
 .hover\:text-gray-900:hover {

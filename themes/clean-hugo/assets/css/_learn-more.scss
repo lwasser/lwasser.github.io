@@ -1,0 +1,40 @@
+@layer components {
+  .learn-more {
+    @apply my-12 bg-slate-100 rounded-3xl p-8 shadow-lg;
+  }
+
+  .learn-more__header {
+    @apply flex items-center gap-3 mb-6;
+  }
+
+  .learn-more__title {
+    @apply text-2xl font-bold text-gray-900 m-0;
+    
+    i {
+      @apply text-gray-900;
+    }
+  }
+
+  .learn-more__list {
+    @apply space-y-4 list-none p-0 m-0;
+  }
+
+  .learn-more__item {
+    a {
+      @apply flex items-center gap-4 text-gray-900 no-underline transition-colors duration-200 group;
+      
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  .learn-more__item-text {
+    @apply text-lg font-semibold;
+    
+    i {
+      @apply mr-2;
+    }
+  }
+}
+

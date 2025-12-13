@@ -1,0 +1,77 @@
+@layer components {
+  /* General content/article styles */
+  .content-container {
+    @apply max-w-3xl mx-auto px-4 py-16;
+  }
+
+  .content-header {
+    h1 {
+      @apply text-4xl font-bold text-gray-900 mb-4;
+    }
+  }
+
+  .content-date {
+    @apply text-gray-600 mb-8;
+  }
+
+  .content-body {
+    @apply prose lg:prose-xl;
+  }
+
+  /* Section styles for list pages */
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 py-12;
+  }
+
+  .section-title {
+    @apply text-3xl font-semibold mb-4;
+  }
+
+  .section-content {
+    @apply prose mb-6;
+  }
+
+  .section-list {
+    @apply space-y-6;
+  }
+
+  .section-item {
+    a {
+      @apply text-lg font-medium transition-colors duration-200;
+      color: var(--color-text);
+      
+      &:hover {
+        @apply underline;
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  .section-item__meta {
+    @apply text-sm text-gray-600;
+  }
+
+  /* Term/taxonomy listing styles */
+  .term-list {
+    @apply space-y-2;
+  }
+
+  .term-item {
+    a {
+      @apply text-lg text-gray-800 transition-colors duration-200;
+      
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  .term-count {
+    @apply text-sm text-gray-500;
+  }
+
+  .term-description {
+    @apply text-sm text-gray-600 mb-6;
+  }
+}
+

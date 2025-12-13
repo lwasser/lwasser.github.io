@@ -1,15 +1,15 @@
 {{ define "main" }}
-<section class="max-w-7xl mx-auto px-6 py-12">
-  <h1 class="text-3xl font-semibold mb-4">{{ .Title }}</h1>
+<section class="section-container">
+  <h1 class="section-title">{{ .Title }}</h1>
   {{ with .Content }}
-    <div class="prose mb-6">{{ . }}</div>
+    <div class="section-content">{{ . }}</div>
   {{ end }}
 
-  <div class="space-y-6">
+  <div class="section-list">
     {{ range .Pages }}
-      <article>
-        <a href="{{ .Permalink }}" class="text-lg font-medium">{{ .Title }}</a>
-        <p class="text-sm text-gray-600">{{ .Date.Format "Jan 2, 2006" }}</p>
+      <article class="section-item">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <p class="section-item__meta">{{ .Date.Format "Jan 2, 2006" }}</p>
       </article>
     {{ end }}
   </div>

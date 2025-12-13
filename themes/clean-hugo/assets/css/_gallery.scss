@@ -1,4 +1,30 @@
 @layer components {
+  /* Gallery list page wrapper */
+  .gallery-list-wrapper {
+    @apply max-w-7xl mx-auto px-4 md:px-6 py-8;
+  }
+
+  /* Gallery grid container */
+  .gallery-grid-container {
+    @apply max-w-7xl mx-auto px-4 md:px-6 py-8;
+  }
+
+  .gallery-grid__title {
+    @apply text-2xl md:text-3xl font-bold mb-4;
+  }
+
+  .gallery-grid__category-title {
+    @apply text-xl md:text-2xl font-semibold mb-4 capitalize;
+  }
+
+  .gallery-grid__section {
+    @apply mb-12;
+  }
+
+  .gallery-grid__items {
+    @apply grid gap-6 grid-cols-[repeat(auto-fill,minmax(250px,1fr))];
+  }
+
   /* Gallery content wrapper */
   .gallery-content { @apply max-w-4xl mx-auto px-4 md:px-6 py-12; }
 
@@ -29,6 +55,10 @@
   }
 
   .gallery-grid a.group:hover img { @apply scale-[1.03]; }
+
+  .gallery-caption {
+    @apply p-2.5 text-sm text-gray-700;
+  }
 
   /* Gallery card component */
   .gallery-card {

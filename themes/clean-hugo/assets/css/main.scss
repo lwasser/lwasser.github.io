@@ -28,12 +28,12 @@ xl: 1280px
     @apply font-sans;
     color: var(--color-text);
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-sora;
     color: inherit;
   }
-  
+
   h2 {
     @apply text-2xl md:text-3xl font-semibold leading-tight;
   }
@@ -41,6 +41,10 @@ xl: 1280px
 
 @layer components {
   /* Import component styles */
+  @import 'navigation';
+  @import 'content';
+  @import 'blog';
+  @import 'learn-more';
   @import 'filter';
   @import 'hero';
   @import 'feature';

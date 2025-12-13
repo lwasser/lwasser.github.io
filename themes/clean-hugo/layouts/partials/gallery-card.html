@@ -20,7 +20,7 @@
 <article class="gallery-card" data-groups='{{ $groups }}'>
   {{ $img := "" }}
 
-  {{ if isset . "Item" }}
+  {{ if $isVariety }}
     <!-- Variety/sub-item: use thumbnail from frontmatter -->
     {{ with $item.thumbnail }}
       {{ $img = $page.Resources.GetMatch . }}
