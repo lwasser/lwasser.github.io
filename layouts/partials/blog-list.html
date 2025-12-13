@@ -1,11 +1,12 @@
 <section class="blog-highlight">
   <div class="container">
     <div class="intro">
-      <h2>Recent Thoughts</h2>
+      <h2>{{ .Params.blog_title | default "Recent Thoughts" }}</h2>
     </div>
 
     <div class="highlight-grid">
-      {{ range first 3 (where .Site.RegularPages "Type" "blog") }}
+      {{ $limit := .Params.blog_limit | default 3 }}
+      {{ range first $limit (where .Site.RegularPages "Type" "blog") }}
         {{ $p := . }}
         <article>
           <div class="meta">
