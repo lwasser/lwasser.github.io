@@ -1,7 +1,8 @@
 @layer components {
   /* Site navigation */
   .site-nav {
-    @apply bg-white border-b;
+    @apply border-b;
+    background-color: var(--color-white);
   }
 
   .site-nav__container {

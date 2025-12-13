@@ -31,7 +31,10 @@
   /* Header */
   .gallery-header { @apply mb-8; }
   .gallery-header h2 { @apply text-3xl font-bold mb-2; }
-  .gallery-header .common-name { @apply text-lg text-gray-600 mb-4; }
+  .gallery-header .common-name { 
+    @apply text-lg mb-4;
+    color: var(--color-gray-600);
+  }
 
   /* Markdown body */
   .gallery-description { @apply prose max-w-none; }
@@ -57,12 +60,15 @@
   .gallery-grid a.group:hover img { @apply scale-[1.03]; }
 
   .gallery-caption {
-    @apply p-2.5 text-sm text-gray-700;
+    @apply p-2.5 text-sm;
+    color: var(--color-gray-700);
   }
 
   /* Gallery card component */
   .gallery-card {
-    @apply relative flex flex-col bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 transition-shadow duration-200 w-full max-w-[340px];
+    @apply relative flex flex-col rounded-2xl shadow-md overflow-hidden border transition-shadow duration-200 w-full max-w-[340px];
+    background-color: var(--color-white);
+    border-color: var(--color-gray-200);
 
     &:hover {  }
 
@@ -89,19 +95,25 @@
     }
 
     &__badge {
-      @apply text-xs font-semibold px-3 py-1 rounded-full bg-gray-900/5 text-gray-700 border border-gray-300;
+      @apply text-xs font-semibold px-3 py-1 rounded-full border;
+      background-color: color-mix(in srgb, var(--color-gray-900) 5%, transparent);
+      color: var(--color-gray-700);
+      border-color: var(--color-gray-300);
     }
 
     &__title {
-      @apply font-sora font-bold text-lg md:text-lg text-gray-900 py-2 px-3;
+      @apply font-sora font-bold text-lg md:text-lg py-2 px-3;
+      color: var(--color-gray-900);
     }
 
     &__common-name {
-      @apply text-sm text-gray-600;
+      @apply text-sm;
+      color: var(--color-gray-600);
     }
 
     &__summary {
-      @apply text-sm text-gray-700 leading-relaxed;
+      @apply text-sm leading-relaxed;
+      color: var(--color-gray-700);
     }
   }
 }

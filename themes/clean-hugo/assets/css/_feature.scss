@@ -8,9 +8,10 @@
   .feature__grid { @apply grid grid-cols-1 gap-8; }
 
   .feature-card {
-    @apply rounded-2xl border border-gray-300
+    @apply rounded-2xl border
            p-5 sm:p-6 md:p-8 lg:p-10 shadow-sm;
     background-color: var(--color-accent-light);
+    border-color: var(--color-gray-300);
   }
 
   .feature-card h3 { @apply text-xl sm:text-2xl md:text-3xl font-extrabold mt-8 first:mt-0 mb-4; }

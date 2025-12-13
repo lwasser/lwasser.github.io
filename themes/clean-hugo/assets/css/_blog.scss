@@ -36,7 +36,8 @@
     @apply max-w-4xl mx-auto px-8 mb-8;
     
     p {
-      @apply text-xl text-gray-700 leading-relaxed;
+      @apply text-xl leading-relaxed;
+      color: var(--color-gray-700);
     }
   }
 
@@ -45,13 +46,15 @@
   }
 
   .blog-post__tags {
-    @apply max-w-4xl mx-auto px-8 mt-12 text-sm text-gray-600;
+    @apply max-w-4xl mx-auto px-8 mt-12 text-sm;
+    color: var(--color-gray-600);
     
     a {
       @apply transition-colors duration-200;
+      color: inherit;
       
       &:hover {
-        @apply text-gray-900;
+        color: var(--color-gray-900);
       }
     }
   }

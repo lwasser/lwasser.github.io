@@ -11,10 +11,11 @@
   }
 
   article {
-    @apply relative bg-white rounded-lg overflow-hidden
+    @apply relative rounded-lg overflow-hidden
            flex flex-col
            shadow-lg hover:shadow-2xl
            transition-all duration-300 ease-out;
+    background-color: var(--color-white);
 
     &:hover {
       @apply -translate-y-1;
@@ -41,16 +42,19 @@
       @apply mt-0 text-lg font-semibold leading-tight;
 
       a {
-        @apply text-gray-900 no-underline;
+        @apply no-underline;
+        color: var(--color-gray-900);
       }
     }
 
     time {
-      @apply block mt-2 text-xs text-gray-500;
+      @apply block mt-2 text-xs;
+      color: var(--color-gray-500);
     }
 
     .excerpt {
-      @apply mt-2 text-sm text-gray-600 leading-relaxed;
+      @apply mt-2 text-sm leading-relaxed;
+      color: var(--color-gray-600);
     }
 
     .stretched-link::after {
@@ -88,9 +92,10 @@
 
   .highlight-grid {
     @apply mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16
-           border-t border-gray-700 pt-10
+           border-t pt-10
            sm:mt-16 sm:pt-16
            lg:mx-0 lg:max-w-none lg:grid-cols-3;
+    border-color: var(--color-gray-700);
   }
 
   article {
@@ -99,14 +104,14 @@
            transition-all duration-300 ease-out;
 
     &:hover {
-      @apply bg-gray-800/30;
+      background-color: color-mix(in srgb, var(--color-gray-800) 30%, transparent);
     }
 
     .meta {
       @apply flex items-center gap-x-4 text-xs;
 
       time {
-        @apply text-gray-400;
+        color: var(--color-gray-400);
       }
 
       .category {
@@ -144,11 +149,12 @@
     }
 
     &:hover h3 {
-      @apply text-gray-300;
+      color: var(--color-gray-300);
     }
 
     .excerpt {
-      @apply mt-5 line-clamp-3 text-sm leading-6 text-gray-400;
+      @apply mt-5 line-clamp-3 text-sm leading-6;
+      color: var(--color-gray-400);
     }
 
     .read-more {

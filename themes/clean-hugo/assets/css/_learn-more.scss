@@ -1,6 +1,7 @@
 @layer components {
   .learn-more {
-    @apply my-12 bg-slate-100 rounded-3xl p-8 shadow-lg;
+    @apply my-12 rounded-3xl p-8 shadow-lg;
+    background-color: var(--color-bg);
   }
 
   .learn-more__header {
@@ -8,10 +9,11 @@
   }
 
   .learn-more__title {
-    @apply text-2xl font-bold text-gray-900 m-0;
+    @apply text-2xl font-bold m-0;
+    color: var(--color-gray-900);
     
     i {
-      @apply text-gray-900;
+      color: var(--color-gray-900);
     }
   }
 
@@ -21,7 +23,8 @@
 
   .learn-more__item {
     a {
-      @apply flex items-center gap-4 text-gray-900 no-underline transition-colors duration-200 group;
+      @apply flex items-center gap-4 no-underline transition-colors duration-200 group;
+      color: var(--color-gray-900);
       
       &:hover {
         color: var(--color-primary);

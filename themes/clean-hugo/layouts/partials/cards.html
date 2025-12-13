@@ -23,7 +23,7 @@
         <p class="card__body">{{ . }}</p>
       {{ end }}
       {{ with .url }}
-        <div class="mt-6">
+        <div class="card__cta-wrapper">
           <a class="card__cta" href="{{ . }}">{{ $.cta | default "Learn more →" }}</a>
         </div>
       {{ end }}
@@ -31,7 +31,7 @@
   </div>
 </article>
 {{ else }}
-<article class="card {{ .modifier | default "card--highlight" }} h-full md:min-h-[260px]">
+<article class="card {{ .modifier | default "card--highlight" }}">
   <div>
 
 

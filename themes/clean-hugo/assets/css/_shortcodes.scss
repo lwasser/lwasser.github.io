@@ -1,0 +1,19 @@
+@layer components {
+  /* YouTube shortcode styles */
+  .youtube-container {
+    @apply my-8;
+  }
+
+  .youtube-wrapper {
+    @apply relative overflow-hidden;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+  }
+
+  .youtube-iframe {
+    @apply absolute w-full h-full;
+    top: 0;
+    left: 0;
+  }
+}
+
