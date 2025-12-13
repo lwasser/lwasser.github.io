@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:css": "tailwindcss -i ./assets/css/main.scss -o ./assets/css/main.css --watch",
     "serve": "hugo server -D --disableFastRender",
-    "dev": "concurrently \"npm:watch:css\" \"npm:serve\"",
-    "build:css": "tailwindcss -i ./assets/css/main.scss -o ./assets/css/main.css --minify",
+    "dev": "hugo server -D --disableFastRender",
     "build": "hugo --minify -d public"
   },
   "keywords": [],

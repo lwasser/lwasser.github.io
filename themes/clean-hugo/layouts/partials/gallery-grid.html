@@ -1,5 +1,10 @@
 {{ $ctx := . }}
-{{ $pages := cond (and (reflect.IsMap $ctx) $ctx.Pages) $ctx.Pages .Pages }}
+{{ $pages := .Pages }}
+{{ if reflect.IsMap $ctx }}
+  {{ with $ctx.Pages }}
+    {{ $pages = . }}
+  {{ end }}
+{{ end }}
 
 <div class="gallery-grid-container">
   {{ if and (reflect.IsMap $ctx) $ctx.Title }}
