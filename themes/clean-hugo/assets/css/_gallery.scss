@@ -37,7 +37,14 @@
   }
 
   /* Markdown body */
-  .gallery-description { @apply prose max-w-none; }
+  .gallery-description { 
+    @apply prose max-w-none;
+    
+    /* Hide h1 in gallery description - title should only be in hero */
+    h1 {
+      @apply hidden;
+    }
+  }
 
   /* Gallery section wrapper */
   .gallery-images { @apply max-w-7xl mx-auto px-4 md:px-6 py-12; }

@@ -1,7 +1,7 @@
 <!-- This partial renders a card component with an optional Font Awesome icon displayed to the left of the title. -->
 <!-- Reusable card partial.
      - Use text_only: true in front matter to render a plain white, non-interactive text card.
-     - Otherwise renders the interactive peach card (supports Font Awesome class strings or raw HTML icons).
+     - Otherwise renders the interactive highlight card (supports Font Awesome class strings or raw HTML icons).
 -->
 
 {{ $icon := .icon }}
@@ -26,7 +26,7 @@
   </div>
 </article>
 {{ else }}
-<article class="card {{ .modifier | default "card--peach" }} h-full md:min-h-[260px]">
+<article class="card {{ .modifier | default "card--highlight" }} h-full md:min-h-[260px]">
   <div>
 
 

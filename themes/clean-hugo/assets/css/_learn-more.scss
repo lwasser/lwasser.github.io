@@ -23,11 +23,11 @@
 
   .learn-more__item {
     a {
-      @apply flex items-center gap-4 no-underline transition-colors duration-200 group;
+      @apply flex items-center gap-4 no-underline transition-colors duration-200;
       color: var(--color-gray-900);
       
       &:hover {
-        color: var(--color-primary);
+        color: var(--color-link);
       }
     }
   }
