@@ -6,7 +6,6 @@ groups = []
 tags = []
 
 [ hero ]
-title = 'Hoya Michelle Silver'
 image = "michelle-silver-leaf.jpg"
 subtitle = "An elegant variegated small leaved hoya with delicate magenta colored flowers."
 

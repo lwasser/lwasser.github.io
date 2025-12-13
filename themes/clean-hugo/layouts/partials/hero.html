@@ -1,8 +1,8 @@
 {{ $hero := .Params.hero | default dict }}
-{{ $title := $hero.title | default .Title }}
+{{ $title := .Title }}
 {{ $subtitle := $hero.subtitle }}
 {{ $excerpt := $hero.excerpt }}
-{{ $img := $hero.image }}
+{{ $img := $hero.image | default "" }}
 {{ $alt := $hero.alt | default .Title | default (printf "Image for %s" .Title) }}
 {{ $isGallery := or (eq .Section "gallery") (eq .Section "plants") }}
 
@@ -10,9 +10,8 @@
 <section class="hero">
   <div class="hero__container">
     <div class="hero__grid">
-      <!-- Left side - Text (wider on md+) -->
-      <div class="hero__content">
-        <h1 class="hero__title">{{ $title }}</h1>
+      <div class="hero__content">This should render on the homage pageTE
+        <!-- <h1 class="hero__title">{{ $title }}</h1> -->
         {{ with $subtitle }}<p class="hero__subtitle">{{ . }}</p>{{ end }}
       </div>
 

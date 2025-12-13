@@ -1,5 +1,4 @@
 +++
-title = 'Hoya Lacunosa'
 date = 2025-11-08T20:45:17-07:00
 excerpt = "This was a cutting I received from a purchase. I suspect it's a vanilla *Hoya lacunosa*."
 groups = []

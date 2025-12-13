@@ -1,5 +1,4 @@
 +++
-title = 'Hoya Black Cat'
 date = 2025-11-14T10:42:10-07:00
 excerpt = ""
 groups = ["veined"]

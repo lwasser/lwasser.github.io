@@ -6,7 +6,7 @@ layout: "splash"
 hero:
   title: "I'm Leah 👋"
   subtitle: "Executive Director & Founder of pyOpenSci"
-  excerpt: "I break down technical and social barriers to open science so scientists everywhere can spend less time struggling with tools and more time advancing discovery."
+  excerpt: ""
   image: "/images/leah-headshot.png"
 cards:
   - grid: "md:row-start-1 md:col-start-1"
