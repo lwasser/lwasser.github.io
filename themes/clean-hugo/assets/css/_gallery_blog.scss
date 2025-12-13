@@ -71,7 +71,8 @@
 // This is styling for the blog list cards on the home page
 // these cards are more compact and discrete compared to the blog listing page.
 .blog-highlight {
-  @apply bg-gray-900 py-24 sm:py-32;
+  @apply py-24 sm:py-32;
+  background-color: var(--color-primary-dark);
 
   .container {
     @apply mx-auto max-w-7xl px-6 lg:px-8;

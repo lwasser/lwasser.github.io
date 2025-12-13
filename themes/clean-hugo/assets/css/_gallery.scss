@@ -62,13 +62,14 @@
 
   /* Gallery card component */
   .gallery-card {
-    @apply relative flex flex-col bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200;
-    @apply transition-shadow duration-200;
-    @apply w-full max-w-[340px]; /* smaller card */
+    @apply relative flex flex-col bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 transition-shadow duration-200 w-full max-w-[340px];
 
     &:hover {  }
 
-    &__link { @apply block focus:outline-none focus:ring-2 focus:ring-teal-500; }
+    &__link {
+      @apply block focus:outline-none focus:ring-2;
+      --tw-ring-color: var(--color-primary);
+    }
 
     /* Top image area */
     &__image {
