@@ -6,6 +6,7 @@ groups = ["variegated", "small leaf"]
 tags = []
 
 [ hero ]
+title = 'Hoya Heuschkeliana Variegata'
 image = "heuschkeliana-variegata-leaves.jpg"
 subtitle = "An elegant variegated small leaved hoya with delicate magenta colored flowers."
 
