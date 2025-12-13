@@ -1,12 +1,12 @@
 +++
 title = 'Hoya Obscura Silver'
 date = 2025-11-10T13:32:43-07:00
-acquired = "2025-11-09"
 excerpt = ""
 groups = []
 tags = []
 
 [ hero ]
+title = 'Hoya Obscura Silver'
 image = "obscura-silver-full.jpg"
 subtitle = "A beautiful Hoya with silver-variegated leaves."
 

@@ -12,19 +12,18 @@
     <div class="hero__grid">
       <!-- Left side - Text (wider on md+) -->
       <div class="hero__content">
-        {{ if $title }}<h1 class="hero__title">{{ $title }}</h1>{{ end }}
+        <h1 class="hero__title">{{ $title }}</h1>
         {{ with $subtitle }}<p class="hero__subtitle">{{ . }}</p>{{ end }}
-        {{ with $excerpt }}<div class="hero__excerpt">{{ . | markdownify }}</div>{{ end }}
       </div>
 
     <!-- Right side circle with photo//only render if image is there -->
-    {{ with $img }}
+    {{- with $img -}}
       <div class="hero__image-wrapper">
         <div class="hero__image-container {{ if $isGallery }}hero__image-container__square{{ end }}">
           <img src="{{ . }}" alt="{{ $alt }}" class="hero__image">
         </div>
       </div>
-    {{ end }}
+    {{- end -}}
     </div>
   </div>
 </section>

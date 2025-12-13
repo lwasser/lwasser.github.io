@@ -1,12 +1,12 @@
 +++
 title = 'Hoya Snow Cui'
 date = 2025-11-08T20:19:31-07:00
-acquired = "2025-09-08"
 excerpt = ""
 groups = ["silver"]
 tags = []
 
 [ hero ]
+title = 'Hoya Snow Cui'
 image = "hoya-snow-cui-leaf.jpg"
 subtitle = "A less common hoya with striking sunstressing and slender silvery leaves."
 

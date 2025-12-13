@@ -6,6 +6,7 @@ groups = []
 tags = []
 
 [ hero ]
+title = 'Hoya Lacunosa'
 image = "asami-clone-leaf.jpg"
 subtitle = "A collection of Hoya Lacunosa varieties with heart-shaped leaves."
 
@@ -14,6 +15,8 @@ subtitle = "A collection of Hoya Lacunosa varieties with heart-shaped leaves."
 flower = "flower.jpg"
 habit = "habit.jpg"
 images = []
+
+# Individual plants in this collection
 
 # Individual plants in this collection
 [[plants]]

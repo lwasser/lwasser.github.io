@@ -6,6 +6,7 @@ groups = ["silver"]
 tags = []
 
 [ hero ]
+title = 'Hoya Latifolia'
 image = "featured.jpg"
 subtitle = "A collection of Hoya Latifolia varieties with silver-variegated leaves."
 
@@ -14,6 +15,8 @@ subtitle = "A collection of Hoya Latifolia varieties with silver-variegated leav
 flower = "flower.jpg"
 habit = "habit.jpg"
 images = []
+
+# Individual plants in this collection
 
 # Individual plants in this collection
 [[plants]]

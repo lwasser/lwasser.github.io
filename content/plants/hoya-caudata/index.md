@@ -1,12 +1,12 @@
 +++
 title = 'Hoya Caudata Silver'
 date = 2025-11-10T13:32:08-07:00
-acquired = "2025-11-09"
 excerpt = ""
 groups = []
 tags = []
 
 [ hero ]
+title = 'Hoya Caudata Silver'
 image = "caudata-silver-leaf-feature.jpg"
 subtitle = "A beautifully elegant Hoya with crinkly, silver-edged leaves."
 

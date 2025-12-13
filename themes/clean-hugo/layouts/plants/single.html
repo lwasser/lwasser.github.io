@@ -3,10 +3,6 @@
   {{ partial "hero.html" . }}
 
   <article class="gallery-content">
-    <header class="gallery-header">
-      <h2>{{ .Title }}</h2>
-    </header>
-
     <div class="gallery-description prose">
       {{ .Content }}
     </div>
@@ -39,7 +35,14 @@
   {{ if .Site.Params.theme.enableGallery | default true }}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-    <script>GLightbox();</script>
+    <script>
+      GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: false,
+        autoplayVideos: true
+      });
+    </script>
   {{ end }}
 {{ end }}
 
