@@ -6,7 +6,6 @@ groups = []
 tags = []
 
 [ hero ]
-title = 'Hoya Obscura Silver'
 image = "obscura-silver-full.jpg"
 subtitle = "A beautiful Hoya with silver-variegated leaves."
 
