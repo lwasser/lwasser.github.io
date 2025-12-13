@@ -1,13 +1,21 @@
 +++
 title = 'Hoya Lacunosa'
 date = 2025-11-08T20:45:17-07:00
-draft = false
-species = "Hoya Lacunosa"
-summary = "This was a cutting I received from a purchase. I suspect it's a vanilla *Hoya lacunosa*."
-weight = 0
-featured_image = "asami-clone-leaf.jpg"
+excerpt = "This was a cutting I received from a purchase. I suspect it's a vanilla *Hoya lacunosa*."
+groups = []
+tags = []
 
+[ hero ]
+image = "asami-clone-leaf.jpg"
+subtitle = "A collection of Hoya Lacunosa varieties with heart-shaped leaves."
 
+# Optional--explicit list of images
+[image_roles]
+flower = "flower.jpg"
+habit = "habit.jpg"
+images = []
+
+# Individual plants in this collection
 [[plants]]
 name = "Hoya Lacunosa"
 acquired = "2024-01-27"
