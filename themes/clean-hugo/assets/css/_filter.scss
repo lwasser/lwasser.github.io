@@ -1,0 +1,27 @@
+@layer components {
+  .filter-row {
+    @apply flex flex-wrap gap-3 mb-8 justify-center;
+  }
+
+  .filter-btn {
+    @apply px-4 py-2 rounded-full
+           text-sm font-medium
+           bg-white border border-gray-300
+           text-gray-700
+           transition-all duration-200
+           cursor-pointer;
+
+    &[aria-pressed="true"] {
+      @apply bg-[var(--color-primary)] text-white border-[var(--color-primary)];
+    }
+
+    &[aria-pressed="false"]:hover {
+      @apply bg-gray-50 border-gray-400;
+    }
+
+    &:focus {
+      @apply outline-none ring-2 ring-[var(--color-primary)] ring-offset-2;
+    }
+  }
+}
+

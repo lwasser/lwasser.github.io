@@ -1,0 +1,31 @@
+{{ $hero := .Params.hero }}
+{{ $title := $hero.title }}
+{{ $subtitle := $hero.subtitle }}
+{{ $excerpt := $hero.excerpt }}
+{{ $img := $hero.image }}
+{{ $alt := $hero.alt }}
+{{ $isGallery := or (eq .Section "gallery") (eq .Section "plants") }}
+
+
+<section class="hero">
+  <div class="hero__container">
+    <div class="hero__grid">
+      <!-- Left side - Text (wider on md+) -->
+      <div class="hero__content">
+        <h1 class="hero__title">{{ $title }}</h1>
+        <p class="hero__subtitle">{{ $subtitle }}</p>
+        <div class="hero__excerpt">{{ $excerpt | markdownify }}</div>
+      </div>
+
+    <!-- Right side circle with photo//only render if image is there -->
+    {{ with $img }}
+      <div class="hero__image-wrapper">
+        <div class="hero__image-container {{ if $isGallery }}hero__image-container__square{{ end }}">
+          <img src="{{ . }}" alt="{{ $alt }}" class="hero__image">
+        </div>
+      </div>
+    {{ end }}
+    </div>
+  </div>
+</section>
+

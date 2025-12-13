@@ -1,0 +1,46 @@
+{{/* Compatibility layer: plants section uses gallery single layout */}}
+{{ define "main" }}
+  {{ partial "hero.html" . }}
+
+  <article class="gallery-content">
+    <header class="gallery-header">
+      <h2>{{ .Title }}</h2>
+      {{ with .Params.common_name }}<p class="common-name">{{ . }}</p>{{ end }}
+    </header>
+
+    <div class="gallery-description prose">
+      {{ .Content }}
+    </div>
+
+    <section class="gallery-images">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        {{ $images := .Resources.ByType "image" }}
+        {{ range $images }}
+          {{ $filename := .Name | replaceRE "\\.[^.]+$" "" | replaceRE "-" " " | title }}
+          {{ $caption := printf "%s · %s" $.Title $filename }}
+          <figure>
+            <a href="{{ .RelPermalink }}"
+                class="glightbox"
+                data-gallery="gallery-images"
+                data-glightbox="title: {{ $caption }};">
+              <img src="{{ .RelPermalink }}" alt="{{ or .Title $.Title }}" loading="lazy">
+            </a>
+            <p style="background: padding: 10px;">
+                {{ $caption }}
+            </p>
+          </figure>
+        {{ end }}
+      </div>
+    </section>
+  </article>
+{{ end }}
+
+{{ define "scripts" }}
+  {{ if .Site.Params.theme.enableGallery | default true }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>GLightbox();</script>
+  {{ end }}
+{{ end }}
+

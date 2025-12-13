@@ -1,0 +1,71 @@
+{{ define "main" }}
+  {{ partial "hero.html" . }}
+
+  <section class="max-w-7xl mx-auto px-4 md:px-6 py-8">
+    <!-- Build unique group list from pages -->
+    {{ $seen := dict }}
+    {{ range .Pages.ByWeight.Reverse }}
+      {{ if isset .Params "groups" }}
+        {{ range .Params.groups }}
+          {{ if not (isset $seen .) }}
+            {{ $seen = merge $seen (dict . true) }}
+          {{ end }}
+        {{ end }}
+      {{ else if isset .Params "group" }}
+        {{ $g := .Params.group }}
+        {{ if not (isset $seen $g) }}
+          {{ $seen = merge $seen (dict $g true) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    <!-- Filter buttons -->
+    <div class="filter-row" role="tablist" aria-label="Filter gallery by group">
+      <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+      {{ range $k, $v := $seen }}
+        <button class="filter-btn" data-filter="{{ $k }}" aria-pressed="false">{{ humanize $k }}</button>
+      {{ end }}
+    </div>
+
+    <!-- Gallery -->
+    {{ partial "gallery-grid.html" (dict "Pages" .Pages.ByWeight.Reverse "Title" .Title "Cols" 3) }}
+  </section>
+
+  <!-- Client-side filter  -->
+  <!-- Only toggle aria-pressed so CSS controls appearance -->
+  <script>
+  (function(){
+    const buttons = Array.from(document.querySelectorAll('.filter-btn'));
+    const cards = Array.from(document.querySelectorAll('.gallery-card'));
+    if (!buttons.length) return;
+
+    function setActive(btn){
+      buttons.forEach(b => b.setAttribute('aria-pressed','false'));
+      btn.setAttribute('aria-pressed','true');
+    }
+    function filter(group){
+      cards.forEach(c=>{
+        const groups = (c.dataset.groups || '').split(/\s+/).filter(Boolean);
+        if(group === 'all' || groups.includes(group) || groups.length === 0) {
+          c.style.display = '';
+        } else {
+          c.style.display = 'none';
+        }
+      });
+    }
+
+    buttons.forEach(b=>{
+      b.addEventListener('click', ()=>{
+        setActive(b);
+        filter(b.getAttribute('data-filter'));
+      });
+    });
+
+    // ensure initial state
+    const active = buttons.find(b => b.getAttribute('aria-pressed') === 'true') || buttons[0];
+    setActive(active);
+    filter(active.getAttribute('data-filter') || 'all');
+  })();
+  </script>
+{{ end }}
+

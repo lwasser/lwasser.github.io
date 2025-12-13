@@ -1,0 +1,47 @@
+/* Hero section components */
+
+.hero {
+  @apply py-2 flex items-center overflow-hidden;
+  background-color: var(--color-primary-dark);
+
+  &__container {
+    @apply max-w-7xl mx-auto px-4 py-4 md:py-12 w-full;
+  }
+
+  &__grid {
+    @apply grid md:grid-cols-12 gap-6 md:gap-8 items-center;
+  }
+
+  &__content {
+    @apply order-2 md:order-1 md:col-span-8;
+  }
+
+  &__title {
+    @apply text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 md:mb-6;
+  }
+
+  &__subtitle {
+    @apply text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-4 md:mb-6;
+  }
+
+  &__excerpt {
+    @apply text-base sm:text-lg md:text-xl leading-[1.5] md:leading-[1.6] text-white;
+  }
+
+  &__image-wrapper {
+    @apply order-1 md:order-2 md:col-span-4 flex justify-center md:justify-end;
+  }
+
+  &__image-container {
+    @apply w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-8 border-white shadow-2xl;
+  }
+
+  &__image {
+    @apply w-full h-full object-cover;
+  }
+}
+
+.hero__image-container__square {
+    @apply w-[260px] md:w-[340px] lg:w-[400px] rounded-lg overflow-hidden border-4 border-white shadow-2xl mx-0 sm:mx-4 md:mx-8;
+}
+

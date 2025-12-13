@@ -1,0 +1,35 @@
+@layer components {
+  .site-footer {
+    @apply py-10;
+    background-color: var(--color-primary-dark);
+  }
+  
+  .site-footer > .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center;
+  }
+
+  .site-footer h3 {
+    @apply text-white text-xl font-semibold mb-6;
+  }
+  
+  .site-footer ul {
+    @apply flex justify-center gap-6;
+  }
+  
+  .site-footer li {
+    list-style: none;
+  }
+
+  .site-footer a {
+    @apply text-white transition-colors duration-300 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-white rounded;
+  }
+  
+  .site-footer p {
+    @apply text-white/80 text-sm mt-8;
+  }
+  
+  .site-footer p a {
+    @apply underline hover:text-white;
+  }
+}
+

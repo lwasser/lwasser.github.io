@@ -1,0 +1,77 @@
+@layer components {
+  /* Gallery content wrapper */
+  .gallery-content { @apply max-w-4xl mx-auto px-4 md:px-6 py-12; }
+
+  /* Header */
+  .gallery-header { @apply mb-8; }
+  .gallery-header h2 { @apply text-3xl font-bold mb-2; }
+  .gallery-header .common-name { @apply text-lg text-gray-600 mb-4; }
+
+  /* Markdown body */
+  .gallery-description { @apply prose max-w-none; }
+
+  /* Gallery section wrapper */
+  .gallery-images { @apply max-w-7xl mx-auto px-4 md:px-6 py-12; }
+  .gallery-images h2 { @apply text-2xl font-bold mb-4; }
+
+  /* Masonry (CSS columns) */
+  .gallery-grid {
+    @apply columns-1 sm:columns-2 lg:columns-3 space-y-4;
+    column-gap: 1rem;
+  }
+
+  .gallery-grid figure { @apply break-inside-avoid mb-4; }
+
+  .gallery-grid a { @apply block; }
+
+  .gallery-grid img {
+    @apply w-full h-auto rounded-lg transition-transform duration-200 ease-out cursor-zoom-in;
+  }
+
+  .gallery-grid a.group:hover img { @apply scale-[1.03]; }
+
+  /* Gallery card component */
+  .gallery-card {
+    @apply relative flex flex-col bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200;
+    @apply transition-shadow duration-200;
+    @apply w-full max-w-[340px]; /* smaller card */
+
+    &:hover {  }
+
+    &__link { @apply block focus:outline-none focus:ring-2 focus:ring-teal-500; }
+
+    /* Top image area */
+    &__image {
+      @apply w-full h-40 overflow-hidden;
+      img {
+        @apply w-full h-full object-cover transition-transform duration-300 ease-out hover:scale-110;
+      }
+    }
+
+    /* Content area (no overlay, regular flow) */
+    &__body {
+      @apply flex flex-col gap-3 p-6;
+    }
+
+    &__badges {
+      @apply flex flex-wrap gap-2;
+    }
+
+    &__badge {
+      @apply text-xs font-semibold px-3 py-1 rounded-full bg-gray-900/5 text-gray-700 border border-gray-300;
+    }
+
+    &__title {
+      @apply font-sora font-bold text-lg md:text-lg text-gray-900 py-2 px-3;
+    }
+
+    &__common-name {
+      @apply text-sm text-gray-600;
+    }
+
+    &__summary {
+      @apply text-sm text-gray-700 leading-relaxed;
+    }
+  }
+}
+

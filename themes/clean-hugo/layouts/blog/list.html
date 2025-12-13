@@ -1,0 +1,32 @@
+{{ define "main" }}
+<section class="blog-listing">
+  <div class="container">
+    <h2>{{ .Title | default "Blog" }}</h2>
+
+    <div class="blog-grid">
+      {{ range .Paginator.Pages }}
+        <article>
+          {{ with .Params.image }}
+            <figure class="card-media">
+              <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy" />
+            </figure>
+          {{ end }}
+
+          <div class="card-body">
+            <h3>
+              <a href="{{ .Permalink }}" class="stretched-link">{{ .Title }}</a>
+            </h3>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            <p class="excerpt">
+              {{ with .Params.excerpt }}{{ . | markdownify }}{{ else }}{{ .Summary | plainify | truncate 140 }}{{ end }}
+            </p>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</section>
+{{ end }}
+

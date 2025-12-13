@@ -1,6 +1,7 @@
 baseURL = 'https://leahwasser.com/'
 languageCode = 'en-us'
 title = 'Leah A Wasser'
+theme = 'clean-hugo'
 
 # Socials
 [params.social]
@@ -20,6 +21,34 @@ params.licenseURL = "/license"
   author = "Leah A. Wasser"
   tagline = "Empowering Communities to Advance Science Through Open, Equitable Practices"
 
+# Theme configuration
+[params.theme]
+  # Enable/disable features
+  enableGallery = true
+  enableFontAwesome = true
+  
+  # Fonts (Google Fonts)
+  [params.theme.fonts]
+    heading = "Sora"
+    body = "Inter"
+  
+  # Color customization (CSS variables)
+  [params.theme.colors]
+    primary = "#71B3B5"        # Verdigris (teal/cyan)
+    primaryDark = "#2E6060"     # Darker verdigris
+    primaryLight = "#D6E3E3"   # Light verdigris background
+    secondary = "#EDB88B"      # Buff (warm peachy/tan)
+    accent = "#42213D"        # Dark purple
+    accentLight = "#AC87A0"    # Mountbatten pink
+    neutral = "#395E66"        # Dark slate gray
+
+# Gallery configuration
+[params.gallery]
+  otherTitle = "Other Hoyas"
+
+# Footer configuration
+[params.footer]
+  title = "Let's Connect"
 
 [[menu.main]]
   name = "Blog"

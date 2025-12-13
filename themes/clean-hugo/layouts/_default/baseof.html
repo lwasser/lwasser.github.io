@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}">
+  
+  {{/* Preconnect for Google Fonts */}}
+  {{ $fonts := .Site.Params.theme.fonts | default dict }}
+  {{ if or $fonts.heading $fonts.body }}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {{ $fontFamily := "" }}
+    {{ if $fonts.heading }}{{ $fontFamily = printf "family=%s" $fonts.heading }}{{ end }}
+    {{ if $fonts.body }}
+      {{ if $fontFamily }}{{ $fontFamily = printf "%s&family=%s" $fontFamily $fonts.body }}{{ else }}{{ $fontFamily = printf "family=%s" $fonts.body }}{{ end }}
+    {{ end }}
+    {{ if $fontFamily }}
+      <link href="https://fonts.googleapis.com/css2?{{ $fontFamily }}:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    {{ end }}
+  {{ end }}
+
+  {{/* Font Awesome (CDN) */}}
+  {{ if .Site.Params.theme.enableFontAwesome | default true }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  {{ end }}
+
+  {{/* Inject CSS variables from theme config */}}
+  {{ $colors := .Site.Params.theme.colors | default dict }}
+  <style>
+    :root {
+      {{ with $colors.primary }}--color-primary: {{ . }};{{ end }}
+      {{ with $colors.primaryDark }}--color-primary-dark: {{ . }};{{ end }}
+      {{ with $colors.primaryLight }}--color-primary-light: {{ . }};{{ end }}
+      {{ with $colors.secondary }}--color-secondary: {{ . }};{{ end }}
+      {{ with $colors.accent }}--color-accent: {{ . }};{{ end }}
+      {{ with $colors.accentLight }}--color-accent-light: {{ . }};{{ end }}
+      {{ with $colors.neutral }}--color-neutral: {{ . }};{{ end }}
+    }
+  </style>
+
+  {{/* Theme styles */}}
+  {{ $styles := resources.Get "css/main.scss" | toCSS | postCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+
+  {{/* Analytics */}}
+  {{ with .Site.Params.analytics.google }}
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ . }}');
+    </script>
+  {{ end }}
+  {{ with .Site.Params.analytics.plausible }}
+    <!-- Plausible Analytics -->
+    <script defer data-domain="{{ . }}" src="https://plausible.io/js/script.js"></script>
+  {{ end }}
+</head>
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold">{{ .Site.Params.author | default .Site.Title }}</a>
+      <div class="space-x-6">
+        {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}" class="hover:text-[var(--color-primary)]">{{ .Name }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </nav>
+
+  {{ block "main" . }}{{ end }}
+  {{ partial "footer.html" . }}
+  {{ block "scripts" . }}{{ end }}
+</body>
+</html>
+

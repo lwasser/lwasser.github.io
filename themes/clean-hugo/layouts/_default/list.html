@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <h1 class="text-3xl font-semibold mb-4">{{ .Title }}</h1>
+  {{ with .Content }}
+    <div class="prose mb-6">{{ . }}</div>
+  {{ end }}
+
+  <div class="space-y-6">
+    {{ range .Pages }}
+      <article>
+        <a href="{{ .Permalink }}" class="text-lg font-medium">{{ .Title }}</a>
+        <p class="text-sm text-gray-600">{{ .Date.Format "Jan 2, 2006" }}</p>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+

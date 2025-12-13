@@ -1,0 +1,81 @@
+{{/* Compatibility partial for plants section - uses plant-card instead of gallery-card */}}
+{{ $ctx := . }}
+{{ $pages := cond (isset $ctx "Pages") $ctx.Pages .Pages }}
+{{ $cols := cond (isset $ctx "Cols") $ctx.Cols 3 }}
+
+<div class="max-w-7xl mx-auto px-4 md:px-6 py-8">
+  {{ if isset $ctx "Title" }}
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">{{ $ctx.Title }}</h2>
+  {{ end }}
+
+  {{/* Step 1: Build species map and count plants */}}
+  {{ $speciesMap := dict }}
+  {{ $singles := slice }}
+
+  {{ range $pages }}
+    {{ $species := .Params.species | default "" }}
+    {{ if .Params.plants }}
+      {{/* Page has varieties */}}
+      {{ $plantCount := len .Params.plants }}
+      {{ if ge $plantCount 2 }}
+        {{/* 2+ plants = gets its own section */}}
+        {{ $existing := slice }}
+        {{ with index $speciesMap $species }}
+          {{ $existing = . }}
+        {{ end }}
+        {{ $speciesMap = merge $speciesMap (dict $species ($existing | append .)) }}
+      {{ else }}
+        {{/* Only 1 plant = treat as single */}}
+        {{ $singles = $singles | append . }}
+      {{ end }}
+    {{ else }}
+      {{/* No varieties = single plant */}}
+      {{ $singles = $singles | append . }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Step 2: Render grouped sections alphabetically */}}
+  {{ $speciesList := slice }}
+  {{ range $key, $val := $speciesMap }}
+    {{ $speciesList = $speciesList | append $key }}
+  {{ end }}
+  {{ $sortedSpecies := sort $speciesList }}
+  {{ range $species := $sortedSpecies }}
+    {{ $speciesPages := index $speciesMap $species }}
+    <section class="mb-12">
+      <h3 class="text-xl md:text-2xl font-semibold mb-4 capitalize">{{ $species }}</h3>
+      <div class="grid gap-6 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]">
+        {{ range $speciesPages }}
+          {{ $parentPage := . }}
+          {{/* Sort plants by name */}}
+          {{ $sortedPlants := sort .Params.plants "name" }}
+          {{ range $sortedPlants }}
+            {{ partial "plant-card.html" (dict "Page" $parentPage "Plant" . "IsVariety" true) }}
+          {{ end }}
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+
+  {{/* Step 3: Render singles as "Other Hoyas" */}}
+  {{ if gt (len $singles) 0 }}
+    <section class="mb-12">
+      <h3 class="text-xl md:text-2xl font-semibold mb-4">{{ .Site.Params.gallery.otherTitle | default "Other Hoyas" }}</h3>
+      <div class="grid gap-6 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]">
+        {{ range sort $singles "Title" }}
+          {{ if .Params.plants }}
+            {{/* Single variety page */}}
+            {{ $parentPage := . }}
+            {{ range .Params.plants }}
+              {{ partial "plant-card.html" (dict "Page" $parentPage "Plant" . "IsVariety" true) }}
+            {{ end }}
+          {{ else }}
+            {{/* Regular single plant */}}
+            {{ partial "plant-card.html" . }}
+          {{ end }}
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+</div>
+

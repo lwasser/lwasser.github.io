@@ -1,0 +1,17 @@
+name = "clean-hugo"
+license = "MIT"
+licenselink = "https://github.com/lwasser/clean-hugo/blob/main/LICENSE"
+description = "A clean, modern Hugo theme with configurable colors and optional gallery feature"
+tags = ["blog", "gallery", "minimal", "modern", "tailwind"]
+features = ["blog", "gallery", "responsive", "customizable"]
+min_version = "0.118.2"
+
+[author]
+  name = "Leah A. Wasser"
+  homepage = "https://leahwasser.com"
+
+[original]
+  author = "Leah A. Wasser"
+  homepage = "https://leahwasser.com"
+  repo = "https://github.com/lwasser/lwasser.github.io"
+

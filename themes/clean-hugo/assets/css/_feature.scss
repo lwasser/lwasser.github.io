@@ -1,0 +1,25 @@
+@layer components {
+  .feature { @apply max-w-7xl mx-auto px-6 py-16 md:py-20; }
+
+  .feature__header { @apply mb-10 md:mb-12 text-center; }
+  .feature__header h2 { @apply text-4xl sm:text-5xl md:text-6xl font-bold mb-4; }
+  .feature__header p  { @apply text-lg sm:text-xl md:text-2xl opacity-80 max-w-3xl mx-auto; }
+
+  .feature__grid { @apply grid grid-cols-1 gap-8; }
+
+  .feature-card {
+    @apply rounded-2xl border border-gray-300
+           p-5 sm:p-6 md:p-8 lg:p-10 shadow-sm;
+    background-color: var(--color-accent-light);
+  }
+
+  .feature-card h3 { @apply text-xl sm:text-2xl md:text-3xl font-extrabold mt-8 first:mt-0 mb-4; }
+  .feature-card h4 { @apply text-lg sm:text-xl font-semibold mt-8 mb-3; }
+  .feature-card .lead { @apply text-lg md:text-xl mb-6; }
+  .feature-card p { @apply text-base sm:text-lg md:text-xl mb-6; }
+
+  .feature-card ul { @apply list-disc pl-6 space-y-2 text-base sm:text-lg leading-relaxed; }
+  .feature-card ul.links a { @apply underline; color: var(--color-primary-dark); }
+  .feature-card a { @apply underline text-current; }
+}
+

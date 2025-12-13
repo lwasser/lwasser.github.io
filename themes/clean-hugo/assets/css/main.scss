@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+sm: 640px
+md: 768px
+lg: 1024px
+xl: 1280px
+2xl: 1536px
+*/
+
+@layer base {
+  /* CSS Variables for theme colors - can be overridden via params */
+  :root {
+    --color-primary: #71B3B5;        /* Verdigris (teal/cyan) - default */
+    --color-primary-dark: #2E6060;  /* Darker verdigris */
+    --color-primary-light: #D6E3E3; /* Light verdigris background */
+    --color-secondary: #EDB88B;     /* Buff (warm peachy/tan) */
+    --color-accent: #42213D;        /* Dark purple */
+    --color-accent-light: #AC87A0;  /* Mountbatten pink */
+    --color-neutral: #395E66;       /* Dark slate gray */
+    --color-text: #111827;         /* Base text color */
+    --color-bg: #F9FAFB;           /* Background (gray-50) */
+  }
+
+  body {
+    @apply font-sans;
+    color: var(--color-text);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sora;
+    color: inherit;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl font-semibold leading-tight;
+  }
+}
+
+@layer components {
+  /* Import component styles */
+  @import 'filter';
+  @import 'hero';
+  @import 'feature';
+  @import 'cards';
+  @import 'footer';
+  @import 'gallery';
+  @import 'gallery_blog';
+}
+
