@@ -1,11 +1,21 @@
 +++
+title = 'Hoya Polyneura'
 date = 2025-11-09
-draft = false
-title = 'Hoya Polyneura'  # Used for page title & card
 excerpt = "Fast-growing Hoya that tolerates cooler temperatures better than most Hoyas. Native to higher elevation mountainous regions of Burma and India"
-species= "Hoya Polyneura"
-featured_image = "featured.jpg"  # Shows on gallery listing page
-groups = ["silver", "unicorn"]   # Filter tags
+groups = ["silver", "unicorn"]
+tags = []
+
+[ hero ]
+image = "hoya-polyneura-leaf.jpg"
+subtitle = "A fast-growing Hoya collection with beautiful variegated varieties."
+
+# Optional--explicit list of images
+[image_roles]
+flower = "flower.jpg"
+habit = "habit.jpg"
+images = []
+
+# Individual plants in this collection
 
 # Individual plants in this collection
 [[plants]]

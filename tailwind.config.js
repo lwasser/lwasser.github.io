@@ -5,6 +5,8 @@ module.exports = {
     './layouts/**/*.htm',
     './content/**/*.{md,html}',
     './assets/**/*.{js,ts,css,scss}',
+    './themes/clean-hugo/layouts/**/*.html',
+    './themes/clean-hugo/assets/**/*.{js,ts,css,scss}',
   ],
   theme: {
     extend: {

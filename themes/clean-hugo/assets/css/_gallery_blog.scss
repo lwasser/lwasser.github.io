@@ -1,0 +1,181 @@
+// Styles for the blog gallery listing landing page
+.blog-listing {
+  @apply max-w-7xl mx-auto px-6 py-16;
+
+  .container { @apply w-full; }
+
+  h2 { @apply text-3xl font-bold mb-8; }
+
+  .blog-grid {
+    @apply grid gap-8 md:grid-cols-2 lg:grid-cols-3;
+  }
+
+  article {
+    @apply relative rounded-lg overflow-hidden
+           flex flex-col
+           shadow-lg hover:shadow-2xl
+           transition-all duration-300 ease-out;
+    background-color: var(--color-white);
+
+    &:hover {
+      @apply -translate-y-1;
+    }
+
+    .card-media {
+      @apply w-full overflow-hidden;
+
+      img {
+        @apply w-full h-40 object-cover
+               transition-transform duration-500 ease-out;
+      }
+    }
+
+    &:hover .card-media img {
+      @apply scale-110;
+    }
+
+    .card-body {
+      @apply p-4 flex flex-col grow;
+    }
+
+    h3 {
+      @apply mt-0 text-lg font-semibold leading-tight;
+
+      a {
+        @apply no-underline;
+        color: var(--color-gray-900);
+      }
+    }
+
+    time {
+      @apply block mt-2 text-xs;
+      color: var(--color-gray-500);
+    }
+
+    .excerpt {
+      @apply mt-2 text-sm leading-relaxed;
+      color: var(--color-gray-600);
+    }
+
+    .stretched-link::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+    }
+  }
+
+  // Pagination styling
+  .pagination {
+    @apply mt-12 flex justify-center gap-2;
+  }
+}
+
+
+// This is styling for the blog list cards on the home page
+// these cards are more compact and discrete compared to the blog listing page.
+.blog-highlight {
+  @apply py-24 sm:py-32;
+  background-color: var(--color-primary-dark);
+
+  .container {
+    @apply mx-auto max-w-7xl px-6 lg:px-8;
+  }
+
+  .intro {
+    @apply mx-auto max-w-2xl lg:mx-0;
+
+    h2 {
+      @apply text-4xl font-semibold tracking-tight text-white sm:text-5xl;
+    }
+  }
+
+  .highlight-grid {
+    @apply mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16
+           border-t pt-10
+           sm:mt-16 sm:pt-16
+           lg:mx-0 lg:max-w-none lg:grid-cols-3;
+    border-color: var(--color-gray-700);
+  }
+
+  article {
+    @apply flex max-w-xl flex-col
+           p-6 rounded-lg
+           transition-all duration-300 ease-out;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--color-gray-800) 30%, transparent);
+    }
+
+    .meta {
+      @apply flex items-center gap-x-4 text-xs;
+
+      time {
+        color: var(--color-gray-400);
+      }
+
+      .category {
+        @apply inline-block rounded-full
+               px-3 py-1.5 font-medium
+               transition-colors duration-200;
+        color: var(--color-primary);
+        background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+        border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+
+        &:hover {
+          background-color: color-mix(in srgb, var(--color-primary) 20%, transparent);
+          border-color: color-mix(in srgb, var(--color-primary) 30%, transparent);
+        }
+      }
+    }
+
+    .content {
+      @apply relative grow flex flex-col;
+    }
+
+    h3 {
+      @apply mt-3 text-lg font-semibold leading-6 text-white
+             transition-colors duration-200;
+
+      a {
+        @apply text-white no-underline;
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+        }
+      }
+    }
+
+    &:hover h3 {
+      color: var(--color-gray-300);
+    }
+
+    .excerpt {
+      @apply mt-5 line-clamp-3 text-sm leading-6;
+      color: var(--color-gray-400);
+    }
+
+    .read-more {
+      @apply mt-4 inline-flex items-center gap-2
+             text-sm font-medium
+             transition-all duration-200
+             relative z-10;
+      color: var(--color-primary);
+
+      i {
+        @apply text-xs transition-transform duration-200;
+      }
+
+      &:hover {
+        color: color-mix(in srgb, var(--color-primary) 80%, white);
+
+        i {
+          @apply translate-x-1;
+        }
+      }
+    }
+  }
+}
+

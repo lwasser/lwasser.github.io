@@ -1,0 +1,33 @@
+@layer components {
+  .filter-row {
+    @apply flex flex-wrap gap-3 mb-8 justify-center;
+  }
+
+  .filter-btn {
+    @apply px-4 py-2 rounded-full
+           text-sm font-medium
+           border
+           transition-all duration-200
+           cursor-pointer;
+    background-color: var(--color-white);
+    border-color: var(--color-gray-300);
+    color: var(--color-gray-700);
+
+    &[aria-pressed="true"] {
+      @apply text-white;
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+
+    &[aria-pressed="false"]:hover {
+      background-color: var(--color-gray-50);
+      border-color: var(--color-gray-400);
+    }
+
+    &:focus {
+      @apply outline-none ring-2 ring-offset-2;
+      --tw-ring-color: var(--color-primary);
+    }
+  }
+}
+

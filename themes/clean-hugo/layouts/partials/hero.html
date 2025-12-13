@@ -1,0 +1,29 @@
+{{ $hero := .Params.hero | default dict }}
+{{ $title := .Title }}
+{{ $subtitle := $hero.subtitle }}
+{{ $excerpt := $hero.excerpt }}
+{{ $img := $hero.image | default "" }}
+{{ $alt := $hero.alt | default .Title | default (printf "Image for %s" .Title) }}
+{{ $isGallery := or (eq .Section "gallery") (eq .Section "plants") }}
+
+
+<section class="hero">
+  <div class="hero__container">
+    <div class="hero__grid">
+      <div class="hero__content">This should render on the homage pageTE
+        <!-- <h1 class="hero__title">{{ $title }}</h1> -->
+        {{ with $subtitle }}<p class="hero__subtitle">{{ . }}</p>{{ end }}
+      </div>
+
+    <!-- Right side circle with photo//only render if image is there -->
+    {{- with $img -}}
+      <div class="hero__image-wrapper">
+        <div class="hero__image-container {{ if $isGallery }}hero__image-container__square{{ end }}">
+          <img src="{{ . }}" alt="{{ $alt }}" class="hero__image">
+        </div>
+      </div>
+    {{- end -}}
+    </div>
+  </div>
+</section>
+

@@ -20,7 +20,7 @@
     <!-- Right side circle with photo//only render if image is there -->
     {{ with $img }}
       <div class="hero__image-wrapper">
-+       <div class="hero__image-container {{ if $isPlant }}hero__image-container__square{{ end }}">
+       <div class="hero__image-container {{ if $isPlant }}hero__image-container__square{{ end }}">
           <img src="{{ . }}" alt="{{ $alt }}" class="hero__image">
         </div>
       </div>
