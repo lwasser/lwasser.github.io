@@ -6,6 +6,7 @@ groups = []
 tags = []
 
 [ hero ]
+title = 'Hoya Caudata Silver'
 image = "caudata-silver-leaf-feature.jpg"
 subtitle = "A beautifully elegant Hoya with crinkly, silver-edged leaves."
 
