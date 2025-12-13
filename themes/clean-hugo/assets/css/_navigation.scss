@@ -20,7 +20,7 @@
   .site-nav__link {
     @apply transition-colors duration-200;
     color: var(--color-text);
-    
+
     &:hover {
       color: var(--color-primary);
     }
