@@ -110,12 +110,15 @@
 
       .category {
         @apply inline-block rounded-full
-               bg-teal-500/10 border border-teal-500/20
-               px-3 py-1.5 font-medium text-teal-400
+               px-3 py-1.5 font-medium
                transition-colors duration-200;
+        color: var(--color-primary);
+        background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+        border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
 
         &:hover {
-          @apply bg-teal-500/20 border-teal-500/30;
+          background-color: color-mix(in srgb, var(--color-primary) 20%, transparent);
+          border-color: color-mix(in srgb, var(--color-primary) 30%, transparent);
         }
       }
     }
@@ -149,16 +152,17 @@
 
     .read-more {
       @apply mt-4 inline-flex items-center gap-2
-             text-sm font-medium text-teal-400
+             text-sm font-medium
              transition-all duration-200
              relative z-10;
+      color: var(--color-primary);
 
       i {
         @apply text-xs transition-transform duration-200;
       }
 
       &:hover {
-        @apply text-teal-300;
+        color: color-mix(in srgb, var(--color-primary) 80%, white);
 
         i {
           @apply translate-x-1;
