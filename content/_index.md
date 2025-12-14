@@ -66,7 +66,7 @@ cards:
 {{< card title="Recognition & Awards" icon="fa-solid fa-trophy" >}}
 
 - **Python Software Foundation Fellow (2025)**
-- Panel: [PyLadiesCon 2024](https://2025.conference.pyladies.com/es/sessions/) – "From Contributor to Founder"
+- Panel: [PyLadiesCon 2024](https://2025.conference.pyladies.com/en/session/from-contributor-to-founder-turning-python-projects-into-products/) – "From Contributor to Founder"
 - Podcast: [Pybites #204 – The Science of Open Science](https://www.pybitespodcast.com/1501156/episodes/17969765-204-the-science-of-open-science-with-leah-wasser-founder-of-pyopensci)
 - Recent talks: [SciPy 2024](https://youtu.be/uCLlshkTBM0) | [PyCon US 2024](https://youtu.be/oA6-f7PtTQ4) | [CURIOSS](link)
 
