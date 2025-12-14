@@ -15,7 +15,7 @@ xl: 1280px
     Self-hosted font declarations using variable fonts
     Font files are in themes/clean-hugo/static/fonts/
   */
-  
+
   /* Inter Variable font (body text) - regular/roman style */
   @font-face {
     font-family: 'Inter';
@@ -115,7 +115,6 @@ xl: 1280px
   @import 'learn-more';
   @import 'filter';
   @import 'hero';
-  // @import 'feature'; // REMOVED - merged into feature-section
   @import 'cards';
   @import 'feature-section';
   @import 'intro-section';

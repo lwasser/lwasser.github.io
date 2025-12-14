@@ -124,7 +124,11 @@
   .site-nav__dropdown-menu {
     @apply hidden md:absolute md:top-full md:left-0 md:mt-2;
     @apply md:bg-white md:border md:rounded-lg md:shadow-lg;
-    @apply md:min-w-[200px] md:py-2 md:z-50;
+    @apply md:py-2 md:z-50;
+    /* min-width: 200px - ensures dropdown menu has adequate width */
+    @media (min-width: 768px) {
+      min-width: 200px;
+    }
     @apply list-none p-0 m-0;
     border-color: var(--color-gray-200);
 

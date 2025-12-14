@@ -21,7 +21,9 @@
   }
 
   .site-footer a {
-    @apply text-white transition-colors duration-300 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-white rounded;
+    @apply text-white hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-white rounded;
+    /* 300ms for subtle footer link hover effect */
+    transition: color 300ms ease;
   }
 
   .site-footer__icon {
