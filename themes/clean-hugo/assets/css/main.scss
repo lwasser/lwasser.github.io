@@ -58,6 +58,21 @@ xl: 1280px
   }
 }
 
+@layer utilities {
+  /* Reusable background color utilities - short, generalized class names */
+  .bg-card {
+    background-color: var(--color-feature-card);
+  }
+
+  .bg-primary {
+    background-color: var(--color-primary-light);
+  }
+
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+}
+
 @layer components {
   /* Import component styles */
   @import 'navigation';
@@ -66,7 +81,7 @@ xl: 1280px
   @import 'learn-more';
   @import 'filter';
   @import 'hero';
-  @import 'feature';
+  // @import 'feature'; // REMOVED - merged into feature-section
   @import 'cards';
   @import 'feature-section';
   @import 'intro-section';
