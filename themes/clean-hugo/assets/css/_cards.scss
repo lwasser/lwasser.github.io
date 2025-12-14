@@ -1,25 +1,16 @@
 @layer components {
-  /* Highlight section (formerly impact) */
+  /* Highlight section */
   .highlight { @apply max-w-7xl mx-auto px-6 py-20; }
   .highlight__grid { @apply grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-8; }
   .highlight__item { @apply contents; } /* wrapper is neutral; card handles its own layout */
 
-  /* Impact section (same as highlight, kept for compatibility) */
-  .impact { @apply max-w-7xl mx-auto px-6 pt-10 pb-4; }
-  .impact__grid {
-    @apply grid grid-cols-1 md:grid-cols-2 gap-8;
-    /* Use explicit row template to ensure equal heights per row */
-    grid-template-rows: repeat(3, 1fr);
-  }
-  .impact__item {
-    @apply contents;
-    /* Ensure items stretch to fill row */
-    align-self: stretch;
-  }
-
   .card--text  {
-    @apply rounded-2xl p-10 md:p-12 h-full md:min-h-[260px];
+    @apply rounded-2xl p-10 md:p-12 h-full;
     background-color: var(--color-white);
+    /* min-height: 260px on medium+ screens - arbitrary value for design consistency */
+    @media (min-width: 768px) {
+      min-height: 260px;
+    }
   }
   .card__inner { @apply flex items-center justify-center text-center h-full;
     h2 {
@@ -30,7 +21,8 @@
   .card__body  {
     @apply text-lg md:text-xl lg:text-2xl;
     color: var(--color-gray-700);
-    transition: color .2s ease;
+    /* Standard transition: 200ms for color changes */
+    transition: color 200ms ease;
   }
 
   .card-hover {
@@ -78,11 +70,16 @@
   }
 
   .card__icon { @apply text-4xl md:text-5xl mb-4; }
-  .card__title { @apply text-xl md:text-2xl lg:text-3xl font-extrabold mb-4; transition: color .2s ease; }
+  .card__title { 
+    @apply text-xl md:text-2xl lg:text-3xl font-extrabold mb-4; 
+    /* Standard transition: 200ms for color changes */
+    transition: color 200ms ease; 
+  }
   .card__body {
     @apply text-base md:text-lg lg:text-xl prose prose-sm;
     color: var(--color-gray-700);
-    transition: color .2s ease;
+    /* Standard transition: 200ms for color changes */
+    transition: color 200ms ease;
   }
   .card__cta-wrapper {
     @apply mt-6;
@@ -91,7 +88,8 @@
   .card__cta   {
     @apply mt-4 text-sm md:text-base;
     color: var(--color-link);
-    transition: color .2s ease;
+    /* Standard transition: 200ms for color changes */
+    transition: color 200ms ease;
 
     &:hover,
     &:focus {
