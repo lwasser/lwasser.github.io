@@ -6,20 +6,7 @@
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}">
 
-  {{/* Preconnect for Google Fonts */}}
-  {{ $fonts := .Site.Params.theme.fonts | default dict }}
-  {{ if or $fonts.heading $fonts.body }}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    {{ $fontFamily := "" }}
-    {{ if $fonts.heading }}{{ $fontFamily = printf "family=%s" $fonts.heading }}{{ end }}
-    {{ if $fonts.body }}
-      {{ if $fontFamily }}{{ $fontFamily = printf "%s&family=%s" $fontFamily $fonts.body }}{{ else }}{{ $fontFamily = printf "family=%s" $fonts.body }}{{ end }}
-    {{ end }}
-    {{ if $fontFamily }}
-      <link href="https://fonts.googleapis.com/css2?{{ $fontFamily }}:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    {{ end }}
-  {{ end }}
+  {{/* Self-hosted fonts via @font-face (defined in main.scss) */}}
 
   {{/* Font Awesome (CDN) */}}
   {{ if .Site.Params.theme.enableFontAwesome | default true }}

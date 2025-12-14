@@ -12,6 +12,41 @@ xl: 1280px
 
 @layer base {
   /*
+    Self-hosted font declarations using variable fonts
+    Font files are in themes/clean-hugo/static/fonts/
+  */
+  
+  /* Inter Variable font (body text) - regular/roman style */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('/fonts/inter-variable.woff2') format('woff2 supports variations'),
+         url('/fonts/inter-variable.woff2') format('woff2-variations');
+  }
+
+  /* Inter Variable font (body text) - italic style */
+  @font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('/fonts/inter-italic-variable.woff2') format('woff2 supports variations'),
+         url('/fonts/inter-italic-variable.woff2') format('woff2-variations');
+  }
+
+  /* Sora Variable font (headings) */
+  @font-face {
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 100 800;
+    font-display: swap;
+    src: url('/fonts/sora-variable.woff2') format('woff2 supports variations'),
+         url('/fonts/sora-variable.woff2') format('woff2-variations');
+  }
+
+  /*
     CSS Variables for theme colors - DEFAULT VALUES
     These defaults are overridden by user-defined colors in hugo.toml
     (injected via inline <style> block in baseof.html)
