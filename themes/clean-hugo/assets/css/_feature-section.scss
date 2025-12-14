@@ -40,7 +40,7 @@
 
   .feature-card ul {
     @apply list-disc pl-6 space-y-2 text-base sm:text-lg leading-relaxed;
-    @apply pr-4; /* Add right padding on mobile to prevent text from being too narrow */
+    @apply pr-4; /* fix for narrow screens */
   }
   .feature-card ul.links a {
     @apply underline;
