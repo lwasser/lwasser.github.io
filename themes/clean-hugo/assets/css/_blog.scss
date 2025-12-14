@@ -34,7 +34,7 @@
 
   .blog-post__excerpt {
     @apply max-w-4xl mx-auto px-8 mb-8;
-    
+
     p {
       @apply text-xl leading-relaxed;
       color: var(--color-gray-700);
@@ -43,16 +43,32 @@
 
   .blog-post__content {
     @apply prose lg:prose-xl mx-auto px-8;
+
+    /* Override prose link colors for accessibility */
+    a {
+      color: var(--color-link);
+
+      &:hover,
+      &:focus {
+        color: var(--color-link-hover);
+      }
+    }
+  }
+
+  /* Blog post notice/alert boxes - uses reusable background utilities */
+  .blog-post__notice {
+    @apply rounded-lg border p-4 md:p-6 my-6;
+    border-color: var(--color-gray-300);
   }
 
   .blog-post__tags {
     @apply max-w-4xl mx-auto px-8 mt-12 text-sm;
     color: var(--color-gray-600);
-    
+
     a {
       @apply transition-colors duration-200;
       color: inherit;
-      
+
       &:hover {
         color: var(--color-gray-900);
       }

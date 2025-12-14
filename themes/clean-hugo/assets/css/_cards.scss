@@ -6,28 +6,28 @@
 
   /* Impact section (same as highlight, kept for compatibility) */
   .impact { @apply max-w-7xl mx-auto px-6 pt-[40px] pb-[15px]; }
-  .impact__grid { 
+  .impact__grid {
     @apply grid grid-cols-1 md:grid-cols-2 gap-8;
     /* Use explicit row template to ensure equal heights per row */
     grid-template-rows: repeat(3, 1fr);
   }
-  .impact__item { 
+  .impact__item {
     @apply contents;
     /* Ensure items stretch to fill row */
     align-self: stretch;
   }
 
-  .card--text  { 
+  .card--text  {
     @apply rounded-2xl p-10 md:p-12 h-full md:min-h-[260px];
     background-color: var(--color-white);
   }
   .card__inner { @apply flex items-center justify-center text-center h-full;
-    h2 { 
+    h2 {
       @apply text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight max-w-lg;
       color: var(--color-gray-900);
     }
     }
-  .card__body  { 
+  .card__body  {
     @apply text-lg md:text-xl lg:text-2xl;
     color: var(--color-gray-700);
     transition: color .2s ease;
@@ -63,9 +63,15 @@
          transition-transform duration-200 ease-in-out;
     background-color: var(--color-white);
     border-color: var(--color-gray-200);
+
+    /* Hover effect */
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(17,24,39,0.08);
+    }
   }
 
-  /* Highlight card (formerly peach card) */
+  /* Highlight card (formerly peach card) - can also use bg-primary utility */
   .card--highlight {
     background-color: var(--color-primary-light);
     @apply transition-colors duration-200 ease-in-out;
@@ -82,6 +88,15 @@
     @apply mt-6;
   }
 
-  .card__cta   { @apply mt-4 text-sm md:text-base; color: var(--color-link); transition: color .2s ease; }
+  .card__cta   {
+    @apply mt-4 text-sm md:text-base;
+    color: var(--color-link);
+    transition: color .2s ease;
+
+    &:hover,
+    &:focus {
+      color: var(--color-link-hover);
+    }
+  }
 }
 

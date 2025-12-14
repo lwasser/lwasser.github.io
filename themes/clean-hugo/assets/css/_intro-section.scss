@@ -10,17 +10,27 @@
   .intro-section__content {
     @apply prose prose-lg md:prose-xl;
     @apply text-center;
-    
+
     /* Override prose defaults for centered, larger text */
     p {
       @apply text-xl md:text-2xl leading-relaxed;
       color: var(--color-gray-700);
       font-weight: 400;
     }
-    
+
     strong {
       color: var(--color-text);
       font-weight: 600;
+    }
+
+    /* Override prose link colors for accessibility */
+    a {
+      color: var(--color-link);
+
+      &:hover,
+      &:focus {
+        color: var(--color-link-hover);
+      }
     }
   }
 }

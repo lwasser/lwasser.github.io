@@ -42,7 +42,9 @@ params.licenseURL = "/license"
     accentLight = "#AC87A0"    # Mountbatten pink
     neutral = "#395E66"        # Dark slate gray
     blogHighlight = "#111827"  # Blog highlight section background (RGB: 17, 24, 39)
-    link = "#2DD4BF"           # Link color (RGB: 45, 212, 191)
+    link = "#2E6060"           # Link color on light backgrounds - using primaryDark for WCAG AA accessibility
+    linkOnDark = "#2DD4BF"     # Link color on dark backgrounds (RGB: 45, 212, 191) - lighter variant
+    linkHover = "#1F4345"      # Link hover color - darker variant for better contrast
     footerBg = "#115E59"      # Footer background (RGB: 17, 94, 89)
     featureCard = "#EBC1D3"    # Feature section card background (RGB: 235, 193, 211)
 
