@@ -1,7 +1,7 @@
 @layer components {
   /* Site navigation */
   .site-nav {
-    @apply border-b;
+    @apply border-b relative;
     background-color: var(--color-white);
   }
 
@@ -11,15 +11,79 @@
 
   .site-nav__brand {
     @apply text-2xl font-bold;
+    color: var(--color-text);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: var(--color-link);
+      @apply outline-none ring-2 ring-offset-2;
+      --tw-ring-color: var(--color-link);
+    }
   }
 
+  /* Hamburger menu toggle button */
+  .site-nav__toggle {
+    @apply md:hidden flex flex-col justify-center items-center w-10 h-10;
+    @apply border border-gray-300 rounded;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--color-gray-50);
+    }
+
+    &:focus {
+      @apply outline-none ring-2 ring-offset-2;
+      --tw-ring-color: var(--color-link);
+    }
+
+    &[aria-expanded="true"] {
+      .site-nav__toggle-icon {
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg) translate(7px, -6px);
+        }
+      }
+    }
+  }
+
+  .site-nav__toggle-icon {
+    @apply block w-5 h-0.5 mb-1 transition-all duration-200;
+    background-color: var(--color-text);
+
+    &:last-child {
+      @apply mb-0;
+    }
+  }
+
+  /* Navigation menu */
   .site-nav__menu {
-    @apply space-x-6;
+    @apply hidden md:flex md:items-center md:space-x-6;
+    @apply absolute md:relative top-full left-0 right-0 md:top-auto;
+    @apply flex-col md:flex-row bg-white md:bg-transparent;
+    @apply border-t md:border-t-0 shadow-lg md:shadow-none;
+    @apply py-4 md:py-0;
+
+    &[aria-expanded="true"],
+    &.site-nav__menu--open {
+      @apply flex;
+    }
   }
 
   .site-nav__link {
     @apply px-4 py-2 text-lg font-medium transition-colors duration-200;
+    @apply block md:inline-block;
     color: var(--color-text);
+    text-decoration: none;
 
     &:hover {
       color: var(--color-link);
@@ -29,6 +93,59 @@
       color: var(--color-link);
       @apply outline-none ring-2 ring-offset-2;
       --tw-ring-color: var(--color-link);
+    }
+  }
+
+  /* Dropdown menu */
+  .site-nav__dropdown {
+    @apply relative;
+  }
+
+  .site-nav__link--dropdown {
+    @apply flex items-center gap-2;
+
+    i {
+      @apply text-xs transition-transform duration-200;
+    }
+  }
+
+  .site-nav__dropdown:hover,
+  .site-nav__dropdown:focus-within {
+    .site-nav__link--dropdown i {
+      transform: rotate(180deg);
+    }
+
+    .site-nav__dropdown-menu {
+      @apply block;
+    }
+  }
+
+  .site-nav__dropdown-menu {
+    @apply hidden md:absolute md:top-full md:left-0 md:mt-2;
+    @apply md:bg-white md:border md:rounded-lg md:shadow-lg;
+    @apply md:min-w-[200px] md:py-2 md:z-50;
+    @apply list-none p-0 m-0;
+    border-color: var(--color-gray-200);
+
+    /* On mobile, show as normal list items with indentation */
+    @apply pl-8 pt-2 space-y-2 md:pl-6;
+
+    &.site-nav__dropdown-menu--open {
+      @apply block;
+    }
+  }
+
+  .site-nav__dropdown-link {
+    @apply px-4 py-2 text-base font-medium transition-colors duration-200;
+    @apply block;
+    color: var(--color-text);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: var(--color-link);
+      background-color: var(--color-gray-50);
+      @apply outline-none;
     }
   }
 }

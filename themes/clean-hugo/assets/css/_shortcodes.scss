@@ -86,6 +86,8 @@
 
     ul {
       @apply space-y-2;
+      /* Reduce left padding on mobile to align bullets with text */
+      @apply pl-4 md:pl-6;
     }
 
     li {
@@ -151,6 +153,8 @@
 
     ul {
       @apply space-y-3;
+      /* Reduce left padding on mobile to align bullets with text */
+      @apply pl-4 md:pl-6;
     }
 
     li {
