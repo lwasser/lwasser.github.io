@@ -1,6 +1,6 @@
 @layer components {
   .intro-section {
-    @apply bg-transparent pt-[27px] pb-[27px] md:pt-9 md:pb-9 lg:pt-[45px] lg:pb-[45px];
+    @apply bg-transparent pt-7 pb-7 md:pt-9 md:pb-9 lg:pt-12 lg:pb-12;
   }
 
   .intro-section__container {

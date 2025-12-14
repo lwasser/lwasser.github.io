@@ -1,3 +1,4 @@
+@layer components {
 /* Hero section components */
 
 .hero {
@@ -5,7 +6,7 @@
   background-color: var(--color-primary-dark);
 
   &__container {
-    @apply max-w-7xl mx-auto px-4 w-full pt-[14px] pb-[14px] md:pt-[33.6px] md:pb-[33.6px];
+    @apply max-w-7xl mx-auto px-4 w-full pt-3.5 pb-3.5 md:pt-8 md:pb-8;
   }
 
   &__grid {
@@ -46,5 +47,6 @@
 .hero__image-container__square {
     @apply w-[260px] md:w-[340px] lg:w-[400px] rounded-lg overflow-hidden border-4 shadow-2xl mx-0 sm:mx-4 md:mx-8;
     border-color: var(--color-white);
+}
 }
 
