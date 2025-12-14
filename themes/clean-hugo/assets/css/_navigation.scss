@@ -24,6 +24,12 @@
     &:hover {
       color: var(--color-link);
     }
+
+    &:focus {
+      color: var(--color-link);
+      @apply outline-none ring-2 ring-offset-2;
+      --tw-ring-color: var(--color-link);
+    }
   }
 }
 

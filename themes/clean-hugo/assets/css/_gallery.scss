@@ -31,18 +31,28 @@
   /* Header */
   .gallery-header { @apply mb-8; }
   .gallery-header h2 { @apply text-3xl font-bold mb-2; }
-  .gallery-header .common-name { 
+  .gallery-header .common-name {
     @apply text-lg mb-4;
     color: var(--color-gray-600);
   }
 
   /* Markdown body */
-  .gallery-description { 
+  .gallery-description {
     @apply prose max-w-none;
-    
+
     /* Hide h1 in gallery description - title should only be in hero */
     h1 {
       @apply hidden;
+    }
+
+    /* Override prose link colors for accessibility */
+    a {
+      color: var(--color-link);
+
+      &:hover,
+      &:focus {
+        color: var(--color-link-hover);
+      }
     }
   }
 

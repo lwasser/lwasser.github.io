@@ -88,6 +88,15 @@
     @apply mt-6;
   }
 
-  .card__cta   { @apply mt-4 text-sm md:text-base; color: var(--color-link); transition: color .2s ease; }
+  .card__cta   {
+    @apply mt-4 text-sm md:text-base;
+    color: var(--color-link);
+    transition: color .2s ease;
+
+    &:hover,
+    &:focus {
+      color: var(--color-link-hover);
+    }
+  }
 }
 

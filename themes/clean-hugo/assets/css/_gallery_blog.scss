@@ -118,13 +118,14 @@
         @apply inline-block rounded-full
                px-3 py-1.5 font-medium
                transition-colors duration-200;
-        color: var(--color-link);
-        background-color: color-mix(in srgb, var(--color-link) 10%, transparent);
-        border: 1px solid color-mix(in srgb, var(--color-link) 20%, transparent);
+        color: var(--color-link-on-dark);  /* Use lighter link color for dark background */
+        background-color: color-mix(in srgb, var(--color-link-on-dark) 10%, transparent);
+        border: 1px solid color-mix(in srgb, var(--color-link-on-dark) 20%, transparent);
 
-        &:hover {
-          background-color: color-mix(in srgb, var(--color-link) 20%, transparent);
-          border-color: color-mix(in srgb, var(--color-link) 30%, transparent);
+        &:hover,
+        &:focus {
+          background-color: color-mix(in srgb, var(--color-link-on-dark) 20%, transparent);
+          border-color: color-mix(in srgb, var(--color-link-on-dark) 30%, transparent);
         }
       }
     }
@@ -157,19 +158,20 @@
       color: var(--color-gray-400);
     }
 
-    .read-more {
+      .read-more {
       @apply mt-4 inline-flex items-center gap-2
              text-sm font-medium
              transition-all duration-200
              relative z-10;
-      color: var(--color-link);
+      color: var(--color-link-on-dark);  /* Use lighter link color for dark background */
 
       i {
         @apply text-xs transition-transform duration-200;
       }
 
-      &:hover {
-        color: color-mix(in srgb, var(--color-link) 80%, white);
+      &:hover,
+      &:focus {
+        color: var(--color-link);  /* Darker on hover for better contrast */
 
         i {
           @apply translate-x-1;

@@ -43,6 +43,16 @@
 
   .blog-post__content {
     @apply prose lg:prose-xl mx-auto px-8;
+
+    /* Override prose link colors for accessibility */
+    a {
+      color: var(--color-link);
+
+      &:hover,
+      &:focus {
+        color: var(--color-link-hover);
+      }
+    }
   }
 
   /* Blog post notice/alert boxes - uses reusable background utilities */

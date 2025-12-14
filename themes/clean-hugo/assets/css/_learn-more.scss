@@ -11,7 +11,7 @@
   .learn-more__title {
     @apply text-2xl font-bold m-0;
     color: var(--color-gray-900);
-    
+
     i {
       color: var(--color-gray-900);
     }
@@ -25,8 +25,9 @@
     a {
       @apply flex items-center gap-4 no-underline transition-colors duration-200;
       color: var(--color-gray-900);
-      
-      &:hover {
+
+      &:hover,
+      &:focus {
         color: var(--color-link);
       }
     }
@@ -34,7 +35,7 @@
 
   .learn-more__item-text {
     @apply text-lg font-semibold;
-    
+
     i {
       @apply mr-2;
     }

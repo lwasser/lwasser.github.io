@@ -4,7 +4,7 @@
   article h2 {
     @apply text-center;
   }
-  
+
 
 
   /* General content/article styles */
@@ -26,6 +26,16 @@
 
   .content-body {
     @apply prose lg:prose-xl;
+
+    /* Override prose link colors for accessibility */
+    a {
+      color: var(--color-link);
+
+      &:hover,
+      &:focus {
+        color: var(--color-link-hover);
+      }
+    }
   }
 
   /* Section styles for list pages */
@@ -50,7 +60,8 @@
       @apply text-lg font-medium transition-colors duration-200;
       color: var(--color-text);
 
-      &:hover {
+      &:hover,
+      &:focus {
         @apply underline;
         color: var(--color-link);
       }
@@ -72,7 +83,8 @@
       @apply text-lg transition-colors duration-200;
       color: var(--color-gray-800);
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: var(--color-link);
       }
     }

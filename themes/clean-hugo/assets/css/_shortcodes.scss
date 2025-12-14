@@ -97,8 +97,9 @@
       @apply underline;
       transition: color .2s ease;
 
-      &:hover {
-        color: var(--color-primary-dark);
+      &:hover,
+      &:focus {
+        color: var(--color-link-hover);
       }
     }
 
@@ -161,8 +162,9 @@
       @apply underline font-medium;
       transition: color .2s ease;
 
-      &:hover {
-        color: var(--color-primary-dark);
+      &:hover,
+      &:focus {
+        color: var(--color-link-hover);
       }
     }
 

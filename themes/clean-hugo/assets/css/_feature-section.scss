@@ -39,7 +39,22 @@
   .feature-card p { @apply text-base sm:text-lg md:text-xl mb-6; }
 
   .feature-card ul { @apply list-disc pl-6 space-y-2 text-base sm:text-lg leading-relaxed; }
-  .feature-card ul.links a { @apply underline; color: var(--color-primary-dark); }
-  .feature-card a { @apply underline text-current; }
+  .feature-card ul.links a {
+    @apply underline;
+    color: var(--color-link);
+
+    &:hover,
+    &:focus {
+      color: var(--color-link-hover);
+    }
+  }
+  .feature-card a {
+    @apply underline text-current;
+
+    &:hover,
+    &:focus {
+      color: var(--color-link);
+    }
+  }
 }
 

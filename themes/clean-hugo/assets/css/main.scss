@@ -37,7 +37,9 @@ xl: 1280px
     --color-gray-800: #1F2937;     /* Gray-800 */
     --color-gray-900: #111827;     /* Gray-900 */
     --color-blog-highlight: #111827; /* Blog highlight section background (RGB: 17, 24, 39) */
-    --color-link: #2DD4BF;         /* Link color (RGB: 45, 212, 191) */
+    --color-link: #2E6060;         /* Link color on light backgrounds - using primaryDark for accessibility (WCAG AA compliant) */
+    --color-link-on-dark: #2DD4BF; /* Link color on dark backgrounds (RGB: 45, 212, 191) - lighter variant for dark bg */
+    --color-link-hover: #1F4345;   /* Link hover color - darker variant of primaryDark */
     --color-footer-bg: #115E59;    /* Footer background (RGB: 17, 94, 89) */
     --color-feature-card: #EBC1D3;   /* Feature section card background (RGB: 235, 193, 211) */
   }
