@@ -8,37 +8,6 @@ hero:
   subtitle: "Executive Director & Founder of pyOpenSci"
   excerpt: "I build inclusive global programs that harness the power of community to break down barriers in open science—so scientists can spend less time struggling and more time solving the world's greatest problems."
   image: "/images/leah-headshot.png"
-feature_section:
-  title: "What I've Built"
-  subtitle: "Thousands of researchers trained • Hundreds of open lessons built • Hundreds of package maintainers supported"
-  sections:
-    - title: "Program Design, Creation & Leadership"
-      lead: "15+ years building national & global open science programs across research, education, community infrastructure."
-      items:
-        - bold: "pyOpenSci:"
-          text: " Founder & Executive Director"
-        - bold: "Earth Data Analytics Professional Program (CU Boulder)"
-          text: ""
-        - bold: "NEON Data Skills Program:"
-          text: " Helping ecologists use large time‑series data."
-        - bold: "Earth Data Science Corps:"
-          text: " Expands data science teaching capacity at tribal colleges."
-      subsections:
-        - title: "Accessible Education & Content"
-          content: "20+ years creating inclusive open education resources."
-    - title: "Education & Awards"
-      items:
-        - text: "Fellow: Python Software Foundation (2025)"
-        - text: "PhD Ecology – Penn State"
-        - text: "Creator: 300+ open science lessons & workshops"
-    - title: "Recent Talks"
-      items:
-        - text: "SciPy 2024"
-          url: "https://youtu.be/uCLlshkTBM0?si=MxSe5i_lxIEI46-W"
-        - text: "PyCon US 2024"
-          url: "https://youtu.be/oA6-f7PtTQ4?si=p5qLkhiAlNyRLk6Y"
-        - text: "About pyOpenSci: CURIOSS"
-          url: "#"
 cards:
   - grid: "md:row-start-1 md:col-start-1"
     modifier: "card--white"
@@ -49,11 +18,10 @@ cards:
     icon: "fa-solid fa-sun"
     title: "pyOpenSci"
     excerpt: |
-      **Founder and Executive Director** of an inclusive non profit organization. Together, our community that supports scientists in building, discovering and maintaining better scientific software. Together, we make open source accessible to everyone, everywhere.
+      **Founder and Executive Director** of an inclusive non profit organization. Together, our community that supports scientists in building, discovering and maintaining better scientific software. Together, we make open source accessible to everyone, everywhere. [Learn More](https://www.pyopensci.org)
 
       * 350+ contributors & maintainers 
       * 50+ packages supported
-    url: "https://www.pyopensci.org"
   - grid: "md:row-start-3 md:col-start-2"   # bottom-right
     icon: "fa-solid fa-seedling"
     title: "Passionate about Open Source"
