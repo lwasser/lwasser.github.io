@@ -1,4 +1,5 @@
 // Styles for the blog gallery listing landing page
+@layer components {
 .blog-listing {
   @apply max-w-7xl mx-auto px-6 py-16;
 
@@ -70,12 +71,12 @@
     @apply mt-12 flex justify-center gap-2;
   }
 }
-
+}
 
 // This is styling for the blog list cards on the home page
 // these cards are more compact and discrete compared to the blog listing page.
 .blog-highlight {
-  @apply pt-[72px] pb-24;
+  @apply pt-16 pb-24;
   background-color: var(--color-blog-highlight);
 
   .container {
