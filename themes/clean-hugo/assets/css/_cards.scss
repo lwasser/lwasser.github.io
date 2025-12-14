@@ -71,7 +71,7 @@
     }
   }
 
-  /* Highlight card (formerly peach card) - can also use bg-primary utility */
+  /* Highlight card - can also use bg-primary utility */
   .card--highlight {
     background-color: var(--color-primary-light);
     @apply transition-colors duration-200 ease-in-out;
