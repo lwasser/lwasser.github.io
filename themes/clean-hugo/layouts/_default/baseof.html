@@ -88,9 +88,30 @@
   <nav class="site-nav">
     <div class="site-nav__container">
       <a href="/" class="site-nav__brand">{{ .Site.Params.author | default .Site.Title }}</a>
-      <div class="site-nav__menu">
+      <button class="site-nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav-menu">
+        <span class="site-nav__toggle-icon"></span>
+        <span class="site-nav__toggle-icon"></span>
+        <span class="site-nav__toggle-icon"></span>
+      </button>
+      <div class="site-nav__menu" id="site-nav-menu">
         {{ range .Site.Menus.main }}
-          <a href="{{ .URL }}" class="site-nav__link">{{ .Name }}</a>
+          {{ if .HasChildren }}
+            <div class="site-nav__dropdown">
+              <a href="{{ .URL }}" class="site-nav__link site-nav__link--dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ .Name }}
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+              </a>
+              <ul class="site-nav__dropdown-menu">
+                {{ range .Children }}
+                  <li>
+                    <a href="{{ .URL }}" class="site-nav__dropdown-link">{{ .Name }}</a>
+                  </li>
+                {{ end }}
+              </ul>
+            </div>
+          {{ else }}
+            <a href="{{ .URL }}" class="site-nav__link">{{ .Name }}</a>
+          {{ end }}
         {{ end }}
       </div>
     </div>
@@ -98,6 +119,63 @@
 
   {{ block "main" . }}{{ end }}
   {{ partial "footer.html" . }}
+  
+  {{/* Navigation JavaScript */}}
+  <script>
+    (function() {
+      const toggle = document.querySelector('.site-nav__toggle');
+      const menu = document.querySelector('#site-nav-menu');
+      
+      if (toggle && menu) {
+        // Toggle main menu
+        toggle.addEventListener('click', function() {
+          const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', !isExpanded);
+          menu.classList.toggle('site-nav__menu--open');
+        });
+
+        // Handle dropdown menus
+        const dropdowns = menu.querySelectorAll('.site-nav__dropdown');
+        dropdowns.forEach(function(dropdown) {
+          const dropdownToggle = dropdown.querySelector('.site-nav__link--dropdown');
+          const dropdownMenu = dropdown.querySelector('.site-nav__dropdown-menu');
+          
+          if (dropdownToggle && dropdownMenu) {
+            dropdownToggle.addEventListener('click', function(e) {
+              // On mobile, toggle dropdown
+              if (window.innerWidth < 768) {
+                e.preventDefault();
+                const isOpen = dropdownMenu.classList.contains('site-nav__dropdown-menu--open');
+                dropdownMenu.classList.toggle('site-nav__dropdown-menu--open');
+                dropdownToggle.setAttribute('aria-expanded', !isOpen);
+              }
+              // On desktop, let hover handle it
+            });
+          }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+          if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+            toggle.setAttribute('aria-expanded', 'false');
+            menu.classList.remove('site-nav__menu--open');
+          }
+        });
+
+        // Close menu when clicking on a non-dropdown link (mobile)
+        const menuLinks = menu.querySelectorAll('.site-nav__link:not(.site-nav__link--dropdown), .site-nav__dropdown-link');
+        menuLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+            if (window.innerWidth < 768) {
+              toggle.setAttribute('aria-expanded', 'false');
+              menu.classList.remove('site-nav__menu--open');
+            }
+          });
+        });
+      }
+    })();
+  </script>
+
   {{ block "scripts" . }}{{ end }}
 </body>
 </html>
