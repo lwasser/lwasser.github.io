@@ -5,19 +5,6 @@
     @apply text-center;
   }
   
-  /* "What I've Built" section heading styling - targets h2 followed by .section-subtitle */
-  .content h2:has(+ .section-subtitle),
-  article h2:has(+ .section-subtitle) {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4 pt-12 pb-6;
-    @apply max-w-7xl mx-auto px-6;
-  }
-  
-  /* Section subtitle styling */
-  .section-subtitle {
-    @apply text-center text-lg md:text-xl opacity-80 mb-10 mt-0;
-    @apply max-w-7xl mx-auto px-6;
-    color: var(--color-gray-600);
-  }
 
 
   /* General content/article styles */

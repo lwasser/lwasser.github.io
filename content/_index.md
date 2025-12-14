@@ -49,9 +49,10 @@ cards:
 
 {{< impact-cards >}}
 
-## What I've Built
-
-<div class="section-subtitle">Thousands of researchers trained • Hundreds of open lessons built • Hundreds of package maintainers supported</div>
+{{< section-heading
+  title="What I've Built"
+  subtitle="Thousands of researchers trained • Hundreds of open lessons built • Hundreds of package maintainers supported"
+>}}
 
 {{< metrics-bar
   stat1="**1000s** researchers trained"

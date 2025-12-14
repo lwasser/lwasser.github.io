@@ -5,7 +5,7 @@
   .highlight__item { @apply contents; } /* wrapper is neutral; card handles its own layout */
 
   /* Impact section (same as highlight, kept for compatibility) */
-  .impact { @apply max-w-7xl mx-auto px-6 pt-[15px] pb-[15px]; }
+  .impact { @apply max-w-7xl mx-auto px-6 pt-[40px] pb-[15px]; }
   .impact__grid { 
     @apply grid grid-cols-1 md:grid-cols-2 gap-8;
     /* Use explicit row template to ensure equal heights per row */

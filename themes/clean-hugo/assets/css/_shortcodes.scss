@@ -1,7 +1,7 @@
 @layer components {
   /* Metrics Bar */
   .metrics-bar {
-    @apply w-full pt-16 pb-16 mb-[60px];
+    @apply w-full pt-24 pb-24 mt-12 mb-20;
     background-color: color-mix(in srgb, var(--color-primary) 8%, var(--color-bg));
   }
 
@@ -110,7 +110,7 @@
 
   /* Single Card Wide */
   .single-card-wide {
-    @apply pt-8 pb-12 mt-10;
+    @apply pt-8 pb-16 mt-10 mb-16;
     background-color: var(--color-bg);
   }
 
@@ -122,7 +122,7 @@
     @apply rounded-2xl border shadow-sm
          p-6 md:p-8 lg:p-10
          transition-transform duration-200 ease-in-out;
-    background-color: color-mix(in srgb, var(--color-primary-dark) 25%, var(--color-primary-light));
+    background-color: color-mix(in srgb, var(--color-primary-dark) 12%, var(--color-primary-light));
     border-color: var(--color-gray-200);
 
     &:hover {
@@ -170,5 +170,21 @@
       color: var(--color-text);
       font-weight: 600;
     }
+  }
+
+  /* Section Heading Shortcode */
+  .section-heading {
+    @apply max-w-7xl mx-auto px-6 text-center;
+    @apply pt-20 pb-8 mb-8;
+  }
+
+  .section-heading__title {
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4;
+    color: var(--color-text);
+  }
+
+  .section-heading__subtitle {
+    @apply text-center text-lg md:text-xl opacity-80;
+    color: var(--color-gray-600);
   }
 }

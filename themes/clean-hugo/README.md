@@ -52,7 +52,7 @@ theme = 'clean-hugo'
     blogHighlight = "#111827"
     link = "#2DD4BF"
     footerBg = "#115E59"
-    resumeCard = "#EBC1D3"
+    featureCard = "#EBC1D3"
 ```
 
 ### Theme Features
@@ -73,7 +73,7 @@ Here's what each color controls:
 
 The `primary` color is your main brand color - it's used for links, buttons, and other interactive elements. `primaryDark` is a darker version used for hero sections and footer backgrounds, while `primaryLight` is a lighter tint perfect for card backgrounds. The `secondary` color provides a warm accent, and `accent` and `accentLight` give you additional options for highlighting specific elements.
 
-For text and backgrounds, you have `neutral` for gray tones, and specific colors like `blogHighlight` for the blog section background, `link` for hyperlink color, `footerBg` for the footer, and `resumeCard` for resume card backgrounds. Don't worry if you don't customize all of them - the theme has sensible defaults for everything.
+For text and backgrounds, you have `neutral` for gray tones, and specific colors like `blogHighlight` for the blog section background, `link` for hyperlink color, `footerBg` for the footer, and `featureCard` for feature section card backgrounds. Don't worry if you don't customize all of them - the theme has sensible defaults for everything.
 
 ### Social Media Links
 
@@ -163,51 +163,51 @@ This creates a new gallery item with a template you can fill in, saving you from
 
 Sometimes you have content that you want to reuse in multiple places or that's more structured than a regular page. That's where Hugo's data files come in handy. They let you store content in YAML, TOML, or JSON files and reference it from anywhere in your site.
 
-### Resume Cards
+### Feature Section
 
-The resume cards feature is a perfect example of using data files effectively. Instead of hardcoding your resume content into a template (which would make it hard to update), you store it in a data file. This way, you can edit your resume in one place and it automatically appears everywhere you use it - whether that's on your homepage, in a blog post, or on a dedicated resume page.
+The feature section is a flexible component that displays structured content in a card format. You can define the content directly in your page's front matter, making it easy to customize for each page while maintaining consistent styling.
 
-To use resume cards, first create a file called `resume.yaml` in your `data/` directory. This file contains all your resume information in a structured format:
+To use the feature section, add a `feature_section` parameter to your page's front matter:
 
 ```yaml
-title: "What I've Built"
-subtitle: "Your subtitle text here"
-
-sections:
-  - title: "Section Title"
-    lead: "Optional lead paragraph"
-    items:
-      - bold: "Bold Text:"
-        text: " Rest of the text"
-      - text: "Plain text item"
-      - text: "Linked Item"
-        url: "https://example.com"
-    subsections:
-      - title: "Subsection Title"
-        content: "Subsection content"
+feature_section:
+  title: "What I've Built"
+  subtitle: "Your subtitle text here"
+  sections:
+    - title: "Section Title"
+      lead: "Optional lead paragraph"
+      items:
+        - bold: "Bold Text:"
+          text: " Rest of the text"
+        - text: "Plain text item"
+        - text: "Linked Item"
+          url: "https://example.com"
+      subsections:
+        - title: "Subsection Title"
+          content: "Subsection content"
 ```
 
 The structure is straightforward: you have a title and subtitle at the top, then sections that contain items. Items can be plain text, have bold prefixes, or be links with URLs. You can also nest subsections within sections for more complex layouts.
 
-Once you have your data file set up, you can display the resume cards anywhere. The easiest way is to use the resume cards shortcode in any Markdown file:
+Once you have your front matter set up, you can display the feature section anywhere using the shortcode:
 
 ```markdown
-{{< resume-cards >}}
+{{< feature-section >}}
 ```
 
 You can also include it in layout templates using:
 
 ```hugo
-{{ partial "resume-cards.html" . }}
+{{ partial "feature-section.html" . }}
 ```
 
-The component automatically handles all the formatting - plain text items, items with bold prefixes, items with URLs (which become clickable links), and subsections within sections. Just update your YAML file and the changes appear everywhere.
+The component automatically handles all the formatting - plain text items, items with bold prefixes, items with URLs (which become clickable links), and subsections within sections.
 
 ## Page Layouts
 
 Hugo uses layouts to control how different types of pages are displayed. This theme comes with several pre-built layouts that handle the most common use cases. You don't need to understand how they work to use them - just know that different content types automatically use the right layout.
 
-The `splash` layout is designed for homepages. It includes a hero section at the top, cards for highlighting key information, resume cards, and a section showing recent blog posts. It's perfect for creating an engaging landing page.
+The `splash` layout is designed for homepages. It includes a hero section at the top, and renders your page content (which can include cards, feature sections, and other shortcodes), followed by a section showing recent blog posts. It's perfect for creating an engaging landing page.
 
 Blog posts use the `blog/single` layout, which provides a clean reading experience with proper typography and spacing. The `blog/list` layout shows all your blog posts in an organized, paginated list.
 
@@ -239,15 +239,15 @@ Instead of copying and pasting embed code from YouTube, you can use the youtube 
 
 The shortcode automatically creates a responsive embed that works on all devices. The video ID is the string of characters that appears in the YouTube URL after `v=`. For example, if your YouTube URL is `https://www.youtube.com/watch?v=dQw4w9WgXcQ`, the video ID is `dQw4w9WgXcQ`.
 
-### Displaying Resume Cards
+### Displaying Feature Sections
 
-If you've set up resume cards using the data file system (described above), you can display them anywhere in your content using:
+If you've set up a feature section in your page's front matter (described above), you can display it anywhere in your content using:
 
 ```markdown
-{{< resume-cards >}}
+{{< feature-section >}}
 ```
 
-This is especially useful if you want to include your resume or achievements section in a blog post or on a dedicated about page. The content is always pulled from your `data/resume.yaml` file, so you only need to update it in one place.
+This is especially useful if you want to include your achievements or accomplishments section in a blog post or on a dedicated about page. Each page can have its own customized feature section content.
 
 ## Development
 

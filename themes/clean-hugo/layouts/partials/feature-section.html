@@ -1,5 +1,5 @@
-{{/* Feature section partial - reads from page front matter (.Params.feature_section) or falls back to data/feature-section.yaml */}}
-{{ $feature := .Params.feature_section | default .Site.Data.featureSection }}
+{{/* Feature section partial - reads from page front matter (.Params.feature_section) */}}
+{{ $feature := .Params.feature_section }}
 {{ if $feature }}
 <section class="feature-section">
   <header class="feature-section__header">
