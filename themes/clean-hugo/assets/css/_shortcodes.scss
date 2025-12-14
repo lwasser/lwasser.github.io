@@ -1,19 +1,174 @@
 @layer components {
-  /* YouTube shortcode styles */
-  .youtube-container {
-    @apply my-8;
+  /* Metrics Bar */
+  .metrics-bar {
+    @apply w-full pt-16 pb-16 mb-[60px];
+    background-color: color-mix(in srgb, var(--color-primary) 8%, var(--color-bg));
   }
 
-  .youtube-wrapper {
-    @apply relative overflow-hidden;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
+  .metrics-bar__container {
+    @apply w-full px-6 grid gap-8 grid-cols-2 lg:grid-cols-4 max-w-full;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .youtube-iframe {
-    @apply absolute w-full h-full;
-    top: 0;
-    left: 0;
+  .metrics-bar__item {
+    @apply text-center;
+  }
+
+  .metrics-bar__text {
+    @apply text-base md:text-lg leading-relaxed;
+    color: var(--color-gray-700);
+
+    /* Style bold text (numbers) - markdown strong tags get rendered as <strong> */
+    strong {
+      @apply block text-4xl md:text-5xl lg:text-6xl font-black mb-2 md:mb-3 leading-tight;
+      color: var(--color-text);
+      letter-spacing: -0.02em;
+    }
+
+    /* Regular text that follows the bold number */
+    &:not(:has(strong)) {
+      color: var(--color-gray-600);
+    }
+  }
+
+  /* Two Card Row */
+  .two-card-row {
+    @apply pt-6 pb-6;
+    background-color: var(--color-bg);
+  }
+
+  .two-card-row__container {
+    @apply max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6;
+  }
+  
+  /* Ensure cards are full width on mobile */
+  .card-shortcode {
+    @apply w-full md:w-auto;
+  }
+
+  /* Card Shortcode (used in two-card-row) */
+  .card-shortcode {
+    @apply rounded-2xl border shadow-sm
+         p-6 md:p-8 lg:p-10
+         h-full
+         transition-transform duration-200 ease-in-out;
+    background-color: var(--color-white);
+    border-color: var(--color-gray-200);
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(17,24,39,0.08);
+    }
+  }
+
+  .card-shortcode__inner {
+    @apply h-full flex flex-col;
+  }
+
+  .card-shortcode__icon {
+    @apply text-4xl md:text-5xl mb-4;
+    
+    i {
+      @apply text-inherit;
+    }
+  }
+
+  .card-shortcode__title {
+    @apply text-2xl md:text-3xl font-extrabold mb-6;
+    color: var(--color-text);
+  }
+
+  .card-shortcode__content {
+    @apply flex-1 prose prose-lg text-lg leading-[1.7];
+    color: var(--color-gray-700);
+
+    ul {
+      @apply space-y-2;
+    }
+
+    li {
+      @apply leading-[1.7];
+    }
+
+    a {
+      color: var(--color-link);
+      @apply underline;
+      transition: color .2s ease;
+
+      &:hover {
+        color: var(--color-primary-dark);
+      }
+    }
+
+    strong {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+  }
+
+  /* Single Card Wide */
+  .single-card-wide {
+    @apply pt-8 pb-12 mt-10;
+    background-color: var(--color-bg);
+  }
+
+  .single-card-wide__container {
+    @apply max-w-7xl mx-auto px-6;
+  }
+
+  .single-card-wide__inner {
+    @apply rounded-2xl border shadow-sm
+         p-6 md:p-8 lg:p-10
+         transition-transform duration-200 ease-in-out;
+    background-color: color-mix(in srgb, var(--color-primary-dark) 25%, var(--color-primary-light));
+    border-color: var(--color-gray-200);
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(17,24,39,0.08);
+    }
+  }
+
+  .single-card-wide__icon {
+    @apply text-4xl md:text-5xl mb-4;
+    
+    i {
+      @apply text-inherit;
+    }
+  }
+
+  .single-card-wide__title {
+    @apply text-2xl md:text-3xl font-extrabold mb-6;
+    color: var(--color-text);
+  }
+
+  .single-card-wide__content {
+    @apply prose prose-lg text-lg leading-[1.7];
+    color: var(--color-gray-700);
+
+    ul {
+      @apply space-y-3;
+    }
+
+    li {
+      @apply leading-[1.7];
+    }
+
+    a {
+      color: var(--color-link);
+      @apply underline font-medium;
+      transition: color .2s ease;
+
+      &:hover {
+        color: var(--color-primary-dark);
+      }
+    }
+
+    strong {
+      color: var(--color-text);
+      font-weight: 600;
+    }
   }
 }
-

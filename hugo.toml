@@ -26,12 +26,12 @@ params.licenseURL = "/license"
   # Enable/disable features
   enableGallery = true
   enableFontAwesome = true
-  
+
   # Fonts (Google Fonts)
   [params.theme.fonts]
     heading = "Sora"
     body = "Inter"
-  
+
   # Color customization (CSS variables)
   [params.theme.colors]
     primary = "#71B3B5"        # Verdigris (teal/cyan)
@@ -44,7 +44,7 @@ params.licenseURL = "/license"
     blogHighlight = "#111827"  # Blog highlight section background (RGB: 17, 24, 39)
     link = "#2DD4BF"           # Link color (RGB: 45, 212, 191)
     footerBg = "#115E59"      # Footer background (RGB: 17, 94, 89)
-    resumeCard = "#EBC1D3"    # Resume card background (RGB: 235, 193, 211)
+    featureCard = "#EBC1D3"    # Feature section card background (RGB: 235, 193, 211)
 
 # Gallery configuration
 [params.gallery]

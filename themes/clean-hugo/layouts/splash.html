@@ -3,10 +3,8 @@
 <!-- Hero - vision - who i am-->
 {{ partial "hero.html" . }}
 
-<!-- What I do - emphasis on pyos -->
-{{ partial "impact-cards.html" . }}
-
-{{ partial "resume-cards.html" . }}
+<!-- Page content (can include intro-section, impact-cards, and feature-section shortcodes) -->
+{{ .Content }}
 
 <!-- Recent Blog Posts Section -->
 {{ partial "blog-list.html" . }}

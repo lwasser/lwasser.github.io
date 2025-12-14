@@ -1,11 +1,11 @@
 /* Hero section components */
 
 .hero {
-  @apply py-2 flex items-center overflow-hidden;
+  @apply py-2 flex items-center overflow-hidden mb-12;
   background-color: var(--color-primary-dark);
 
   &__container {
-    @apply max-w-7xl mx-auto px-4 py-4 md:py-12 w-full;
+    @apply max-w-7xl mx-auto px-4 w-full pt-[14px] pb-[14px] md:pt-[33.6px] md:pb-[33.6px];
   }
 
   &__grid {
