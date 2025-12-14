@@ -14,8 +14,9 @@
   article {
     @apply relative rounded-lg overflow-hidden
            flex flex-col
-           shadow-lg hover:shadow-2xl
-           transition-all duration-300 ease-out;
+           shadow-lg hover:shadow-2xl;
+    /* 300ms for smooth card hover animations */
+    transition: all 300ms ease-out;
     background-color: var(--color-white);
 
     &:hover {
@@ -26,8 +27,9 @@
       @apply w-full overflow-hidden;
 
       img {
-        @apply w-full h-40 object-cover
-               transition-transform duration-500 ease-out;
+        @apply w-full h-40 object-cover;
+        /* 500ms for slow, smooth image zoom effect */
+        transition: transform 500ms ease-out;
       }
     }
 
@@ -101,8 +103,9 @@
 
   article {
     @apply flex max-w-xl flex-col
-           p-6 rounded-lg
-           transition-all duration-300 ease-out;
+           p-6 rounded-lg;
+    /* 300ms for smooth card hover animations */
+    transition: all 300ms ease-out;
 
     &:hover {
       background-color: color-mix(in srgb, var(--color-gray-800) 30%, transparent);

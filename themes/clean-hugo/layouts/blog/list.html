@@ -1,7 +1,9 @@
 {{ define "main" }}
 <section class="blog-listing">
   <div class="container">
-    <h2>{{ .Title | default "Blog" }}</h2>
+    <header>
+      <h2>{{ .Title | default "Blog" }}</h2>
+    </header>
 
     <div class="blog-grid">
       {{ range .Paginator.Pages }}
