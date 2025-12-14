@@ -21,6 +21,7 @@
       <div class="hero__content">
         <h1 class="hero__title">{{ $title }}</h1>
         {{ with $subtitle }}<p class="hero__subtitle">{{ . }}</p>{{ end }}
+        {{ with $excerpt }}<p class="hero__excerpt">{{ . }}</p>{{ end }}
       </div>
 
     <!-- Right side circle with photo//only render if image is there -->

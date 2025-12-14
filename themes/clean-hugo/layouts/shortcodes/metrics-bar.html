@@ -1,0 +1,31 @@
+{{/* Metrics bar shortcode - displays 4 stats with bold numbers and smaller text */}}
+{{ $stat1 := .Get "stat1" | default "" }}
+{{ $stat2 := .Get "stat2" | default "" }}
+{{ $stat3 := .Get "stat3" | default "" }}
+{{ $stat4 := .Get "stat4" | default "" }}
+
+<div class="metrics-bar">
+  <div class="metrics-bar__container">
+    {{ if $stat1 }}
+    <div class="metrics-bar__item">
+      <div class="metrics-bar__text">{{ $stat1 | markdownify }}</div>
+    </div>
+    {{ end }}
+    {{ if $stat2 }}
+    <div class="metrics-bar__item">
+      <div class="metrics-bar__text">{{ $stat2 | markdownify }}</div>
+    </div>
+    {{ end }}
+    {{ if $stat3 }}
+    <div class="metrics-bar__item">
+      <div class="metrics-bar__text">{{ $stat3 | markdownify }}</div>
+    </div>
+    {{ end }}
+    {{ if $stat4 }}
+    <div class="metrics-bar__item">
+      <div class="metrics-bar__text">{{ $stat4 | markdownify }}</div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+

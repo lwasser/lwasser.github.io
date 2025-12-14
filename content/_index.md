@@ -6,7 +6,7 @@ layout: "splash"
 hero:
   title: "I'm Leah 👋"
   subtitle: "Executive Director & Founder of pyOpenSci"
-  excerpt: ""
+  excerpt: "I build inclusive global programs that harness the power of community to break down barriers in open science—so scientists can spend less time struggling and more time solving the world's greatest problems."
   image: "/images/leah-headshot.png"
 cards:
   - grid: "md:row-start-1 md:col-start-1"
@@ -18,11 +18,10 @@ cards:
     icon: "fa-solid fa-sun"
     title: "pyOpenSci"
     excerpt: |
-      **Founder and Executive Director** of an inclusive non profit organization. Together, our community that supports scientists in building, discovering and maintaining better scientific software. Together, we make open source accessible to everyone, everywhere.
+      **Founder and Executive Director** of an inclusive non profit organization. Together, our community that supports scientists in building, discovering and maintaining better scientific software. Together, we make open source accessible to everyone, everywhere. [Learn More](https://www.pyopensci.org)
 
       * 350+ contributors & maintainers 
       * 50+ packages supported
-    url: "https://www.pyopensci.org"
   - grid: "md:row-start-3 md:col-start-2"   # bottom-right
     icon: "fa-solid fa-seedling"
     title: "Passionate about Open Source"
@@ -45,8 +44,52 @@ cards:
       I maintain:
         * [all-contributors bot](https://all-contributors.github.io/) 
         * [stravalib](https://www.github.com/stravalib/stravalib)
-      
-      I also enjoy rebuilding maintainer teams. 
+
 ---
 
-I build equitable global programs that harness the power of community to advance open science. My work empowers participants with both technical and leadership skills, breaking down barriers so scientists everywhere can spend less time struggling and more time solving the world’s greatest challenges.
+{{< impact-cards >}}
+
+{{< section-heading
+  title="What I've Built"
+  subtitle="Thousands of researchers trained • Hundreds of open lessons built • Hundreds of package maintainers supported"
+>}}
+
+{{< metrics-bar
+  stat1="**1000s** researchers trained"
+  stat2="**350+** contributors empowered"
+  stat3="**400+** open lessons published"
+  stat4="**120+** maintainers supported"
+>}}
+
+{{< two-card-row >}}
+
+{{< card title="Recognition & Awards" icon="fa-solid fa-trophy" >}}
+
+- **Python Software Foundation Fellow (2025)**
+- Panel: [PyLadiesCon 2024](https://2025.conference.pyladies.com/es/sessions/) – "From Contributor to Founder"
+- Podcast: [Pybites #204 – The Science of Open Science](https://www.pybitespodcast.com/1501156/episodes/17969765-204-the-science-of-open-science-with-leah-wasser-founder-of-pyopensci)
+- Recent talks: [SciPy 2024](https://youtu.be/uCLlshkTBM0) | [PyCon US 2024](https://youtu.be/oA6-f7PtTQ4) | [CURIOSS](link)
+
+{{</ card >}}
+
+{{< card title="Education & Impact" icon="fa-solid fa-graduation-cap" >}}
+
+- **PhD Ecology** – Penn State
+- **300+ open education lessons** reaching millions of learners globally
+- **20+ years** designing inclusive technical training that tackles the hardest pain points
+
+{{</ card >}}
+
+{{</ two-card-row >}}
+
+{{< single-card-wide title="Programs That Scale & Empower" icon="fa-solid fa-rocket" >}}
+**Creator of national data science programs focused on access and inclusion:**
+
+- **pyOpenSci** (Founder & Executive Director) – Building diverse community supporting open science through Python. 350+ contributors, 120+ maintainers supported. [Learn more →](https://www.pyopensci.org)
+
+- **Earth Data Analytics Professional Program (CU Boulder)** – Designed graduate program training students in earth and environmental data science with industry-relevant skills
+
+- **Earth Data Science Corps (NSF Award)** – Expanded data science teaching capacity at tribal colleges, building inclusive pathways to tech careers
+
+- **NEON Data Skills Program** – Created training program helping ecologists work with large-scale, complex time-series data from National Ecological Observatory Network
+{{</ single-card-wide >}}

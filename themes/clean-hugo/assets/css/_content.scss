@@ -1,4 +1,12 @@
 @layer components {
+  /* Center h2 headings in content */
+  .content h2,
+  article h2 {
+    @apply text-center;
+  }
+  
+
+
   /* General content/article styles */
   .content-container {
     @apply max-w-3xl mx-auto px-4 py-16;
