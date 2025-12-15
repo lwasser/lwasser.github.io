@@ -1,10 +1,23 @@
 {{ define "main" }}
 <article class="blog-post">
   <!-- Hero Banner with Title Overlay -->
-  <header class="blog-post__header">
+  <header class="blog-post__header"{{ if not .Params.image }}{{/* Get gradient colors based on category when no image */}}
+    {{ $gradientColors := dict
+      "Open Education" (dict "from" "#71B3B5" "to" "#2E6060")
+      "Open Science" (dict "from" "#EDB88B" "to" "#D6A570")
+      "Community" (dict "from" "#AC87A0" "to" "#8B6A8F")
+      "Science Communication" (dict "from" "#71B3B5" "to" "#5A9A9C")
+    }}
+    {{ $postCategory := .Params.category }}
+    {{ $colors := index $gradientColors $postCategory | default (dict "from" "#71B3B5" "to" "#2E6060") }}
+    style="background: linear-gradient(135deg, {{ $colors.from }} 0%, {{ $colors.to }} 100%);"
+  {{ end }}>
     {{ with .Params.image }}
     <img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Title }}" class="blog-post__header-image" />
     <!-- Dark gradient overlay for text readability -->
+    <div class="blog-post__header-overlay"></div>
+    {{ else }}
+    <!-- Dark gradient overlay for text readability when using color background -->
     <div class="blog-post__header-overlay"></div>
     {{ end }}
 
