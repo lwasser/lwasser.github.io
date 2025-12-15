@@ -11,10 +11,8 @@
         <article>
           <div class="meta">
             <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "Jan 2, 2006" }}</time>
-            {{ with $p.Params.categories }}
-              {{ with index . 0 }}
-                <span class="category">{{ . }}</span>
-              {{ end }}
+            {{ with $p.Params.category }}
+              <span class="category">{{ . }}</span>
             {{ end }}
           </div>
 
@@ -24,8 +22,10 @@
             </h3>
 
             <p class="excerpt">
-              {{ if $p.Summary }}
-                {{ $p.Summary | plainify }}
+              {{ if $p.Params.excerpt }}
+                {{ $p.Params.excerpt | markdownify | plainify | truncate 200 }}
+              {{ else if $p.Summary }}
+                {{ $p.Summary | plainify | truncate 200 }}
               {{ else }}
                 {{ $p.Plain | truncate 200 }}
               {{ end }}

@@ -14,8 +14,7 @@ stick with system fonts for faster loading.
 
 ## Get started
 
-Before you can use this theme, you need to add it to your Hugo site. Think of
-this as telling Hugo "hey, use these templates and styles for my website."
+Before you can use this theme, you need to add it to your Hugo site.
 The easiest way is to add it as a git submodule, which keeps everything
 organized and makes it easy to update the theme later.
 
@@ -28,11 +27,11 @@ git submodule add https://github.com/lwasser/clean-hugo themes/clean-hugo
 If you prefer to clone it directly into your themes folder:
 
 ```bash
-git clone https://github.com/yourusername/clean-hugo themes/clean-hugo
+git clone https://github.com/lwasser/clean-hugo themes/clean-hugo
 ```
 
 Once the theme is in place, you'll need to tell Hugo to use it by updating
-your configuration file.
+your hugo.toml configuration file.
 
 ## Configuration
 
@@ -91,15 +90,17 @@ content more readable.
 
 Under `[params.theme.fonts]`, you can specify `heading` for all your h1-h6
 elements and `body` for paragraph text and other content. The default heading
-font is "Sora" and the default body font is "Inter", both excellent choices
-that work well together. If you don't specify fonts, the theme will use system
-fonts which load instantly and work everywhere.
+font is "Sora" and the default body font is "Inter". 
+
+If you don't like these fonts, you will need to change the fonts both in 
+the CSS file and the hugo.toml configuration file. The fonts are vendored 
+with the theme as woff2 variable files. Variable means that multiple versions 
+of the fonts (weights and styles) are included.
 
 ### Customize colors
 
-One of the most powerful features of this theme is how easy it is to change
-the color scheme. Instead of diving into CSS files, you can customize your
-entire color palette right in the configuration file. All colors are specified
+You can customize the entire color palette of the site in the hugo.toml 
+configuration file under `[params.theme.colors]`. All colors are specified
 using standard hex codes (like `#71B3B5`), and you can find these codes using
 any color picker tool.
 
@@ -120,6 +121,21 @@ Here's what each color controls:
 - `accent` - Additional accent color for specific elements
 - `accentLight` - Lighter accent variant
 - `neutral` - Gray tone for text and subtle elements
+
+**Gray scale colors (optional):**
+
+The theme includes a full gray scale that you can customize. These are used for text, borders, backgrounds, and subtle UI elements:
+
+- `white` - Pure white (#FFFFFF)
+- `gray50` - Lightest gray, used for page backgrounds (#F9FAFB)
+- `gray200` - Light gray for borders and dividers (#E5E7EB)
+- `gray300` - Medium-light gray for subtle borders (#D1D5DB)
+- `gray400` - Medium gray for disabled text (#9CA3AF)
+- `gray500` - Medium gray for secondary text (#6B7280)
+- `gray600` - Medium-dark gray for meta text and dates (#4B5563)
+- `gray700` - Dark gray for body text on light backgrounds (#374151)
+- `gray800` - Very dark gray for headings (#1F2937)
+- `gray900` - Darkest gray, used for primary text (#111827)
 
 **Specific use colors:**
 
@@ -198,11 +214,27 @@ mind:
   primary = "#71B3B5"
   primaryDark = "#2E6060"
   primaryLight = "#D6E3E3"
-  
-  # Other colors
   secondary = "#EDB88B"
+  accent = "#42213D"
+  accentLight = "#AC87A0"
+  neutral = "#395E66"
+  
+  # Gray scale (optional - defaults provided)
+  white = "#FFFFFF"
+  gray50 = "#F9FAFB"
+  gray200 = "#E5E7EB"
+  gray300 = "#D1D5DB"
+  gray400 = "#9CA3AF"
+  gray500 = "#6B7280"
+  gray600 = "#4B5563"
+  gray700 = "#374151"
+  gray800 = "#1F2937"
+  gray900 = "#111827"
+  
+  # Specific use colors
   featureCard = "#EBC1D3"
   blogHighlight = "#111827"
+  footerBg = "#115E59"
 ```
 
 If you need help to choose accessible colors, consider using tools like:
@@ -234,6 +266,8 @@ ORCID, RSS feeds, and email links.
 
 ### Analytics
 
+IMPORTANT: this hasn't been setup // tested yet!!! 
+
 If you want to track how many people visit your site, you can add analytics
 support. The theme supports both Google Analytics and Plausible Analytics (a
 privacy-friendly alternative). Just add an `[params.analytics]` section to
@@ -257,34 +291,108 @@ and follows specific patterns.
 
 ### Write blog posts
 
-Blog posts are the most common type of content. You create them by adding
-Markdown files to the `content/blog/` directory. Each post starts with "front
-matter" - that's the YAML or TOML section at the top that describes your post.
-This includes things like the title, publication date, categories, tags, and
-an optional featured image.
+Blog posts are the most common type of content. The theme includes a blog 
+archetype to help you create new posts quickly with all the necessary frontmatter 
+fields. Frontmatter is the metadata that appears at the top of a Markdown file.
 
-Here's what a typical blog post looks like:
+#### Using the blog archetype
+
+The easiest way to create a new blog post is using Hugo's archetype system. 
+This automatically generates a template with all the required fields:
+
+```bash
+hugo new blog/2025/my-new-post.md
+```
+
+This creates a new blog post file with the following structure:
 
 ```markdown
 ---
-title: "My Blog Post"
-date: 2025-01-01
-categories: ["tech"]
-tags: ["hugo", "web"]
-image: "/images/post.jpg"
+title: "My New Post"
+date: 2025-01-15
+excerpt: ""
+image: /images/headers/
+photo_credit_author: ""
+photo_credit_description: ""
+category: ""
+show_author: false
+tags: []
 ---
 
-Your post content goes here, written in Markdown...
+Your post content goes here...
 ```
 
-The front matter tells Hugo everything it needs to know about your post. The
-`title` appears as the page heading and in lists. The `date` controls when the
-post was published and how it's sorted. `categories` and `tags` help organize
-your content, and the `image` can be used as a thumbnail in blog listings.
+#### Blog post front matter fields
 
-After the front matter, you write your actual post content using standard
-Markdown. You can use headings, lists, links, images, code blocks, and all the
-usual Markdown features.
+Here's what each field does:
+
+- **`title`** - The post title (appears as the page heading and in listings)
+- **`date`** - Publication date in `YYYY-MM-DD` format (controls sorting - most recent first)
+- **`excerpt`** - Short summary displayed in blog listings (optional, will use post summary if not provided)
+- **`image`** - Path to featured image (displayed in listings and as header on single post page)
+- **`photo_credit_author`** - Photo credit author name (optional)
+- **`photo_credit_description`** - Photo credit description (optional)
+- **`category`** - Single category for organizing posts (used for filtering on blog listing page)
+- **`show_author`** - Set to `true` to display author name in listings (defaults to `false`)
+- **`tags`** - Array of tags for additional organization (displayed at bottom of single post)
+
+#### Featured posts
+
+The blog listing page automatically features the **most recent post** as the large featured card on the left. The next posts (configurable, default 2) appear in the sidebar on the right. All remaining posts appear in a grid below.
+
+**Note:** Currently, the featured post is always the most recent post by date. There's no manual "featured" flag - the layout automatically highlights your latest content.
+
+#### Blog listing page configuration
+
+You can customize the blog listing page behavior in your `hugo.toml`:
+
+```toml
+[params]
+  blog_title = "Welcome to My Blog"  # Title shown at top of blog listing page
+
+  [params.blog]
+    sidebar_count = 2      # Number of posts shown in sidebar (right column)
+    excerpt_length = 200   # Character length for excerpts in featured card
+```
+
+#### Blog listing page features
+
+The blog listing page includes:
+
+- **Featured section** - Large card for the most recent post + smaller sidebar cards
+- **Category filtering** - Filter buttons to show posts by category
+- **Responsive grid** - All remaining posts displayed in a responsive grid
+- **Image zoom effects** - Gentle hover zoom on card images
+- **Pagination** - Automatic pagination for large numbers of posts
+
+#### Example blog post
+
+Here's a complete example of a blog post:
+
+```markdown
+---
+title: "Getting Started with Hugo"
+date: 2025-01-15
+excerpt: "Learn how to build a fast, modern website with Hugo static site generator."
+image: /images/headers/hugo-tutorial.jpg
+photo_credit_author: "John Doe"
+photo_credit_description: "Hugo logo on laptop screen"
+category: "Tutorials"
+show_author: false
+tags:
+  - hugo
+  - web-development
+  - static-sites
+---
+
+## Introduction
+
+Hugo is a fast and flexible static site generator...
+
+[Rest of your content in Markdown]
+```
+
+After the front matter, you write your actual post content using standard Markdown. You can use headings, lists, links, images, code blocks, and all the usual Markdown features.
 
 ### Create gallery items
 
@@ -395,7 +503,9 @@ posts. It's perfect for creating an engaging landing page.
 
 Blog posts use the `blog/single` layout, which provides a clean reading
 experience with proper typography and spacing. The `blog/list` layout shows
-all your blog posts in an organized, paginated list.
+all your blog posts in an organized, paginated list with a featured section
+highlighting your most recent post, category filtering, and a responsive grid
+layout.
 
 If you're using the gallery feature, `gallery/single` displays individual
 gallery items with their images and descriptions, while `gallery/list` shows
@@ -454,6 +564,20 @@ above), you can display it anywhere in your content using:
 This is especially useful if you want to include your achievements or
 accomplishments section in a blog post or on a dedicated about page. Each page
 can have its own customized feature section content.
+
+### Display recent blog posts
+
+You can display a list of recent blog posts on any page using the `blog-list` shortcode:
+
+```markdown
+{{< blog-list title="Recent Thoughts" limit=3 >}}
+```
+
+**Parameters:**
+- `title` - Title for the blog section (default: "Recent Thoughts")
+- `limit` - Number of posts to display (default: 3)
+
+This shortcode shows the specified number of most recent blog posts with their categories, dates, and excerpts. It's perfect for adding a blog preview to your homepage or other pages.
 
 ## License
 
