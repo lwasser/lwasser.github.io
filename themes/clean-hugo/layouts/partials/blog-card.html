@@ -27,9 +27,7 @@
       "Science Communication" (dict "from" "#71B3B5" "to" "#5A9A9C")
     }}
     {{ $colors := index $gradientColors $postCategory | default (dict "from" "#71B3B5" "to" "#2E6060") }}
-    <div class="blog-card__image-placeholder" style="background: linear-gradient(135deg, {{ $colors.from }} 0%, {{ $colors.to }} 100%);">
-      <h3 class="blog-card__placeholder-title">{{ $post.Title }}</h3>
-    </div>
+    <div class="blog-card__image-placeholder" style="background: linear-gradient(135deg, {{ $colors.from }} 0%, {{ $colors.to }} 100%);"></div>
     {{ end }}
     <div class="blog-card__content">
       {{ if $postCategory }}
