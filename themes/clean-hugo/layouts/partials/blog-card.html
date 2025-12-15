@@ -14,10 +14,22 @@
 
 <article class="blog-card {{ $modifier }}" data-category="{{ if $postCategory }}{{ $postCategory | urlize }}{{ end }}">
   <a href="{{ $post.Permalink }}" class="blog-card__link">
-    {{ with $post.Params.image }}
+    {{ if $post.Params.image }}
     <figure class="blog-card__image">
-      <img src="{{ . }}" alt="{{ $post.Title }}" loading="lazy" />
+      <img src="{{ $post.Params.image }}" alt="{{ $post.Title }}" loading="lazy" />
     </figure>
+    {{ else }}
+    {{/* Get gradient colors based on category - map categories to color pairs */}}
+    {{ $gradientColors := dict
+      "Open Education" (dict "from" "#71B3B5" "to" "#2E6060")
+      "Open Science" (dict "from" "#EDB88B" "to" "#D6A570")
+      "Community" (dict "from" "#AC87A0" "to" "#8B6A8F")
+      "Science Communication" (dict "from" "#71B3B5" "to" "#5A9A9C")
+    }}
+    {{ $colors := index $gradientColors $postCategory | default (dict "from" "#71B3B5" "to" "#2E6060") }}
+    <div class="blog-card__image-placeholder" style="background: linear-gradient(135deg, {{ $colors.from }} 0%, {{ $colors.to }} 100%);">
+      <h3 class="blog-card__placeholder-title">{{ $post.Title }}</h3>
+    </div>
     {{ end }}
     <div class="blog-card__content">
       {{ if $postCategory }}

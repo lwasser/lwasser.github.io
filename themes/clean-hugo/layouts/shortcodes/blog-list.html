@@ -16,35 +16,7 @@
     <div class="highlight-grid">
       {{ $limit := .Get "limit" | default 3 | int }}
       {{ range first $limit (where .Site.RegularPages "Type" "blog") }}
-        {{ $p := . }}
-        <article>
-          <div class="meta">
-            <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "Jan 2, 2006" }}</time>
-            {{ with $p.Params.category }}
-              <span class="category">{{ . }}</span>
-            {{ end }}
-          </div>
-
-          <div class="content">
-            <h3>
-              <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
-            </h3>
-
-            <p class="excerpt">
-              {{ if $p.Params.excerpt }}
-                {{ $p.Params.excerpt | markdownify | plainify | truncate 200 }}
-              {{ else if $p.Summary }}
-                {{ $p.Summary | plainify | truncate 200 }}
-              {{ else }}
-                {{ $p.Plain | truncate 200 }}
-              {{ end }}
-            </p>
-
-            <a href="{{ $p.Permalink }}" class="read-more">
-              Read more <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </article>
+        {{ partial "blog-card.html" (dict "." . "showExcerpt" true) }}
       {{ end }}
     </div>
   </div>

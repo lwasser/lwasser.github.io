@@ -1,26 +1,22 @@
 @layer components {
+  /* Blog hero header with teal background */
+  .blog-hero {
+    @apply py-8 md:py-12 mb-12;
+    background-color: var(--color-primary-dark);
+  }
+
+  .blog-hero__container {
+    @apply max-w-7xl mx-auto px-4 md:px-6;
+  }
+
+  .blog-hero__title {
+    @apply text-4xl sm:text-5xl md:text-6xl font-sora font-bold;
+    color: var(--color-white);
+  }
+
   /* Blog grid page */
   .blog-grid {
     @apply max-w-7xl mx-auto px-4 md:px-6 py-12;
-  }
-
-  .blog-grid__header {
-    @apply mb-8;
-  }
-
-  .blog-grid__title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-sora font-bold mb-4;
-    color: var(--color-gray-900);
-    position: relative;
-
-    &::after {
-      content: '';
-      @apply block w-full;
-      height: 1px;
-      background-color: var(--color-gray-300);
-      margin-top: 1rem;
-      max-width: 66.666667%; /* 2/3 width to match left column */
-    }
   }
 
   /* Category filter buttons */
@@ -83,6 +79,41 @@
     transform: scale(1.03);
   }
 
+  /* Placeholder for cards without images */
+  .blog-card__image-placeholder {
+    @apply w-full mb-3 overflow-hidden rounded-lg flex items-center justify-center;
+    aspect-ratio: 16 / 9;
+    transition: transform 300ms ease-out;
+  }
+
+  .blog-card__link:hover .blog-card__image-placeholder,
+  .blog-card__link:focus .blog-card__image-placeholder {
+    transform: scale(1.03);
+  }
+
+  .blog-card__placeholder-title {
+    @apply text-white font-sora font-bold text-center px-6;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    @media (min-width: 768px) {
+      font-size: 1.75rem;
+    }
+    @media (min-width: 1024px) {
+      font-size: 2rem;
+    }
+  }
+
+  /* Featured card placeholder - larger text */
+  .blog-card--featured .blog-card__placeholder-title {
+    font-size: 2rem;
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
+    @media (min-width: 1024px) {
+      font-size: 3rem;
+    }
+  }
+
   .blog-card__content {
     @apply flex-1 space-y-2 p-4;
   }
@@ -119,6 +150,8 @@
   /* Featured title modifier - target 40px */
   h2.blog-list-title.title-featured {
     @apply font-sora font-bold leading-tight text-left;
+    color: var(--color-gray-900);
+    letter-spacing: -0.02em;
     font-size: 2rem !important; /* 32px */
     @media (min-width: 768px) {
       font-size: 2.25rem !important; /* 36px */
@@ -129,8 +162,6 @@
     @media (min-width: 1280px) {
       font-size: 2.5rem !important; /* 40px - target size */
     }
-    color: var(--color-gray-900);
-    letter-spacing: -0.02em;
   }
 
   /* Featured card modifier */
@@ -188,6 +219,16 @@
     font-size: 1.25rem !important; /* 20px - target size */
   }
 
+  /* Empty state */
+  .blog-grid__empty {
+    @apply text-center py-16;
+  }
+
+  .blog-grid__empty-message {
+    @apply text-lg;
+    color: var(--color-gray-600);
+  }
+
   /* Blog single post styles */
   .blog-post {
     @apply mx-auto;
@@ -243,6 +284,13 @@
       &:focus {
         color: var(--color-link-hover);
       }
+    }
+
+    /* Left align all headings (h2 and below) and ensure sentence case */
+    h2, h3, h4, h5, h6 {
+      @apply text-left;
+      text-transform: none;
+      text-align: left !important;
     }
   }
 

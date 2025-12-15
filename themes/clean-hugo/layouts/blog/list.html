@@ -1,12 +1,23 @@
 {{ define "main" }}
+<!-- Blog header with teal background -->
+<section class="blog-hero">
+  <div class="blog-hero__container">
+    <h1 class="blog-hero__title">{{ .Site.Params.blog_title | default "Latest Articles" }}</h1>
+  </div>
+</section>
+
 <section class="blog-grid">
   <div class="container">
-    <header class="blog-grid__header">
-      <h2 class="blog-grid__title">{{ .Site.Params.blog_title | default "Welcome to My Blog" }}</h2>
-    </header>
 
     {{/* Get all blog posts */}}
     {{ $allPosts := where .Site.RegularPages "Type" "blog" }}
+
+    {{/* Empty state - no posts */}}
+    {{ if eq (len $allPosts) 0 }}
+    <div class="blog-grid__empty">
+      <p class="blog-grid__empty-message">No blog posts yet. Check back soon!</p>
+    </div>
+    {{ else }}
 
     {{/* Featured post is always the most recent (first post) */}}
     {{ $featuredPost := false }}
@@ -69,6 +80,7 @@
     {{ end }}
 
     {{ template "_internal/pagination.html" . }}
+    {{ end }}
   </div>
 </section>
 
