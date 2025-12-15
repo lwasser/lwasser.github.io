@@ -93,3 +93,5 @@ cards:
 
 - **NEON Data Skills Program** – Created training program helping ecologists work with large-scale, complex time-series data from National Ecological Observatory Network
 {{</ single-card-wide >}}
+
+{{< blog-list title="Recent Thoughts" limit=3 >}}

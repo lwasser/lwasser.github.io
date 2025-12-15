@@ -1,11 +1,20 @@
+{{/*
+  Blog List Shortcode
+
+  Usage: {{< blog-list title="Recent Thoughts" limit=3 >}}
+
+  Parameters:
+  - title: Title for the blog section (default: "Recent Thoughts")
+  - limit: Number of posts to display (default: 3)
+*/}}
 <section class="blog-highlight">
   <div class="container">
     <div class="intro">
-      <h2>{{ .Params.blog_title | default "Recent Thoughts" }}</h2>
+      <h2>{{ .Get "title" | default "Recent Thoughts" }}</h2>
     </div>
 
     <div class="highlight-grid">
-      {{ $limit := .Params.blog_limit | default 3 }}
+      {{ $limit := .Get "limit" | default 3 | int }}
       {{ range first $limit (where .Site.RegularPages "Type" "blog") }}
         {{ $p := . }}
         <article>
@@ -40,4 +49,3 @@
     </div>
   </div>
 </section>
-

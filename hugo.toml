@@ -20,6 +20,12 @@ params.licenseURL = "/license"
 [params]
   author = "Leah A. Wasser"
   tagline = "Empowering Communities to Advance Science Through Open, Equitable Practices"
+  blog_title = "Welcome to My Blog"
+
+  # Blog listing configuration
+  [params.blog]
+    sidebar_count = 2  # Number of posts in sidebar (right column)
+    excerpt_length = 200  # Character length for excerpts
 
 # Theme configuration
 [params.theme]

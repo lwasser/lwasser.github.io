@@ -18,8 +18,7 @@ learn_more:
     description: "The original tested environment from 2016"
     url: "https://github.com/earthlab/earth-analytics-python-env"
     icon: "fa-archive"
-categories:
-  - open-science
+category: "Open Science"
 tags:
   - python
   - education

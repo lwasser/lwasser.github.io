@@ -1,0 +1,42 @@
+{{/*
+  Blog Card Partial
+
+  Parameters:
+  - "." (context): The blog post page object (passed as "." in dict)
+  - "modifier" (string): Optional modifier class (e.g., "blog-card--featured")
+  - "showExcerpt" (bool): Whether to show excerpt (default: false for sidebar/grid, true for featured)
+*/}}
+{{ $post := index . "." }}
+{{ $modifier := .modifier | default "" }}
+{{ $showExcerpt := .showExcerpt | default false }}
+{{ $postCategory := $post.Params.category }}
+{{ $excerptLength := $post.Site.Params.blog.excerpt_length | default 200 }}
+
+<article class="blog-card {{ $modifier }}" data-category="{{ if $postCategory }}{{ $postCategory | urlize }}{{ end }}">
+  <a href="{{ $post.Permalink }}" class="blog-card__link">
+    {{ with $post.Params.image }}
+    <figure class="blog-card__image">
+      <img src="{{ . }}" alt="{{ $post.Title }}" loading="lazy" />
+    </figure>
+    {{ end }}
+    <div class="blog-card__content">
+      {{ if $postCategory }}
+        <span class="blog-card__category">{{ $postCategory | upper }}</span>
+      {{ end }}
+      <h2 class="blog-list-title {{ if eq $modifier "blog-card--featured" }}title-featured{{ end }}">{{ $post.Title }}</h2>
+      <time class="blog-card__date" datetime="{{ $post.Date.Format "2006-01-02" }}">{{ $post.Date.Format "Jan 2, 2006" }}</time>
+      {{ if $post.Params.show_author }}
+        <p class="blog-card__author">{{ $post.Params.author | default $post.Site.Params.author }}</p>
+      {{ end }}
+      {{ if $showExcerpt }}
+      <p class="blog-card__excerpt">
+        {{ with $post.Params.excerpt }}
+          {{ . | markdownify | plainify | truncate $excerptLength }}
+        {{ else }}
+          {{ $post.Summary | plainify | truncate $excerptLength }}
+        {{ end }}
+      </p>
+      {{ end }}
+    </div>
+  </a>
+</article>

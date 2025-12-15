@@ -5,8 +5,7 @@ excerpt: "How I used YouTube to bridge the gap between traditional ecology and l
 image: /images/headers/leah-lidar-header.png
 photo_credit_author: "Leah Wasser"
 photo_credit_description: "Northern lights--Tromsø, Norway"
-categories:
-  - science-communication
+category: "Science Communication"
 tags:
   - ecology
   - remote-sensing

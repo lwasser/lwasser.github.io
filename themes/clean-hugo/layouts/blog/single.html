@@ -11,7 +11,7 @@
     <!-- Title and metadata overlaid on image -->
     <div class="blog-post__header-content">
       <h1 class="blog-post__title">{{ .Title }}</h1>
-      <p class="blog-post__meta">{{ .Date.Format "Jan 2, 2006" }} • {{ range $i, $c := .Params.categories }}{{ if $i }}, {{ end }}{{ $c }}{{ end }}</p>
+      <p class="blog-post__meta">{{ .Date.Format "Jan 2, 2006" }}{{ with .Params.category }} • {{ . }}{{ end }}</p>
     </div>
 
     <!-- Photo credit in bottom right -->
