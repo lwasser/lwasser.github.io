@@ -5,7 +5,7 @@ excerpt: "I recently was honored as a Python Software Foundation Fellow. I am hu
 image: /images/headers/south-boulder-peak-sunrise.png
 photo_credit_author: "Leah Wasser"
 photo_credit_description: "A Snowy South Boulder Peak @ Sunrise Boulder, CO"
-categories: "Community"
+category: "Community"
 tags:
   - python
   - education

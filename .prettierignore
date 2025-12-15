@@ -1,0 +1,8 @@
+# Ignore patterns that might have Sphinx targets or special formatting
+# Add specific files or patterns here if Prettier is causing issues
+
+# Example: if you have files with Sphinx targets like:
+# .. _target-name:
+# or
+# ()=
+# You can add them here

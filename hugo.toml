@@ -20,7 +20,7 @@ params.licenseURL = "/license"
 [params]
   author = "Leah A. Wasser"
   tagline = "Empowering Communities to Advance Science Through Open, Equitable Practices"
-  blog_title = "Welcome to My Blog"
+  blog_title = "Building in the Open"
 
   # Blog listing configuration
   [params.blog]
