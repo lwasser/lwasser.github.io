@@ -1,7 +1,7 @@
 ---
 title: "The Hidden Cost of Publishing Open Education Resources"
 date: 2022-12-17
-draft: true
+draft: false
 excerpt: "Creating open education resources is the easy part. Keeping them relevant as technology evolves? That's where most efforts fail. Here's what nobody tells you about maintaining technical learning content."
 category: "Open Education"
 show_author: false
