@@ -40,11 +40,7 @@
       {{ end }}
       {{ if $showExcerpt }}
       <p class="blog-card__excerpt">
-        {{ with $post.Params.excerpt }}
-          {{ . | markdownify | plainify | truncate $excerptLength }}
-        {{ else }}
-          {{ $post.Summary | plainify | truncate $excerptLength }}
-        {{ end }}
+        {{ partial "blog-excerpt.html" (dict "." $post "length" $excerptLength) }}
       </p>
       {{ end }}
     </div>

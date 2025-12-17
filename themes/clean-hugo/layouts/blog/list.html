@@ -12,6 +12,21 @@
     {{/* Get all blog posts */}}
     {{ $allPosts := where .Site.RegularPages "Type" "blog" }}
 
+    {{/* Separate recent posts from archive posts */}}
+    {{ $recentPosts := slice }}
+    {{ $archivePosts := slice }}
+    {{ $cutoffDate := time "2025-01-01" }}
+
+    {{ range $allPosts }}
+      {{ $isOld := le (.Date.Unix) ($cutoffDate.Unix) }}
+      {{ $hasNoImage := not .Params.image }}
+      {{ if and $isOld $hasNoImage }}
+        {{ $archivePosts = $archivePosts | append . }}
+      {{ else }}
+        {{ $recentPosts = $recentPosts | append . }}
+      {{ end }}
+    {{ end }}
+
     {{/* Empty state - no posts */}}
     {{ if eq (len $allPosts) 0 }}
     <div class="blog-grid__empty">
@@ -19,26 +34,26 @@
     </div>
     {{ else }}
 
-    {{/* Featured post is always the most recent (first post) */}}
+    {{/* Featured post is always the most recent (first post from recent posts) */}}
     {{ $featuredPost := false }}
     {{ $sidebarPosts := slice }}
     {{ $remainingPosts := slice }}
 
-    {{ if gt (len $allPosts) 0 }}
-      {{ $featuredPost = index $allPosts 0 }}
+    {{ if gt (len $recentPosts) 0 }}
+      {{ $featuredPost = index $recentPosts 0 }}
       {{ $sidebarCount := .Site.Params.blog.sidebar_count | default 2 }}
       {{ $skipCount := add $sidebarCount 1 }}
-      {{ if gt (len $allPosts) 1 }}
-        {{ $sidebarPosts = first $sidebarCount (after 1 $allPosts) }}
+      {{ if gt (len $recentPosts) 1 }}
+        {{ $sidebarPosts = first $sidebarCount (after 1 $recentPosts) }}
       {{ end }}
-      {{ if gt (len $allPosts) $skipCount }}
-        {{ $remainingPosts = after $skipCount $allPosts }}
+      {{ if gt (len $recentPosts) $skipCount }}
+        {{ $remainingPosts = after $skipCount $recentPosts }}
       {{ end }}
     {{ end }}
 
-    {{/* Get all unique categories */}}
+    {{/* Get all unique categories from recent posts only (for filtering) */}}
     {{ $categories := slice }}
-    {{ range $allPosts }}
+    {{ range $recentPosts }}
       {{ with .Params.category }}
         {{ $categories = $categories | append (slice .) }}
       {{ end }}
@@ -83,6 +98,9 @@
     {{ end }}
   </div>
 </section>
+
+{{/* Archives section for old posts without images */}}
+{{ partial "blog-archives.html" $archivePosts }}
 
 {{/* Load blog filter JavaScript */}}
 <script src="{{ "js/blog-filter.js" | relURL }}" defer></script>

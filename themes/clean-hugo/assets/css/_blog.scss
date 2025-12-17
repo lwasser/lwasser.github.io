@@ -22,10 +22,13 @@
   /* Category filter buttons */
   .blog-grid__filters {
     @apply flex flex-wrap gap-3 mb-12;
+    display: flex !important;
   }
 
   .blog-grid__filter-btn {
     @apply px-4 py-2 text-sm font-medium rounded-full border transition-colors duration-200 cursor-pointer inline-flex;
+    display: inline-flex !important;
+    visibility: visible !important;
     background-color: var(--color-white);
     border-color: var(--color-gray-300);
     color: var(--color-gray-700);
@@ -289,5 +292,182 @@
         color: var(--color-gray-900);
       }
     }
+  }
+
+  /* Blog highlight section (for shortcode - full-width dark background) */
+  .blog-highlight {
+    @apply w-full py-12;
+    background-color: var(--color-blog-highlight);
+  }
+
+  .blog-highlight .container {
+    @apply max-w-7xl mx-auto px-4 md:px-6;
+  }
+
+  /* Shared intro styles for blog sections */
+  .blog-highlight .intro,
+  .blog-archives .intro {
+    @apply mb-8;
+  }
+
+  .blog-highlight .intro h2 {
+    @apply text-3xl md:text-4xl font-sora font-bold mb-4;
+    color: var(--color-white);
+  }
+
+  /* Dark cards for blog-highlight section - same color as background */
+  .blog-highlight .highlight-grid article {
+    background-color: var(--color-blog-highlight);
+    border-color: var(--color-gray-700);
+    transition: background-color 200ms ease-in-out;
+
+    &:hover {
+      background-color: var(--color-gray-800);
+    }
+  }
+
+  .blog-highlight .highlight-grid .meta {
+    color: var(--color-gray-300);
+  }
+
+  .blog-highlight .highlight-grid .content h3 {
+    color: var(--color-white);
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: var(--color-primary-light);
+      }
+    }
+  }
+
+  .blog-highlight .highlight-grid .content .excerpt {
+    color: var(--color-gray-300);
+  }
+
+  .blog-highlight .highlight-grid .content .read-more {
+    color: var(--color-link-on-dark);
+
+    &:hover {
+      color: var(--color-primary-light);
+    }
+  }
+
+  /* Blog archives section (full-width background, light color) */
+  .blog-archives {
+    @apply w-full py-12;
+    background-color: var(--color-primary-light);
+  }
+
+  .blog-archives__container {
+    @apply max-w-7xl mx-auto px-4 md:px-6;
+  }
+
+  .blog-archives .intro h2 {
+    @apply text-3xl md:text-4xl font-sora font-bold mb-4;
+    color: var(--color-gray-900);
+  }
+
+  .highlight-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .highlight-grid article {
+    @apply border rounded-lg p-6;
+    background-color: var(--color-white);
+    border-color: var(--color-gray-200);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+
+    &:hover {
+      box-shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+      transform: translateY(-2px);
+    }
+  }
+
+  /* Archive cards - closer to background color, slightly lighter */
+  .blog-archives .highlight-grid article {
+    background-color: color-mix(in srgb, var(--color-primary-light) 60%, white 40%);
+    border-color: var(--color-gray-300);
+
+    &:hover {
+      background-color: color-mix(in srgb, white 60%, var(--color-primary-light) 40%);
+    }
+  }
+
+  .highlight-grid .meta {
+    @apply flex items-center gap-3 mb-4;
+    font-size: 0.9375rem; /* 15px - larger than text-sm */
+    color: var(--color-gray-600);
+  }
+
+  .highlight-grid .meta time {
+    @apply font-medium;
+  }
+
+  .highlight-grid .meta .category {
+    @apply px-2 py-1 rounded font-semibold uppercase tracking-wide;
+    font-size: 0.75rem; /* 12px */
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+  }
+
+  .highlight-grid .content h3 {
+    @apply font-sora font-semibold mb-3;
+    font-size: 1.25rem; /* 20px - larger than text-xl */
+    line-height: 1.4;
+    color: var(--color-gray-900);
+
+    a {
+      @apply transition-colors duration-200;
+      color: inherit;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  .highlight-grid .content .excerpt {
+    @apply leading-relaxed mb-4;
+    font-size: 1rem; /* 16px - base size for better readability */
+    line-height: 1.6;
+    color: var(--color-gray-700);
+  }
+
+  .highlight-grid .content .read-more {
+    @apply font-medium transition-colors duration-200;
+    font-size: 0.9375rem; /* 15px - larger than text-sm */
+    color: var(--color-link);
+
+    &:hover {
+      color: var(--color-link-hover);
+    }
+
+    i {
+      @apply ml-1;
+    }
+  }
+
+  /* Larger fonts for archive cards specifically */
+  .blog-archives .highlight-grid .meta {
+    font-size: 1rem; /* 16px */
+  }
+
+  .blog-archives .highlight-grid .content h3 {
+    font-size: 1.5rem; /* 24px - much larger */
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .blog-archives .highlight-grid .content .excerpt {
+    font-size: 1.125rem; /* 18px - larger */
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .blog-archives .highlight-grid .content .read-more {
+    font-size: 1rem; /* 16px */
   }
 }
