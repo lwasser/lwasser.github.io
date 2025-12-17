@@ -304,7 +304,9 @@
     @apply max-w-7xl mx-auto px-4 md:px-6;
   }
 
-  .blog-highlight .intro {
+  /* Shared intro styles for blog sections */
+  .blog-highlight .intro,
+  .blog-archives .intro {
     @apply mb-8;
   }
 
@@ -360,10 +362,6 @@
 
   .blog-archives__container {
     @apply max-w-7xl mx-auto px-4 md:px-6;
-  }
-
-  .blog-archives .intro {
-    @apply mb-8;
   }
 
   .blog-archives .intro h2 {

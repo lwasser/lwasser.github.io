@@ -100,49 +100,7 @@
 </section>
 
 {{/* Archives section for old posts without images */}}
-{{ if gt (len $archivePosts) 0 }}
-<section class="blog-archives">
-  <div class="blog-archives__container">
-    <div class="intro">
-      <h2>From the Archives</h2>
-    </div>
-
-    <div class="highlight-grid">
-      {{ range $archivePosts }}
-        {{ $p := . }}
-        <article>
-          <div class="meta">
-            <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "Jan 2, 2006" }}</time>
-            {{ with $p.Params.category }}
-              <span class="category">{{ . }}</span>
-            {{ end }}
-          </div>
-
-          <div class="content">
-            <h3>
-              <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
-            </h3>
-
-            <p class="excerpt">
-              {{ if $p.Params.excerpt }}
-                {{ $p.Params.excerpt | markdownify | plainify | htmlUnescape | truncate 200 }}
-              {{ else if $p.Summary }}
-                {{ $p.Summary | plainify | htmlUnescape | truncate 200 }}
-              {{ else }}
-                {{ $p.Plain | htmlUnescape | truncate 200 }}
-              {{ end }}
-            </p>
-
-            <a href="{{ $p.Permalink }}" class="read-more">
-              Read more <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </article>
-      {{ end }}
-    </div>
-  </div>
-</section>
-{{ end }}
+{{ partial "blog-archives.html" $archivePosts }}
 
 {{/* Load blog filter JavaScript */}}
 <script src="{{ "js/blog-filter.js" | relURL }}" defer></script>
