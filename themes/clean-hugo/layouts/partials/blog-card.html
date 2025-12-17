@@ -41,9 +41,9 @@
       {{ if $showExcerpt }}
       <p class="blog-card__excerpt">
         {{ with $post.Params.excerpt }}
-          {{ . | markdownify | plainify | truncate $excerptLength }}
+          {{ . | markdownify | plainify | htmlUnescape | truncate $excerptLength }}
         {{ else }}
-          {{ $post.Summary | plainify | truncate $excerptLength }}
+          {{ $post.Summary | plainify | htmlUnescape | truncate $excerptLength }}
         {{ end }}
       </p>
       {{ end }}

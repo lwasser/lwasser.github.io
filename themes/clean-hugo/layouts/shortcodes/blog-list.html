@@ -32,11 +32,11 @@
 
             <p class="excerpt">
               {{ if $p.Params.excerpt }}
-                {{ $p.Params.excerpt | markdownify | plainify | truncate 200 }}
+                {{ $p.Params.excerpt | markdownify | plainify | htmlUnescape | truncate 200 }}
               {{ else if $p.Summary }}
-                {{ $p.Summary | plainify | truncate 200 }}
+                {{ $p.Summary | plainify | htmlUnescape | truncate 200 }}
               {{ else }}
-                {{ $p.Plain | truncate 200 }}
+                {{ $p.Plain | htmlUnescape | truncate 200 }}
               {{ end }}
             </p>
 
