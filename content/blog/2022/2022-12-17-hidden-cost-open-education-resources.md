@@ -1,7 +1,7 @@
 ---
-title: "The Hidden Cost of Publishing Open Education Resources (and ways to mak them more affordable)"
+title: "The Hidden Cost of Publishing Open Education Resources"
 date: 2022-12-17
-draft: true
+draft: false
 excerpt: "Creating open education resources is the easy part. Keeping them relevant as technology evolves? That's where most efforts fail. Here's what nobody tells you about maintaining technical learning content."
 category: "Open Education"
 show_author: false
@@ -40,9 +40,9 @@ At NEON, we published a [comprehensive suite of lessons on the HDF5 file
 format](https://www.neonscience.org/resources/learning-hub/tutorials/hdf5-intro-r)
 for working with hyperspectral remote sensing data.
 
-Within 5 years, NEON reorganized their HDF5 file structure to be more
+Within 1-2 years, NEON reorganized their HDF5 file structure to be more
 user-friendly. Better for users, but it meant every single lesson needed
-updating.
+an update.
 
 We had the resources to update them because these lessons supported an
 active program. But what happens when resources run out and outdated
@@ -60,10 +60,10 @@ When I started teaching Python for geospatial work around 2018, the
 standard approach used core GDAL - powerful but notoriously difficult to
 install and learn for beginners.
 
-Two years later, `rasterio` simplified raster processing significantly.
+A few years later, `rasterio` simplified raster processing significantly.
 
-Two years after that, `xarray` and `rioxarray` reduced code complexity
-even further and scaled better to cloud computing.
+And soon thereafter, `xarray` and `rioxarray` transformed the way spatial data is processed, reducing code complexity
+even further and scaled better to cloud computing and maximizing performance.
 
 **In just 4 years, I rewrote spatial data lessons three times.** Each
 iteration was simpler, more relevant, and more aligned with industry
@@ -71,7 +71,7 @@ practice.
 
 Here's what the progression looked like:
 
-**2018 approach (GDAL):**
+**initial approach (GDAL):**
 ```python
 # Complex, verbose, hard to teach
 import os
@@ -87,7 +87,7 @@ out_ds.SetProjection(in_ds.GetProjection())
 out_ds.SetGeoTransform(in_ds.GetGeoTransform())
 ```
 
-**2022 approach (rioxarray):**
+**a later approach (rioxarray):**
 ```python
 # Simpler, more intuitive, scales to cloud
 import rioxarray as rxr
@@ -193,21 +193,16 @@ What made earthdatascience.org sustainable was combining four elements:
 **1. Automated testing (the game-changer):** A CI/CD pipeline running
 weekly regardless of whether we made changes. Every code block tested
 end-to-end, with immediate notification when dependencies updated and
-broke things. We caught breaking changes in days, not months.
+broke things. We caught breaking changes in days, before students were impacted.
 
-**2. Active teaching program (the feedback loop):** Issues caught in
-real classroom use, student incentives for quality control, and
-continuous pressure to stay relevant kept content aligned with what
-learners actually needed.
+**2. Active teaching program (the feedback loop):** The best way to keep lessons current is to actively teach them. As an instructor, you'll catch the issues during the workshop or class. And when the students are working, they'll catch things too. This wasn't a passive approach, I would provide incentives to students to report lesson bugs. This way the content remained relevant and also were further focused on the actual walls that learners would hit when running through the materials.
 
-**3. Team capacity (the reality check):** Not just me - a small team
-shared maintenance work. Updates were ongoing work, not a one-time
-deliverable. Maintenance was budgeted as a core function, not an
-afterthought.
+**3. Team capacity (the reality check):** In each of the previous programs that I built, the program grew to the point that I had a small team of people that helped me maintain the content. Updates were ongoing work, not a one-time
+deliverable. Lesson maintenance was budgeted as a core part of our operations.
 
 **4. Open licensing (the sustainability path):** Creative Commons
 license meant anyone could fork and update the content. If we stopped
-maintaining it, the community could take over. No vendor lock-in to
+maintaining it, the community could take over. No lock-in or
 institutional ownership.
 
 ## The hard truth: publication ≠ education
@@ -228,7 +223,7 @@ What happens when you move on? Is there institutional commitment to
 testing and maintenance? Can the community take over the infrastructure?
 Or will it just slowly break?
 
-Sometimes a blog post is more honest. Blog posts represent a moment in
+Sometimes a blog post makes more sense. Blog posts represent a moment in
 time. Nobody expects them to stay current forever. That's often more
 appropriate than pretending to create "permanent" resources.
 
@@ -245,17 +240,11 @@ actually worked.
 
 **Model 2: Contribute to existing tested platforms.** Don't create alone
 - contribute to established projects. Leverage existing CI/CD
-infrastructure. Example: The Carpentries has testing and maintenance
-built into their model.
+infrastructure.
 
 **Model 3: Blog posts for point-in-time solutions.** Share your current
 approach openly. Date it clearly. Don't pretend it will stay current.
 Let search engines and users understand it's a snapshot.
-
-**What doesn't work:** Grant-funded content creation with no maintenance
-plan. "Publish and hope" with no testing infrastructure. Assuming
-institutional ownership means institutional maintenance. Testing only
-when you make changes (dependencies update without you!).
 
 ## The bottom line
 
