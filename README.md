@@ -37,6 +37,46 @@ npm run dev
 
 Your site will be available at `http://localhost:1313`
 
+## Theme Submodule
+
+This site uses the [clean-hugo](https://github.com/lwasser/clean-hugo) theme as a git submodule.
+
+### Clone the Repository
+
+When cloning this repository for the first time, you need to initialize and update the submodule:
+
+```bash
+git clone --recursive https://github.com/lwasser/lwasser.github.io.git
+```
+
+Or if you've already cloned without the `--recursive` flag:
+
+```bash
+git submodule init
+git submodule update
+```
+
+### Update the Theme
+
+To update the theme to the latest version:
+
+```bash
+git submodule update --remote themes/clean-hugo
+git add themes/clean-hugo
+git commit -m "Update clean-hugo theme"
+```
+
+### Work with the Submodule
+
+The theme is located in `themes/clean-hugo/`. If you need to make changes to the theme itself, you should:
+
+1. Make changes in the `themes/clean-hugo/` directory
+2. Commit changes in the submodule repository
+3. Push to the clean-hugo repository
+4. Update the parent repository to point to the new commit
+
+For more information about the theme, see the [clean-hugo repository](https://github.com/lwasser/clean-hugo).
+
 ### Building for Production
 
 Build the site for production:
@@ -78,8 +118,8 @@ Your content here...
 I created a custom shortcode for adding images with captions. Use it like this:
 
 ```markdown
-{{< figure src="/images/my-image.jpg" 
-    alt="Description of image" 
+{{< figure src="/images/my-image.jpg"
+    alt="Description of image"
     caption="This is my image caption." >}}
 ```
 

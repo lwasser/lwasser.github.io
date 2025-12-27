@@ -1,0 +1,3 @@
+[submodule "themes/clean-hugo"]
+	path = themes/clean-hugo
+	url = https://github.com/lwasser/clean-hugo.git
